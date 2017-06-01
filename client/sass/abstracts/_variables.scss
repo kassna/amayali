@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$body-font: 'Karla', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$title-font: 'Montserrat', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+$pink: #ef3971;
+$aqua: #43c2c1;
+$dark-gray: #6b6a6b;
+$orange: #fb7221;
+$green: #98ce00;
+$yellow: #fccd14;
+$white: #fff;
+$light-yellow: #f2f2bc;
+$light-green: #9edccf;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+// ----------------------------------------------------------------------
+// Layout Breakpoints
+// ----------------------------------------------------------------------
+$large-desktop: 1280px;
+$small-desktop: 1999px;
+$tablet: 991px;
+$smartphone: 767px;
+$phone: 580px;
+
+$large-desktop-over: 1281px;
+$small-desktop-over: 1200px;
+$tablet-over: 992px;
+$smartphone-over: 768px;
+$phone-over: 581px;
+
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+// Al buttons are without border-radius
+.btn,
+.btn-pill, 
+.btn-xs, 
+.btn-sm, 
+.btn-md, 
+.btn-lg {
+	border-radius: 0;
+}
+
+.btn-success-outline {
+	color: $green;
+}
+
+.btn-success-outline.active, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline:focus, .btn-success-outline:hover, .open>.dropdown-toggle.btn-success-outline {
+	background-color: $green;
+}
+
+.btn-success-outline, .btn-success-outline.disabled, .btn-success-outline.disabled.active, .btn-success-outline.disabled.focus, .btn-success-outline.disabled:active, .btn-success-outline.disabled:focus, .btn-success-outline.disabled:hover, .btn-success-outline[disabled], .btn-success-outline[disabled].active, .btn-success-outline[disabled].focus, .btn-success-outline[disabled]:active, .btn-success-outline[disabled]:focus, .btn-success-outline[disabled]:hover, fieldset[disabled] .btn-success-outline, fieldset[disabled] .btn-success-outline.active, fieldset[disabled] .btn-success-outline.focus, fieldset[disabled] .btn-success-outline:active, fieldset[disabled] .btn-success-outline:focus, fieldset[disabled] .btn-success-outline:hover {
+	border-color: $green;
+}
+
+.btn-warning-outline {
+	color: $yellow;
+}
+
+.btn-warning-outline.active, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline:focus, .btn-warning-outline:hover, .open>.dropdown-toggle.btn-warning-outline {
+	background-color: $yellow;
+}
+
+.btn-warning-outline, .btn-warning-outline.disabled, .btn-warning-outline.disabled.active, .btn-warning-outline.disabled.focus, .btn-warning-outline.disabled:active, .btn-warning-outline.disabled:focus, .btn-warning-outline.disabled:hover, .btn-warning-outline[disabled], .btn-warning-outline[disabled].active, .btn-warning-outline[disabled].focus, .btn-warning-outline[disabled]:active, .btn-warning-outline[disabled]:focus, .btn-warning-outline[disabled]:hover, fieldset[disabled] .btn-warning-outline, fieldset[disabled] .btn-warning-outline.active, fieldset[disabled] .btn-warning-outline.focus, fieldset[disabled] .btn-warning-outline:active, fieldset[disabled] .btn-warning-outline:focus, fieldset[disabled] .btn-warning-outline:hover {
+	border-color: $yellow;
+}
+
+.btn-info-outline {
+	color: $pink;
+}
+
+.btn-info-outline.active, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline:focus, .btn-info-outline:hover, .open>.dropdown-toggle.btn-info-outline {
+	background-color: $pink;
+}
+
+.btn-info-outline, .btn-info-outline.disabled, .btn-info-outline.disabled.active, .btn-info-outline.disabled.focus, .btn-info-outline.disabled:active, .btn-info-outline.disabled:focus, .btn-info-outline.disabled:hover, .btn-info-outline[disabled], .btn-info-outline[disabled].active, .btn-info-outline[disabled].focus, .btn-info-outline[disabled]:active, .btn-info-outline[disabled]:focus, .btn-info-outline[disabled]:hover, fieldset[disabled] .btn-info-outline, fieldset[disabled] .btn-info-outline.active, fieldset[disabled] .btn-info-outline.focus, fieldset[disabled] .btn-info-outline:active, fieldset[disabled] .btn-info-outline:focus, fieldset[disabled] .btn-info-outline:hover {
+	border-color: $pink;
+}
+
+.btn-info {
+	background-color: $orange;
+    border-color: darken($orange, 5%);
+}
+
+.btn-info.focus, .btn-info:focus {
+	background-color: darken($orange, 10%);
+    border-color: darken($orange, 15%);
+}
+
+.btn-info.active, .btn-info:active, .btn-info:hover, .open>.dropdown-toggle.btn-info {
+	background-color: darken($orange, 10%);
+    border-color: darken($orange, 15%);
+}
+
+.btn-info.active.focus, .btn-info.active:focus, .btn-info.active:hover, .btn-info:active.focus, .btn-info:active:focus, .btn-info:active:hover, .open>.dropdown-toggle.btn-info.focus, .open>.dropdown-toggle.btn-info:focus, .open>.dropdown-toggle.btn-info:hover {
+    background-color: darken($orange, 10%);
+    border-color: darken($orange, 15%);
+}
+
+.btn-link {
+	color: $aqua;
+}
+
+.btn-link:focus, .btn-link:hover {
+	color: darken($aqua, 10%);
+}
+

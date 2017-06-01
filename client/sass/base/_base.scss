@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+a {
+	color: $pink;
+	&:hover {
+		color: $orange;
+	}
+}
+
+.row-centered
+{
+    @include bp(tablet)
+    {
+        text-align: center;
+    }
+}
+.col-centered
+{
+    @include bp(tablet)
+    {
+        display: inline-block;
+        float: none;
+
+        margin-right: -4px;
+
+        text-align: center;
+    }
+    &.forced-smartphone
+    {
+        display: inline-block;
+        float: none;
+
+        margin-right: -4px;
+
+        text-align: center;
+    }
+}

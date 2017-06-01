@@ -1,0 +1,31 @@
+.modal-action:active, .modal-action:focus, .modal-action:hover {
+	&.btn-success {
+		background-color: #159c6e;
+	}
+}
+
+.modal {
+	.modal-body {
+		.form-group input {
+			margin-bottom: 10px;
+			height: inherit;
+		}
+		.autoform-add-item {
+			background-color: $aqua;
+			border-color: $aqua;
+			&:before {
+				content: "Agregar elemento";
+			}
+		}
+		.autoform-remove-item {
+			background-color: $aqua;
+			border-color: $aqua;
+			&:before {
+				content: "Quitar";
+			}
+		}
+		input {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+$pink: #ef3971;
+$aqua: #43c2c1;
+$dark-gray: #555;
+$orange: #fb7221;
+$green: #98ce00;
+$yellow: #fccd14;
+$white: #fff;
+$light-yellow: #f2f2bc;
+$light-green: #9edccf;
+$light-aqua: #b7e7e5;
+$light-pink: #f07d97;
+
+.c-white {
+  color: $white;
+}
+
+.c-aqua {
+  color: $aqua;
+}
+
+.c-dark-gray {
+  color: $dark-gray;
+}
+
+.c-pink {
+  color: $pink;
+}
+
+.c-orange {
+  color: $orange;
+}
+
+.c-yellow {
+  color: $yellow;
+}
+
+.c-green {
+  color: $green;
+}
+
+.float-right {
+  float: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.d-ib {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.o-h {
+  overflow: hidden;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lucida Grande','Lucida Sans','Lucida Sans Unicode',Arial,Helvetica,Verdana,sans-serif;
+  color: $dark-gray;
+}
+
+.logo {
+  height: 100px;
+}
+
+.logo-words {
+  float: right;
+  padding-top: 33px;
+  height: 33px;
+}
+
+.block {
+  display: block;
+}
+
+.footer {
+  text-align: center;
+  color: $pink;
+}

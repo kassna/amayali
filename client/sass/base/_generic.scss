@@ -1,0 +1,104 @@
+/////////////////
+///  Colors
+////////////////
+
+.c-pink,
+.canceled {
+	color: $pink !important;
+}
+
+.c-aqua {
+	color: $aqua !important;
+}
+
+.c-dark-gray {
+	color: $dark-gray !important;
+}
+
+.c-green,
+.completed {
+	color: $green !important;
+}
+
+.c-yellow {
+	color: $yellow !important;
+}
+
+.c-orange {
+	color: $orange !important;
+}
+
+.c-white {
+	color: $white !important;
+}
+
+.c-light-yellow {
+	color: $light-yellow !important;
+}
+
+.c-light-green {
+	color: $light-green !important;
+}
+
+.bg-pink {
+	background-color: $pink !important;
+}
+
+.bg-aqua {
+	background-color: $aqua !important;
+}
+
+.bg-dark-gray {
+	background-color: $dark-gray !important;
+}
+
+.bg-green {
+	background-color: $green !important;
+}
+
+.bg-yellow {
+	background-color: $yellow !important;
+}
+
+.bg-orange {
+	background-color: $orange !important;
+}
+
+.bg-light-yellow {
+	background-color: $light-yellow !important;
+}
+
+.bg-light-green {
+	background-color: $light-green !important;
+}
+
+/////////////////
+///  Helpers
+////////////////
+
+.spacer-small {
+	height: 100px;
+}
+
+.f-right-md {
+	float: right;
+	@include bp(phone) {
+		float: none;
+	}
+}
+
+.nopadding {
+	padding: 0 !important;
+}
+
+.nomargin {
+	margin: 0 !important;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}

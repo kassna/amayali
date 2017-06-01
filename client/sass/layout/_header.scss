@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Admin header
+// -----------------------------------------------------------------------------
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: $pink;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	// background-color: lighten($pink, 35%);
+	background-color: $aqua;
+}
+
+.nav {
+	margin-bottom: 0;
+	a {
+		color: $pink;
+		cursor: pointer;
+		&:hover {
+			// color: lighten($pink, 15%);
+			color: $white;
+		}
+	}
+}
+
+@include bp(tablet) {
+	.sidebar-nav {
+		margin-right: 0;
+	}
+}
+
+.dashhead {
+	@include bp(tablet) {
+		margin-top: 30px;
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Landing header
+// -----------------------------------------------------------------------------
+.navbar.navbar-inverse {
+	background-color: $white;
+	border-color: #eaeaea;
+	transition: all 0.4s;
+	&.small-nav {
+		.navbar-brand {
+			height: 60px;
+		}
+	}
+	.navbar-brand {
+		height: 75px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		@include bp(phone) {
+			height: 60px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		img {
+			max-height: 100%;
+		}
+	}
+	.navbar-toggle {
+		margin-top: 14px;
+		border-color: $aqua;
+		background: $aqua;
+	}
+	.navbar-collapse {
+		margin-top: 12px;
+	}
+	.navbar-nav {
+		@include bp(desk) {
+			float: right;
+		}
+		>li>a {
+			color: $aqua;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 16px;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			&:after {
+				content: "";
+				width: 100%;
+				height: 4px;
+				background: $pink;
+				position: absolute;
+				left: 0;
+				top: 40%;
+				margin-top: 15px;
+				opacity: 0; 
+				filter: alpha(opacity=0); 
+				-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				transition: all 0.3s ease;
+			}
+		}
+		> li.highlight {
+			@include bp(desk) {
+				background-color: $pink;
+				&:hover, &:active, &:focus {
+					background-color: $aqua;
+					> a {
+						color: $white;
+						&:after {
+							opacity: 0;
+							filter: alpha(opacity=0); 
+							-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+						}
+					}
+				}
+				> a {
+					color: $white;
+				}
+			}
+		}
+		>.active>a,
+		>.active>a:hover,
+		>.active>a:focus,
+		>.active>a:active, 
+		>li:hover > a {
+			background-color: transparent;
+			color: $aqua;
+			&:after {
+				opacity: 1; 
+				filter: alpha(opacity=100); 
+				-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+				top: 50%;
+			}
+		}
+	}
+}

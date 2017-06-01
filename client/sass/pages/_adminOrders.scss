@@ -1,0 +1,13 @@
+.order-review {
+	.icon {
+		margin-right: 5px;
+	}
+}
+.order-row {
+	@include bp(phone) {
+		.col-sm-6 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

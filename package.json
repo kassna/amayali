@@ -1,0 +1,15 @@
+{
+  "name": "meteor-base",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "bcrypt": "^1.0.2",
+    "conekta": "^2.1.0",
+    "masonry-layout": "^4.1.1",
+    "meteor-node-stubs": "~0.2.0",
+    "node-sass": "^4.5.2"
+  }
+}

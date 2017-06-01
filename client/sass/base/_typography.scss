@@ -1,0 +1,43 @@
+/**
+ * Basic typography style for copy text
+ */
+// body {
+//   color: $text-color;
+//   font: normal 125% / 1.4 $text-font-stack;
+// }
+
+body
+{
+    font-family: $body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+optgroup,
+select,
+textarea
+{
+    font-family: $title-font;
+}
+
+strong, b {
+	font-weight: 700;
+}
+
+.dashhead-title {
+	color: $pink;
+}
+
+h2 {
+	&.small-phone {
+		@include bp(phone) {
+			font-size: 18px;
+		}
+	}
+}

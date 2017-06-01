@@ -1,0 +1,81 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+session@1.1.7
+u2622:persistent-session
+meteor-base@1.1.0             	# Packages every Meteor app needs to have
+mobile-experience@1.0.4       	# Packages for a great mobile UX
+mongo@1.1.18                  # The database Meteor supports right now
+blaze-html-templates@1.0.4    	# Compile .html files into Meteor Blaze views
+reactive-var@1.0.11            	# Reactive variable for tracker
+jquery@1.11.10                  	# Helpful client-side library
+tracker@1.1.3                 	# Meteor's client-side reactive programming library
+
+standard-minifier-js@2.1.0          # JS minifier run for production mode
+es5-shim@4.6.15               # ECMAScript 5 compatibility for older browsers.
+ecmascript@0.8.0              # Enable ECMAScript2015+ syntax in app code
+shell-server@0.2.3            	# Server-side component of the `meteor shell` command
+
+# ROUTER PACKAGES
+kadira:flow-router				# Router
+kadira:blaze-layout				# Router helper for blaze
+arillo:flow-router-helpers
+okgrow:analytics
+
+# FRONT-END PACKAGES
+#twbs:bootstrap 					# Bootstrap framework
+seba:minifiers-autoprefixer		# SASS minifier
+fourseven:scss					# SASS support
+themeteorchef:bert
+
+# COLLECTIONS PACKAGES
+aldeed:collection2            	# create schemas from collections
+aldeed:autoform               	# generate forms from schemas
+matb33:collection-hooks       	# hooks for before or after touching db
+aldeed:delete-button            # creates delete button
+yogiben:autoform-file           # adds autoform image uploader
+drewy:datetimepicker
+drewy:autoform-datetimepicker
+mpowaga:autoform-summernote     # WYSIWYG autoform editor
+percolate:paginated-subscription # infinite paginated subscription
+
+# ACCOUNTS PACKAGES
+accounts-base@1.3.0                 	# create users
+accounts-password@1.3.6             	# create users with password
+accounts-ui@1.1.9        				# add login buttons
+alanning:roles                	# add roles to users
+
+# TEMPLATE PACKAGES
+aldeed:template-extension     	# boost templates functions
+raix:handlebar-helpers			# access different variables from template
+
+# IMAGES PACKAGES
+cfs:standard-packages         	# adds feature to store images in db
+cfs:gridfs
+
+# EMAIL PACKAGES
+email@1.2.1					  	    # adds sending email function
+meteorhacks:ssr               	# adds html to email sending
+lookback:emails                 # rich functionality to email templates
+
+# GENERAL PACKAGES
+erasaur:meteor-lodash			# Javascript super useful helpers
+meteortoys:allthings          	# inspect collections in development mode with 'ctrl + m'
+
+# OPTIONAL
+useraccounts:unstyled         	# custom login buttons
+zimme:active-route				# check for active route in template
+vazco:universe-selectize		# autocomplete select
+vazco:universe-autoform-select  # autocomplete select for autoform
+kevohagan:sweetalert          	# add pretty alerts
+rzymek:moment-locale-es         # momentjs ES locale
+gwendall:auth-client-callbacks	# add login callbacks on the client
+joshowens:shareit               # add social link buttons
+lukemadera:social-share
+
+
+#autopublish
+dynamic-import

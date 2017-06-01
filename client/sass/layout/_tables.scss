@@ -1,0 +1,37 @@
+table
+{
+    img
+    {
+        max-height: 40px;
+    }
+    a {
+    	cursor: pointer;
+    }
+    .status-icon {
+    	width: 10px;
+	    height: 10px;
+	    border-radius: 50%;
+	    display: inline-block;
+	    &.active {
+	    	background: #5cb85c;
+	    }
+	    &.not-active {
+	    	background: #d9534f;
+	    }
+    }
+}
+
+.headerSortDown, .headerSortUp {
+    color: $aqua !important;
+    border-bottom-color: $aqua !important;
+}
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th
+{
+    vertical-align: middle;
+}
+

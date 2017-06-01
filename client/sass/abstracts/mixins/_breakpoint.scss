@@ -1,0 +1,40 @@
+// ----------------------------------------------------------------------
+
+  // Media Query Breakpoints
+
+// ----------------------------------------------------------------------
+
+// example @include breakpoint(940px) { width:80%; }
+
+@mixin breakpoint($size) {
+  @media only screen and (min-width: $size) { @content; }
+}
+
+
+/*
+ * Mixin for easy media queries
+ * @include bp(tablet) { SCSS here }
+*/
+@mixin bp($point) {
+	@if $point == large-desk {
+		@media (min-width : $small-desktop-over) { @content; }
+	}
+	@if $point == desk {
+		@media (min-width : $tablet-over) { @content; }
+	}
+	@if $point == noDesk {
+		@media (max-width : $tablet) { @content; }
+	}
+	@if $point == tablet {
+		@media (min-width : $smartphone-over) { @content; }
+	}
+	@if $point == phone {
+		@media (max-width : $smartphone) { @content; }
+	}
+	@if $point == phablet {
+		@media (max-width : $smartphone) and (min-width: 375px) { @content; }
+	}
+	@if $point == small {
+		@media (max-width : 374px) { @content; }
+	}
+}
