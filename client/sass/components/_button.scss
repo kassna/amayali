@@ -5,10 +5,10 @@
 
 // Al buttons are without border-radius
 .btn,
-.btn-pill, 
-.btn-xs, 
-.btn-sm, 
-.btn-md, 
+.btn-pill,
+.btn-xs,
+.btn-sm,
+.btn-md,
 .btn-lg {
 	border-radius: 0;
 }
@@ -38,42 +38,41 @@
 }
 
 .btn-info-outline {
-	color: $pink;
+	color: $turquoise;
 }
 
 .btn-info-outline.active, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline:focus, .btn-info-outline:hover, .open>.dropdown-toggle.btn-info-outline {
-	background-color: $pink;
+	background-color: $turquoise;
 }
 
 .btn-info-outline, .btn-info-outline.disabled, .btn-info-outline.disabled.active, .btn-info-outline.disabled.focus, .btn-info-outline.disabled:active, .btn-info-outline.disabled:focus, .btn-info-outline.disabled:hover, .btn-info-outline[disabled], .btn-info-outline[disabled].active, .btn-info-outline[disabled].focus, .btn-info-outline[disabled]:active, .btn-info-outline[disabled]:focus, .btn-info-outline[disabled]:hover, fieldset[disabled] .btn-info-outline, fieldset[disabled] .btn-info-outline.active, fieldset[disabled] .btn-info-outline.focus, fieldset[disabled] .btn-info-outline:active, fieldset[disabled] .btn-info-outline:focus, fieldset[disabled] .btn-info-outline:hover {
-	border-color: $pink;
+	border-color: $turquoise;
 }
 
 .btn-info {
-	background-color: $orange;
-    border-color: darken($orange, 5%);
+	background-color: $cream;
+    border-color: darken($cream, 5%);
 }
 
 .btn-info.focus, .btn-info:focus {
-	background-color: darken($orange, 10%);
-    border-color: darken($orange, 15%);
+	background-color: darken($cream, 10%);
+    border-color: darken($cream, 15%);
 }
 
 .btn-info.active, .btn-info:active, .btn-info:hover, .open>.dropdown-toggle.btn-info {
-	background-color: darken($orange, 10%);
-    border-color: darken($orange, 15%);
+	background-color: darken($cream, 10%);
+    border-color: darken($cream, 15%);
 }
 
 .btn-info.active.focus, .btn-info.active:focus, .btn-info.active:hover, .btn-info:active.focus, .btn-info:active:focus, .btn-info:active:hover, .open>.dropdown-toggle.btn-info.focus, .open>.dropdown-toggle.btn-info:focus, .open>.dropdown-toggle.btn-info:hover {
-    background-color: darken($orange, 10%);
-    border-color: darken($orange, 15%);
+    background-color: darken($cream, 10%);
+    border-color: darken($cream, 15%);
 }
 
 .btn-link {
-	color: $aqua;
+	color: $cream;
 }
 
 .btn-link:focus, .btn-link:hover {
-	color: darken($aqua, 10%);
+	color: darken($cream, 10%);
 }
-

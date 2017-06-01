@@ -11,15 +11,15 @@
 			height: inherit;
 		}
 		.autoform-add-item {
-			background-color: $aqua;
-			border-color: $aqua;
+			background-color: $cream;
+			border-color: $cream;
 			&:before {
 				content: "Agregar elemento";
 			}
 		}
 		.autoform-remove-item {
-			background-color: $aqua;
-			border-color: $aqua;
+			background-color: $cream;
+			border-color: $cream;
 			&:before {
 				content: "Quitar";
 			}

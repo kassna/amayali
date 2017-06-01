@@ -30,10 +30,6 @@ strong, b {
 	font-weight: 700;
 }
 
-.dashhead-title {
-	color: $pink;
-}
-
 h2 {
 	&.small-phone {
 		@include bp(phone) {
