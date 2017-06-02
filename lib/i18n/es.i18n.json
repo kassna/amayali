@@ -1,4 +1,7 @@
 {
+  "general": {
+    "book": "Reservar"
+  },
   "navbar" : {
     "howWorks": "Cómo funciona",
     "prices": "Precios",
@@ -6,5 +9,11 @@
     "faq": "FAQ",
     "aboutUs": "Sobre Nosotros",
     "contact": "Contacto"
+  },
+  "hero": {
+    "title": "¡Relájate en donde quieras!",
+    "lead": "Masajes por terapeutas calificados a tu casa, hotel u oficina",
+    "lead1": "Reserva en menos de 90 segundos",
+    "lead2": "Servicio diario de 8am a 10pm"
   }
 }

@@ -8,11 +8,11 @@
 
 /// Regular font family
 /// @type List
-$body-font: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$title-font: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$title-font: 'Lato', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$body-font: 'Lato', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Colors
 $white: #fff;
@@ -21,6 +21,7 @@ $green: rgb(101, 181, 168);
 $yellow: rgb(229, 175, 0);
 $cream: rgb(248, 200, 126);
 $gray: rgb(212, 198, 185);
+$black: #1a1a1a;
 
 /// Container's maximum width
 /// @type Length

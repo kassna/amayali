@@ -16,20 +16,23 @@ textarea,
 textarea.form-control,
 .uneditable-input
 {
-    color: $turquoise;
+    color: $green;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 700;
 
     float: left;
 
     height: 48px;
     padding: 5px 10px;
+    border: none;
 
-    border: 1px solid $turquoise;
+    background-color: $white;
+
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
-    background: #eef2f5;
+
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;
@@ -41,31 +44,71 @@ textarea.form-control,
         box-shadow: 0 0 15px $cream;
         border: 3px solid $cream;
     }
+
+    &::-webkit-input-placeholder
+    {
+        /* Chrome/Opera/Safari */
+        color: lighten($green, 15%);
+    }
+    &::-moz-placeholder
+    {
+        /* Firefox 19+ */
+        color: lighten($green, 15%);
+    }
+    &:-ms-input-placeholder
+    {
+        /* IE 10+ */
+        color: lighten($green, 15%);
+    }
+    &:-moz-placeholder
+    {
+        /* Firefox 18- */
+        color: lighten($green, 15%);
+    }
 }
 
 textarea {
     height: 150px;
 }
 
-::-webkit-input-placeholder
-{
-    /* Chrome/Opera/Safari */
-    color: lighten($turquoise, 15%);
+.flatpickr-input {
+  cursor: pointer;
 }
-::-moz-placeholder
-{
-    /* Firefox 19+ */
-    color: lighten($turquoise, 15%);
+
+.input-group-addon {
+  background-color: $white;
+  border: none;
+  color: $green;
 }
-:-ms-input-placeholder
-{
-    /* IE 10+ */
-    color: lighten($turquoise, 15%);
-}
-:-moz-placeholder
-{
-    /* Firefox 18- */
-    color: lighten($turquoise, 15%);
+
+.bootstrap-select {
+  .dropdown-toggle {
+    background-color: $white !important;
+    border: none;
+    color: $green !important;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    &:focus {
+      outline: none !important;
+    }
+  }
+  .dropdown-menu {
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    li {
+      a {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        color: $green;
+        padding: 7px 12px;
+        outline: none !important;
+      }
+    }
+  }
 }
 
 .custom-control input:checked ~ .custom-control-indicator

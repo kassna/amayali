@@ -1,8 +1,42 @@
 <template name="Hero">
-  <div class="hero-bg"></div>
-	<div class="hero-cont">
-    <div class="hero-text">
+  <div class="hero-bg">
 
+    <div class="hero-cont">
+      <div class="hero-text">
+        <h1 class="title">{{_ "hero.title"}}</h1>
+        <p class="lead">{{_ "hero.lead"}}</p>
+        <div class="form-cont">
+          <div class="row">
+            <div class="col-sm-5">
+              <select class="selectpicker">
+                <option>Monterrey</option>
+                <option>CDMX</option>
+              </select>
+            </div>
+            <div class="col-sm-5 hidden-xs">
+              <div class="input-with-icon dashhead-toolbar-item">
+      					<div class="form-group select-date">
+                  <div class='input-group date'>
+                    <input type='text' class="form-control" name="date" data-input placeholder="Fecha y hora">
+                    <span class="input-group-addon" data-toggle>
+                      <span class="icon icon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+      			  </div>
+            </div>
+            <br class="visible-xs-block">
+            <div class="col-sm-2">
+              <button class="submit-landing">
+                {{_ "general.book"}}
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="lead m-t">{{_ "hero.lead1"}}</p>
+        <p class="lead">{{_ "hero.lead2"}}</p>
+    	</div>
   	</div>
-	</div>
+  </div>
+
 </template>
