@@ -1,3 +1,46 @@
 // -----------------------------------------------------------------------------
 // GENERAL
 // -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// HERO
+// -----------------------------------------------------------------------------
+
+.hero-bg {
+  background-size: cover;
+  background-image: url(/img/drenaje1.jpg);
+  width: 1440px;
+  width: 100%;
+  height: 660px;
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position-y: 20%;
+}
+
+.hero-cont {
+	height: 600px;
+	position: relative;
+	@include bp(phone) {
+		height: 400px;
+	}
+	.hero-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: calc(100% - 80px);
+		transform: translateY(-50%) translateX(-50%);
+		@include bp(phone) {
+			text-align: center;
+		    top: 50%;
+		    transform: translateX(-50%)translateY(-50%);
+		}
+		@include bp(small) {
+			width: calc(100% - 40px);
+		}
+		.subtitle {
+			margin-top: 10px;
+		}
+	}
+}

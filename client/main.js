@@ -15,6 +15,10 @@ scroll = function(target) {
 	return false;
 }
 
+Meteor.startup(function () {
+  TAPi18n.setLanguage('es');
+});
+
 
 //////////////////////////////////
 ///  HELPERS

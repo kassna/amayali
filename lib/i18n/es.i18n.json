@@ -1,0 +1,10 @@
+{
+  "navbar" : {
+    "howWorks": "Cómo funciona",
+    "prices": "Precios",
+    "terapists": "Terapeutas",
+    "faq": "FAQ",
+    "aboutUs": "Sobre Nosotros",
+    "contact": "Contacto"
+  }
+}
