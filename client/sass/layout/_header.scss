@@ -59,7 +59,11 @@
 			height: 60px;
 		}
 		li a {
+			color: $cream;
 			padding: 20px 10px;
+		}
+		.navbar-toggle {
+			color: $cream;
 		}
 	}
 	li {
@@ -68,7 +72,7 @@
 			color: darken($cream, 15%);
 		}
 		a {
-			color: $cream;
+			color: $white;
 			font-weight: 300;
 			text-transform: uppercase;
 			margin-left: 10px;
@@ -76,6 +80,7 @@
 			padding: 30px 10px;
 			letter-spacing: .15em;
 			font-size: 13px;
+			transition: all 0.4s;
 		}
 	}
 	.navbar-brand {
@@ -94,8 +99,11 @@
 	}
 	.navbar-toggle {
 		margin-top: 14px;
-		border-color: $cream;
-		background: $cream;
+		border-color: rgba(255, 255, 255, 0.4);
+		color: $white;
+		letter-spacing: .15em;
+		font-size: 13px;
+		text-transform: uppercase;
 	}
 	.navbar-nav {
 		@include bp(desk) {
