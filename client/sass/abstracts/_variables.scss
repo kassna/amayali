@@ -46,10 +46,11 @@ $smartphone-over: 768px;
 $phone-over: 581px;
 
 
-
-
-
-
+// ----------------------------------------------------------------------
+// Stage
+// ----------------------------------------------------------------------
+$stage-bg:                    $white;
+$stage-shelf-width:           180px;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

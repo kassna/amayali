@@ -2,8 +2,7 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed"
-									data-toggle="collapse" data-target="#navbar"
-									aria-expanded="false" aria-controls="navbar">
+									data-target=".stage" data-toggle="stage" data-distance="-180">
 		          Menu
 		      </button>
 		      <a class="navbar-brand" href="{{pathFor 'home'}}">
@@ -12,12 +11,7 @@
 		  </div>
 		  <div id="navbar" class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
-		          <li><a href="">{{_ "navbar.howWorks"}}</a></li>
-							<li><a href="">{{_ "navbar.prices"}}</a></li>
-							<li><a href="">{{_ "navbar.terapists"}}</a></li>
-							<li><a href="">{{_ "navbar.faq"}}</a></li>
-							<li><a href="">{{_ "navbar.aboutUs"}}</a></li>
-							<li><a href="">{{_ "navbar.contact"}}</a></li>
+		          {{> HeaderLandingLinks}}
 		      </ul>
 		  </div>
 		  <!--/.nav-collapse -->

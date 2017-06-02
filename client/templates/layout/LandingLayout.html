@@ -1,6 +1,9 @@
 <template name="LandingLayout">
-	{{> HeaderLanding}}
-	<div class="landing-page">
-		{{> Template.dynamic template=main}}
+	{{> HeaderLandingMobile}}
+	<div class="stage">
+		{{> HeaderLanding}}
+		<div class="landing-page">
+			{{> Template.dynamic template=main}}
+		</div>
 	</div>
 </template>
