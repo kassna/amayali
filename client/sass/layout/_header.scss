@@ -114,8 +114,8 @@
 		}
 		&:hover {
 			background-color: transparent;
-			color: lighten($black, 15%);
-			border-color: lighten($black, 15%);
+			color: $white;
+			border-color: $white;
 		}
 	}
 	.navbar-nav {
