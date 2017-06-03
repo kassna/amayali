@@ -1,6 +1,7 @@
 {
   "general": {
-    "book": "Reservar"
+    "book": "Reservar",
+    "bookNow": "Reservar ahora"
   },
   "navbar" : {
     "howWorks": "Cómo funciona",
@@ -15,5 +16,13 @@
     "lead": "Masajes por terapeutas calificados a tu casa, hotel u oficina",
     "lead1": "Reserva en menos de 90 segundos",
     "lead2": "Servicio diario de 8am a 10pm"
+  },
+  "howWorks": {
+    "step1": "Reserva",
+    "step1Lead": "Reserva por internet",
+    "step2": "Recibe",
+    "step2Lead": "Un terapeuta profesional va a donde te encuentres",
+    "step3": "Relájate",
+    "step3Lead": "Relájate y disfruta tu masaje"
   }
 }

@@ -1,22 +1,24 @@
 <template name="HowWorks">
   <div class="block block-bordered-lg how-works">
     <div class="container text-center">
-      <h1 class="block-title c-green">¿Cómo funciona nuestro servicio?</h1>
       <div class="row">
         <div class="col-sm-4">
+          <h2 class="icon-title c-turquoise">{{_ "howWorks.step1"}}</h2>
           <span class="item-icon ion-calendar c-cream"></span>
-          <h3 class="icon-title c-gray">Reserva por internet</h3>
+          <p class="lead">{{_ "howWorks.step1Lead"}}</p>
         </div>
         <div class="col-sm-4">
+          <h2 class="icon-title c-turquoise">{{_ "howWorks.step2"}}</h2>
           <span class="item-icon ion-home c-cream"></span>
-          <h3 class="icon-title c-gray">Un terapeuta profesional va a donde te encuentres</h3>
+          <p class="lead">{{_ "howWorks.step2Lead"}}</p>
         </div>
         <div class="col-sm-4">
+          <h2 class="icon-title c-turquoise">{{_ "howWorks.step3"}}</h2>
           <span class="item-icon ion-happy c-cream"></span>
-          <h3 class="icon-title c-gray">Relájate y disfruta tu masaje</h3>
+          <p class="lead">{{_ "howWorks.step3Lead"}}</p>
         </div>
       </div>
-      <button type="button" class="btn btn-lg btn-success m-t-lg btn-book-now">Reservar ahora</button>
+      <button type="button" class="btn btn-lg btn-success m-t-md btn-book-now">{{_ "general.bookNow"}}</button>
     </div>
   </div>
 </template>

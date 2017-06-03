@@ -108,6 +108,7 @@
         height: 50px;
         font-size: 18px;
         font-weight: 700;
+        padding: 0;
         @include bp(tablet) {
           height: 70px;
           font-size: 24px;
@@ -126,7 +127,12 @@
   }
   .icon-title {
     font-weight: 700;
-    font-family: $body-font;
-    text-transform: uppercase;
+    margin-top: 0;
+    @include bp(phone) {
+      margin: 20px 0 0 0;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }
