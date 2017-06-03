@@ -17,12 +17,23 @@
     "lead1": "Reserva en menos de 90 segundos",
     "lead2": "Servicio diario de 8am a 10pm"
   },
-  "howWorks": {
+  "steps": {
     "step1": "Reserva",
     "step1Lead": "Reserva por internet",
     "step2": "Recibe",
     "step2Lead": "Un terapeuta profesional va a donde te encuentres",
     "step3": "Relájate",
     "step3Lead": "Relájate y disfruta tu masaje"
+  },
+  "features": {
+    "title": "Nuestros beneficios",
+    "feature1": "Fácil",
+    "feature1Lead": "En menos de 90 segundos puedes hacer tu reservación desde nuestra página web.",
+    "feature2": "Profesional",
+    "feature2Lead": "Todos nuestros terapeutas cuentas con acreditación y experiencia para ofrecer el mejor servicio.",
+    "feature3": "Seguro",
+    "feature3Lead": "Contamos con un proceso de admisión de varios pasos para asegurar la integridad de todos nuestros terapeutas.",
+    "feature4": "Flexible",
+    "feature4Lead": "Donde quieras, cuando quieras."
   }
 }

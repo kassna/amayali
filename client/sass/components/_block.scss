@@ -136,6 +136,18 @@
 }
 
 // type
+
+.block-subtitle {
+  font-weight: 700;
+  margin-top: 0;
+  @include bp(phone) {
+    margin: 20px 0 0 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
 .block-label {
   margin-bottom: 20px;
   font-weight: 400;
