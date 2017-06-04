@@ -156,9 +156,12 @@
 }
 .h1.block-title,
 h1.block-title {
-  font-size: $block-title-font-size;
+  font-size: $block-title-font-size - 10;
   line-height: 1;
   margin-top: 0;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-weight: 100;
 }
 .block .lead {
   font-size: $block-lead-font-size;
