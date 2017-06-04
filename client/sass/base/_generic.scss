@@ -78,6 +78,12 @@
 	}
 }
 
+.m-b-0-sm {
+	@include bp(tablet) {
+		margin-bottom: 0 !important;
+	}
+}
+
 .p-b-0-xs {
 	@include bp(phone) {
 		padding-bottom: 0 !important;

@@ -19,6 +19,11 @@
   li {
     position: relative;
     padding-left: 80px;
+    margin-bottom: 40px;
+    @include bp(tablet) {
+      margin-bottom: 60px;
+    }
+
   }
 }
 
