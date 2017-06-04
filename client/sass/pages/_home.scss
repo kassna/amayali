@@ -126,3 +126,39 @@
     font-size: 70px;
   }
 }
+
+// -----------------------------------------------------------------------------
+// PRICING
+// -----------------------------------------------------------------------------
+
+.pricing-table {
+  @include bp(tablet) {
+    .col:not(:first-child) {
+      .pricing-item {
+        position: relative;
+        &:before {
+          content: "";
+          background-color: $gray;
+          width: 1px;
+          height: 80%;
+          position: absolute;
+          left: 0;
+          top: 10%;
+        }
+      }
+    }  
+  }
+}
+
+.pricing-price {
+  font-size: 78px;
+  margin: 0;
+  font-weight: 700;
+  &:after {
+    content: "min";
+    font-size: 24px;
+    font-weight: 100;
+    color: $gray;
+    margin-left: 5px;
+  }
+}

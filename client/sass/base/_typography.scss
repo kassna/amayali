@@ -37,3 +37,17 @@ h2 {
 		}
 	}
 }
+
+.title-style {
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.text-muted {
+  font-family: $body-font;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 13px;
+}

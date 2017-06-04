@@ -66,6 +66,14 @@
 		color: $green;
 		background-color: $white;
 	}
+
+	&.btn-xs {
+		font-size: 14px;
+	}
+
+	&.btn-sm {
+		font-size: 18px;
+	}
 }
 
 /////////////////
@@ -87,6 +95,12 @@
 .p-b-0-xs {
 	@include bp(phone) {
 		padding-bottom: 0 !important;
+	}
+}
+
+.m-b-lg-xs {
+	@include bp(phone) {
+		margin-bottom: 40px !important;
 	}
 }
 
