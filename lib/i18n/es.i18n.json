@@ -52,6 +52,15 @@
       },
       "prices": {
         "title": "Tarifas"
+      },
+      "types": {
+        "title": "Elige tu masaje",
+        "title1": "Relajante",
+        "lead1": "Un masaje suave especial para liberar estrés.",
+        "title2": "Descontracturante",
+        "lead2": "Un masaje con presión intermedia-alta que elimina tensión muscular y dolores crónicos.",
+        "title3": "Deportivo",
+        "lead3": "Mejora flexibilidad y reduce las probabilidades de lesión y el tiempo de recuperación. Puede realizarse pre y post ejercicio."
       }
     }
   }

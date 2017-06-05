@@ -23,7 +23,19 @@
     @include bp(tablet) {
       margin-bottom: 60px;
     }
+  }
 
+  &:not(.no-icon) {
+    li {
+      @include bp(phone) {
+        padding-left: 0;
+        padding-top: 60px;
+        .featured-list-icon {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
   }
 }
 
@@ -36,6 +48,9 @@
   text-align: center;
   line-height: 0;
   width: 60px;
+  img {
+    width: 60px;
+  }
 }
 
 .featured-list-bordered {
