@@ -38,6 +38,21 @@
       "feature3Lead": "Contamos con un proceso de admisión de varios pasos para asegurar la integridad de todos nuestros terapeutas.",
       "feature4": "Flexible",
       "feature4Lead": "Donde quieras, cuando quieras."
+    },
+    "prices": {
+      "title": {
+        "muted": "¿Qué masaje te gustaría?",
+        "line1": "Relajarse nunca había sido tan",
+        "line1bold": "fácil",
+        "line2A": "Tú decides el",
+        "line2boldA": "tipo de masaje",
+        "line2B": "que quieres y la",
+        "line2boldB": "duración",
+        "line2C": "del mismo"
+      },
+      "prices": {
+        "title": "Tarifas"
+      }
     }
   }
 }
