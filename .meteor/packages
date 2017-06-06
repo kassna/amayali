@@ -41,6 +41,7 @@ drewy:datetimepicker
 drewy:autoform-datetimepicker
 mpowaga:autoform-summernote     # WYSIWYG autoform editor
 percolate:paginated-subscription # infinite paginated subscription
+gwendall:simple-schema-i18n
 
 # ACCOUNTS PACKAGES
 # accounts-base@1.3.0                 	# create users
@@ -80,6 +81,6 @@ joshowens:shareit               # add social link buttons
 lukemadera:social-share
 
 
-#autopublish
+autopublish
 dynamic-import
 tap:i18n

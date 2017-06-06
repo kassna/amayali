@@ -64,5 +64,36 @@
         "lead3": "Mejora flexibilidad y reduce las probabilidades de lesión y el tiempo de recuperación. Puede realizarse pre y post ejercicio."
       }
     }
+  },
+  "schemas": {
+    "clients": {
+      "phone": "Télefono",
+      "address": {
+        "street1": "Calle y Número",
+        "street2": "Colonia",
+        "zip": "Código Postal",
+        "locationId": "Ciudad"
+      }
+    },
+    "terapists": {
+      "name": "Nombre completo",
+      "sex": "Sexo"
+    },
+    "locations": {
+      "name": "Nombre de la ciudad"
+    },
+    "promoCodes": {
+      "code": "Código de promoción",
+      "type": "Tipo de descuento del código",
+      "typeSelect": {
+        "firstOption": "<Selecciona el tipo>",
+        "options": {
+          "percentage": "Porcentaje de descuento",
+          "amount": "Restar cantidad al total"
+        }
+      },
+      "amount": "Si es porcentaje, escribir de 0 a 100 sin el signo %. Si es para restar, escribir la cantidad de descuento",
+      "locationsId": "Ciudades disponibles"
+    }
   }
 }
