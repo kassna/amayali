@@ -15,14 +15,35 @@ scroll = function(target) {
 	return false;
 }
 
+let accountsTranslationsES = {
+	firstname: "Nombres",
+	lastname: "Apellidos",
+	"Required Field": "Campo Requerido",
+	"Minimum required length: 3": "Mínimo 3 caractéres",
+	"Minimum required length: 6": "Mínimo 6 caractéres",
+	"Invalid email": "Email inválido"
+}
+
+// For translation, all language objects should contain the same keys
+let accountsTranslationsEN = {
+	firstname: "First name",
+	lastname: "Last name"
+}
+
 Meteor.startup(function () {
   TAPi18n.setLanguage('es');
+	T9n.setLanguage('es');
+	T9n.map('es', accountsTranslationsES);
+	T9n.map('en', accountsTranslationsEN);
 });
-
 
 //////////////////////////////////
 ///  HELPERS
 //////////////////////////////////
+
+Template.registerHelper('log', (toLog) => {
+	console.log(toLog);
+});
 
 Template.registerHelper('imagePath', (id) => {
 	return "/cfs/files/images/" + id;

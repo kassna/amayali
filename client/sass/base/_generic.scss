@@ -57,7 +57,8 @@
 	background-color: $white !important;
 }
 
-.btn-success.btn-book-now {
+.btn-success.btn-book-now,
+.btn-success.btn-login {
 	font-size: 24px;
 	color: $white;
 	background-color: $green;

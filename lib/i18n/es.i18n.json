@@ -3,7 +3,8 @@
   "general": {
     "book": "Reservar",
     "bookNow": "Reservar ahora",
-    "menu": "Menú"
+    "menu": "Menú",
+    "backHome": "Volver al inicio"
   },
   "landing": {
     "navbar" : {

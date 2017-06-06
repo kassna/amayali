@@ -10,6 +10,10 @@ Mailer.config({
     }
 });
 
+Accounts.emailTemplates.resetPassword.from = () => {
+  return 'Amayali <alex@2112studio.com>';
+};
+
 Meteor.startup(() => {
 	// script to verify time of orders
 
