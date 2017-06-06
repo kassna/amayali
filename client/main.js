@@ -2,7 +2,7 @@ _ = lodash;
 
 var hooksObject = {
 	onSuccess: function(formType, result) {
-		$("#new-modal").modal('hide');
+		$('#new-modal').modal('hide');
 		Bert.alert( 'Éxito! Se ha agregado a la base de datos', 'success', 'growl-top-right' );
 	},
 }
@@ -16,18 +16,23 @@ scroll = function(target) {
 }
 
 let accountsTranslationsES = {
-	firstname: "Nombres",
-	lastname: "Apellidos",
-	"Required Field": "Campo Requerido",
-	"Minimum required length: 3": "Mínimo 3 caractéres",
-	"Minimum required length: 6": "Mínimo 6 caractéres",
-	"Invalid email": "Email inválido"
+	firstname: 'Nombres',
+	lastname: 'Apellidos',
+	'Required Field': 'Campo Requerido',
+	'Minimum required length: 3': 'Mínimo 3 caractéres',
+	'Minimum required length: 6': 'Mínimo 6 caractéres',
+	'Invalid email': 'Email inválido',
+	error: {
+		accounts: {
+			'Acceso denegado': 'Acceso denegado. Intenta de nuevo'
+		}
+	}
 }
 
 // For translation, all language objects should contain the same keys
 let accountsTranslationsEN = {
-	firstname: "First name",
-	lastname: "Last name"
+	firstname: 'First name',
+	lastname: 'Last name'
 }
 
 Meteor.startup(function () {
@@ -46,7 +51,7 @@ Template.registerHelper('log', (toLog) => {
 });
 
 Template.registerHelper('imagePath', (id) => {
-	return "/cfs/files/images/" + id;
+	return '/cfs/files/images/' + id;
 });
 
 Template.registerHelper('roundedPrice', (price) => {
@@ -54,11 +59,11 @@ Template.registerHelper('roundedPrice', (price) => {
 });
 
 Template.registerHelper('humanDate', (date) => {
-	return moment(date).format("LL");
+	return moment(date).format('LL');
 });
 
 Template.registerHelper('humanDateUnix', (date) => {
-	return moment(date, "MM/DD/YYYY h:mm a").format("LLLL");
+	return moment(date, 'MM/DD/YYYY h:mm a').format('LLLL');
 });
 
 Template.registerHelper('fromNow', (date) => {
@@ -67,10 +72,10 @@ Template.registerHelper('fromNow', (date) => {
 
 Template.registerHelper('prettyStatus', (string) => {
 	let status = {
-		pending_payment: "Pendiente de pago",
-		confirmed: "Confirmada",
-		canceled: "Cancelada",
-		completed: "Completada"
+		pending_payment: 'Pendiente de pago',
+		confirmed: 'Confirmada',
+		canceled: 'Cancelada',
+		completed: 'Completada'
 	};
 	return status[string];
 });
