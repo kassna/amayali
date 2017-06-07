@@ -1,0 +1,21 @@
+<template name="NewModal">
+	<div class="modal" id="new-modal">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	                <h4 class="modal-title">{{_ "admin.general.add"}}</h4>
+	            </div>
+	            <div class="modal-body">
+	                {{> quickForm collection=collection id="insertForm" type="insert" buttonClasses="submit-button hidden" buttonContent="Crear"}}
+	            </div>
+	            <div class="modal-actions">
+	                <button type="button" class="btn-link modal-action" data-dismiss="modal">{{_ "admin.general.cancel"}}</button>
+	                <button type="button" class="btn-success modal-action" id="target-submit">
+	                    <strong>{{_ "admin.general.create"}}</strong>
+	                </button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</template>

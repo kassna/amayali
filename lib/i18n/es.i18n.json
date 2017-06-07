@@ -1,4 +1,3 @@
-// TODO: Add landing key
 {
   "general": {
     "book": "Reservar",
@@ -201,6 +200,37 @@
         "zip": "Código Postal",
         "locationId": "Ciudad"
       }
+    }
+  },
+  "admin": {
+    "general": {
+      "edit": "Editar",
+      "cancel": "Cancelar",
+      "forbidden": "Acceso denegado",
+      "loading": "Cargando",
+      "add": "Agregar",
+      "create": "Crear",
+      "noResults": "No hay elementos",
+      "activate": "Activar",
+      "deactivate": "Desactivar",
+      "name": "Nombre",
+      "confirm": "¿Estás seguro?",
+      "cantUndone": "No se pude deshacer esta acción",
+      "confirmDelete": "Sí, ¡Borrar!",
+      "successDelete": "Éxito! Se ha eliminado ese elemento",
+      "successInsert": "Éxito! Se ha agregado a la base de datos"
+    },
+    "header": {
+      "selectCity": "Selecciona tu ciudad",
+      "general": "General",
+      "settings": "Ajustes",
+      "logOut": "Cerrar sesión"
+    },
+    "locations": {
+      "title": "Ciudades"
+    },
+    "promoCodes": {
+      "title": "Códigos de Promoción"
     }
   }
 }

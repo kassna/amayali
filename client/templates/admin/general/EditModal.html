@@ -1,0 +1,23 @@
+<template name="EditModal">
+  {{#if $.Session.get 'editMode'}}
+      <div class="modal" id="edit-modal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">{{_ "admin.general.edit"}}</h4>
+                  </div>
+                  <div class="modal-body">
+                      {{> quickForm collection="Locations" id=editId type="update" doc=editItem buttonClasses="submit-button hidden"}}
+                  </div>
+                  <div class="modal-actions">
+                      <button type="button" class="btn-link modal-action" data-dismiss="modal">{{_ "admin.general.cancel"}}</button>
+                      <button type="button" class="btn-success modal-action" id="target-edit">
+                          <strong>{{_ "admin.general.edit"}}</strong>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  {{/if}}
+</template>

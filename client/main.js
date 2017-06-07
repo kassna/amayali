@@ -3,7 +3,7 @@ _ = lodash;
 var hooksObject = {
 	onSuccess: function(formType, result) {
 		$('#new-modal').modal('hide');
-		Bert.alert( 'Éxito! Se ha agregado a la base de datos', 'success', 'growl-top-right' );
+		Bert.alert( TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right' );
 	},
 }
 AutoForm.addHooks('insertForm', hooksObject);
@@ -31,8 +31,7 @@ let accountsTranslationsES = {
 
 // For translation, all language objects should contain the same keys
 let accountsTranslationsEN = {
-	firstname: 'First name',
-	lastname: 'Last name'
+
 }
 
 Meteor.startup(function () {
@@ -45,6 +44,14 @@ Meteor.startup(function () {
 //////////////////////////////////
 ///  HELPERS
 //////////////////////////////////
+
+////// ADMIN
+
+Template.registerHelper('editId', () => {
+	return Session.get('editId');
+});
+
+//////
 
 Template.registerHelper('log', (toLog) => {
 	console.log(toLog);
@@ -83,3 +90,15 @@ Template.registerHelper('prettyStatus', (string) => {
 //////////////////////////////////
 ///  ALL ELEMENTS
 /////////////////////////////////
+
+Template.registerHelper('locations', () => {
+	return Locations.find();
+});
+
+//////////////////////////////////
+///  SINGLE ELEMENTS
+/////////////////////////////////
+
+Template.registerHelper('location', () => {
+	return Locations.findOne();
+});

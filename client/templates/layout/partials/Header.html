@@ -11,8 +11,8 @@
         </div>
         <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
             {{#if isInRole 'admin'}}
-                <!-- <select class="custom-select m-b" id="city-selection">
-                    <option value="">&lt;Selecciona tu ciudad&gt;</option>
+                <select class="custom-select m-b" id="city-selection">
+                    <option value="">&lt;{{_ "admin.general.selectCity"}}&gt;</option>
                     {{#each locations}}
                         {{#if isCurrentCity _id}}
                             <option value="{{_id}}" selected>{{name}}</option>
@@ -20,13 +20,20 @@
                             <option value="{{_id}}">{{name}}</option>
                         {{/if}}
                     {{/each}}
-                </select> -->
+                </select>
             {{/if}}
             <ul class="nav nav-pills nav-stacked">
                 {{#if isInRole 'admin'}}
-										<li class="nav-header">Ajustes</li>
+										<li class="nav-header">{{_ "admin.header.general"}}</li>
+										<li class="{{isActiveRoute 'promoCodes'}}">
+												<a class="scroll-top" href="{{pathFor 'promoCodes'}}">{{_ "admin.promoCodes.title"}}</a>
+										</li>
+										<li class="{{isActiveRoute 'locations'}}">
+												<a class="scroll-top" href="{{pathFor 'locations'}}">{{_ "admin.locations.title"}}</a>
+										</li>
+										<li class="nav-header">{{_ "admin.header.settings"}}</li>
                     <li>
-                        <a id="logout" class="scroll-top">Cerrar sesión</a>
+                        <a id="logout" class="scroll-top">{{_ "admin.header.logOut"}}</a>
                     </li>
                 {{/if}}
             </ul>
