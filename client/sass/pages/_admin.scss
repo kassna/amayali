@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// Admin header
+// -----------------------------------------------------------------------------
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+	background-color: $green;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: lighten($green, 15%);
+	// background-color: $cream;
+}
+
+.nav {
+	margin-bottom: 0;
+	a {
+		color: $green;
+		cursor: pointer;
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
+}
+
+.sidebar-nav {
+	select {
+		width: 100%;
+	}
+	a {
+		i {
+			font-size: 45px;
+			display: block;
+		}
+	}
+}
+
+@include bp(tablet) {
+	.sidebar-nav {
+		margin-right: 0;
+	}
+}
+
+.dashhead {
+	@include bp(tablet) {
+		margin-top: 20px;
+	}
+}
+
+//////////////////////
+// Admin structure = Header + body
+//////////////////////
+.profile {
+	@include bp(tablet) {
+		.sidebar {
+			width: 160px;
+		}
+		.content {
+			width: calc(100% - 160px);
+		}
+	}
+}
+
+.dashhead-toolbar {
+  @include bp(tablet) {
+    margin-top: 0;
+    float: none;
+    button {
+      margin-bottom: 0;
+    }
+  }
+}

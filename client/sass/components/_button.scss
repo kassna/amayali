@@ -5,12 +5,17 @@
 
 // Al buttons are without border-radius
 .btn,
-.btn-pill,
 .btn-xs,
 .btn-sm,
 .btn-md,
 .btn-lg {
-	border-radius: 0;
+	&:not(.btn-pill):not(.btn-round) {
+		border-radius: 0;
+	}
+}
+
+.btn-round {
+	border-radius: 50%;
 }
 
 .btn-success-outline {

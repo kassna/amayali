@@ -16,4 +16,13 @@ Template.MainLayout.onCreated(function() {
 			Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
 		});
 	});
+
+	$('body').on('click', '#logout', () => {
+		AccountsTemplates.logout();
+	})
+
+	$('body').on('click', '.scroll-top', () => {
+		$('html,body').animate({ scrollTop: 0}, 0, 'easeInOutQuart');
+		$(".nav-toggler").trigger('click');
+	});
 });

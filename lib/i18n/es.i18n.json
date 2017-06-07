@@ -221,7 +221,7 @@
       "successInsert": "Éxito! Se ha agregado a la base de datos"
     },
     "header": {
-      "selectCity": "Selecciona tu ciudad",
+      "selectCity": "Selecciona",
       "general": "General",
       "settings": "Ajustes",
       "logOut": "Cerrar sesión"
