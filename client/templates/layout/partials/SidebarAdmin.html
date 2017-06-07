@@ -1,11 +1,6 @@
 <template name="SidebarAdmin">
 	<nav class="sidebar-nav">
-        <div class="sidebar-header">
-            <button class="nav-toggler nav-toggler-sm sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-sm">
-                <span class="sr-only">Toggle nav</span>
-            </button>
-        </div>
-        <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+        <div class="collapse in nav-toggleable-sm m-t" id="nav-toggleable-sm">
             {{#if isInRole 'admin'}}
                 <select class="custom-select m-b" id="city-selection">
                     <option value="">&lt;{{_ "admin.header.selectCity"}}&gt;</option>
@@ -31,6 +26,13 @@
 												<a class="scroll-top text-center" href="{{pathFor 'locations'}}">
 													<i class="fa fa-map-marker" aria-hidden="true"></i>
 													{{_ "admin.locations.title"}}
+												</a>
+										</li>
+										<li class="nav-header text-center">{{_ "admin.header.settings"}}</li>
+										<li class="{{isActiveRoute 'promoCodes'}}">
+												<a class="scroll-top text-center" id="logout">
+													<i class="fa fa-power-off" aria-hidden="true"></i>
+													{{_ "admin.header.logOut"}}
 												</a>
 										</li>
                 {{/if}}

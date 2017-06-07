@@ -63,7 +63,16 @@
 	}
 }
 
+.dashhead-title {
+	@include bp(phone) {
+		margin-top: 15px;
+	}
+}
+
 .dashhead-toolbar {
+	button {
+		margin-bottom: 15px;
+	}
   @include bp(tablet) {
     margin-top: 0;
     float: none;
@@ -71,4 +80,10 @@
       margin-bottom: 0;
     }
   }
+}
+
+.table-responsive {
+	@include bp(phone) {
+		border: none;
+	}
 }

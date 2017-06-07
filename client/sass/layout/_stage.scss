@@ -20,6 +20,7 @@
   width: $stage-shelf-width;
   padding-top: 30px;
   background-color: darken($stage-bg, 5%);
+  overflow: auto;
 }
 .stage-shelf-right {
   left: auto;
