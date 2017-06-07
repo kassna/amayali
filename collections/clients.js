@@ -2,11 +2,6 @@ class ClientsCollection extends Mongo.Collection {
   insert(doc, callback) {
     const ourDoc = doc;
     ourDoc.createdAt = new Date();
-    ourDoc.promoCodeId = PromoCodes.insert({
-      type: 'percentage',
-      amount: 10,
-      locationsId: [doc.location],
-    });
     return super.insert(ourDoc, callback);
   }
 
@@ -118,6 +113,14 @@ ClientsSchema = new SimpleSchema({
       },
     },
   },
+});
+
+Clients.after.insert((userId, doc) => {
+  doc.promoCodeId = PromoCodes.insert({
+    type: 'percentage',
+    amount: 10,
+    locationsId: [doc.location],
+  });
 });
 
 // Add translations to labels
