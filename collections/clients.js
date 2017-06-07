@@ -31,9 +31,9 @@ AddressSchema = new SimpleSchema({
     type: String,
     regEx: SimpleSchema.RegEx.Id,
     autoform: {
-      type: 'select',
+      type: 'select-radio-inline',
       options() {
-        return Locations.find().map(category => ({ label: category.name, value: category._id }));
+        return Locations.find().map(location => ({ label: location.name, value: location._id }));
       },
     },
   },

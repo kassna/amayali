@@ -48,10 +48,7 @@ PromoCodesSchema = new SimpleSchema({
   type: {
     type: String,
     autoform: {
-      type: 'select',
-      firstOption: function () {
-        return TAPi18n.__(`schemas.promoCodes.typeSelect.firstOption`, null);
-      },
+      type: 'select-radio-inline',
       options () {
         return [
           {value: "amount", label: TAPi18n.__(`schemas.promoCodes.typeSelect.options.amount`, null)},
@@ -69,7 +66,7 @@ PromoCodesSchema = new SimpleSchema({
     autoform: {
       type: 'select-checkbox',
       options() {
-        return Locations.find().map(category => ({ label: category.name, value: category._id }));
+        return Locations.find().map(location => ({ label: location.name, value: location._id }));
       },
     },
   },
