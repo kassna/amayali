@@ -77,6 +77,8 @@
         input {
           height: 50px;
           font-size: 18px;
+          background: $white;
+          border: none;
           @include bp(tablet) {
             height: 70px;
             font-size: 24px;
@@ -146,7 +148,7 @@
           top: 10%;
         }
       }
-    }  
+    }
   }
 }
 
