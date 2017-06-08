@@ -41,7 +41,10 @@ h2 {
 .title-style {
   letter-spacing: .15em;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 300;
+  @include bp(tablet) {
+    font-weight: 100;
+  }
 }
 
 .text-muted {
