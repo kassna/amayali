@@ -218,7 +218,9 @@
       "cantUndone": "No se pude deshacer esta acción",
       "confirmDelete": "Sí, ¡Borrar!",
       "successDelete": "Éxito! Se ha eliminado ese elemento",
-      "successInsert": "Éxito! Se ha agregado a la base de datos"
+      "successInsert": "Éxito! Se ha agregado a la base de datos",
+      "active": "Activar",
+      "createdAt": "Creado"
     },
     "header": {
       "selectCity": "Selecciona",
@@ -230,7 +232,15 @@
       "title": "Ciudades"
     },
     "promoCodes": {
-      "title": "Códigos de Promoción"
+      "title": "Códigos de Promoción",
+      "code": "Código",
+      "type": "Tipo",
+      "typeOptions": {
+        "amount": "Restar cantidad",
+        "percentage": "Porcentaje"
+      },
+      "amount": "Descuento",
+      "locationsId": "Ciudades"
     }
   }
 }

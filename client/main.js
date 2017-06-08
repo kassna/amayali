@@ -47,37 +47,21 @@ Meteor.startup(function () {
 
 ////// ADMIN
 
-Template.registerHelper('editId', () => {
-	return Session.get('editId');
-});
+Template.registerHelper('editId', () => Session.get('editId'));
 
 //////
 
-Template.registerHelper('log', (toLog) => {
-	console.log(toLog);
-});
+Template.registerHelper('log', toLog => { console.log(toLog); });
 
-Template.registerHelper('imagePath', (id) => {
-	return '/cfs/files/images/' + id;
-});
+Template.registerHelper('imagePath', id => '/cfs/files/images/' + id);
 
-Template.registerHelper('roundedPrice', (price) => {
-	return (price % 1 === 0) ? price : price.toFixed(2);
-});
+Template.registerHelper('roundedPrice', price => (price % 1 === 0) ? price : price.toFixed(2));
 
-Template.registerHelper('humanDate', (date) => {
-	return moment(date).format('LL');
-});
+Template.registerHelper('humanDate', date => moment(date).format('LL'));
 
-Template.registerHelper('humanDateUnix', (date) => {
-	return moment(date, 'MM/DD/YYYY h:mm a').format('LLLL');
-});
+Template.registerHelper('fromNow', date => moment(date).fromNow());
 
-Template.registerHelper('fromNow', (date) => {
-	return moment(date).fromNow();
-});
-
-Template.registerHelper('prettyStatus', (string) => {
+Template.registerHelper('prettyStatus', string => {
 	let status = {
 		pending_payment: 'Pendiente de pago',
 		confirmed: 'Confirmada',
@@ -87,18 +71,28 @@ Template.registerHelper('prettyStatus', (string) => {
 	return status[string];
 });
 
+Template.registerHelper('prettyDiscount', (type, amount) => {
+	if(type === 'amount') return `${amount}`;
+	else if(type === 'percentage') return `${amount}%`;
+	return '';
+});
+
+Template.registerHelper('locationsName', locationsId =>
+	_.map(locationsId, (id) => Locations.findOne(id).name)
+);
+
 //////////////////////////////////
 ///  ALL ELEMENTS
 /////////////////////////////////
 
-Template.registerHelper('locations', () => {
-	return Locations.find();
-});
+Template.registerHelper('locations', () => Locations.find());
+
+Template.registerHelper('promoCodes', () => PromoCodes.find());
 
 //////////////////////////////////
 ///  SINGLE ELEMENTS
 /////////////////////////////////
 
-Template.registerHelper('location', () => {
-	return Locations.findOne();
-});
+Template.registerHelper('location', () => Locations.findOne());
+
+Template.registerHelper('promoCode', () => PromoCodes.findOne());

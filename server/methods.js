@@ -10,6 +10,17 @@ Meteor.methods({
 		}
 	},
 
+	// PromoCodes
+	toggleStatusPromoCode: function(id) {
+		let status = PromoCodes.findOne(id).status;
+		if (status) {
+			PromoCodes.update({_id: id}, {$set: {status: false}});
+		}
+		else {
+			PromoCodes.update({_id: id}, {$set: {status: true}});
+		}
+	},
+
 	sendContactUs: function (name, email, question) {
 	    Mailer.send({
 	        to: process.env.ADMIN_EMAIL,

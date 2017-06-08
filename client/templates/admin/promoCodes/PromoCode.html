@@ -1,0 +1,30 @@
+ <template name="PromoCode">
+	<tr>
+      <td>{{code}}</td>
+      <td>{{prettyType type}}</td>
+      <td><b>{{prettyDiscount type amount}}</b></td>
+      <td>{{locationsName locationsId}}</td>
+      <td>{{humanDate createdAt}}</td>
+      <td><i class="status-icon {{#if status}}active{{else}}not-active{{/if}}"></i></td>
+      <td>
+          {{#if status }}
+              <button class="toggle-status btn btn-sm btn-pill btn-danger-outline">{{_ "admin.general.deactivate"}}</button>
+          {{else}}
+              <button class="toggle-status btn btn-sm btn-pill btn-success-outline">{{_ "admin.general.activate"}}</button>
+          {{/if}}
+      </td>
+      <td>
+      	<button type="" class="btn btn-round btn-info-outline edit-button">
+      		<i class="fa fa-pencil" aria-hidden="true"></i>
+      	</button>
+      </td>
+      <td>
+      	{{#quickRemoveButton collection="PromoCodes" _id=this._id class="hidden delete-btn"}}
+				Delete
+      	{{/quickRemoveButton}}
+          <button class="btn btn-round btn-danger-outline confirm-remove">
+						<i class="fa fa-trash" aria-hidden="true"></i>
+					</button>
+      </td>
+  </tr>
+</template>

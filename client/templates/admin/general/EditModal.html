@@ -8,7 +8,7 @@
                       <h4 class="modal-title block-subtitle c-turquoise">{{_ "admin.general.edit"}}</h4>
                   </div>
                   <div class="modal-body">
-                      {{> quickForm collection="Locations" id=editId type="update" doc=editItem buttonClasses="submit-button hidden"}}
+                      {{> quickForm collection=collection id=editId type="update" doc=editItem buttonClasses="submit-button hidden"}}
                   </div>
                   <div class="modal-actions">
                       <button type="button" class="btn-link modal-action" data-dismiss="modal">{{_ "admin.general.cancel"}}</button>
