@@ -3,13 +3,14 @@
     "book": "Reservar",
     "bookNow": "Reservar ahora",
     "menu": "Menú",
-    "backHome": "Volver al inicio"
+    "backHome": "Volver al inicio",
+    "send": "Envíar"
   },
   "landing": {
     "navbar" : {
       "howWorks": "Cómo funciona",
       "prices": "Precios",
-      "terapists": "Terapeutas",
+      "therapists": "Terapeutas",
       "faq": "FAQ",
       "aboutUs": "Sobre Nosotros",
       "contact": "Contacto"
@@ -78,7 +79,7 @@
         "locationId": "Ciudad"
       }
     },
-    "terapists": {
+    "therapists": {
       "name": "Nombre completo",
       "sex": "Sexo",
       "sexSelect": {
@@ -152,7 +153,7 @@
         "options": {
           "fb": "Facebook / Instagram",
           "web": "Página Web",
-          "terapist": "Referido de otro terapeuta",
+          "therapist": "Referido de otro terapeuta",
           "staff": "Personal de Amayali",
           "other": "Otro"
         }

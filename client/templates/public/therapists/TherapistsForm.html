@@ -1,0 +1,12 @@
+<template name="TherapistsForm">
+  <div class="therapist-section">
+    <div class="container">
+      <h1 class="block-title text-center c-yellow">¿Te gustaría ser parte de nuestro equipo?</h1>
+      <h3 class="text-center">Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a <a href="">contacto@amayali.com</a></h3>
+      <hr class="m-b-md m-t-md">
+      <div class="therapist-form m-b-lg">
+        {{> quickForm collection="Therapists" id="insertForm" type="insert" buttonClasses="btn btn-success btn-full submit-button" buttonContent=sendText}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,4 +1,4 @@
-class TerapistsCollection extends Mongo.Collection {
+class TherapistsCollection extends Mongo.Collection {
   insert(doc, callback) {
     const ourDoc = doc;
     ourDoc.createdAt = new Date();
@@ -7,9 +7,9 @@ class TerapistsCollection extends Mongo.Collection {
   // TODO: Can't remove if has orders
 }
 
-Terapists = new TerapistsCollection('terapists');
+Therapists = new TherapistsCollection('therapists');
 
-Terapists.allow({
+Therapists.allow({
   insert: function(userId, doc) {
     // everybody can register
     return true;
@@ -24,7 +24,7 @@ Terapists.allow({
   }
 });
 
-TerapistsSchema = new SimpleSchema({
+TherapistsSchema = new SimpleSchema({
   name: {
     type: String
   },
@@ -35,8 +35,8 @@ TerapistsSchema = new SimpleSchema({
       options () {
         return _.map(['male', 'female'], (option) => {
           return {
-            value: TAPi18n.__(`schemas.terapists.sexSelect.options.${option}`, null),
-            label: TAPi18n.__(`schemas.terapists.sexSelect.options.${option}`, null),
+            value: TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null),
+            label: TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null),
           }
         });
       }
@@ -82,8 +82,8 @@ TerapistsSchema = new SimpleSchema({
       options () {
         return _.map(['morning', 'evening', 'night', 'all'], (option) => {
           return {
-            value: TAPi18n.__(`schemas.terapists.schedulePreferenceSelect.options.${option}`, null),
-            label: TAPi18n.__(`schemas.terapists.schedulePreferenceSelect.options.${option}`, null),
+            value: TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null),
+            label: TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null),
           }
         });
       }
@@ -106,8 +106,8 @@ TerapistsSchema = new SimpleSchema({
       options () {
         return _.map(['hospital', 'rehab', 'hotel', 'gym', 'spa', 'private', 'onDemand', 'school', 'other'], (option) => {
           return {
-            value: TAPi18n.__(`schemas.terapists.experienceSelect.options.${option}`, null),
-            label: TAPi18n.__(`schemas.terapists.experienceSelect.options.${option}`, null),
+            value: TAPi18n.__(`schemas.therapists.experienceSelect.options.${option}`, null),
+            label: TAPi18n.__(`schemas.therapists.experienceSelect.options.${option}`, null),
           }
         });
       }
@@ -123,8 +123,8 @@ TerapistsSchema = new SimpleSchema({
       options () {
         return _.map(['a' ,'b' ,'c' ,'d' ,'e' ,'f' ,'g' ,'h' ,'i' ,'j' ,'k' ,'l' ,'m' ,'n' ,'o' ,'p'], (option) => {
           return {
-            value: TAPi18n.__(`schemas.terapists.experienceTypesSelect.options.${option}`, null),
-            label: TAPi18n.__(`schemas.terapists.experienceTypesSelect.options.${option}`, null),
+            value: TAPi18n.__(`schemas.therapists.experienceTypesSelect.options.${option}`, null),
+            label: TAPi18n.__(`schemas.therapists.experienceTypesSelect.options.${option}`, null),
           }
         });
       }
@@ -190,10 +190,10 @@ TerapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-checkbox-inline',
       options () {
-        return _.map(['fb', 'web', 'terapist', 'staff', 'other'], (option) => {
+        return _.map(['fb', 'web', 'therapist', 'staff', 'other'], (option) => {
           return {
-            value: TAPi18n.__(`schemas.terapists.referenceSelect.options.${option}`, null),
-            label: TAPi18n.__(`schemas.terapists.referenceSelect.options.${option}`, null),
+            value: TAPi18n.__(`schemas.therapists.referenceSelect.options.${option}`, null),
+            label: TAPi18n.__(`schemas.therapists.referenceSelect.options.${option}`, null),
           }
         });
       }
@@ -226,10 +226,10 @@ TerapistsSchema = new SimpleSchema({
 });
 
 // Add translations to labels
-for(const prop in TerapistsSchema._schema) {
-  TerapistsSchema._schema[prop].label = function () {
-    return TAPi18n.__(`schemas.terapists.${prop}`, null);
+for(const prop in TherapistsSchema._schema) {
+  TherapistsSchema._schema[prop].label = function () {
+    return TAPi18n.__(`schemas.therapists.${prop}`, null);
   }
 }
 
-Terapists.attachSchema(TerapistsSchema);
+Therapists.attachSchema(TherapistsSchema);

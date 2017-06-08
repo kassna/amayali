@@ -1,6 +1,8 @@
 Template.SidebarAdmin.onCreated(function() {
 	let self = this;
-	self.subscribe('locations');
+	self.autorun(function() {
+		self.subscribe('locations');
+	});
 });
 
 Template.SidebarAdmin.helpers({

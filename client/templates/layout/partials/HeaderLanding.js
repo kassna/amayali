@@ -1,10 +1,10 @@
 Template.HeaderLanding.onRendered(() => {
   let scrollNavbar = () => {
     if ($(window).scrollTop() > 60){
-      $('.navbar').addClass('small-nav');
+      $('.navbar.toChange').addClass('small-nav');
     }
     else {
-      $('.navbar').removeClass('small-nav');
+      $('.navbar.toChange').removeClass('small-nav');
     }
   }
   scrollNavbar();
