@@ -1,7 +1,7 @@
 <template name="HeaderLandingLinks">
-  <li><a href="#comoFunciona" class="scroll-to">{{_ "landing.navbar.howWorks"}}</a></li>
-  <li><a href="#precios" class="scroll-to">{{_ "landing.navbar.prices"}}</a></li>
-  <li><a href="{{pathFor 'therapists-form'}}">{{_ "landing.navbar.therapists"}}</a></li>
+  <li><a href="{{howWorksLink}}" class="{{#if routeIsHome}}scroll-to{{/if}}">{{_ "landing.navbar.howWorks"}}</a></li>
+  <li><a href="{{pricesLink}}" class="{{#if routeIsHome}}scroll-to{{/if}}">{{_ "landing.navbar.prices"}}</a></li>
+  <li><a href="{{pathFor 'therapists-form'}}" class="scroll-top">{{_ "landing.navbar.therapists"}}</a></li>
   <li><a href="">{{_ "landing.navbar.faq"}}</a></li>
   <li><a href="">{{_ "landing.navbar.aboutUs"}}</a></li>
   <li><a href="">{{_ "landing.navbar.contact"}}</a></li>

@@ -20,9 +20,4 @@ Template.MainLayout.onCreated(function() {
 	$('body').on('click', '#logout', () => {
 		AccountsTemplates.logout();
 	})
-
-	$('body').on('click', '.scroll-top', () => {
-		$('html,body').animate({ scrollTop: 0}, 0, 'easeInOutQuart');
-		$(".nav-toggler").trigger('click');
-	});
 });

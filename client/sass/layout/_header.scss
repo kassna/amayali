@@ -96,4 +96,12 @@
 	img {
 		max-width: 50px;
 	}
+	.nav-bordered>li>a:focus,
+	.nav-bordered>li>a:hover {
+		color: $turquoise;
+	}
+	.nav > li > a:focus,
+	.nav > li > a:hover {
+		background-color: transparent;
+	}
 }
