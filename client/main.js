@@ -1,12 +1,18 @@
 _ = lodash;
 
-var hooksObject = {
-	onSuccess: function(formType, result) {
-		$('#new-modal').modal('hide');
-		Bert.alert( TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right' );
+AutoForm.hooks({
+	insertForm: {
+		onSuccess: function(formType, result) {
+			$('#new-modal').modal('hide');
+			Bert.alert( TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right' );
+		},
 	},
-}
-AutoForm.addHooks('insertForm', hooksObject);
+	insertTherapistForm: {
+		onSuccess: function(formType, result) {
+			FlowRouter.go('therapist-success');
+		},
+	}
+})
 
 // Sweet scroll function
 scroll = function(target) {
