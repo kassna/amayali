@@ -1,13 +1,8 @@
 class TherapistsCollection extends Mongo.Collection {
-  insert(doc, callback) {
-    const ourDoc = doc;
-    ourDoc.createdAt = new Date();
-    return super.insert(ourDoc, callback);
-  }
   // TODO: Can't remove if has orders
 }
 
-Therapists = new Mongo.Collection('therapists');
+Therapists = new TherapistsCollection('therapists');
 
 Therapists.allow({
   insert: function(userId, doc) {

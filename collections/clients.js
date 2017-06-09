@@ -1,10 +1,4 @@
 class ClientsCollection extends Mongo.Collection {
-  insert(doc, callback) {
-    const ourDoc = doc;
-    ourDoc.createdAt = new Date();
-    return super.insert(ourDoc, callback);
-  }
-
   // TODO: Remove function verify if client has orders
 }
 
