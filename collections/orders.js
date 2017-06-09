@@ -81,46 +81,26 @@ OrdersSchema = new SimpleSchema({
     regEx: SimpleSchema.RegEx.Id,
     optional: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   firstname: {
     type: String,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   lastname: {
     type: String,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   email: {
     type: String,
     regEx: SimpleSchema.RegEx.Email,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   phone: {
@@ -134,24 +114,23 @@ OrdersSchema = new SimpleSchema({
     regEx: SimpleSchema.RegEx.Id,
     optional: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   createdAt: {
     type: Date,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Date.now();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: Date.now()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    },
     denyUpdate: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
 });

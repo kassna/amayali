@@ -24,12 +24,7 @@ LocationsSchema = new SimpleSchema({
     type: Boolean,
     defaultValue: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
 });

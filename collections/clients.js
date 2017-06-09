@@ -92,6 +92,15 @@ ClientsSchema = new SimpleSchema({
   },
   createdAt: {
     type: Date,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Date.now();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: Date.now()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    },
     denyUpdate: true,
     autoform: {
       afFieldInput: {
@@ -106,12 +115,7 @@ ClientsSchema = new SimpleSchema({
     type: Boolean,
     defaultValue: false,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
 });

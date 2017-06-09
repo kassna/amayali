@@ -19,7 +19,6 @@ class PromoCodesCollection extends Mongo.Collection {
       } while (this.findOne({ code: promoCode }));
       ourDoc.code = promoCode;
     }
-    ourDoc.createdAt = new Date();
     return super.insert(ourDoc, callback);
   }
 }
@@ -75,24 +74,23 @@ PromoCodesSchema = new SimpleSchema({
     type: Boolean,
     defaultValue: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   createdAt: {
     type: Date,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Date.now();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: Date.now()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    },
     denyUpdate: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
 });

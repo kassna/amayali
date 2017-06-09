@@ -7,7 +7,7 @@ class TherapistsCollection extends Mongo.Collection {
   // TODO: Can't remove if has orders
 }
 
-Therapists = new TherapistsCollection('therapists');
+Therapists = new Mongo.Collection('therapists');
 
 Therapists.allow({
   insert: function(userId, doc) {
@@ -205,24 +205,23 @@ TherapistsSchema = new SimpleSchema({
     type: Boolean,
     defaultValue: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   createdAt: {
     type: Date,
+    autoValue: function() {
+      if (this.isInsert) {
+        return new Date();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: new Date()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    },
     denyUpdate: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
 });
