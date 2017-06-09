@@ -76,7 +76,7 @@ TherapistsSchema = new SimpleSchema({
     type: String
   },
   schedulePreference: {
-    type: String,
+    type: [String],
     autoform: {
       type: 'select-checkbox',
       options () {
@@ -100,7 +100,7 @@ TherapistsSchema = new SimpleSchema({
     type: String,
   },
   experience: {
-    type: String,
+    type: [String],
     autoform: {
       type: 'select-checkbox-inline',
       options () {
@@ -114,10 +114,11 @@ TherapistsSchema = new SimpleSchema({
     },
   },
   experienceYears: {
-    type: Number
+    type: Number,
+    min: 0
   },
   experienceTypes: {
-    type: String,
+    type: [String],
     autoform: {
       type: 'select-checkbox-inline',
       options () {
@@ -184,11 +185,12 @@ TherapistsSchema = new SimpleSchema({
   email: {
     type: String,
     regEx: SimpleSchema.RegEx.Email,
+    unique: true,
   },
   reference: {
     type: String,
     autoform: {
-      type: 'select-checkbox-inline',
+      type: 'select-radio-inline',
       options () {
         return _.map(['fb', 'web', 'therapist', 'staff', 'other'], (option) => {
           return {

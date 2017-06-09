@@ -18,6 +18,7 @@ Locations.allow({
 LocationsSchema = new SimpleSchema({
   name: {
     type: String,
+    unique: true,
   },
   status: {
     type: Boolean,

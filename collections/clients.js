@@ -60,6 +60,7 @@ ClientsSchema = new SimpleSchema({
   email: {
     type: String,
     regEx: SimpleSchema.RegEx.Email,
+    unique: true,
     autoform: {
       afFieldInput: {
         type: 'hidden',

@@ -44,6 +44,7 @@ PromoCodes.allow({
 PromoCodesSchema = new SimpleSchema({
   code: {
     type: String,
+    unique: true,
   },
   type: {
     type: String,
