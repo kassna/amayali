@@ -13,7 +13,8 @@
       "therapists": "Terapeutas",
       "faq": "FAQ",
       "aboutUs": "Sobre Nosotros",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "logIn": "Ingresar"
     },
     "hero": {
       "title": "¡Relájate en donde quieras!",
@@ -27,7 +28,10 @@
       "step2": "Recibe",
       "step2Lead": "Un terapeuta profesional va a donde te encuentres",
       "step3": "Relájate",
-      "step3Lead": "Relájate y disfruta tu masaje"
+      "step3Lead": "Relájate y disfruta tu masaje",
+      "feature1": "El masaje puede ser de cuerpo completo o enfocado en zonas específicas.",
+      "feature2": "Incluye todo el equipo necesario, por comodidad se recomienda tener dos toallas limpias.",
+      "feature3": "Garantía del 100% si no estás satisfecho con el servicio."
     },
     "features": {
       "title": "Nuestros beneficios",
@@ -63,6 +67,14 @@
         "title3": "Deportivo",
         "lead3": "Mejora flexibilidad y reduce las probabilidades de lesión y el tiempo de recuperación. Puede realizarse pre y post ejercicio."
       }
+    },
+    "image": {
+      "title": "Déjanos consentirte",
+      "lead": "Pide uno de nuestros masajes profesionales y un terapeuta calificado irá a tu casa."
+    },
+    "therapistButton": {
+      "lead": "¿Eres terapeuta profesional?",
+      "action": "¡Únete al equipo!"
     }
   },
   "schemas": {

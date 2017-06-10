@@ -41,15 +41,23 @@
 
 .featured-list-icon {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 10px;
   display: inline-block;
   font-size: 36px;
   text-align: center;
   line-height: 0;
   width: 60px;
+  @include bp(tablet) {
+    top: 0;
+  }
   img {
     width: 60px;
+  }
+
+  .fa {
+    position: relative;
+    top: -5px;
   }
 }
 

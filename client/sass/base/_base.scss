@@ -2,6 +2,10 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+body {
+	color: $light-black;
+}
+
 a {
 	color: $turquoise;
 	&:hover {

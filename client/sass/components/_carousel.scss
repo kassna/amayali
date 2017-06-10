@@ -1,11 +1,13 @@
 .carousel-light {
   .carousel-control {
     text-shadow: none;
-    color: rgba(0,0,0,.3);
+    color: $turquoise;
     background-image: none;
   }
 
   .carousel-indicators {
+    bottom: 0;
+    
     li {
       background-color: $gray;
       border: 0;

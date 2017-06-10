@@ -20,6 +20,29 @@
 
 .btn-full {
 	width: 100%;
+	padding: 30px 0;
+	&.turquoise {
+		background: $turquoise;
+		color: $white;
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $cream;
+		}
+	}
+	&.cream {
+		background: $cream;
+		color: $white;
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $yellow;
+		}
+	}
+
+	.lead {
+		font-family: $body-font;
+	}
 }
 
 .btn-success-outline {

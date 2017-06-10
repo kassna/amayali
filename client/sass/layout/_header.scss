@@ -28,6 +28,11 @@
 		li a {
 			color: $cream;
 			padding: 20px 10px;
+
+			&.highlight {
+				margin-top: 10px;
+				color: $white;
+			}
 		}
 		.navbar-toggle {
 			color: $cream;
@@ -49,6 +54,19 @@
 			letter-spacing: .15em;
 			font-size: 13px;
 			transition: all 0.4s;
+
+			&.highlight {
+				padding-top: 10px;
+		    padding-bottom: 10px;
+		    margin-top: 20px;
+				background-color: $green;
+				border-radius: 4px;
+
+				&:hover {
+					background-color: $cream;
+					color: $white;
+				}
+			}
 		}
 	}
 	.navbar-brand {
