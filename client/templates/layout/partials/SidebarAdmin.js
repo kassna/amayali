@@ -12,7 +12,7 @@ Template.SidebarAdmin.helpers({
 });
 
 Template.SidebarAdmin.events({
-	'change #city-selection ': function () {
-		Session.setPersistent("currentCity", $("#city-selection").val());
+	'change #city-selection ': function (event) {
+		Session.setPersistent("currentCity", $(event.target).val());
 	},
 });

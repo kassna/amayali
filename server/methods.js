@@ -1,6 +1,6 @@
 Meteor.methods({
 	// Locations
-	toggleStatusLocation: function(id) {
+	toggleStatusLocation: (id) => {
 		let status = Locations.findOne(id).status;
 		if (status) {
 			Locations.update({_id: id}, {$set: {status: false}});
@@ -11,7 +11,7 @@ Meteor.methods({
 	},
 
 	// PromoCodes
-	toggleStatusPromoCode: function(id) {
+	toggleStatusPromoCode: (id) => {
 		let status = PromoCodes.findOne(id).status;
 		if (status) {
 			PromoCodes.update({_id: id}, {$set: {status: false}});
@@ -21,7 +21,16 @@ Meteor.methods({
 		}
 	},
 
-	sendContactUs: function (name, email, question) {
+	// Admins
+	toggleAdmin: (id) => {
+		if(Roles.userIsInRole(id, 'admin')) {
+			Roles.removeUsersFromRoles(id, 'admin');
+		} else {
+			Roles.setUserRoles(id, 'admin');
+		}
+	},
+
+	sendContactUs: (name, email, question) => {
 	    Mailer.send({
 	        to: process.env.ADMIN_EMAIL,
 	        from: name + '<'+ email + '>',

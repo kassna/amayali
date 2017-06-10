@@ -87,6 +87,8 @@ Template.registerHelper('locationsName', locationsId =>
 	_.map(locationsId, (id) => Locations.findOne(id).name)
 );
 
+Template.registerHelper('userInRole', (id, role) => Roles.userIsInRole(id, role));
+
 //////////////////////////////////
 ///  ALL ELEMENTS
 /////////////////////////////////
@@ -94,6 +96,8 @@ Template.registerHelper('locationsName', locationsId =>
 Template.registerHelper('locations', () => Locations.find());
 
 Template.registerHelper('promoCodes', () => PromoCodes.find());
+
+Template.registerHelper('users', () => Meteor.users.find());
 
 //////////////////////////////////
 ///  SINGLE ELEMENTS

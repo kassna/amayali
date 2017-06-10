@@ -1,16 +1,18 @@
 Template.PromoCodes.onRendered(function() {
 	let template = this;
-	template.subscribe('promoCodes', function () {
-		Tracker.afterFlush(function () {
-			$("[data-sort=table]").tablesorter({
-				sortList: [[0,0]],
-				headers: {
-					4: { sorter: false },
-					5: { sorter: false },
-					6: { sorter: false },
-					7: { sorter: false },
-					8: { sorter: false },
-	      }
+	template.autorun(function() {
+		template.subscribe('promoCodes', Session.get('currentCity'), function () {
+			Tracker.afterFlush(function () {
+				$("[data-sort=table]").tablesorter({
+					sortList: [[0,0]],
+					headers: {
+						4: { sorter: false },
+						5: { sorter: false },
+						6: { sorter: false },
+						7: { sorter: false },
+						8: { sorter: false },
+		      }
+				});
 			});
 		});
 	});

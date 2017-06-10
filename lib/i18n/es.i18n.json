@@ -233,7 +233,8 @@
       "successDelete": "Éxito! Se ha eliminado ese elemento",
       "successInsert": "Éxito! Se ha agregado a la base de datos",
       "active": "Activar",
-      "createdAt": "Creado"
+      "createdAt": "Creado",
+      "orders": "Ordenes"
     },
     "header": {
       "selectCity": "Selecciona",
@@ -254,6 +255,20 @@
       },
       "amount": "Descuento",
       "locationsId": "Ciudades"
+    },
+    "admins": {
+      "title": "Administradores"
+    },
+    "therapists": {
+      "title": "Terapeutas"
+    },
+    "clients": {
+      "title": "Clientes"
+    },
+    "orders": {
+      "pendingOrders": "Ordenes pendientes",
+      "pastOrders": "Historial de ordenes",
+      "assignTherapist": "Asignar Terapeutas"
     }
   }
 }

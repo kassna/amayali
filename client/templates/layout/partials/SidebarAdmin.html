@@ -15,19 +15,58 @@
             {{/if}}
             <ul class="nav nav-pills nav-stacked">
                 {{#if isInRole 'admin'}}
+										<li class="nav-header text-center">{{_ "admin.general.orders"}}</li>
+										<li class="">
+												<a class="scroll-top text-center" href="">
+													<i class="fa fa-exclamation" aria-hidden="true"></i>
+													{{_ "admin.orders.pendingOrders"}}
+												</a>
+										</li>
+										<li class="">
+												<a class="scroll-top text-center" href="">
+													<i class="fa fa-link" aria-hidden="true"></i>
+													{{_ "admin.orders.assignTherapist"}}
+												</a>
+										</li>
+										<li class="">
+												<a class="scroll-top text-center" href="">
+													<i class="fa fa-history" aria-hidden="true"></i>
+													{{_ "admin.orders.pastOrders"}}
+												</a>
+										</li>
+
 										<li class="nav-header text-center">{{_ "admin.header.general"}}</li>
+										<li class="">
+												<a class="scroll-top text-center" href="">
+													<i class="fa fa-user-plus" aria-hidden="true"></i>
+													{{_ "admin.clients.title"}}
+												</a>
+										</li>
 										<li class="{{isActiveRoute 'promoCodes'}}">
-												<a class="scroll-top text-center" href="{{pathFor 'promoCodes'}}">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-therapists'}}">
+													<i class="fa fa-address-card-o" aria-hidden="true"></i>
+													{{_ "admin.therapists.title"}}
+												</a>
+										</li>
+										<li class="{{isActiveRoute 'promoCodes'}}">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-promoCodes'}}">
 													<i class="fa fa-tags" aria-hidden="true"></i>
 													{{_ "admin.promoCodes.title"}}
 												</a>
 										</li>
 										<li class="{{isActiveRoute 'locations'}}">
-												<a class="scroll-top text-center" href="{{pathFor 'locations'}}">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-locations'}}">
 													<i class="fa fa-map-marker" aria-hidden="true"></i>
 													{{_ "admin.locations.title"}}
 												</a>
 										</li>
+										<li class="{{isActiveRoute 'admins'}}">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-admins'}}">
+													<i class="fa fa-key" aria-hidden="true"></i>
+													{{_ "admin.admins.title"}}
+												</a>
+										</li>
+
 										<li class="nav-header text-center">{{_ "admin.header.settings"}}</li>
 										<li>
 												<a class="scroll-top text-center" id="logout">

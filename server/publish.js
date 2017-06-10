@@ -3,25 +3,37 @@ _ = lodash;
 ////////////////////////
 ///  Locations
 ////////////////////////
-Meteor.publish('locations', function () {
-    return Locations.find();
-});
+Meteor.publish('locations', () => Locations.find());
 
-Meteor.publish('activeLocations', function () {
-    return Locations.find({status: true});
-});
+Meteor.publish('activeLocations', () => Locations.find({status: true}));
 
 ////////////////////////
 ///  PromoCodes
 ////////////////////////
-Meteor.publish('promoCodes', function () {
+Meteor.publish('promoCodes', (location) => {
     let excludeArr = [];
     Clients.find().map(item => excludeArr.push(item.promoCodeId));
-    return PromoCodes.find({ _id: { $nin: excludeArr }});
+
+    if (location) {
+      return PromoCodes.find({ $and: [{ _id: { $nin: excludeArr }}, { locationsId: location }] });
+    } else {
+      return PromoCodes.find({ _id: { $nin: excludeArr }});
+    }
+
 });
 
-Meteor.publish('activePromoCodes', function () {
+Meteor.publish('activePromoCodes', (location) => {
     let excludeArr = [];
     Clients.find().map(item => excludeArr.push(item.promoCodeId));
-    return PromoCodes.find({ $and: [{ status: true }, { _id: { $nin: excludeArr }}]});
+
+    if (location) {
+      return PromoCodes.find({ $and: [{ status: true }, { _id: { $nin: excludeArr }}, { locationsId: location }] });
+    } else {
+      return PromoCodes.find({ $and: [{ status: true }, { _id: { $nin: excludeArr }}]});
+    }
 });
+
+////////////////////////
+///  Admins
+////////////////////////
+Meteor.publish('admins', () => Meteor.users.find({ roles: 'admin' }));

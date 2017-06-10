@@ -1,0 +1,38 @@
+<template name="Admins">
+    {{#if isInRole 'admin'}}
+        <div class="dashhead">
+            <div class="dashhead-titles">
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.admins.title"}}</h2>
+            </div>
+        </div>
+
+        {{#if Template.subscriptionsReady}}
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.general.name"}}</th>
+                              <th></th>
+                              <th>{{_ "admin.general.active"}}</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each users}}
+                              {{> Admin}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=4}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>
