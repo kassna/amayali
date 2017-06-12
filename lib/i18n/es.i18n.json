@@ -272,16 +272,30 @@
     },
     "therapists": {
       "title": "Terapeutas activos",
+      "infoTitle": "Información del terapeuta",
       "sex": "Sexo",
       "languages": "Idiomas",
       "locationId": "Ciudad",
       "zone": "Colonias",
       "schedulePreference": "Horario",
-      "createdAt": "Miembro desde"
+      "createdAt": "Miembro desde",
+      "birthday": "Fecha de nacimiento",
+      "smartphone": "¿Tiene smartphone?",
+      "zip": "Código postal",
+      "training": "Preparación",
+      "jobStatus": "Estado laboral",
+      "experience": "Experiencia",
+      "experienceYears": "Años de experiencia",
+      "experienceTypes": "Conocimiento de masajes",
+      "herbs": "Balsamos, aromaterapia, compresas herbales",
+      "hasBed": "¿Tiene cama?",
+      "hasChair": "¿Tiene silla?",
+      "hasCar": "¿Tiene carro?",
+      "contactTime": "Horario de contacto",
+      "reference": "Referencia"
     },
     "therapistRequests": {
-      "title": "Solicitudes de terapeutas",
-      "sex": "Sexo"
+      "title": "Solicitudes de terapeutas"
     },
     "clients": {
       "title": "Clientes"

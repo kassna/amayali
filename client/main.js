@@ -78,10 +78,19 @@ Template.registerHelper('prettyStatus', string => {
 });
 
 // Therapists helpers
-Template.registerHelper('prettySex', option => TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null)[0])
+Template.registerHelper('prettySex', option => TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null))
+Template.registerHelper('prettySexInitial', option => TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null)[0])
 Template.registerHelper('prettySchedules', options =>
 	_.map(options, option => TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null))
 );
+Template.registerHelper('prettyExperience', options =>
+	_.map(options, option => TAPi18n.__(`schemas.therapists.experienceSelect.options.${option}`, null))
+);
+Template.registerHelper('prettyExperienceTypes', options =>
+	_.map(options, option => TAPi18n.__(`schemas.therapists.experienceTypesSelect.options.${option}`, null))
+);
+Template.registerHelper('prettyBoolean', option => TAPi18n.__(`schemas.general.${option}`, null));
+Template.registerHelper('prettyReference', option => TAPi18n.__(`schemas.therapists.referenceSelect.options.${option}`, null));
 
 Template.registerHelper('prettyDiscount', (type, amount) => {
 	if(type === 'amount') return `${amount}`;

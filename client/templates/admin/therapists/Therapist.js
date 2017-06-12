@@ -3,7 +3,7 @@ Template.Therapist.helpers({
 });
 
 Template.Therapist.events({
-	'click .edit-button': function (event, template) {
+	'click .edit-button': function () {
 		Session.set('editId', this._id);
 		Session.set('editMode', 1);
 		Meteor.setTimeout(function() {
@@ -13,4 +13,11 @@ Template.Therapist.events({
 	'click .toggle-status': function () {
 		Meteor.call('toggleStatusTherapist', this._id);
 	},
+	'click .view-more-btn': function() {
+		Session.set('viewId', this._id);
+		Session.set('viewMode', 1);
+		Meteor.setTimeout(function() {
+			$("#therapist-info").modal('show');
+		}, 500);
+	}
 });
