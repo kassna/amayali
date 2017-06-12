@@ -28,9 +28,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-radio-inline',
       options () {
-        return _.map(['male', 'female'], (option) => {
+        return _.map(['male', 'female'], option => {
           return {
-            value: TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null),
           }
         });
@@ -45,9 +45,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-radio-inline',
       options () {
-        return _.map(['yes', 'no'], (option) => {
+        return _.map(['yes', 'no'], option => {
           return {
-            value: TAPi18n.__(`schemas.general.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.general.${option}`, null),
           }
         });
@@ -75,9 +75,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-checkbox',
       options () {
-        return _.map(['morning', 'evening', 'night', 'all'], (option) => {
+        return _.map(['morning', 'evening', 'night', 'all'], option => {
           return {
-            value: TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null),
           }
         });
@@ -99,9 +99,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-checkbox-inline',
       options () {
-        return _.map(['hospital', 'rehab', 'hotel', 'gym', 'spa', 'private', 'onDemand', 'school', 'other'], (option) => {
+        return _.map(['hospital', 'rehab', 'hotel', 'gym', 'spa', 'private', 'onDemand', 'school', 'other'], option => {
           return {
-            value: TAPi18n.__(`schemas.therapists.experienceSelect.options.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.therapists.experienceSelect.options.${option}`, null),
           }
         });
@@ -117,9 +117,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-checkbox-inline',
       options () {
-        return _.map(['a' ,'b' ,'c' ,'d' ,'e' ,'f' ,'g' ,'h' ,'i' ,'j' ,'k' ,'l' ,'m' ,'n' ,'o' ,'p'], (option) => {
+        return _.map(['a' ,'b' ,'c' ,'d' ,'e' ,'f' ,'g' ,'h' ,'i' ,'j' ,'k' ,'l' ,'m' ,'n' ,'o' ,'p'], option => {
           return {
-            value: TAPi18n.__(`schemas.therapists.experienceTypesSelect.options.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.therapists.experienceTypesSelect.options.${option}`, null),
           }
         });
@@ -134,9 +134,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-radio-inline',
       options () {
-        return _.map(['yes', 'no'], (option) => {
+        return _.map(['yes', 'no'], option => {
           return {
-            value: TAPi18n.__(`schemas.general.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.general.${option}`, null),
           }
         });
@@ -148,9 +148,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-radio-inline',
       options () {
-        return _.map(['yes', 'no'], (option) => {
+        return _.map(['yes', 'no'], option => {
           return {
-            value: TAPi18n.__(`schemas.general.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.general.${option}`, null),
           }
         });
@@ -162,9 +162,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-radio-inline',
       options () {
-        return _.map(['yes', 'no'], (option) => {
+        return _.map(['yes', 'no'], option => {
           return {
-            value: TAPi18n.__(`schemas.general.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.general.${option}`, null),
           }
         });
@@ -187,9 +187,9 @@ TherapistsSchema = new SimpleSchema({
     autoform: {
       type: 'select-radio-inline',
       options () {
-        return _.map(['fb', 'web', 'therapist', 'staff', 'other'], (option) => {
+        return _.map(['fb', 'web', 'therapist', 'staff', 'other'], option => {
           return {
-            value: TAPi18n.__(`schemas.therapists.referenceSelect.options.${option}`, null),
+            value: option,
             label: TAPi18n.__(`schemas.therapists.referenceSelect.options.${option}`, null),
           }
         });

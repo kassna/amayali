@@ -1,0 +1,56 @@
+<template name="AdminTherapists">
+    {{#if isInRole 'admin'}}
+        <div class="dashhead">
+            <div class="dashhead-titles">
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.therapists.title"}}</h2>
+            </div>
+            <div class="btn-toolbar dashhead-toolbar">
+                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
+                    {{_ "admin.general.add"}}
+                </button>
+            </div>
+        </div>
+
+        {{#if Template.subscriptionsReady}}
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.general.viewMore"}}</th>
+                              <th>{{_ "admin.general.name"}}</th>
+                              <th>{{_ "admin.therapists.sex"}}</th>
+                              <th>{{_ "admin.general.email"}}</th>
+                              <th>{{_ "admin.general.phone"}}</th>
+                              <th>{{_ "admin.therapists.locationId"}}</th>
+                              <th>{{_ "admin.therapists.zone"}}</th>
+                              <th>{{_ "admin.therapists.schedulePreference"}}</th>
+                              <th>{{_ "admin.therapists.languages"}}</th>
+                              <th>{{_ "admin.therapists.createdAt"}}</th>
+                              <th></th>
+                              <th>{{_ "admin.general.active"}}</th>
+                              <th></th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each therapists}}
+                              {{> Therapist}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=14}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+
+        {{> NewModal collection="Therapists"}}
+        {{> EditModal collection="Therapists" editItem=editItem }}
+
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>

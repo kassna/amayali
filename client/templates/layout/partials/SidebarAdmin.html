@@ -38,30 +38,36 @@
 										<li class="nav-header text-center">{{_ "admin.header.general"}}</li>
 										<li class="">
 												<a class="scroll-top text-center" href="">
-													<i class="fa fa-user-plus" aria-hidden="true"></i>
+													<i class="fa fa-address-book-o" aria-hidden="true"></i>
 													{{_ "admin.clients.title"}}
 												</a>
 										</li>
-										<li class="{{isActiveRoute 'promoCodes'}}">
+										<li class="{{isActiveRoute 'admin-therapists'}}">
 												<a class="scroll-top text-center" href="{{pathFor 'admin-therapists'}}">
-													<i class="fa fa-address-card-o" aria-hidden="true"></i>
+													<i class="fa fa-id-card" aria-hidden="true"></i>
 													{{_ "admin.therapists.title"}}
 												</a>
 										</li>
-										<li class="{{isActiveRoute 'promoCodes'}}">
+										<li class="{{isActiveRoute 'admin-promoCodes'}}">
 												<a class="scroll-top text-center" href="{{pathFor 'admin-promoCodes'}}">
 													<i class="fa fa-tags" aria-hidden="true"></i>
 													{{_ "admin.promoCodes.title"}}
 												</a>
 										</li>
-										<li class="{{isActiveRoute 'locations'}}">
+										<li class="">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-therapists-requests'}}">
+													<i class="fa fa-user-plus" aria-hidden="true"></i>
+													{{_ "admin.therapistRequests.title"}}
+												</a>
+										</li>
+										<li class="{{isActiveRoute 'admin-locations'}}">
 												<a class="scroll-top text-center" href="{{pathFor 'admin-locations'}}">
 													<i class="fa fa-map-marker" aria-hidden="true"></i>
 													{{_ "admin.locations.title"}}
 												</a>
 										</li>
 										{{#if isInRole 'superadmin'}}
-										<li class="{{isActiveRoute 'admins'}}">
+										<li class="{{isActiveRoute 'admin-admins'}}">
 												<a class="scroll-top text-center" href="{{pathFor 'admin-admins'}}">
 													<i class="fa fa-key" aria-hidden="true"></i>
 													{{_ "admin.admins.title"}}

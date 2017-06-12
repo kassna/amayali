@@ -38,3 +38,23 @@ Meteor.publish('activePromoCodes', (location) => {
 ////////////////////////
 Meteor.publish('admins', () => Meteor.users.find({ roles: { $in: ['admin', 'admin-inactive'] }}));
 Meteor.publish('adminCode', () => Admins.find());
+
+////////////////////////
+///  Therapists
+////////////////////////
+Meteor.publish('therapists', (location) => {
+    if (location) {
+      return Therapists.find({ locationId: location });
+    } else {
+      return Therapists.find();
+    }
+
+});
+
+Meteor.publish('activeTherapists', (location) => {
+    if (location) {
+      return Therapists.find({ $and: [{ status: true }, { locationsId: location }] });
+    } else {
+      return Therapists.find({ status: true });
+    }
+});

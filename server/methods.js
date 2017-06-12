@@ -44,6 +44,17 @@ Meteor.methods({
 		Admins.update({ _id: _id }, { $set: { code: randomCode() }});
 	},
 
+	// Therapists
+	toggleStatusTherapist: id => {
+		let status = Therapists.findOne(id).status;
+		if (status) {
+			Therapists.update({_id: id}, {$set: {status: false}});
+		}
+		else {
+			Therapists.update({_id: id}, {$set: {status: true}});
+		}
+	},
+
 	sendContactUs: (name, email, question) => {
 	    Mailer.send({
 	        to: process.env.ADMIN_EMAIL,

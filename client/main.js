@@ -77,6 +77,12 @@ Template.registerHelper('prettyStatus', string => {
 	return status[string];
 });
 
+// Therapists helpers
+Template.registerHelper('prettySex', option => TAPi18n.__(`schemas.therapists.sexSelect.options.${option}`, null)[0])
+Template.registerHelper('prettySchedules', options =>
+	_.map(options, option => TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null))
+);
+
 Template.registerHelper('prettyDiscount', (type, amount) => {
 	if(type === 'amount') return `${amount}`;
 	else if(type === 'percentage') return `${amount}%`;
@@ -84,8 +90,10 @@ Template.registerHelper('prettyDiscount', (type, amount) => {
 });
 
 Template.registerHelper('locationsName', locationsId =>
-	_.map(locationsId, (id) => Locations.findOne(id).name)
+	_.map(locationsId, id => Locations.findOne(id).name)
 );
+
+Template.registerHelper('locationName', locationId => Locations.findOne(locationId).name);
 
 Template.registerHelper('userInRole', (id, role) => Roles.userIsInRole(id, role));
 
@@ -99,6 +107,8 @@ Template.registerHelper('promoCodes', () => PromoCodes.find());
 
 Template.registerHelper('users', () => Meteor.users.find());
 
+Template.registerHelper('therapists', () => Therapists.find());
+
 //////////////////////////////////
 ///  SINGLE ELEMENTS
 /////////////////////////////////
@@ -106,3 +116,5 @@ Template.registerHelper('users', () => Meteor.users.find());
 Template.registerHelper('location', () => Locations.findOne());
 
 Template.registerHelper('promoCode', () => PromoCodes.findOne());
+
+Template.registerHelper('therapist', () => Therapists.findOne());

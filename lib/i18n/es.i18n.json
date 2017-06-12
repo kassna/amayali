@@ -227,6 +227,8 @@
       "activate": "Activar",
       "deactivate": "Desactivar",
       "name": "Nombre",
+      "phone": "Teléfono",
+      "email": "Email",
       "confirm": "¿Estás seguro?",
       "cantUndone": "No se pude deshacer esta acción",
       "confirmDelete": "Sí, ¡Borrar!",
@@ -235,7 +237,8 @@
       "active": "Activar",
       "createdAt": "Creado",
       "orders": "Ordenes",
-      "submit": "Envíar"
+      "submit": "Envíar",
+      "viewMore": "Más"
     },
     "header": {
       "selectCity": "Selecciona",
@@ -268,7 +271,17 @@
       "error": "El código es inválido, intenta de nuevo."
     },
     "therapists": {
-      "title": "Terapeutas"
+      "title": "Terapeutas activos",
+      "sex": "Sexo",
+      "languages": "Idiomas",
+      "locationId": "Ciudad",
+      "zone": "Colonias",
+      "schedulePreference": "Horario",
+      "createdAt": "Miembro desde"
+    },
+    "therapistRequests": {
+      "title": "Solicitudes de terapeutas",
+      "sex": "Sexo"
     },
     "clients": {
       "title": "Clientes"
