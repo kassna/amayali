@@ -25,6 +25,7 @@
                               <th>{{_ "admin.therapists.zone"}}</th>
                               <th>{{_ "admin.therapists.schedulePreference"}}</th>
                               <th>{{_ "admin.therapists.languages"}}</th>
+                              <th>{{_ "admin.therapists.completedOrders"}}</th>
                               <th>{{_ "admin.therapists.createdAt"}}</th>
                               <th></th>
                               <th>{{_ "admin.general.active"}}</th>
@@ -37,7 +38,7 @@
                               {{> Therapist}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=14}}
+                                  {{> NoResults cols=15}}
                               </tr>
                           {{/each}}
                       </tbody>

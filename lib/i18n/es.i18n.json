@@ -275,6 +275,7 @@
       "infoTitle": "Información del terapeuta",
       "sex": "Sexo",
       "languages": "Idiomas",
+      "completedOrders": "Ordenes",
       "locationId": "Ciudad",
       "zone": "Colonias",
       "schedulePreference": "Horario",
