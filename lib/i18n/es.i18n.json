@@ -234,7 +234,8 @@
       "successInsert": "Éxito! Se ha agregado a la base de datos",
       "active": "Activar",
       "createdAt": "Creado",
-      "orders": "Ordenes"
+      "orders": "Ordenes",
+      "submit": "Envíar"
     },
     "header": {
       "selectCity": "Selecciona",
@@ -257,7 +258,14 @@
       "locationsId": "Ciudades"
     },
     "admins": {
-      "title": "Administradores"
+      "title": "Administradores",
+      "lead1": "Para agregar adminisitradores, enviar este link",
+      "lead2": "y este código"
+    },
+    "requestAdmin": {
+      "title": "Solicitar acceso de administrador",
+      "lead": "Ingresa el código proporcionado por el administrador",
+      "error": "El código es inválido, intenta de nuevo."
     },
     "therapists": {
       "title": "Terapeutas"

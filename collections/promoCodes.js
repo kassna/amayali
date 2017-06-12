@@ -1,7 +1,7 @@
 /*
   Generate a random code of 3 capital letters and 3 numbers in random order
  */
-const randomCode = function randomCode() {
+randomCode = function randomCode() {
   let codeArray = _.times(3, () => String.fromCharCode(_.random(48, 57)));
   codeArray = _.concat(codeArray, _.times(3, () => String.fromCharCode(_.random(65, 90))));
   codeArray = _.shuffle(codeArray);

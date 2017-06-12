@@ -3,7 +3,7 @@
         <div class="collapse in nav-toggleable-sm m-t" id="nav-toggleable-sm">
             {{#if isInRole 'admin'}}
                 <select class="custom-select m-b" id="city-selection">
-                    <option value="">&lt;{{_ "admin.header.selectCity"}}&gt;</option>
+                    <option value="">{{_ "admin.header.selectCity"}}..</option>
                     {{#each locations}}
                         {{#if isCurrentCity _id}}
                             <option value="{{_id}}" selected>{{name}}</option>
@@ -60,12 +60,14 @@
 													{{_ "admin.locations.title"}}
 												</a>
 										</li>
+										{{#if isInRole 'superadmin'}}
 										<li class="{{isActiveRoute 'admins'}}">
 												<a class="scroll-top text-center" href="{{pathFor 'admin-admins'}}">
 													<i class="fa fa-key" aria-hidden="true"></i>
 													{{_ "admin.admins.title"}}
 												</a>
 										</li>
+										{{/if}}
 
 										<li class="nav-header text-center">{{_ "admin.header.settings"}}</li>
 										<li>

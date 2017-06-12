@@ -36,4 +36,5 @@ Meteor.publish('activePromoCodes', (location) => {
 ////////////////////////
 ///  Admins
 ////////////////////////
-Meteor.publish('admins', () => Meteor.users.find({ roles: 'admin' }));
+Meteor.publish('admins', () => Meteor.users.find({ roles: { $in: ['admin', 'admin-inactive'] }}));
+Meteor.publish('adminCode', () => Admins.find());

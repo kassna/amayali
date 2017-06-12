@@ -1,0 +1,18 @@
+<template name="RequestAccess">
+  {{#if currentUser}}
+    {{#if isInRole 'admin'}}{{ redirectHome }}{{/if}}
+    <h2 class="c-turquoise">{{_ "admin.requestAdmin.title"}}</h2>
+    <p class="lead">{{_ "admin.requestAdmin.lead"}}</p>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="error c-error hidden">{{_ "admin.requestAdmin.error"}}</div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="admin-code">
+        </div>
+        <button type="submit" class="btn btn-success request-btn">{{_ "admin.general.submit"}}</button>
+      </div>
+    </div>
+  {{else}}
+    {{> Forbidden}}
+  {{/if}}
+</template>

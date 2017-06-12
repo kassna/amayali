@@ -1,6 +1,6 @@
 Meteor.methods({
 	// Locations
-	toggleStatusLocation: (id) => {
+	toggleStatusLocation: id => {
 		let status = Locations.findOne(id).status;
 		if (status) {
 			Locations.update({_id: id}, {$set: {status: false}});
@@ -11,7 +11,7 @@ Meteor.methods({
 	},
 
 	// PromoCodes
-	toggleStatusPromoCode: (id) => {
+	toggleStatusPromoCode: id => {
 		let status = PromoCodes.findOne(id).status;
 		if (status) {
 			PromoCodes.update({_id: id}, {$set: {status: false}});
@@ -22,12 +22,26 @@ Meteor.methods({
 	},
 
 	// Admins
-	toggleAdmin: (id) => {
+	toggleAdmin: id => {
 		if(Roles.userIsInRole(id, 'admin')) {
 			Roles.removeUsersFromRoles(id, 'admin');
+			Roles.setUserRoles(id, 'admin-inactive');
 		} else {
 			Roles.setUserRoles(id, 'admin');
+			Roles.removeUsersFromRoles(id, 'admin-inactive');
 		}
+	},
+	requestAdmin: inputCode => {
+		const { code } = Admins.findOne();
+		if(inputCode === code) {
+			Roles.setUserRoles(Meteor.userId(), 'admin');
+		} else {
+			throw new Meteor.Error("code-invalid");
+		}
+	},
+	refreshAdminCode: () => {
+		const { _id } = Admins.findOne();
+		Admins.update({ _id: _id }, { $set: { code: randomCode() }});
 	},
 
 	sendContactUs: (name, email, question) => {
