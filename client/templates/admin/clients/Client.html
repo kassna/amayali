@@ -1,0 +1,29 @@
+ <template name="Client">
+	<tr>
+      <td>
+        <button type="" class="btn btn-round btn-info-outline view-more-btn">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+      </td>
+      <td>{{firstname}} {{lastname}}</td>
+      <td><a href="mailto:{{email}}">{{email}}</a></td>
+      <td>{{#if phone}}<a href="tal:{{phone}}">{{phone}}</a>{{/if}}</td>
+      <td>{{#if locationId}}{{locationName locationId}}{{/if}}</td>
+      <td>{{clientOrders _id}}</td>
+      <td>{{pendingPromos}}</td>
+      <td>{{humanDate createdAt}}</td>
+      <td>
+      	<button type="" class="btn btn-round btn-info-outline edit-button">
+      		<i class="fa fa-pencil" aria-hidden="true"></i>
+      	</button>
+      </td>
+      <td>
+      	{{#quickRemoveButton collection="Locations" _id=this._id class="hidden delete-btn"}}
+				Delete
+      	{{/quickRemoveButton}}
+          <button class="btn btn-round btn-danger-outline confirm-remove">
+						<i class="fa fa-trash" aria-hidden="true"></i>
+					</button>
+      </td>
+  </tr>
+</template>

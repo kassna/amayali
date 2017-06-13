@@ -76,7 +76,15 @@ OrdersSchema = new SimpleSchema({
     type: Number,
     decimal: true,
   },
-  terapist: {
+  therapist: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    optional: true,
+    autoform: {
+      omit: true
+    },
+  },
+  clientId: {
     type: String,
     regEx: SimpleSchema.RegEx.Id,
     optional: true,

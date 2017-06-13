@@ -1,8 +1,8 @@
-<template name="AdminTherapists">
+<template name="AdminTherapistsRequest">
     {{#if isInRole 'admin'}}
         <div class="dashhead">
             <div class="dashhead-titles">
-                <h2 class="dashhead-title title-style c-green">{{_ "admin.therapists.title"}}</h2>
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.therapistRequests.title"}}</h2>
             </div>
             <div class="btn-toolbar dashhead-toolbar">
                 <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
@@ -23,11 +23,12 @@
                               <th>{{_ "admin.general.phone"}}</th>
                               <th>{{_ "admin.general.locationId"}}</th>
                               <th>{{_ "admin.therapists.zone"}}</th>
-                              <th>{{_ "admin.therapists.schedulePreference"}}</th>
-                              <th>{{_ "admin.therapists.languages"}}</th>
-                              <th>{{_ "admin.general.completedOrders"}}</th>
-                              <th>{{_ "admin.therapists.createdAt"}}</th>
-                              <th></th>
+                              <th>{{_ "admin.therapists.experience"}}</th>
+                              <th class="text-center">{{_ "admin.therapists.experienceYears"}}</th>
+                              <th class="text-center">{{_ "admin.therapists.smartphone"}}</th>
+                              <th class="text-center">{{_ "admin.therapists.hasBed"}}</th>
+                              <th class="text-center">{{_ "admin.therapists.hasChair"}}</th>
+                              <th class="text-center">{{_ "admin.therapists.hasCar"}}</th>
                               <th>{{_ "admin.general.active"}}</th>
                               <th></th>
                               <th></th>
@@ -35,10 +36,10 @@
                       </thead>
                       <tbody>
                           {{#each therapists}}
-                              {{> Therapist}}
+                              {{> TherapistRequest}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=15}}
+                                  {{> NoResults cols=16}}
                               </tr>
                           {{/each}}
                       </tbody>

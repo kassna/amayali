@@ -10,7 +10,7 @@
   	            <div class="modal-body">
                   <div class="row">
                     <div class="col-sm-6">
-                      <h3 class="c-cream m-t-0">Datos personales</h3>
+                      <h3 class="c-cream m-t-0">{{_ "admin.general.personalData"}}</h3>
                       <div class="group">
                         <b>{{_ "admin.general.name"}}:</b> {{ currentTherapist.name }}
                       </div>
@@ -24,7 +24,7 @@
                         <b>{{_ "admin.general.email"}}:</b> <a href="mailto:{{ currentTherapist.email }}">{{ currentTherapist.email }}</a>
                       </div>
                       <div class="group">
-                        <b>{{_ "admin.therapists.locationId"}}:</b> {{ locationName currentTherapist.locationId }}
+                        <b>{{_ "admin.general.locationId"}}:</b> {{ locationName currentTherapist.locationId }}
                       </div>
                       <div class="group">
                         <b>{{_ "admin.therapists.schedulePreference"}}:</b> {{ prettySchedules currentTherapist.schedulePreference }}
@@ -40,7 +40,7 @@
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <h3 class="c-cream m-t-0">Datos laborales</h3>
+                      <h3 class="c-cream m-t-0">{{_ "admin.therapists.jobData"}}</h3>
                       <div class="group">
                         <b>{{_ "admin.therapists.birthday"}}:</b> {{ currentTherapist.birthday }}
                       </div>

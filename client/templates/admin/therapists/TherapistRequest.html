@@ -1,4 +1,4 @@
- <template name="Therapist">
+ <template name="TherapistRequest">
 	<tr>
       <td>
         <button type="" class="btn btn-round btn-info-outline view-more-btn">
@@ -11,11 +11,12 @@
       <td><a href="tel:{{phone}}">{{phone}}</a></td>
       <td>{{locationName locationId}}</td>
       <td>{{zone}}</td>
-      <td>{{prettySchedules schedulePreference}}</td>
-      <td>{{languages}}</td>
-      <td>{{therapistOrders _id}}</td>
-      <td>{{humanDate createdAt}}</td>
-      <td><i class="status-icon {{#if status}}active{{else}}not-active{{/if}}"></i></td>
+      <td>{{prettyExperience experience}}</td>
+      <td class="text-center">{{experienceYears}}</td>
+      <td class="text-center">{{prettyBoolean smartphone}}</td>
+      <td class="text-center">{{prettyBoolean hasBed}}</td>
+      <td class="text-center">{{prettyBoolean hasChair}}</td>
+      <td class="text-center">{{prettyBoolean hasCar}}</td>
       <td>
           {{#if status }}
               <button class="toggle-status btn btn-sm btn-pill btn-danger-outline">{{_ "admin.general.deactivate"}}</button>

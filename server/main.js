@@ -14,6 +14,12 @@ Accounts.emailTemplates.resetPassword.from = () => {
   return 'Amayali <alex@2112studio.com>';
 };
 
+AccountsTemplates.configure({
+  postSignUpHook: (userId, info) => {
+    Meteor.call('createClientFromSignUp', userId, info);
+  },
+});
+
 Meteor.startup(() => {
 	// script to verify time of orders
 

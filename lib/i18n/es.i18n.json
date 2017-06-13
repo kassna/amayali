@@ -87,9 +87,9 @@
       "address": {
         "street1": "Calle y Número",
         "street2": "Colonia",
-        "zip": "Código Postal",
-        "locationId": "Ciudad"
-      }
+        "zip": "Código Postal"
+      },
+      "locationId": "Ciudad"
     },
     "therapists": {
       "name": "Nombre completo",
@@ -229,6 +229,8 @@
       "name": "Nombre",
       "phone": "Teléfono",
       "email": "Email",
+      "locationId": "Ciudad",
+      "completedOrders": "Ordenes",
       "confirm": "¿Estás seguro?",
       "cantUndone": "No se pude deshacer esta acción",
       "confirmDelete": "Sí, ¡Borrar!",
@@ -238,7 +240,8 @@
       "createdAt": "Creado",
       "orders": "Ordenes",
       "submit": "Envíar",
-      "viewMore": "Más"
+      "viewMore": "Más",
+      "personalData": "Datos personales"
     },
     "header": {
       "selectCity": "Selecciona",
@@ -275,8 +278,6 @@
       "infoTitle": "Información del terapeuta",
       "sex": "Sexo",
       "languages": "Idiomas",
-      "completedOrders": "Ordenes",
-      "locationId": "Ciudad",
       "zone": "Colonias",
       "schedulePreference": "Horario",
       "createdAt": "Miembro desde",
@@ -293,13 +294,18 @@
       "hasChair": "¿Tiene silla?",
       "hasCar": "¿Tiene carro?",
       "contactTime": "Horario de contacto",
-      "reference": "Referencia"
+      "reference": "Referencia",
+      "jobData": "Datos laborales"
     },
     "therapistRequests": {
       "title": "Solicitudes de terapeutas"
     },
     "clients": {
-      "title": "Clientes"
+      "title": "Clientes",
+      "pendingPromos": "Cupones pendientes",
+      "infoClient": "Información del cliente",
+      "address": "Dirección",
+      "createdAt": "Miembro desde"
     },
     "orders": {
       "pendingOrders": "Ordenes pendientes",

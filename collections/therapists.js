@@ -198,7 +198,7 @@ TherapistsSchema = new SimpleSchema({
   },
   status: {
     type: Boolean,
-    defaultValue: true,
+    defaultValue: false,
     autoform: {
       omit: true
     },

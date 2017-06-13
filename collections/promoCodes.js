@@ -81,9 +81,9 @@ PromoCodesSchema = new SimpleSchema({
     type: Date,
     autoValue: function() {
       if (this.isInsert) {
-        return Date.now();
+        return new Date();
       } else if (this.isUpsert) {
-        return {$setOnInsert: Date.now()};
+        return {$setOnInsert: new Date()};
       } else {
         this.unset();  // Prevent user from supplying their own value
       }

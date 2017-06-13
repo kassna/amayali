@@ -1,8 +1,4 @@
-Template.Therapist.helpers({
-	'therapistOrders': id => Orders.find({ therapist: id }).count()
-});
-
-Template.Therapist.events({
+Template.TherapistRequest.events({
 	'click .edit-button': function () {
 		Session.set('editId', this._id);
 		Session.set('editMode', 1);

@@ -4,28 +4,36 @@ class ClientsCollection extends Mongo.Collection {
 
 Clients = new ClientsCollection('clients');
 
+Clients.allow({
+  insert: function(userId, doc) {
+    // just admins can update
+    return true;
+  },
+  update: function(userId, doc) {
+    // just admins can update
+    return Roles.userIsInRole(userId, ['admin']) || userId === doc.userId;
+  },
+  remove: function (userId, doc) {
+    // just admins can delete
+    return Roles.userIsInRole(userId, ['admin']);
+  }
+});
+
 // Address schema
 AddressSchema = new SimpleSchema({
   street1: {
     type: String,
+    optional: true
   },
   street2: {
     type: String,
+    optional: true
   },
   zip: {
     type: String,
     regEx: SimpleSchema.RegEx.ZipCode,
-  },
-  locationId: {
-    type: String,
-    regEx: SimpleSchema.RegEx.Id,
-    autoform: {
-      type: 'select-radio-inline',
-      options() {
-        return Locations.find().map(location => ({ label: location.name, value: location._id }));
-      },
-    },
-  },
+    optional: true
+  }
 });
 
 ClientsSchema = new SimpleSchema({
@@ -65,10 +73,31 @@ ClientsSchema = new SimpleSchema({
     },
   },
   phone: {
-    type: String
+    type: String,
+    optional: true
   },
   address: {
     type: AddressSchema,
+    optional: true,
+  },
+  userId: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    denyUpdate: true,
+    autoform: {
+      omit: true
+    },
+  },
+  locationId: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    autoform: {
+      type: 'select-radio-inline',
+      options() {
+        return Locations.find().map(location => ({ label: location.name, value: location._id }));
+      },
+    },
+    optional: true
   },
   promoCodeId: {
     type: String,
@@ -76,33 +105,23 @@ ClientsSchema = new SimpleSchema({
     denyUpdate: true,
     optional: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   createdAt: {
     type: Date,
     autoValue: function() {
       if (this.isInsert) {
-        return Date.now();
+        return new Date();
       } else if (this.isUpsert) {
-        return {$setOnInsert: Date.now()};
+        return {$setOnInsert: new Date()};
       } else {
         this.unset();  // Prevent user from supplying their own value
       }
     },
     denyUpdate: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   completedProfile: {
@@ -112,6 +131,14 @@ ClientsSchema = new SimpleSchema({
       omit: true
     },
   },
+  pendingPromos: {
+    type: Number,
+    optional: true,
+    defaultValue: 0,
+    autoform: {
+      omit: true
+    },
+  }
 });
 
 Clients.after.insert((userId, doc) => {

@@ -36,8 +36,8 @@
 										</li>
 
 										<li class="nav-header text-center">{{_ "admin.header.general"}}</li>
-										<li class="">
-												<a class="scroll-top text-center" href="">
+										<li class="{{isActiveRoute 'admin-clients'}}">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-clients'}}">
 													<i class="fa fa-address-book-o" aria-hidden="true"></i>
 													{{_ "admin.clients.title"}}
 												</a>
@@ -54,7 +54,7 @@
 													{{_ "admin.promoCodes.title"}}
 												</a>
 										</li>
-										<li class="">
+										<li class="{{isActiveRoute 'admin-therapists-requests'}}">
 												<a class="scroll-top text-center" href="{{pathFor 'admin-therapists-requests'}}">
 													<i class="fa fa-user-plus" aria-hidden="true"></i>
 													{{_ "admin.therapistRequests.title"}}

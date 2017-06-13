@@ -1,14 +1,7 @@
-Template.AdminTherapists.onCreated(function() {
-	let self = this;
-	self.autorun(function() {
-		self.subscribe('orders', Session.get('currentCity'));
-	});
-});
-
-Template.AdminTherapists.onRendered(function() {
+Template.AdminTherapistsRequest.onRendered(function() {
 	let template = this;
 	template.autorun(function() {
-		template.subscribe('currentTherapists', Session.get('currentCity'), function () {
+		template.subscribe('inactiveTherapists', Session.get('currentCity'), function () {
 			Tracker.afterFlush(function () {
 				if(Therapists.find().count()) {
 					$("[data-sort=table]").tablesorter({
@@ -31,7 +24,7 @@ Template.AdminTherapists.onRendered(function() {
 	});
 });
 
-Template.AdminTherapists.helpers({
+Template.AdminTherapistsRequest.helpers({
 	editItem: () => {
 		return Therapists.findOne(Session.get('editId'));
 	}

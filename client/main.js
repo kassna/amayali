@@ -118,6 +118,8 @@ Template.registerHelper('users', () => Meteor.users.find());
 
 Template.registerHelper('therapists', () => Therapists.find());
 
+Template.registerHelper('clients', () => Clients.find());
+
 //////////////////////////////////
 ///  SINGLE ELEMENTS
 /////////////////////////////////
@@ -127,3 +129,5 @@ Template.registerHelper('location', () => Locations.findOne());
 Template.registerHelper('promoCode', () => PromoCodes.findOne());
 
 Template.registerHelper('therapist', () => Therapists.findOne());
+
+Template.registerHelper('client', () => Clients.findOne());

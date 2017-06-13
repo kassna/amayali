@@ -21,6 +21,14 @@ Meteor.methods({
 		}
 	},
 
+	// Client
+	createClientFromSignUp: (userId, info) => {
+		const { email } = info;
+		const { firstname, lastname } = info.profile;
+		Roles.setUserRoles(userId, 'client');
+		Clients.insert({ email, firstname, lastname, userId });
+	},
+
 	// Admins
 	toggleAdmin: id => {
 		if(Roles.userIsInRole(id, 'admin')) {
@@ -33,8 +41,11 @@ Meteor.methods({
 	},
 	requestAdmin: inputCode => {
 		const { code } = Admins.findOne();
-		if(inputCode === code) {
-			Roles.setUserRoles(Meteor.userId(), 'admin');
+		const userId = Meteor.userId();
+		const orders = Orders.find({ clientId: userId }).count();
+		if(!orders && inputCode === code) {
+			Roles.removeUsersFromRoles(userId, 'client');
+			Roles.setUserRoles(userId, 'admin');
 		} else {
 			throw new Meteor.Error("code-invalid");
 		}
