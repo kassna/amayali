@@ -93,6 +93,19 @@
 ///  Helpers
 ////////////////
 
+.full-bg {
+	/* Full height */
+  height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .m-b-0-xs {
 	@include bp(phone) {
 		margin-bottom: 0 !important;

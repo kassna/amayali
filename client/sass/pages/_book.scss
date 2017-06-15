@@ -20,8 +20,6 @@
 }
 
 .book-cont {
-  // background-color: $turquoise;
-  background: linear-gradient(100deg, rgba(101, 181, 168, 0.25) 0%, rgba(121, 185, 191, 0.71) 70%, rgba(248, 200, 126, 0.55) 90%);
   min-height: 100vh;
   padding-top: 60px;
 
@@ -75,10 +73,10 @@ $borderRadius: 8px;
 
     // Different state colors
     &.completed {
-      background-color: #57ab8e;
+      background-color: #1BC98E;
       color: $white;
       &:after {
-        border-left-color: #57ab8e;
+        border-left-color: #1BC98E;
       }
       .checked {
         margin-right: 10px;
@@ -160,7 +158,7 @@ $borderRadius: 8px;
   	padding: 0 1em;
   	width: 40%;
   	font-weight: bold;
-  	font-size: 70.25%;
+  	font-size: 100%;
   	-webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
   	-webkit-touch-callout: none;
@@ -174,7 +172,7 @@ $borderRadius: 8px;
   .input__label-content {
   	position: relative;
   	display: block;
-  	padding: 1.6em 0;
+  	padding: 0.7em 0;
   	width: 100%;
   }
 
@@ -200,7 +198,7 @@ $borderRadius: 8px;
   	position: absolute;
   	width: 100%;
   	height: 100%;
-  	color: $light-black;
+  	color: $unactive;
   	text-align: left;
   	cursor: text;
   }
@@ -219,7 +217,7 @@ $borderRadius: 8px;
   	transition: stroke-dashoffset 0.3s;
   	pointer-events: none;
 
-  	stroke: $light-black;
+  	stroke: $white;
   	stroke-width: 4px;
   	stroke-dasharray: 962;
   	stroke-dashoffset: 558;
@@ -239,8 +237,8 @@ $borderRadius: 8px;
 
   .input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
   .input--filled .input__label-content--madoka {
-  	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
-  	transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+  	-webkit-transform: scale3d(0.6, 0.6, 1) translate3d(0, 3.5em, 0);
+  	transform: scale3d(0.6, 0.6, 1) translate3d(0, 3.5em, 0);
   }
 
   .flatpickr-input {
@@ -261,7 +259,7 @@ $borderRadius: 8px;
   }
 
   .dropdown-toggle {
-    border-bottom: 3px solid $light-black;
+    border-bottom: 3px solid $white;
     font-size: 100%;
     line-height: 1.15;
     background: transparent !important;
@@ -269,15 +267,22 @@ $borderRadius: 8px;
   	-webkit-transition: border 0.3s;
   	transition: border 0.3s;
 
+    @include bp(phone) {
+      border-bottom-width: 2px;
+    }
+
     &.not-selected {
-      color: $light-black !important;
+      color: $unactive !important;
     }
   }
 
   .btn-group.open .dropdown-toggle,
   .dropdown-toggle:not(.not-selected) {
     box-shadow: none;
-    border: 3px solid $light-black;
+    border: 3px solid $white;
+    @include bp(phone) {
+      border-width: 2px;
+    }
   }
 
   .dropdown-menu>li>a:focus,
@@ -318,6 +323,7 @@ $borderRadius: 8px;
       margin: 0 10px;
       border-radius: 10px;
       margin-top: 1em;
+      padding: 0.5em 0;
     }
   }
 }

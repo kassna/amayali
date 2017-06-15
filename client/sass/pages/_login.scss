@@ -10,19 +10,6 @@
 	}
 }
 
-.login-bg {
-	/* Full height */
-  height: 100vh;
-	width: 100%;
-	position: fixed;
-	z-index: -1;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .login-cont {
 	width: calc(100% - 20px);
 	max-width: 400px;
