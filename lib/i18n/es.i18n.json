@@ -4,7 +4,8 @@
     "bookNow": "Reservar ahora",
     "menu": "Menú",
     "backHome": "Volver al inicio",
-    "send": "Envíar"
+    "send": "Envíar",
+    "total": "Total"
   },
   "landing": {
     "navbar" : {
@@ -76,6 +77,19 @@
       "lead": "¿Eres terapeuta profesional?",
       "action": "¡Únete al equipo!"
     }
+  },
+  "book": {
+    "next": "Siguiente",
+    "back": "Regresar",
+    "step1": "Fecha",
+    "step2": "Masaje",
+    "step3": "Pago",
+    "step1Lead": "Selecciona la fecha y ubicación de tu cita",
+    "step2Lead": "Personaliza tu masaje",
+    "date": "Fecha y hora",
+    "locationId": "Ciudad",
+    "type": "Tipo de masaje",
+    "therapistsType": "Terapeuta"
   },
   "schemas": {
     "general": {
@@ -204,8 +218,19 @@
           "sport": "Sport"
         }
       },
+      "therapistsType": "Selecciona terapeuta",
+      "therapistsTypeSelect": {
+        "options": {
+          "any": "Cualquiera",
+          "male": "Hombre",
+          "female": "Mujer",
+          "same": "Anterior"
+        }
+      },
       "date": "Fecha y hora",
       "total": "Total",
+      "therapist": "Terapeuta",
+      "clientId": "Cliente",
       "phone": "Teléfono",
       "address": {
         "street1": "Calle y Número",

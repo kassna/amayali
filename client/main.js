@@ -41,7 +41,11 @@ let accountsTranslationsEN = {
 }
 
 Meteor.startup(function () {
-  TAPi18n.setLanguage('es');
+	Session.set("i18lLoaded", false);
+  TAPi18n.setLanguage('es')
+		.done(function () {
+			Session.set("i18lLoaded", true);
+		});
 	T9n.setLanguage('es');
 	T9n.map('es', accountsTranslationsES);
 	T9n.map('en', accountsTranslationsEN);
@@ -105,6 +109,12 @@ Template.registerHelper('locationsName', locationsId =>
 Template.registerHelper('locationName', locationId => Locations.findOne(locationId).name);
 
 Template.registerHelper('userInRole', (id, role) => Roles.userIsInRole(id, role));
+
+Template.registerHelper('reloadSelect', () => {
+	if(Session.get('i18lLoaded')) {
+		$(".selectpicker").selectpicker('refresh');
+	}
+});
 
 //////////////////////////////////
 ///  ALL ELEMENTS

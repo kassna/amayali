@@ -64,6 +64,21 @@ OrdersSchema = new SimpleSchema({
       }
     },
   },
+  therapistsType: {
+    type: String,
+    allowedValues: ['any', 'female', 'male', 'same'],
+    autoform: {
+      type: 'select-radio-inline',
+      options () {
+        return _.map(['any', 'female', 'male', 'same'], (option) => {
+          return {
+            value: option,
+            label: TAPi18n.__(`schemas.orders.therapistsTypeSelect.options.${option}`, null),
+          }
+        });
+      }
+    },
+  },
   date: {
     type: String,
     autoform: {

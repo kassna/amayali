@@ -1,0 +1,20 @@
+<template name="MassageBook">
+  <div class="book-form">
+    <h1 class="c-white text-center">{{_ "book.step2Lead"}}</h1>
+    <div class="simform">
+      <select class="selectpicker">
+        <option value="">{{_ "book.type"}}</option>
+        {{#each types}}
+          <option value="{{value}}">{{label}}</option>
+        {{/each}}
+      </select>
+
+      <select class="selectpicker">
+        <option value="">{{_ "book.therapistsType"}}</option>
+        {{#each therapistsType}}
+          <option value="{{value}}">{{label}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+</template>

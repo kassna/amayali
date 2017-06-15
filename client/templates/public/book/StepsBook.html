@@ -1,0 +1,33 @@
+<template name="StepsBook">
+  <div>
+    <ul class="steps-book">
+      <li class="completed">
+        <span class="hidden-xs">
+          <i class="fa fa-check-square-o c-white checked" aria-hidden="true"></i>
+          {{_ "book.step1"}}
+        </span>
+        <span class="visible-xs-inline-block">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+        </span>
+      </li>
+      <li class="">
+        <span class="hidden-xs">
+          <i class="fa fa-check-square-o c-white checked" aria-hidden="true"></i>
+          {{_ "book.step2"}}
+        </span>
+        <span class="visible-xs-inline-block">
+          <i class="fa fa-sign-language" aria-hidden="true"></i>
+        </span>
+      </li>
+      <li class="disabled">
+        <span class="hidden-xs">
+          <i class="fa fa-check-square-o c-white checked" aria-hidden="true"></i>
+          {{_ "book.step3"}}
+        </span>
+        <span class="visible-xs-inline-block">
+          <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+        </span>
+      </li>
+    </ul>
+  </div>
+</template>
