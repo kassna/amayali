@@ -1,3 +1,21 @@
+verifyFields = $form => {
+  let allValid = true;
+  $form.find('input, select').each(function() {
+    if(!$(this).val()) {
+      allValid = false;
+      return false;
+    }
+  });
+
+  if(!allValid) Bert.alert(TAPi18n.__('book.errors.requiredInputs', null), 'danger');
+  return allValid;
+}
+
+Template.Book.onCreated(() => {
+  Session.set('instance', 0);
+	Session.set('totalSteps', 3);
+});
+
 Template.Book.onRendered(() => {
   $('body').on('focus', '.input__field', event => {
     $(event.target).parent().addClass('input--filled');

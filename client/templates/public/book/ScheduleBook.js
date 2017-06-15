@@ -5,7 +5,7 @@ Template.ScheduleBook.onRendered(() => {
 		altFormat: "F j, Y h:i K",
     altInputClass: "",
 		utc: true,
-		minDate: moment().add(1, 'days').valueOf(),
+		minDate: moment().subtract(2, 'h').valueOf(),
 		minuteIncrement: 15,
 		time_24hr: true,
 		disableMobile: true,
@@ -24,4 +24,19 @@ Template.ScheduleBook.onRendered(() => {
 	  style: 'input__field input__field--madoka not-selected',
 	  size: 4
 	});
+});
+
+Template.ScheduleBook.events({
+  'click #next1': event => {
+    event.preventDefault();
+    if(!verifyFields($('#book-form-1'))) return false;
+
+    // Not valid hours
+		let notAllowed = [0, 1, 2, 3, 4, 5, 6, 7, 22, 23];
+		if(_.includes(notAllowed, moment($("[name='date']").val()).hour())){
+      Bert.alert(TAPi18n.__('book.errors.invalidHour', null), 'danger');
+			return false;
+		}
+
+  }
 });

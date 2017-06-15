@@ -1,9 +1,9 @@
 <template name="ScheduleBook">
   <div class="book-form">
     <h1 class="c-white text-center m-b-0">{{_ "book.step1Lead"}}</h1>
-    <div class="simform">
+    <div class="simform" id="book-form-1">
       <span class="input input--madoka select-date">
-				<input class="input__field input__field--madoka custom-input" type="text" id="date" data-input>
+				<input class="input__field input__field--madoka custom-input" type="text" name="date" data-input>
 				<label class="input__label input__label--madoka" for="date">
 					<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
 						<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
@@ -11,15 +11,15 @@
 					<span class="input__label-content input__label-content--madoka">{{_ "book.date"}}</span>
 				</label>
 			</span>
-      <select class="selectpicker">
+      <select class="selectpicker" name="locationId">
         <option value="">{{_ "book.locationId"}}</option>
-        <option>Monterrey</option>
-        <option>CDMX</option>
+        <option value="mty">Monterrey</option>
+        <option value="cdmx">CDMX</option>
       </select>
 
       <div class="footer-buttons">
         <!-- <button class="btn-default">{{_ "book.back"}}</button> -->
-        <button class="btn-success">{{_ "book.next"}}</button>
+        <button class="btn-success" id="next1">{{_ "book.next"}}</button>
       </div>
     </div>
   </div>

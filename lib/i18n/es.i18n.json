@@ -89,7 +89,11 @@
     "date": "Fecha y hora",
     "locationId": "Ciudad",
     "type": "Tipo de masaje",
-    "therapistsType": "Terapeuta"
+    "therapistsType": "Terapeuta",
+    "errors": {
+      "requiredInputs": "Todos los campos son obligatorios",
+      "invalidHour": "No podemos atenderte en esa hora, por favor selecciona otra."
+    }
   },
   "schemas": {
     "general": {
