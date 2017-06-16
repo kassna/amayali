@@ -46,10 +46,6 @@ $borderRadius: 8px;
     font-size: 20px;
     font-weight: 600;
 
-    &:not(.disabled) {
-      cursor: pointer;
-    }
-
     // Arrows
     &:not(:last-child) {
       // Color triangle to make color border

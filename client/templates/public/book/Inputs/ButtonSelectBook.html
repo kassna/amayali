@@ -2,7 +2,7 @@
   <div class="button-select-cont">
     <div class="button-select" id="{{attribute}}">
       {{#each elements}}
-        <button class="" data-id="{{value}}">{{label}}</button>
+        <button class="{{#if isSelected _id}}active{{/if}}" data-id="{{_id}}">{{name}}</button>
       {{/each}}
     </div>
     <label>{{getTranslation placeholder}}</label>

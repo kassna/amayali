@@ -19,4 +19,8 @@ Template.PaymentBook.events({
       template.createAccount.set(false);
     }
   },
+  'click #back3': () => {
+    Session.set('instance', 2);
+    scrollTop();
+  }
 });

@@ -20,6 +20,6 @@ Template.InputTextBook.events({
     }
   },
   'change .input__field': (event, template) => {
-    Session.set(Template.instance().data.attribute, $(event.target).val());
+    Session.set(template.data.attribute, $(event.target).val());
   },
 });

@@ -1,8 +1,12 @@
 <template name="SelectBook">
-  <select class="selectpicker" name="attribute">
+  <select class="selectpicker" name="{{attribute}}">
     <option value="">{{getTranslation placeholder}}</option>
     {{#each elements}}
-      <option value="{{value}}">{{label}}</option>
+      {{#if isSelected _id}}
+        <option value="{{_id}}" selected>{{name}}</option>
+      {{else}}
+        <option value="{{_id}}">{{name}}</option>
+      {{/if}}
     {{/each}}
   </select>
 </template>

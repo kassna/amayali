@@ -1,20 +1,20 @@
 Template.MassageBook.helpers({
-  types: () => _.map(['relax', 'decontracting', 'sport'], value => {
+  types: () => _.map(['relax', 'decontracting', 'sport'], _id => {
     return {
-      value,
-      label: () => TAPi18n.__(`schemas.orders.typeSelect.options.${value}`, null)
+      _id,
+      name: () => TAPi18n.__(`schemas.orders.typeSelect.options.${_id}`, null)
     }
   }),
-  therapistsType: () => _.map(['any', 'female', 'male'], value => {
+  therapistsType: () => _.map(['any', 'female', 'male'], _id => {
     return {
-      value,
-      label: () => TAPi18n.__(`schemas.orders.therapistsTypeSelect.options.${value}`, null)
+      _id,
+      name: () => TAPi18n.__(`schemas.orders.therapistsTypeSelect.options.${_id}`, null)
     }
   }),
-  products: () => _.map(['60', '90', '120'], value => {
+  products: () => _.map(['60', '90', '120'], _id => {
     return {
-      value,
-      label: () => TAPi18n.__(`schemas.orders.productSelect.options.${value}`, null)
+      _id,
+      name: () => TAPi18n.__(`schemas.orders.productSelect.options.${_id}`, null)
     }
   })
 });
@@ -22,7 +22,10 @@ Template.MassageBook.helpers({
 Template.MassageBook.events({
   'click #next2': event => {
     event.preventDefault();
-    if(!verifyFields($('#book-form-2'))) return false;
+    if(!verifyFields($('#book-form-2'))) {
+      Session.set('maxIntance', 2);
+      return false;
+    }
 
     // Get answers
     Session.set('type', $('#type').find('.active').attr('data-id'));
