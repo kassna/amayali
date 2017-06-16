@@ -19,11 +19,6 @@ Template.ScheduleBook.onRendered(() => {
        }
     }
 	});
-
-  $('.selectpicker').selectpicker({
-	  style: 'input__field input__field--madoka not-selected',
-	  size: 4
-	});
 });
 
 Template.ScheduleBook.events({
@@ -37,6 +32,13 @@ Template.ScheduleBook.events({
       Bert.alert(TAPi18n.__('book.errors.invalidHour', null), 'danger');
 			return false;
 		}
-
+    // Get answers
+    Session.set('date', moment($('[name="date"]').val()).format("MM/DD/YYYY h:mm a"));
+    Session.set('locationId', $('[name="locationId"]').val());
+    // Increase steps
+    Session.set('instance', 2);
+    // Increase max instance in case it was the first time advancing
+    if(Session.get('maxIntance') === 1) Session.set('maxIntance', 2);
+    scrollTop();
   }
 });

@@ -1,4 +1,4 @@
-input[type='text']:not(.numInput):not(.custom-input),
+input[type='text']:not(.numInput),
 input[type='password'],
 input[type='datetime'],
 input[type='datetime-local'],
@@ -16,6 +16,7 @@ textarea,
 textarea.form-control,
 .uneditable-input
 {
+  &:not(.custom-input){
     color: $green;
     font-size: 16px;
     line-height: 24px;
@@ -63,7 +64,8 @@ textarea.form-control,
     {
         /* Firefox 18- */
         color: lighten($green, 15%);
-    }
+    }  
+  }
 }
 
 textarea {

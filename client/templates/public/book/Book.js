@@ -7,13 +7,26 @@ verifyFields = $form => {
     }
   });
 
+  if($form.find('.button-select').length) {
+    $form.find('.button-select').each(function() {
+      if(!$(this).find('.active').attr('data-id')) {
+        allValid = false;
+        return false;
+      }
+    });
+  }
+
   if(!allValid) Bert.alert(TAPi18n.__('book.errors.requiredInputs', null), 'danger');
   return allValid;
 }
 
-Template.Book.onCreated(() => {
-  Session.set('instance', 0);
-	Session.set('totalSteps', 3);
+Template.Book.onCreated(function () {
+  let self = this;
+	self.autorun(function() {
+		self.subscribe('activeLocations');
+	});
+  Session.set('instance', 3);
+	Session.set('maxIntance', 3);
 });
 
 Template.Book.onRendered(() => {
@@ -35,5 +48,12 @@ Template.Book.onRendered(() => {
     } else {
       $select.parents('.bootstrap-select').find('button').removeClass('not-selected');
     }
+  });
+
+  $('body').on('click', '.button-select button', event => {
+    event.preventDefault();
+    const $parent = $(event.target).parent();
+    $parent.find('button').removeClass('active');
+    $(event.target).addClass('active');
   });
 });

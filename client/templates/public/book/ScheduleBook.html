@@ -11,16 +11,9 @@
 					<span class="input__label-content input__label-content--madoka">{{_ "book.date"}}</span>
 				</label>
 			</span>
-      <select class="selectpicker" name="locationId">
-        <option value="">{{_ "book.locationId"}}</option>
-        <option value="mty">Monterrey</option>
-        <option value="cdmx">CDMX</option>
-      </select>
 
-      <div class="footer-buttons">
-        <!-- <button class="btn-default">{{_ "book.back"}}</button> -->
-        <button class="btn-success" id="next1">{{_ "book.next"}}</button>
-      </div>
+      {{> SelectCollectionBook attribute="locationId" elements=locations placeholder="book.locationId"}}
+      {{> FooterButtonsBook stage=1 back=false finish=false}}
     </div>
   </div>
 </template>

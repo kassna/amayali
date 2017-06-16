@@ -21,5 +21,5 @@ $('body').on('click', '.scroll-to', function() {
 
 // Scroll top when clicking a button
 $('body').on('click', '.scroll-top', () => {
-  $('html,body').animate({ scrollTop: 0}, 0, 'easeInOutQuart');
+  scrollTop();
 });

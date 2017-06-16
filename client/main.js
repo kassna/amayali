@@ -21,9 +21,13 @@ scroll = function(target) {
 	return false;
 }
 
+scrollTop = () => {
+	$('html,body').animate({ scrollTop: 0}, 0, 'easeInOutQuart');
+}
+
 let accountsTranslationsES = {
-	firstname: 'Nombres',
-	lastname: 'Apellidos',
+	firstname: 'Nombre(s)',
+	lastname: 'Apellido(s)',
 	'Required Field': 'Campo Requerido',
 	'Minimum required length: 3': 'Mínimo 3 caractéres',
 	'Minimum required length: 6': 'Mínimo 6 caractéres',
@@ -115,6 +119,8 @@ Template.registerHelper('reloadSelect', () => {
 		$(".selectpicker").selectpicker('refresh');
 	}
 });
+
+Template.registerHelper('getTranslation', key => TAPi18n.__(key, null));
 
 //////////////////////////////////
 ///  ALL ELEMENTS

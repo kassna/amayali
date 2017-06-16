@@ -1,0 +1,8 @@
+<template name="SelectCollectionBook">
+  <select class="selectpicker" name="{{attribute}}">
+    <option value="">{{getTranslation placeholder}}</option>
+    {{#each elements}}
+      <option value="{{_id}}">{{name}}</option>
+    {{/each}}
+  </select>
+</template>

@@ -1,0 +1,8 @@
+<template name="SelectBook">
+  <select class="selectpicker" name="attribute">
+    <option value="">{{getTranslation placeholder}}</option>
+    {{#each elements}}
+      <option value="{{value}}">{{label}}</option>
+    {{/each}}
+  </select>
+</template>

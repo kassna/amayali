@@ -4,15 +4,19 @@
   <div class="book-cont">
     {{> HeaderBook}}
     <div class="container">
-      {{> StepsBook}}
-      {{#if $.Session.equals 'instance' 0}}
-        {{> ScheduleBook}}
-      {{/if}}
-      {{#if $.Session.equals 'instance' 1}}
-        {{> MassageBook}}
-      {{/if}}
-      {{#if $.Session.equals 'instance' 2}}
-        {{> PaymentBook}}
+      {{#if Template.subscriptionsReady}}
+        {{> StepsBook}}
+        {{#if $.Session.equals 'instance' 1}}
+          {{> ScheduleBook}}
+        {{/if}}
+        {{#if $.Session.equals 'instance' 2}}
+          {{> MassageBook}}
+        {{/if}}
+        {{#if $.Session.equals 'instance' 3}}
+          {{> PaymentBook}}
+        {{/if}}
+      {{else}}
+        {{> Loading}}
       {{/if}}
     </div>
   </div>

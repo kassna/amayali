@@ -1,0 +1,10 @@
+<template name="ButtonSelectBook">
+  <div class="button-select-cont">
+    <div class="button-select" id="{{attribute}}">
+      {{#each elements}}
+        <button class="" data-id="{{value}}">{{label}}</button>
+      {{/each}}
+    </div>
+    <label>{{getTranslation placeholder}}</label>
+  </div>
+</template>

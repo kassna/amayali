@@ -1,0 +1,12 @@
+<template name="FooterButtonsBook">
+  <div class="footer-buttons">
+    {{#if back}}
+      <button class="btn-default" id="back{{stage}}">{{_ "book.back"}}</button>
+    {{/if}}
+    {{#if finish}}
+      <button class="btn-success" id="next{{stage}}">{{_ "book.finish"}}</button>
+    {{else}}
+      <button class="btn-success" id="next{{stage}}">{{_ "book.next"}}</button>
+    {{/if}}
+  </div>
+</template>

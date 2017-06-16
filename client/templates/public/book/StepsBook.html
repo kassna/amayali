@@ -1,27 +1,30 @@
 <template name="StepsBook">
   <div>
     <ul class="steps-book">
-      <li class="completed">
+      <li class="{{#if $gt maxIntance 1}}completed{{/if}}" data-step="1">
         <span class="hidden-xs">
           <i class="fa fa-check-square-o c-white checked" aria-hidden="true"></i>
+          <i class="fa fa-clock-o step-icon" aria-hidden="true"></i>
           {{_ "book.step1"}}
         </span>
         <span class="visible-xs-inline-block">
           <i class="fa fa-clock-o" aria-hidden="true"></i>
         </span>
       </li>
-      <li class="">
+      <li class="{{#if $gt maxIntance 2}}completed{{/if}} {{#if $lt maxIntance 2}}disabled{{/if}}" data-step="2">
         <span class="hidden-xs">
           <i class="fa fa-check-square-o c-white checked" aria-hidden="true"></i>
+          <i class="fa fa-sign-language step-icon" aria-hidden="true"></i>
           {{_ "book.step2"}}
         </span>
         <span class="visible-xs-inline-block">
           <i class="fa fa-sign-language" aria-hidden="true"></i>
         </span>
       </li>
-      <li class="disabled">
+      <li class="{{#if $gt maxIntance 3}}completed{{/if}} {{#if $lt maxIntance 3}}disabled{{/if}}" data-step="3">
         <span class="hidden-xs">
           <i class="fa fa-check-square-o c-white checked" aria-hidden="true"></i>
+          <i class="fa fa-cc-paypal step-icon" aria-hidden="true"></i>
           {{_ "book.step3"}}
         </span>
         <span class="visible-xs-inline-block">

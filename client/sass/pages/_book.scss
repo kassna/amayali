@@ -46,6 +46,10 @@ $borderRadius: 8px;
     font-size: 20px;
     font-weight: 600;
 
+    &:not(.disabled) {
+      cursor: pointer;
+    }
+
     // Arrows
     &:not(:last-child) {
       // Color triangle to make color border
@@ -78,16 +82,17 @@ $borderRadius: 8px;
       &:after {
         border-left-color: #1BC98E;
       }
-      .checked {
-        margin-right: 10px;
+      .step-icon {
+        display: none;
       }
     }
 
     &.disabled {
       background-color: #d2d2d2;
       color: #7d7d7d;
+      cursor: not-allowed;
       &:after {
-        border-left-color: #ababab;
+        border-left-color: #d2d2d2;
       }
     }
 
@@ -95,10 +100,19 @@ $borderRadius: 8px;
     &:not(.completed) .checked {
       display: none;
     }
+
+    .checked,
+    .step-icon {
+      margin-right: 10px;
+    }
   }
 }
 
 .book-form {
+  h1 {
+    margin-bottom: 0;
+  }
+
   .simform {
   	position: relative;
   	margin: 0 auto;
@@ -146,6 +160,7 @@ $borderRadius: 8px;
   	border-radius: 0;
   	font-weight: bold;
   	-webkit-appearance: none; /* for box shadows to show on iOS */
+    z-index: 1;
   }
 
   .input__field:focus {
@@ -201,6 +216,7 @@ $borderRadius: 8px;
   	color: $unactive;
   	text-align: left;
   	cursor: text;
+    font-family: $body-font;
   }
 
   .input__label-content--madoka {
@@ -273,6 +289,7 @@ $borderRadius: 8px;
 
     &.not-selected {
       color: $unactive !important;
+      font-family: $body-font;
     }
   }
 
@@ -310,6 +327,58 @@ $borderRadius: 8px;
     @include bp(tablet) {
       font-size: 1.5em;
       padding: 0.5em;
+    }
+  }
+
+  // BUTTON SELECT
+  .button-select-cont {
+    position: relative;
+    .button-select {
+      display: flex;
+      margin: 2em 1em;
+      padding-bottom: 1em;
+      button {
+        flex-grow: 1;
+        border: 1px solid #bababa;
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: #d9d9d9;
+        font-size: 60%;
+        padding: 2em;
+        font-weight: 600;
+        font-family: $title-font;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.50);
+        }
+        &.active {
+          background-color: rgba(0, 188, 212, 0.52);
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    label {
+      position: absolute;
+      bottom: -24px;
+      font-size: 75%;
+      left: 32px;
+      color: $unactive;
+
+      @include bp(tablet) {
+        left: 65px;
+      }
+    }
+  }
+
+  // RADIO BUTTONS
+  .radio-select {
+    h2 {
+      display: inline-block;
+    }
+    .custom-control-indicator {
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
