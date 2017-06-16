@@ -25,8 +25,8 @@ Template.Book.onCreated(function () {
 	self.autorun(function() {
 		self.subscribe('activeLocations');
 	});
-  Session.set('instance', 3);
-	Session.set('maxIntance', 3);
+  Session.set('instance', 1);
+	Session.set('maxIntance', 1);
 });
 
 Template.Book.onRendered(() => {

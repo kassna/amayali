@@ -1,19 +1,27 @@
 Template.ScheduleBook.onRendered(() => {
+  let date = Session.get('date') || "";
+  // Set active inputs
+  if(date) {
+    // Set as default date
+    date = new Date(date);
+    $("[name='date']").parent().addClass('input--filled');
+  }
+
   $(".select-date").flatpickr({
 		enableTime: true,
 		altInput: true,
 		altFormat: "F j, Y h:i K",
     altInputClass: "",
-		utc: true,
-		minDate: moment().subtract(2, 'h').valueOf(),
+    defaultDate: date,
+		minDate: moment().add(3, 'h').valueOf(),
 		minuteIncrement: 15,
-		time_24hr: true,
 		disableMobile: true,
 		wrap: true,
-    onOpen: function(selectedDates, dateStr, instance){
+    onOpen: (selectedDates, dateStr, instance) => {
         $(instance.element).addClass('input--filled');
     },
-    onClose: function(selectedDates, dateStr, instance){
+    onClose: (selectedDates, dateStr, instance) => {
+      console.log(dateStr);
        if(dateStr.trim() === '') {
          $(instance.element).removeClass('input--filled');
        }
