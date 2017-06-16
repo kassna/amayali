@@ -1,23 +1,32 @@
-verifyFields = $form => {
-  let allValid = true;
-  $form.find('input, select').each(function() {
-    if(!$(this).val()) {
-      allValid = false;
+verifyRequired = attributes => {
+  let allSet = true;
+  _.map(attributes, attr => {
+    if(!Session.get(attr)) {
+      allSet = false;
       return false;
     }
   });
 
-  if($form.find('.button-select').length) {
-    $form.find('.button-select').each(function() {
-      if(!$(this).find('.active').attr('data-id')) {
-        allValid = false;
-        return false;
-      }
-    });
+  if(!allSet) Bert.alert(TAPi18n.__('book.errors.requiredInputs', null), 'danger');
+  return allSet;
+}
+
+nextInstance = (attributes, currInstance) => {
+  if(!verifyRequired(attributes)) {
+    Session.set('maxIntance', currInstance);
+    return false;
   }
 
-  if(!allValid) Bert.alert(TAPi18n.__('book.errors.requiredInputs', null), 'danger');
-  return allValid;
+  // Increase steps
+  Session.set('instance', currInstance + 1);
+  // Increase max instance in case it was the first time advancing
+  if(Session.get('maxIntance') === currInstance) Session.set('maxIntance', currInstance + 1);
+  scrollTop();
+}
+
+prevInstance = currInstance => {
+  Session.set('instance', currInstance - 1);
+  scrollTop();
 }
 
 Template.Book.onCreated(function () {
@@ -27,4 +36,5 @@ Template.Book.onCreated(function () {
 	});
   Session.set('instance', 1);
 	Session.set('maxIntance', 1);
+  Session.set('total', 0);
 });

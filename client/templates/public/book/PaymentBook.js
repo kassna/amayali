@@ -20,7 +20,6 @@ Template.PaymentBook.events({
     }
   },
   'click #back3': () => {
-    Session.set('instance', 2);
-    scrollTop();
+    prevInstance(3);
   }
 });

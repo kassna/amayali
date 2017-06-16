@@ -22,22 +22,26 @@ Template.MassageBook.helpers({
 Template.MassageBook.events({
   'click #next2': event => {
     event.preventDefault();
-    if(!verifyFields($('#book-form-2'))) {
-      Session.set('maxIntance', 2);
-      return false;
-    }
-
-    // Get answers
-    Session.set('type', $('#type').find('.active').attr('data-id'));
-    Session.set('product', $('#product').find('.active').attr('data-id'));
-    // Increase steps
-    Session.set('instance', 3);
-    // Increase max instance in case it was the first time advancing
-    if(Session.get('maxIntance') === 2) Session.set('maxIntance', 3);
-    scrollTop();
+    nextInstance(['type', 'therapistsType', 'product'], 2);
   },
   'click #back2': () => {
-    Session.set('instance', 1);
-    scrollTop();
+    prevInstance(2);
+  },
+  'click #product button': event => {
+    const product = $(event.target).attr('data-id');
+    let price;
+    switch (product) {
+      case '60':
+        price = 799;
+        break;
+      case '90':
+        price = 1099;
+        break;
+      case '120':
+        price = 1399;
+        break;
+      default:
+    }
+    Session.set('total', price);
   }
 });
