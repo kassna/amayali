@@ -11,12 +11,14 @@ Template.SelectBook.onRendered(() => {
 
   $('body').on('change', '.selectpicker', event => {
     const $select = $(event.target);
-    if(!$select.val()) {
-      $select.parents('.bootstrap-select').find('button').addClass('not-selected');
-    } else {
-      $select.parents('.bootstrap-select').find('button').removeClass('not-selected');
+    if(attr === $select.attr('name')) {
+      if(!$select.val()) {
+        $select.parents('.bootstrap-select').find('button').addClass('not-selected');
+      } else {
+        $select.parents('.bootstrap-select').find('button').removeClass('not-selected');
+      }
+      Session.set(attr, $select.val());
     }
-    Session.set(attr, $select.val());
   });
 });
 

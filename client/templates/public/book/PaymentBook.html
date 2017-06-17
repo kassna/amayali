@@ -6,14 +6,14 @@
       {{> InputTextBook type="text" attribute="lastname" placeholder="book.lastname"}}
       {{> InputTextBook type="text" attribute="address.street1" placeholder="schemas.orders.address.street1"}}
       {{> InputTextBook type="text" attribute="address.street2" placeholder="schemas.orders.address.street2"}}
-      {{> InputTextBook type="text" attribute="address.zip" placeholder="schemas.orders.address.zip"}}
+      {{> InputTextBook type="text" attribute="address.zip" placeholder="schemas.orders.address.zip" max=5}}
       {{> InputTextBook type="text" attribute="phone" placeholder="schemas.orders.phone"}}
       {{> InputTextBook type="email" attribute="email" placeholder="book.email"}}
       <div class="radio-select text-center">
         <h2 class="c-white">{{_ "book.createAccount"}}</h2>
         <div class="radio-inline custom-control custom-radio">
           <label class="c-white">
-            <input type="radio" value="yes" name="createAccount">
+            <input type="radio" value="yes" name="createAccount" checked>
             <span class="custom-control-indicator"></span>
             Si
           </label>
@@ -31,6 +31,13 @@
         {{> InputTextBook type="password" attribute="confirmPassword" placeholder="book.confirmPassword"}}
       {{/if}}
       <h2 class="c-white text-center">{{_ "book.paymentLead"}}</h2>
+      <!-- <div id="dropin-container"></div>
+      <button id="submit-button">Purchase</button> -->
+      {{> InputTextBook type="text" attribute="card-number" placeholder="book.cardNumber" max=19}}
+      {{> InputTextBook type="text" attribute="ccv" placeholder="book.ccv" max=3}}
+      {{> SelectBook attribute="expirationMonth" elements=months placeholder="book.expMonth"}}
+      {{> SelectBook attribute="expirationYear" elements=years placeholder="book.expYear"}}
+      {{> InputTextBook type="text" attribute="zipBook" placeholder="schemas.orders.address.zip" max=5}}
       {{> FooterButtonsBook stage=3 back=true finish=true}}
     </div>
   </div>

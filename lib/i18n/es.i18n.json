@@ -100,9 +100,29 @@
     "createAccount": "¿Desea crear una cuenta?",
     "password": "Contraseña",
     "confirmPassword": "Confirmar contraseña",
+    "cardNumber": "Número de tarjeta",
+    "ccv": "CCV",
+    "expMonth": "Mes de expiración",
+    "expYear": "Año de expiración",
     "errors": {
       "requiredInputs": "Todos los campos son obligatorios",
-      "invalidHour": "No podemos atenderte en esa hora, por favor selecciona otra."
+      "invalidHour": "No podemos atenderte en esa hora, por favor selecciona otra.",
+      "passwordMatch": "Tus contraseñas no coinciden, intenta de nuevo.",
+      "emailInvalid": "El email es incorrecto o ya existe, intenta de nuevo."
+    },
+    "months": {
+      "01": "Enero",
+      "02": "Febrero",
+      "03": "Marzo",
+      "04": "Abril",
+      "05": "Mayo",
+      "06": "Junio",
+      "07": "Julio",
+      "08": "Agosto",
+      "09": "Septiembre",
+      "10": "Octubre",
+      "11": "Noviembre",
+      "12": "Diciembre"
     }
   },
   "schemas": {

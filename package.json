@@ -7,10 +7,12 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "bcrypt": "^1.0.2",
+    "bootstrap-select": "*",
+    "braintree": "^2.1.1",
+    "braintree-web": "^3.19.0",
     "conekta": "^2.1.0",
     "masonry-layout": "^4.1.1",
     "meteor-node-stubs": "~0.2.0",
-    "node-sass": "^4.5.2",
-    "bootstrap-select": "*"
+    "node-sass": "^4.5.2"
   }
 }

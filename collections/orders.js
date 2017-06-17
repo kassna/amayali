@@ -10,8 +10,8 @@ Orders = new OrdersCollection('orders');
 
 Orders.allow({
   insert: function(userId, doc) {
-    // everybody can register orders
-    return true;
+    // orders can be created just server-side
+    return false;
   },
   update: function(userId, doc) {
     // just admins can update
@@ -132,6 +132,12 @@ OrdersSchema = new SimpleSchema({
   address: {
     type: AddressSchema,
   },
+  transactionId: {
+    type: String,
+    autoform: {
+      omit: true
+    },
+  },
   survey: {
     type: String,
     regEx: SimpleSchema.RegEx.Id,
@@ -144,9 +150,9 @@ OrdersSchema = new SimpleSchema({
     type: Date,
     autoValue: function() {
       if (this.isInsert) {
-        return Date.now();
+        return new Date();
       } else if (this.isUpsert) {
-        return {$setOnInsert: Date.now()};
+        return {$setOnInsert: new Date()};
       } else {
         this.unset();  // Prevent user from supplying their own value
       }
