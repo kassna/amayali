@@ -79,7 +79,28 @@ Meteor.methods({
 	        }
 	    });
 	},
-
+	// User
+	verifyAvailableEmail: email => {
+		return Accounts.findUserByEmail(email);
+	},
+	// ORDERS
+	createClientFromOrder: (accountDetails, order) => {
+		try {
+			const userId = Accounts.createUser(accountDetails);
+			Roles.setUserRoles(userId, 'client');
+			const { firstname, lastname, email, phone, locationId, address } = order;
+			const client = { firstname, lastname, email, phone, locationId, address, userId };
+			return clientId = Clients.insert(client);
+		} catch (ex) {
+			throw new Meteor.Error("email-invalid");
+		}
+	},
+	paypalPostPay: (order, accountDetails) => {
+		if(accountDetails) {
+			order.clientId = Meteor.call('createClientFromOrder', accountDetails, order);
+		}
+		return Orders.insert(order);
+	},
 	attemptPurchase: (token, order, accountDetails) => {
 		/*
 			Add user

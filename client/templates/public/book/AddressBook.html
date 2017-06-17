@@ -1,0 +1,36 @@
+<template name="AddressBook">
+  <div class="book-form">
+    <h1 class="c-white text-center">{{_ "book.step3Lead"}}</h1>
+    <div class="simform">
+      {{> InputTextBook type="text" attribute="firstname" placeholder="book.firstname"}}
+      {{> InputTextBook type="text" attribute="lastname" placeholder="book.lastname"}}
+      {{> InputTextBook type="text" attribute="address.street1" placeholder="schemas.orders.address.street1"}}
+      {{> InputTextBook type="text" attribute="address.street2" placeholder="schemas.orders.address.street2"}}
+      {{> InputTextBook type="text" attribute="address.zip" placeholder="schemas.orders.address.zip" max=5}}
+      {{> InputTextBook type="text" attribute="phone" placeholder="schemas.orders.phone"}}
+      {{> InputTextBook type="email" attribute="email" placeholder="book.email"}}
+      <div class="radio-select text-center">
+        <h2 class="c-white">{{_ "book.createAccount"}}</h2>
+        <div class="radio-inline custom-control custom-radio">
+          <label class="c-white">
+            <input type="radio" value="yes" name="createAccount" checked>
+            <span class="custom-control-indicator"></span>
+            {{_ "schemas.general.yes"}}
+          </label>
+        </div>
+        <div class="radio-inline custom-control custom-radio">
+          <label class="c-white">
+            <input type="radio" value="no" name="createAccount">
+            <span class="custom-control-indicator"></span>
+            {{_ "schemas.general.no"}}
+          </label>
+        </div>
+      </div>
+      {{#if createAccount}}
+        {{> InputTextBook type="password" attribute="password" placeholder="book.password"}}
+        {{> InputTextBook type="password" attribute="confirmPassword" placeholder="book.confirmPassword"}}
+      {{/if}}
+      {{> FooterButtonsBook stage=3 back=true finish=false}}
+    </div>
+  </div>
+</template>
