@@ -149,6 +149,18 @@ Template.PaymentBook.events({
       template.creditCard.set(false);
     }
   },
+  'click #verifyPromo': event => {
+    const code = $("[name='promoCode']").val();
+    Meteor.call('verifyPromoCode', code, Session.get('locationId'), (err, res) => {
+      console.log(err, res);
+      if (err || !res) {
+        Bert.alert(TAPi18n.__('book.errors.wrongPromoCode', null), 'danger');
+      } else {
+        Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
+        Session.set('promoCodeValid', res);
+      }
+    })
+  },
   'click #back4': () => {
     prevInstance(4);
   },
@@ -158,6 +170,10 @@ Template.PaymentBook.events({
 
   }
 });
+
+/*
+  Paypal template
+ */
 
 Template.PaypalBook.onRendered(() => {
   // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356

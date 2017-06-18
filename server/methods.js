@@ -21,6 +21,8 @@ Meteor.methods({
 		}
 	},
 
+	verifyPromoCode: (code, locationId) => PromoCodes.findOne({$and:[{ code }, {locationsId: locationId}]}, {fields: {type: 1, amount: 1}}),
+
 	// Client
 	createClientFromSignUp: (userId, info) => {
 		const { email } = info;

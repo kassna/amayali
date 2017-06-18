@@ -1,6 +1,5 @@
 Template.InputTextBook.onRendered(() => {
   const attr = Template.instance().data.attribute;
-  console.log(attr, Session.get(attr));
   if (Session.get(attr)) {
     $(`[name="${attr}"]`).parent().addClass('input--filled');
   }

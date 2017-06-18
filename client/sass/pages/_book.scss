@@ -387,6 +387,10 @@ $borderRadius: 8px;
       justify-content: flex-start;
     }
 
+    &.center {
+      justify-content: center;
+    }
+
     button {
       flex-grow: 0.5;
       border: none;

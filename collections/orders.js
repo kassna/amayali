@@ -94,6 +94,13 @@ OrdersSchema = new SimpleSchema({
       omit: true
     },
   },
+  promoCode: {
+    type: String,
+    optional: true,
+    autoform: {
+      omit: true
+    },
+  },
   therapist: {
     type: String,
     regEx: SimpleSchema.RegEx.Id,
