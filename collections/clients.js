@@ -133,7 +133,6 @@ ClientsSchema = new SimpleSchema({
   },
   pendingPromos: {
     type: Number,
-    optional: true,
     defaultValue: 0,
     autoform: {
       omit: true

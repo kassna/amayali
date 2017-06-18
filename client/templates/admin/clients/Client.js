@@ -1,5 +1,5 @@
 Template.Client.helpers({
-  clientOrders: _id => Orders.find().count()
+  clientOrders: _id => Orders.find({clientId: _id}).count()
 });
 
 
