@@ -392,7 +392,20 @@
       "infoOrder": "Información de la orden",
       "noTherapist": "No asignado",
       "completed": "Completada",
-      "canceled": "Cancelada"
+      "canceled": "Cancelada",
+      "assign": "Asignar",
+      "assignInstructions": "Selecciona una orden, un terapeuta y presiona el botón de asignar",
+      "preference": "Preferencia",
+      "last": "Anterior",
+      "zone": "Colonia",
+      "zones": "Colonias disponibles",
+      "zip": "CP",
+      "therapists": "Terapeutas",
+      "schedule": "Horario",
+      "confirmAssignQ": "¿Deseas asignar este terapeuta a esta orden?",
+      "confirmAssign": "Si, asignar",
+      "successAssign": "Éxito! La orden ha sido asignada",
+      "failAssign": "Hubo un error! Intenta de nuevo"
     }
   }
 }

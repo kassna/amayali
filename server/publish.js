@@ -134,6 +134,14 @@ Meteor.publish('historicalOrders', location => {
     }
 });
 
+Meteor.publish('noTherapistOrders', location => {
+    if (location) {
+      return Orders.find({ $and: [{ locationId: location }, { therapist: { $exists: false }}]});
+    } else {
+      return Orders.find({ therapist: { $exists: false }});
+    }
+});
+
 Meteor.publish('clientOrders', location => {
     let includeArr = [];
     Clients.find().map(item => includeArr.push(item._id));

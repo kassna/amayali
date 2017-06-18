@@ -79,11 +79,13 @@ Meteor.methods({
 	        }
 	    });
 	},
+
 	// User
 	verifyAvailableEmail: email => {
 		return Accounts.findUserByEmail(email);
 	},
-	// ORDERS
+
+	// Orders
 	createClientFromOrder: (accountDetails, order) => {
 		try {
 			const userId = Accounts.createUser(accountDetails);
@@ -158,5 +160,12 @@ Meteor.methods({
 			throw new Meteor.Error("card-declined",
 				err);
 		});
+	},
+
+	'assignOrderTherapist': (orderId, therapist) => {
+		if(Orders.findOne(orderId).locationId != Therapists.findOne(therapist).locationId) {
+			throw new Meteor.Error("different-location");
+		}
+		Orders.update({ _id: orderId }, { $set: { therapist }});
 	}
 });

@@ -91,3 +91,50 @@
 .danger-tr {
 	background: rgba(244, 67, 54, 0.1);
 }
+
+//////////////////////
+// Assign therapists
+//////////////////////
+.assign-therapists {
+	&.with-icon {
+		li {
+			position: relative;
+
+			.info-icon {
+				position: absolute;
+				left: -14px;
+				top: 10px;
+				color: $cream;
+				@include bp(tablet) {
+					left: -20px;
+				}
+				&:hover {
+					color: darken($cream, 15%);
+				}
+			}
+		}
+	}
+	li {
+		cursor: pointer;
+		padding: 0;
+		.info {
+			padding: 10px 15px;
+			&:hover {
+				background-color: rgba(121, 185, 191, 0.15);
+			}
+		}
+	}
+
+	.btn-pill {
+		@include bp(tablet) {
+			margin-top: 20px;
+		}
+	}
+
+	.list-group-item.active,
+	.list-group-item.active:focus,
+	.list-group-item.active:hover {
+		background-color: rgba(121, 185, 191, 0.49);
+		border-color: $turquoise
+	}
+}
