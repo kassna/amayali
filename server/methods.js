@@ -89,7 +89,7 @@ Meteor.methods({
 			const userId = Accounts.createUser(accountDetails);
 			Roles.setUserRoles(userId, 'client');
 			const { firstname, lastname, email, phone, locationId, address } = order;
-			const client = { firstname, lastname, email, phone, locationId, address, userId };
+			const client = { firstname, lastname, email, phone, locationId, address, userId, completedProfile: true };
 			return clientId = Clients.insert(client);
 		} catch (ex) {
 			throw new Meteor.Error("email-invalid");
