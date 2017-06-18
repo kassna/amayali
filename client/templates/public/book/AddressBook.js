@@ -1,6 +1,11 @@
 Template.AddressBook.onCreated(function () {
-    this.createAccount = new ReactiveVar(true);
-    Session.set('createAccount', true);
+    const createAccount = Session.get('createAccount');
+    if (createAccount === undefined) {
+      this.createAccount = new ReactiveVar(true);
+      Session.set('createAccount', true);
+    } else {
+      this.createAccount = new ReactiveVar(createAccount);
+    }
 });
 
 Template.AddressBook.helpers({

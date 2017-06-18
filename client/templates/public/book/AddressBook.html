@@ -13,14 +13,22 @@
         <h2 class="c-white">{{_ "book.createAccount"}}</h2>
         <div class="radio-inline custom-control custom-radio">
           <label class="c-white">
-            <input type="radio" value="yes" name="createAccount" checked>
+            {{#if $.Session.equals 'createAccount' true}}
+              <input type="radio" value="yes" name="createAccount" checked>
+            {{else}}
+              <input type="radio" value="yes" name="createAccount">
+            {{/if}}
             <span class="custom-control-indicator"></span>
             {{_ "schemas.general.yes"}}
           </label>
         </div>
         <div class="radio-inline custom-control custom-radio">
           <label class="c-white">
-            <input type="radio" value="no" name="createAccount">
+            {{#if $.Session.equals 'createAccount' false}}
+              <input type="radio" value="no" name="createAccount" checked>
+            {{else}}
+              <input type="radio" value="no" name="createAccount">
+            {{/if}}
             <span class="custom-control-indicator"></span>
             {{_ "schemas.general.no"}}
           </label>
