@@ -6,10 +6,10 @@ Template.Locations.onRendered(function() {
 				$("[data-sort=table]").tablesorter({
 					sortList: [[0,0]],
 					headers: {
-	          1: { sorter: false },
 						2: { sorter: false },
 						3: { sorter: false },
 						4: { sorter: false },
+						5: { sorter: false },
 		      }
 				});
 			});

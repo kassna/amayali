@@ -20,6 +20,9 @@ LocationsSchema = new SimpleSchema({
     type: String,
     unique: true,
   },
+  abbreviation: {
+    type: String,
+  },
   status: {
     type: Boolean,
     defaultValue: true,

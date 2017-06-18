@@ -1,5 +1,5 @@
 Template.PromoCode.helpers({
-	prettyType: type => TAPi18n.__(`admin.promoCodes.typeOptions.${type}`, null)
+	prettyPromoType: type => TAPi18n.__(`admin.promoCodes.typeOptions.${type}`, null)
 });
 
 Template.PromoCode.events({

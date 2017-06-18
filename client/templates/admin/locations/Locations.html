@@ -17,6 +17,7 @@
                       <thead>
                           <tr>
                               <th>{{_ "admin.general.name"}}</th>
+                              <th>{{_ "schemas.locations.abbreviation"}}</th>
                               <th></th>
                               <th>{{_ "admin.general.active"}}</th>
                               <th></th>
@@ -28,7 +29,7 @@
                               {{> Location}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=5}}
+                                  {{> NoResults cols=6}}
                               </tr>
                           {{/each}}
                       </tbody>
