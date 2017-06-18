@@ -16,8 +16,8 @@
             <ul class="nav nav-pills nav-stacked">
                 {{#if isInRole 'admin'}}
 										<li class="nav-header text-center">{{_ "admin.general.orders"}}</li>
-										<li class="">
-												<a class="scroll-top text-center" href="">
+										<li class="{{isActiveRoute 'admin-pending-orders'}}">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-pending-orders'}}">
 													<i class="fa fa-exclamation" aria-hidden="true"></i>
 													{{_ "admin.orders.pendingOrders"}}
 												</a>
@@ -28,8 +28,8 @@
 													{{_ "admin.orders.assignTherapist"}}
 												</a>
 										</li>
-										<li class="">
-												<a class="scroll-top text-center" href="">
+										<li class="{{isActiveRoute 'admin-history-orders'}}">
+												<a class="scroll-top text-center" href="{{pathFor 'admin-history-orders'}}">
 													<i class="fa fa-history" aria-hidden="true"></i>
 													{{_ "admin.orders.pastOrders"}}
 												</a>

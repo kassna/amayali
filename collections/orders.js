@@ -90,6 +90,9 @@ OrdersSchema = new SimpleSchema({
   total: {
     type: Number,
     decimal: true,
+    autoform: {
+      omit: true
+    },
   },
   therapist: {
     type: String,
@@ -159,6 +162,15 @@ OrdersSchema = new SimpleSchema({
       }
     },
     denyUpdate: true,
+    autoform: {
+      omit: true
+    },
+  },
+  status: {
+    type: String,
+    defaultValue: 'confirmed',
+    allowedValues:
+      ['confirmed', 'canceled', 'completed'],
     autoform: {
       omit: true
     },

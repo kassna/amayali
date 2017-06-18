@@ -225,7 +225,8 @@
       }
     },
     "locations": {
-      "name": "Nombre de la ciudad"
+      "name": "Nombre de la ciudad",
+      "abbreviation": "Abreviación"
     },
     "promoCodes": {
       "code": "Código de promoción",
@@ -286,6 +287,7 @@
       "forbidden": "Acceso denegado",
       "loading": "Cargando",
       "add": "Agregar",
+      "delete": "Borrar",
       "create": "Crear",
       "noResults": "No hay elementos",
       "activate": "Activar",
@@ -374,7 +376,20 @@
     "orders": {
       "pendingOrders": "Ordenes pendientes",
       "pastOrders": "Historial de ordenes",
-      "assignTherapist": "Asignar Terapeutas"
+      "assignTherapist": "Asignar Terapeutas",
+      "locationId": "Ciudad",
+      "date": "Fecha",
+      "client": "Cliente",
+      "name": "Nombre",
+      "address": "Dirección",
+      "type": "Tipo",
+      "product": "Duración",
+      "therapist": "Terapeuta",
+      "therapistsType": "Pref. Terapeuta",
+      "total": "Total",
+      "transactionId": "Aprovación",
+      "infoOrder": "Información de la orden",
+      "noTherapist": "No asignado"
     }
   }
 }

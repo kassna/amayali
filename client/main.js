@@ -73,6 +73,10 @@ Template.registerHelper('roundedPrice', price => (price % 1 === 0) ? price : pri
 
 Template.registerHelper('humanDate', date => moment(date).format('LL'));
 
+Template.registerHelper('humanDateHour', date => moment(date).format('lll'));
+
+Template.registerHelper('dateHour', date => moment(date, "MM/DD/YYYY h:mm a").format('llll'));
+
 Template.registerHelper('fromNow', date => moment(date).fromNow());
 
 Template.registerHelper('prettyStatus', string => {
@@ -97,9 +101,16 @@ Template.registerHelper('prettyExperience', options =>
 Template.registerHelper('prettyExperienceTypes', options =>
 	_.map(options, option => TAPi18n.__(`schemas.therapists.experienceTypesSelect.options.${option}`, null))
 );
-Template.registerHelper('prettyBoolean', option => TAPi18n.__(`schemas.general.${option}`, null));
 Template.registerHelper('prettyReference', option => TAPi18n.__(`schemas.therapists.referenceSelect.options.${option}`, null));
 
+Template.registerHelper('prettyBoolean', option => TAPi18n.__(`schemas.general.${option}`, null));
+
+// Orders
+Template.registerHelper('prettyType', option => TAPi18n.__(`schemas.orders.typeSelect.options.${option}`, null));
+Template.registerHelper('prettyTherapistType', option => TAPi18n.__(`schemas.orders.therapistsTypeSelect.options.${option}`, null));
+Template.registerHelper('prettyProduct', option => TAPi18n.__(`schemas.orders.productSelect.options.${option}`, null));
+
+// PromoCodes helpers
 Template.registerHelper('prettyDiscount', (type, amount) => {
 	if(type === 'amount') return `${amount}`;
 	else if(type === 'percentage') return `${amount}%`;
@@ -111,6 +122,10 @@ Template.registerHelper('locationsName', locationsId =>
 );
 
 Template.registerHelper('locationName', locationId => Locations.findOne(locationId).name);
+
+Template.registerHelper('therapistName', therapistId => Therapists.findOne(therapistId).name);
+
+Template.registerHelper('locationAbbr', locationId => Locations.findOne(locationId).abbreviation);
 
 Template.registerHelper('userInRole', (id, role) => Roles.userIsInRole(id, role));
 
@@ -136,6 +151,8 @@ Template.registerHelper('therapists', () => Therapists.find());
 
 Template.registerHelper('clients', () => Clients.find());
 
+Template.registerHelper('orders', () => Orders.find());
+
 //////////////////////////////////
 ///  SINGLE ELEMENTS
 /////////////////////////////////
@@ -147,3 +164,5 @@ Template.registerHelper('promoCode', () => PromoCodes.findOne());
 Template.registerHelper('therapist', () => Therapists.findOne());
 
 Template.registerHelper('client', () => Clients.findOne());
+
+Template.registerHelper('order', () => Orders.findOne());
