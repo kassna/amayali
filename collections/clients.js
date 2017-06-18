@@ -144,7 +144,7 @@ Clients.after.insert((userId, doc) => {
   doc.promoCodeId = PromoCodes.insert({
     type: 'percentage',
     amount: 10,
-    locationsId: [doc.location],
+    locationsId: []
   });
 });
 

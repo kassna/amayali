@@ -21,7 +21,19 @@ Meteor.methods({
 		}
 	},
 
-	verifyPromoCode: (code, locationId) => PromoCodes.findOne({$and:[{ code }, {locationsId: locationId}]}, {fields: {type: 1, amount: 1}}),
+	verifyPromoCode: (code, locationId) => {
+		const promoCode = PromoCodes.findOne({ code });
+		if (promoCode) {
+			const { locationsId, type, amount } = promoCode
+			// User codes have locationsId: [], so verify this or if it's a valid location
+			if(!locationsId.length || _.indexOf(locationsId, locationId) >= 0) {
+				return { type, amount };
+			} else {
+				return false;
+			}
+		}
+		return false;
+	},
 
 	// Client
 	createClientFromSignUp: (userId, info) => {

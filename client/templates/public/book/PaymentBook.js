@@ -208,30 +208,41 @@ Template.PaypalBook.onRendered(() => {
     onError: (err) => {
       // Show an error page here, when an error occurs
       console.log('errr', err);
+      handleErrorPayment({ error: "payment" });
+    },
+    onCancel: (data) => {
+      console.log("CANCEL", data);
+      handleErrorPayment({ error: "payment" });
     },
     onAuthorize: (data, actions) => {
-      // Make a call to the REST api to execute the payment
-      return actions.payment.execute().then(res => {
-        let orderDetails = getOrderDetails();
-        // Add paypal id to order
-        orderDetails.transactionId = res.id;
-        let accountDetails = null;
-
-        // Get account details
-        if(Session.get('createAccount')) {
-          accountDetails = getAccountDetails();
+      Meteor.call('verifyAvailableEmail', Session.get('email'), (err, res) => {
+        if(err || res) {
+          handleErrorPayment(err || { error: "email-invalid" });
+          return false;
         }
+        // Make a call to the REST api to execute the payment
+        return actions.payment.execute().then(res => {
+          let orderDetails = getOrderDetails();
+          // Add paypal id to order
+          orderDetails.transactionId = res.id;
+          let accountDetails = null;
 
-        // Attempt to insert order and account
-        Meteor.call('paypalPostPay', orderDetails, accountDetails, (err, res) => {
-          if (err) {
-            handleErrorPayment(err);
-            return false;
-          } else {
-            const orderId = res;
-            // TODO: Add redirect to order review
-            console.log('payment success', orderId);
+          // Get account details
+          if(Session.get('createAccount')) {
+            accountDetails = getAccountDetails();
           }
+
+          // Attempt to insert order and account
+          Meteor.call('paypalPostPay', orderDetails, accountDetails, (err, res) => {
+            if (err) {
+              handleErrorPayment(err);
+              return false;
+            } else {
+              const orderId = res;
+              // TODO: Add redirect to order review
+              console.log('payment success', orderId);
+            }
+          });
         });
       });
     }
