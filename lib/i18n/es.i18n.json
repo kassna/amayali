@@ -387,9 +387,12 @@
       "therapist": "Terapeuta",
       "therapistsType": "Pref. Terapeuta",
       "total": "Total",
-      "transactionId": "Aprovación",
+      "transactionId": "Aprobación",
+      "status": "Estatus",
       "infoOrder": "Información de la orden",
-      "noTherapist": "No asignado"
+      "noTherapist": "No asignado",
+      "completed": "Completada",
+      "canceled": "Cancelada"
     }
   }
 }

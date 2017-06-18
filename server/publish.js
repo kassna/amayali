@@ -97,6 +97,16 @@ Meteor.publish('therapistPendingOrders', location => {
   }
 });
 
+Meteor.publish('therapistHistoricalOrders', location => {
+  let includeArr = [];
+  Orders.find({ $or: [{ status: 'completed' }, { status: 'canceled' }]}).map(item => includeArr.push(item.therapist));
+  if (location) {
+    return Therapists.find({ $and: [{ _id: { $in: includeArr }}, { locationId: location }]});
+  } else {
+    return Therapists.find({ _id: { $in: includeArr }});
+  }
+});
+
 ////////////////////////
 ///  Orders
 ////////////////////////
@@ -113,6 +123,14 @@ Meteor.publish('pendingOrders', location => {
       return Orders.find({ $and: [{ locationId: location }, { status: 'confirmed' }]});
     } else {
       return Orders.find({ status: 'confirmed' });
+    }
+});
+
+Meteor.publish('historicalOrders', location => {
+    if (location) {
+      return Orders.find({ $and: [{ locationId: location }, { $or: [{ status: 'completed' }, { status: 'canceled' }]}]});
+    } else {
+      return Orders.find({ $or: [{ status: 'completed' }, { status: 'canceled' }]});
     }
 });
 

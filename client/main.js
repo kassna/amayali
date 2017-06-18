@@ -109,6 +109,7 @@ Template.registerHelper('prettyBoolean', option => TAPi18n.__(`schemas.general.$
 Template.registerHelper('prettyType', option => TAPi18n.__(`schemas.orders.typeSelect.options.${option}`, null));
 Template.registerHelper('prettyTherapistType', option => TAPi18n.__(`schemas.orders.therapistsTypeSelect.options.${option}`, null));
 Template.registerHelper('prettyProduct', option => TAPi18n.__(`schemas.orders.productSelect.options.${option}`, null));
+Template.registerHelper('prettyStatus', option => TAPi18n.__(`admin.orders.${option}`, null));
 
 // PromoCodes helpers
 Template.registerHelper('prettyDiscount', (type, amount) => {

@@ -1,0 +1,50 @@
+<template name="HistoricalOrders">
+    {{#if isInRole 'admin'}}
+        <div class="dashhead">
+            <div class="dashhead-titles">
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.orders.pastOrders"}}</h2>
+            </div>
+        </div>
+
+        {{#if Template.subscriptionsReady}}
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.orders.status"}}</th>
+                              <th>{{_ "admin.orders.locationId"}}</th>
+                              <th>{{_ "admin.orders.name"}}</th>
+                              <th>{{_ "admin.orders.date"}}</th>
+                              <th>{{_ "admin.orders.client"}}</th>
+                              <th>{{_ "admin.orders.therapist"}}</th>
+                              <th>{{_ "admin.orders.product"}}</th>
+                              <th>{{_ "admin.orders.type"}}</th>
+                              <th>{{_ "admin.orders.therapistsType"}}</th>
+                              <th>{{_ "admin.general.viewMore"}}</th>
+                              <th>{{_ "admin.general.edit"}}</th>
+                              <th>{{_ "admin.general.delete"}}</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each orders}}
+                              {{> HistoricalOrder}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=11}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+
+        {{> OrderInfo}}
+        {{> ClientInfoOrder}}
+        {{> EditModal collection="Orders" editItem=editItem }}
+
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>
