@@ -1,8 +1,8 @@
 Template.AdminTherapistsRequest.onRendered(function() {
 	let template = this;
 	template.autorun(function() {
-		template.subscribe('inactiveTherapists', Session.get('currentCity'), function () {
-			Tracker.afterFlush(function () {
+		template.subscribe('inactiveTherapists', Session.get('currentCity'), () => {
+			Tracker.afterFlush(() => {
 				if(Therapists.find().count()) {
 					$("[data-sort=table]").tablesorter({
 						sortList: [[1,0]],

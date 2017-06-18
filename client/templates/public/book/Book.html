@@ -13,6 +13,9 @@
           {{> MassageBook}}
         {{/if}}
         {{#if $.Session.equals 'instance' 3}}
+          {{> AddressBook}}
+        {{/if}}
+        {{#if $.Session.equals 'instance' 4}}
           {{> PaymentBook}}
         {{/if}}
       {{else}}

@@ -97,3 +97,13 @@ Meteor.publish('orders', location => {
       return Orders.find();
     }
 });
+
+Meteor.publish('clientOrders', location => {
+    let includeArr = [];
+    Clients.find().map(item => includeArr.push(item._id));
+    if (location) {
+      return Orders.find({ $and: [{ locationId: location }, { clientId: { $in: includeArr }}]});
+    } else {
+      return Orders.find({ clientId: { $in: includeArr } });
+    }
+});

@@ -134,6 +134,7 @@ OrdersSchema = new SimpleSchema({
   },
   transactionId: {
     type: String,
+    optional: true,
     autoform: {
       omit: true
     },

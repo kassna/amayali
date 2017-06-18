@@ -13,9 +13,11 @@
       <td>{{pendingPromos}}</td>
       <td>{{humanDate createdAt}}</td>
       <td>
-      	<button type="" class="btn btn-round btn-info-outline edit-button">
-      		<i class="fa fa-pencil" aria-hidden="true"></i>
-      	</button>
+      	{{#if completedProfile}}
+          <button type="" class="btn btn-round btn-info-outline edit-button">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+        {{/if}}
       </td>
       <td>
       	{{#quickRemoveButton collection="Locations" _id=this._id class="hidden delete-btn"}}

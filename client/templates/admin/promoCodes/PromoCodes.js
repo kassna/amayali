@@ -1,8 +1,8 @@
 Template.PromoCodes.onRendered(function() {
 	let template = this;
 	template.autorun(function() {
-		template.subscribe('promoCodes', Session.get('currentCity'), function () {
-			Tracker.afterFlush(function () {
+		template.subscribe('promoCodes', Session.get('currentCity'), () => {
+			Tracker.afterFlush(() => {
 				$("[data-sort=table]").tablesorter({
 					sortList: [[0,0]],
 					headers: {

@@ -1,21 +1,23 @@
 Template.Admins.onCreated(function() {
 	let self = this;
-	self.autorun(function() {
+	self.autorun(() => {
 		self.subscribe('adminCode');
 	});
 });
 
 Template.Admins.onRendered(function() {
 	let template = this;
-	template.subscribe('admins', function () {
-		Tracker.afterFlush(function () {
-			$("[data-sort=table]").tablesorter({
-				sortList: [[0,0]],
-				headers: {
-          1: { sorter: false },
-					2: { sorter: false },
-					3: { sorter: false },
-	      }
+	template.autorun(() => {
+		template.subscribe('admins', () => {
+			Tracker.afterFlush(() => {
+				$("[data-sort=table]").tablesorter({
+					sortList: [[0,0]],
+					headers: {
+	          1: { sorter: false },
+						2: { sorter: false },
+						3: { sorter: false },
+		      }
+				});
 			});
 		});
 	});

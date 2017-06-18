@@ -1,6 +1,6 @@
-Template.NewModal.onCreated(function() {
+Template.NewModal.onCreated(() => {
 	// Trigger insert form submit
-	$("body").on('click', "#target-submit", function() {
+	$("body").on('click', "#target-submit", () => {
 		$("#insertForm ").submit();
 	});
 });

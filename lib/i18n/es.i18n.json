@@ -82,12 +82,14 @@
     "next": "Siguiente",
     "back": "Regresar",
     "finish": "Comprar",
-    "step1": "Fecha",
+    "step1": "Horario",
     "step2": "Masaje",
-    "step3": "Pago",
+    "step3": "Dirección",
+    "step4": "Pago",
     "step1Lead": "Selecciona la fecha y ubicación de tu cita",
     "step2Lead": "Personaliza tu masaje",
     "step3Lead": "Proporciona tus datos para llevarte tu masaje",
+    "step4Lead": "Selecciona tu método de pago",
     "paymentLead": "Proporciona tus datos de pago",
     "date": "Fecha y hora",
     "locationId": "Ciudad",
@@ -104,11 +106,14 @@
     "ccv": "CCV",
     "expMonth": "Mes de expiración",
     "expYear": "Año de expiración",
+    "creditCard": "Tarjeta de crédito",
+    "paypal": "PayPal",
     "errors": {
       "requiredInputs": "Todos los campos son obligatorios",
       "invalidHour": "No podemos atenderte en esa hora, por favor selecciona otra.",
       "passwordMatch": "Tus contraseñas no coinciden, intenta de nuevo.",
-      "emailInvalid": "El email es incorrecto o ya existe, intenta de nuevo."
+      "emailInvalid": "El email es incorrecto o ya existe, intenta de nuevo.",
+      "payment": "Ha habido un error en tu pago, por favor intenta de nuevo"
     },
     "months": {
       "01": "Enero",
