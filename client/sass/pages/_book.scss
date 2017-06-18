@@ -1,4 +1,7 @@
 .book-nav {
+  &.navbar.navbar-inverse.small-nav {
+    border-bottom: none;
+  }
   .title {
     display: inline-block;
     margin: 12px 0 12px 14px;
@@ -17,11 +20,19 @@
     margin: 6px 34px 6px 0;
     display: inline-block;
   }
+
+  .banner {
+    padding: 8px 0;
+    a {
+      font-weight: 600;
+      color: $white;
+    }
+  }
 }
 
 .book-cont {
   min-height: 100vh;
-  padding-top: 60px;
+  padding-top: 90px;
 
   .container {
     margin-top: 25px;

@@ -12,5 +12,18 @@
 		      </div>
 		  </div>
 		  <!--/.nav-collapse -->
+      <div class="banner bg-cream c-white text-center">
+        {{#if currentUser}}
+          {{_ "book.currentUserLead"}}
+          <a href="{{pathFor 'admin'}}">
+            {{_ "book.currentUserLink"}}
+          </a>
+        {{else}}
+          {{_ "book.noUserLead"}}
+          <a href="{{pathFor 'signin'}}">
+            {{_ "book.noUserLink"}}
+          </a>
+        {{/if}}
+      </div>
 	</nav>
 </template>
