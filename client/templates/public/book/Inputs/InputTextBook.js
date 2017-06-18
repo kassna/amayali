@@ -1,12 +1,13 @@
 Template.InputTextBook.onRendered(() => {
   const attr = Template.instance().data.attribute;
+  console.log(attr, Session.get(attr));
   if (Session.get(attr)) {
-    $(`#${attr}`).parent().addClass('input--filled');
+    $(`[name="${attr}"]`).parent().addClass('input--filled');
   }
 });
 
 Template.InputTextBook.helpers({
-  inputValue: () => Session.get(Template.instance().data.attribute)
+  inputValue: function() { return Session.get(this.attribute); },
 });
 
 Template.InputTextBook.events({
@@ -19,7 +20,7 @@ Template.InputTextBook.events({
       $input.parent().removeClass('input--filled');
     }
   },
-  'change .input__field': (event, template) => {
-    Session.set(template.data.attribute, $(event.target).val());
+  'change .input__field': function (event, template) {
+    Session.set(this.attribute, $(event.target).val());
   },
 });
