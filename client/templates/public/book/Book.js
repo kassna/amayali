@@ -36,5 +36,5 @@ Template.Book.onCreated(function () {
 	});
   Session.set('instance', 1);
 	Session.set('maxIntance', 1);
-  Session.set('total', 0);
+  if(!Session.get('total')) Session.set('total', 0);
 });
