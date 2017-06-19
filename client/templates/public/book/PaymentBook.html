@@ -4,41 +4,20 @@
     <div class="simform">
       {{> InputTextBook type="text" attribute="promoCode" placeholder="book.promoCode"}}
       <div class="footer-buttons center">
-        <button class="btn-success" id="verifyPromo">{{_ "book.verify"}}</button>
-      </div>
-      <div class="radio-select text-center m-t">
-        <h2 class="c-white">{{_ "book.paymentMethod"}}</h2>
-        <div class="radio-inline custom-control custom-radio">
-          <label class="c-white">
-            <input type="radio" value="yes" name="creditCard" checked>
-            <span class="custom-control-indicator"></span>
-            {{_ "book.creditCard"}}
-          </label>
-        </div>
-        <div class="radio-inline custom-control custom-radio">
-          <label class="c-white">
-            <input type="radio" value="no" name="creditCard">
-            <span class="custom-control-indicator"></span>
-            {{_ "book.paypal"}}
-          </label>
-        </div>
+        <button class="btn-success small" id="verifyPromo">{{_ "book.verify"}}</button>
       </div>
 
-      {{#if creditCard}}
-
-      {{else}}
-        {{> PaypalBook}}
-      {{/if}}
+      {{> PaypalBook}}
     </div>
   </div>
 </template>
 
 <template name="PaypalBook">
-  <div class="text-center m-t-md">
+  <div class="text-center m-t-lg m-b-lg">
     <div id="paypal-button-container"></div>
   </div>
 
   <div class="footer-buttons start">
-    <button class="btn-default" id="back4">{{_ "book.back"}}</button>
+    <button class="btn-default m-t-0" id="back4">{{_ "book.back"}}</button>
   </div>
 </template>

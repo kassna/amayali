@@ -18,18 +18,6 @@ const getOrderDetails = () => {
   };
 }
 
-const getPayment = () => {
-  return {
-    number: Session.get('card-number'),
-    expirationMonth: Session.get('expirationMonth'),
-    expirationYear: Session.get('expirationYear'),
-    cvv: Session.get('ccv'),
-    billingAddress: {
-      postalCode: Session.get('zipBook'),
-    }
-  };
-}
-
 const getAccountDetails = () => {
   return {
     email: Session.get('email'),
@@ -39,75 +27,6 @@ const getAccountDetails = () => {
       lastname: Session.get('lastname')
     }
   }
-}
-
-const submitPayment = () => {
-  // Get all required fields
-  const required = ['firstname', 'lastname', 'address.street1', 'address.street2', 'address.zip',
-                    'phone', 'email', 'card-number', 'ccv', 'expirationMonth', 'expirationYear',
-                    'zipBook'];
-  let accountDetails = null;
-
-  // If new account will be created, add password as required
-  if(template.createAccount.get()) {
-    required.push('password');
-    required.push('confirmPassword');
-  }
-  // Verify required fields
-  if(!verifyRequired(required)) {
-    $('#next3').prop('disabled', false);
-    return false;
-  }
-
-  // Add password to sent data
-  if(template.createAccount.get()) {
-    const password = Session.get('password');
-    const confirmPassword = Session.get('confirmPassword');
-    // Verify password match
-    if(password !== confirmPassword) {
-      $('#next3').prop('disabled', false);
-      Bert.alert(TAPi18n.__('book.errors.passwordMatch', null), 'danger');
-      return false;
-    }
-    accountDetails = { password }
-  }
-
-
-  // Create order object
-  const order = {
-    locationId: Session.get('locationId'),
-    product: Session.get('product'),
-    type: Session.get('type'),
-    therapistsType: Session.get('therapistsType'),
-    date: Session.get('date'),
-    total: Session.get('total'),
-    firstname: Session.get('firstname'),
-    lastname: Session.get('lastname'),
-    email: Session.get('email'),
-    phone: Session.get('phone'),
-    address: {
-      street1: Session.get('address.street1'),
-      street2: Session.get('address.street2'),
-      zip: Session.get('address.zip'),
-    },
-  };
-  // If we need to create an account, add the corresponding info
-  if(accountDetails) {
-    accountDetails.email = order.email;
-    accountDetails.profile = {
-      firstname: order.firstname,
-      lastname: order.lastname
-    }
-  }
-  console.log('tocall', accountDetails, nonce);
-  // Send data to server
-  Meteor.call('attemptPurchase', nonce, order, accountDetails, (err, res) => {
-    if(err) {
-      if(err.error === 'email-invalid') Bert.alert(TAPi18n.__('book.errors.emailInvalid', null), 'danger');
-    }
-    console.log(res);
-    $('#next4').prop('disabled', false);
-  });
 }
 
 const handleErrorPayment = error => {

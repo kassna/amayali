@@ -111,69 +111,12 @@ Meteor.methods({
 			throw new Meteor.Error("email-invalid");
 		}
 	},
+
 	paypalPostPay: (order, accountDetails) => {
 		if(accountDetails) {
 			order.clientId = Meteor.call('createClientFromOrder', accountDetails, order);
 		}
 		return Orders.insert(order);
-	},
-	attemptPurchase: (token, order, accountDetails) => {
-		/*
-			Add user
-		 */
-		let userId = null;
-		if(accountDetails) {
-			try {
-		    userId = Accounts.createUser(accountDetails);
-		  } catch (ex) {
-				throw new Meteor.Error("email-invalid");
-		  }
-		}
-		/*
-			Attempt Braintree transaction
-		 */
-		// Set API keys
-		const braintree = require('braintree');
-		const gateway = braintree.connect({
-	    environment:  braintree.Environment.Sandbox,
-	    merchantId:   'v2vwcjx3ck3fmz2y',
-	    publicKey:    'dm5g4dscwyfpq2q2',
-	    privateKey:   'b0bab9c7bc4c3923d3e6c72ed1fd15c3'
-		});
-
-		// Attempt sale
-		gateway.transaction.sale({
-		  amount: order.total,
-		  paymentMethodNonce: token,
-			customer: {
-		    id: userId,
-				firstName: order.firstname,
-				lastName: order.lastname,
-				email: order.email,
-				phone: order.phone
-		  },
-		  options: {
-		    submitForSettlement: true,
-				storeInVaultOnSuccess: true
-		  }
-		}).then(function (result) {
-			// When success, add transaction Id to order and insert order
-		  if (result.success) {
-				console.log(result.transaction);
-		    order.transactionId = result.transaction.id;
-				Orders.insert(order);
-		  } else {
-		    console.error(result.message);
-				// Card was declined, so send message
-				throw new Meteor.Error("card-declined",
-					result.message);
-		  }
-		}).catch(function (err) {
-		  console.error(err);
-			// Card was declined, so send message
-			throw new Meteor.Error("card-declined",
-				err);
-		});
 	},
 
 	'assignOrderTherapist': (orderId, therapist) => {
