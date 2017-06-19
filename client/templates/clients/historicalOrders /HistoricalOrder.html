@@ -1,0 +1,23 @@
+ <template name="HistoricalOrderClient">
+	<tr class="{{#if this.therapist}}{{else}}danger-tr{{/if}}">
+      <td>
+        {{#if $eq status 'completed'}}
+          <span class="c-turquoise">{{prettyStatus status}}</span>
+        {{else}}
+          <span class="c-error">{{prettyStatus status}}</span>
+        {{/if}}
+      </td>
+      <td>{{dateHour date}}</td>
+      <td>
+        {{#if this.therapist}}
+          {{therapistName this.therapist}}
+        {{else}}
+          <div class="c-error">{{_ "admin.orders.noTherapist"}}</div>
+        {{/if}}
+      </td>
+      <td>{{prettyProduct product}}</td>
+      <td>{{prettyType type}}</td>
+      <td>{{prettyTherapistType therapistsType}}</td>
+      <td>${{total}}</td>
+  </tr>
+</template>

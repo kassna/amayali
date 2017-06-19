@@ -1,0 +1,40 @@
+<template name="HistoricalOrdersClient">
+    {{#if isInRole 'client'}}
+        <div class="dashhead">
+            <div class="dashhead-titles">
+                <h2 class="dashhead-title title-style c-green">{{_ "client.orders.pastOrders"}}</h2>
+            </div>
+        </div>
+
+        {{#if Template.subscriptionsReady}}
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.orders.status"}}</th>
+                              <th>{{_ "admin.orders.date"}}</th>
+                              <th>{{_ "admin.orders.therapist"}}</th>
+                              <th>{{_ "admin.orders.product"}}</th>
+                              <th>{{_ "admin.orders.type"}}</th>
+                              <th>{{_ "admin.orders.therapistsType"}}</th>
+                              <th>{{_ "admin.orders.total"}}</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each orders}}
+                              {{> HistoricalOrderClient}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=7}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>
