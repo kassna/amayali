@@ -417,5 +417,17 @@
       "successAssign": "Éxito! La orden ha sido asignada",
       "failAssign": "Hubo un error! Intenta de nuevo"
     }
+  },
+  "client": {
+    "orders": {
+      "pendingOrders": "Próximas sesiones",
+      "pastOrders": "Historial de sesiones"
+    },
+    "personalData": {
+      "title": "Mis datos"
+    },
+    "promoCode": {
+      "title": "Mi código de promoción"
+    }
   }
 }
