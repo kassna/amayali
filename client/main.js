@@ -128,6 +128,8 @@ Template.registerHelper('therapistName', therapistId => Therapists.findOne(thera
 
 Template.registerHelper('locationAbbr', locationId => Locations.findOne(locationId).abbreviation);
 
+Template.registerHelper('promoCodeCode', _id => PromoCodes.findOne(_id).code);
+
 Template.registerHelper('userInRole', (id, role) => Roles.userIsInRole(id, role));
 
 Template.registerHelper('reloadSelect', () => {

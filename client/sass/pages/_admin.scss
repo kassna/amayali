@@ -138,3 +138,12 @@
 		border-color: $turquoise
 	}
 }
+
+.client-promo-code {
+	h1 {
+		&.big {
+			font-size: 3.5em;
+			font-weight: 700;
+		}
+	}
+}

@@ -427,7 +427,13 @@
       "title": "Mis datos"
     },
     "promoCode": {
-      "title": "Mi código de promoción"
+      "title": "Mi código de promoción",
+      "text1": "Tu código es",
+      "text2": "Invita a todos y recibe un 10% de descuento por cada persona que lo use!",
+      "text3": "En este momento tienes disponible",
+      "text4": "de descuento",
+      "text5": "Aprovéchalo y reserva ya tu próxima cita!",
+      "text6": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a contacto@amayali.com"
     }
   }
 }

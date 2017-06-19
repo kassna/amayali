@@ -33,6 +33,11 @@ Meteor.publish('activePromoCodes', location => {
     }
 });
 
+Meteor.publish('clientPromoCode', function () {
+  const { promoCodeId } = Clients.findOne({ userId: this.userId });
+  return PromoCodes.find(promoCodeId);
+});
+
 ////////////////////////
 ///  Admins
 ////////////////////////
