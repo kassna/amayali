@@ -6,7 +6,7 @@ Admins.allow({
   },
   update: function(userId, doc) {
     // just admins can update
-    return Roles.userIsInRole(userId, ['admin']);
+    return false;
   },
   remove: function (userId, doc) {
     return false;

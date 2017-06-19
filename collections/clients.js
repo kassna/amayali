@@ -1,5 +1,32 @@
 class ClientsCollection extends Mongo.Collection {
-  // TODO: Remove function verify if client has orders
+  // Remove clients that has no orders, and also removes user and promoCode
+  remove(selector, callback) {
+    const ids = this.find(selector).map(item => item._id);
+    if(Orders.find({ clientId: { $in: ids } }).count()) {
+      throw new Meteor.Error('client-has-orders', `Client can't be deleted because it has orders`);
+    }
+
+    this.find(selector).map(item => {
+      Meteor.users.remove(item.userId);
+      PromoCodes.remove(item.promoCodeId);
+    });
+
+    return super.remove(selector, callback);
+  }
+
+  // Function to remove client without removing user. This is used to promote client to admin
+  partialRemove(selector, callback) {
+    const ids = this.find(selector).map(item => item._id);
+    if(Orders.find({ clientId: { $in: ids } }).count()) {
+      throw new Meteor.Error('client-has-orders', `Client can't be deleted because it has orders`);
+    }
+
+    this.find(selector).map(item => {
+      PromoCodes.remove(item.promoCodeId);
+    });
+
+    return super.remove(selector, callback);
+  }
 }
 
 Clients = new ClientsCollection('clients');
@@ -140,7 +167,7 @@ ClientsSchema = new SimpleSchema({
   }
 });
 
-Clients.after.insert((userId, doc) => {
+Clients.before.insert((userId, doc) => {
   doc.promoCodeId = PromoCodes.insert({
     type: 'percentage',
     amount: 10,

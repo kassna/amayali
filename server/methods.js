@@ -56,8 +56,9 @@ Meteor.methods({
 	requestAdmin: inputCode => {
 		const { code } = Admins.findOne();
 		const userId = Meteor.userId();
-		const orders = Orders.find({ clientId: userId }).count();
-		if(!orders && inputCode === code) {
+		if(inputCode === code) {
+			// Verify if client has no orders, and remove promoCodes
+			Clients.partialRemove({ userId });
 			Roles.removeUsersFromRoles(userId, 'client');
 			Roles.setUserRoles(userId, 'admin');
 		} else {
