@@ -18,6 +18,7 @@ Template.PendingOrders.onRendered(function() {
 						8: { sorter: false },
 						9: { sorter: false },
 						10: { sorter: false },
+						11: { sorter: false },
 		      }
 				});
 			});

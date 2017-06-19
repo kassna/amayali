@@ -20,6 +20,7 @@
                               <th>{{_ "admin.orders.type"}}</th>
                               <th>{{_ "admin.orders.therapistsType"}}</th>
                               <th>{{_ "admin.general.viewMore"}}</th>
+                              <th></th>
                               <th>{{_ "admin.general.edit"}}</th>
                               <th>{{_ "admin.general.delete"}}</th>
                           </tr>
@@ -29,7 +30,7 @@
                               {{> PendingOrder}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=11}}
+                                  {{> NoResults cols=12}}
                               </tr>
                           {{/each}}
                       </tbody>

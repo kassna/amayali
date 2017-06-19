@@ -96,9 +96,7 @@ Meteor.methods({
 	},
 
 	// User
-	verifyAvailableEmail: email => {
-		return Accounts.findUserByEmail(email);
-	},
+	verifyAvailableEmail: email => Accounts.findUserByEmail(email),
 
 	// Orders
 	createClientFromOrder: (accountDetails, order) => {
@@ -125,5 +123,7 @@ Meteor.methods({
 			throw new Meteor.Error("different-location");
 		}
 		Orders.update({ _id: orderId }, { $set: { therapist }});
-	}
+	},
+
+	'cancelOrder': _id => Orders.update(_id, { $set: { status: 'canceled' } }),
 });

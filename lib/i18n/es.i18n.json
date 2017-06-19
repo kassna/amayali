@@ -415,7 +415,10 @@
       "confirmAssignQ": "¿Deseas asignar este terapeuta a esta orden?",
       "confirmAssign": "Si, asignar",
       "successAssign": "Éxito! La orden ha sido asignada",
-      "failAssign": "Hubo un error! Intenta de nuevo"
+      "failAssign": "Hubo un error! Intenta de nuevo",
+      "confirmCancel": "Si! Cancelar",
+      "failCancel": "Hubo un error! Intenta de nuevo",
+      "successCancel": "Éxito! La orden ha sido cancelada"
     }
   },
   "client": {

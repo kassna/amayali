@@ -171,9 +171,9 @@ Meteor.publish('historicalOrdersClient', function () {
 
 Meteor.publish('noTherapistOrders', location => {
     if (location) {
-      return Orders.find({ locationId: location, therapist: { $exists: false }});
+      return Orders.find({ locationId: location, therapist: { $exists: false }, status: { $nin: ['canceled'] }});
     } else {
-      return Orders.find({ therapist: { $exists: false }});
+      return Orders.find({ therapist: { $exists: false }, status: { $nin: ['canceled'] }});
     }
 });
 

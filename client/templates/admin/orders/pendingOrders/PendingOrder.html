@@ -24,6 +24,11 @@
       	</button>
       </td>
       <td>
+        {{#if isInRole 'superadmin'}}
+          <button class="cancel-order btn btn-sm btn-pill btn-danger-outline">{{_ "admin.general.cancel"}}</button>
+        {{/if}}
+      </td>
+      <td>
         <button type="" class="btn btn-round btn-info-outline edit-button">
       		<i class="fa fa-pencil" aria-hidden="true"></i>
       	</button>

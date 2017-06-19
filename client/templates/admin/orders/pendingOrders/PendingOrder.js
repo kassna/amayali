@@ -20,4 +20,23 @@ Template.PendingOrder.events({
 			$("#order-info").modal('show');
 		}, 500);
 	},
+	'click .cancel-order': function() {
+		const orderId = this._id;
+		swal({
+			title: TAPi18n.__('admin.general.confirm', null),
+			text: TAPi18n.__('admin.general.cantUndone', null),
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#DD6B55",
+			confirmButtonText: TAPi18n.__('admin.orders.confirmCancel', null),
+		}, () => {
+			Meteor.call('cancelOrder', orderId, (err) => {
+				if(err) {
+					Bert.alert( TAPi18n.__('admin.orders.failCancel', null), 'danger', 'growl-top-right' );
+				} else {
+					Bert.alert( TAPi18n.__('admin.orders.successCancel', null), 'success', 'growl-top-right' );
+				}
+			});
+		});
+	}
 });
