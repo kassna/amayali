@@ -1,4 +1,13 @@
 class ClientsCollection extends Mongo.Collection {
+  update(selector, modifier, options, callback) {
+    const { $set, $unset } = modifier;
+    if (!$unset) {
+      $set.completedProfile = true;
+      modifier.$set = $set;
+    }
+    return super.update(selector, modifier, options, callback);
+  }
+
   // Remove clients that has no orders, and also removes user and promoCode
   remove(selector, callback) {
     const ids = this.find(selector).map(item => item._id);
@@ -59,7 +68,8 @@ AddressSchema = new SimpleSchema({
   zip: {
     type: String,
     regEx: SimpleSchema.RegEx.ZipCode,
-    optional: true
+    optional: true,
+    max: 5
   }
 });
 
@@ -67,23 +77,13 @@ ClientsSchema = new SimpleSchema({
   firstname: {
     type: String,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   lastname: {
     type: String,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   email: {
@@ -91,12 +91,7 @@ ClientsSchema = new SimpleSchema({
     regEx: SimpleSchema.RegEx.Email,
     unique: true,
     autoform: {
-      afFieldInput: {
-        type: 'hidden',
-      },
-      afFormGroup: {
-        label: false,
-      },
+      omit: true
     },
   },
   phone: {

@@ -50,6 +50,10 @@ Meteor.publish('clients', location => {
     }
 });
 
+Meteor.publish('clientFromUser', function () {
+  return Clients.find({ userId: this.userId });
+});
+
 ////////////////////////
 ///  Therapists
 ////////////////////////

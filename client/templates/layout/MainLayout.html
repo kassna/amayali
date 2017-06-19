@@ -20,6 +20,10 @@
 	            </div>
 	            <div class="col-sm-10 content">
 	            	{{> Template.dynamic template=main}}
+
+								{{#if isInRole 'client'}}
+									{{> EditModal collection="Clients" editItem=client }}
+								{{/if}}
 	            </div>
 	        </div>
 	    </div>

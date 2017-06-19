@@ -1,4 +1,11 @@
 Template.MainLayout.onCreated(function() {
+	let self = this;
+	self.autorun(() => {
+		self.subscribe('clientFromUser');
+	});
+});
+
+Template.MainLayout.onCreated(function() {
 	if (!Session.get('currentCity')) {
 		Session.set('currentCity', '');
 	}
