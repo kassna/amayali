@@ -15,7 +15,7 @@ Meteor.publish('promoCodes', location => {
     Clients.find().map(item => excludeArr.push(item.promoCodeId));
 
     if (location) {
-      return PromoCodes.find({ $and: [{ _id: { $nin: excludeArr }}, { locationsId: location }] });
+      return PromoCodes.find({ _id: { $nin: excludeArr }, locationsId: location });
     } else {
       return PromoCodes.find({ _id: { $nin: excludeArr }});
     }
@@ -27,9 +27,9 @@ Meteor.publish('activePromoCodes', location => {
     Clients.find().map(item => excludeArr.push(item.promoCodeId));
 
     if (location) {
-      return PromoCodes.find({ $and: [{ status: true }, { _id: { $nin: excludeArr }}, { locationsId: location }] });
+      return PromoCodes.find({ status: true, _id: { $nin: excludeArr }, locationsId: location });
     } else {
-      return PromoCodes.find({ $and: [{ status: true }, { _id: { $nin: excludeArr }}]});
+      return PromoCodes.find({ status: true, _id: { $nin: excludeArr }});
     }
 });
 
@@ -63,7 +63,7 @@ Meteor.publish('therapists', location => {
 
 Meteor.publish('activeTherapists', location => {
     if (location) {
-      return Therapists.find({ $and: [{ status: true }, { locationId: location }] });
+      return Therapists.find({ status: true, locationId: location });
     } else {
       return Therapists.find({ status: true });
     }
@@ -71,7 +71,7 @@ Meteor.publish('activeTherapists', location => {
 
 Meteor.publish('inactiveTherapists', location => {
     if (location) {
-      return Therapists.find({ $and: [{ status: false }, { locationId: location }] });
+      return Therapists.find({ status: false, locationId: location });
     } else {
       return Therapists.find({ status: false });
     }
@@ -91,7 +91,7 @@ Meteor.publish('therapistPendingOrders', location => {
   let includeArr = [];
   Orders.find({ status: 'confirmed' }).map(item => includeArr.push(item.therapist));
   if (location) {
-    return Therapists.find({ $and: [{ _id: { $in: includeArr }}, { locationId: location }]});
+    return Therapists.find({ _id: { $in: includeArr }, locationId: location });
   } else {
     return Therapists.find({ _id: { $in: includeArr }});
   }
@@ -107,9 +107,9 @@ Meteor.publish('therapistPendingOrdersClient', function () {
 
 Meteor.publish('therapistHistoricalOrders', location => {
   let includeArr = [];
-  Orders.find({ $or: [{ status: 'completed' }, { status: 'canceled' }]}).map(item => includeArr.push(item.therapist));
+  Orders.find({ status: { $in: ['completed', 'canceled']}}).map(item => includeArr.push(item.therapist));
   if (location) {
-    return Therapists.find({ $and: [{ _id: { $in: includeArr }}, { locationId: location }]});
+    return Therapists.find({ _id: { $in: includeArr }, locationId: location });
   } else {
     return Therapists.find({ _id: { $in: includeArr }});
   }
@@ -128,7 +128,7 @@ Meteor.publish('orders', location => {
 
 Meteor.publish('pendingOrders', location => {
     if (location) {
-      return Orders.find({ $and: [{ locationId: location }, { status: 'confirmed' }]});
+      return Orders.find({ locationId: location, status: 'confirmed' });
     } else {
       return Orders.find({ status: 'confirmed' });
     }
@@ -141,15 +141,15 @@ Meteor.publish('pendingOrdersClient', function () {
 
 Meteor.publish('historicalOrders', location => {
     if (location) {
-      return Orders.find({ $and: [{ locationId: location }, { $or: [{ status: 'completed' }, { status: 'canceled' }]}]});
+      return Orders.find({ locationId: location, status: { $in: ['completed', 'canceled']}});
     } else {
-      return Orders.find({ $or: [{ status: 'completed' }, { status: 'canceled' }]});
+      return Orders.find({ status: { $in: ['completed', 'canceled']}});
     }
 });
 
 Meteor.publish('noTherapistOrders', location => {
     if (location) {
-      return Orders.find({ $and: [{ locationId: location }, { therapist: { $exists: false }}]});
+      return Orders.find({ locationId: location, therapist: { $exists: false }});
     } else {
       return Orders.find({ therapist: { $exists: false }});
     }
@@ -159,7 +159,7 @@ Meteor.publish('clientOrders', location => {
     let includeArr = [];
     Clients.find().map(item => includeArr.push(item._id));
     if (location) {
-      return Orders.find({ $and: [{ locationId: location }, { clientId: { $in: includeArr }}]});
+      return Orders.find({ locationId: location, clientId: { $in: includeArr }});
     } else {
       return Orders.find({ clientId: { $in: includeArr } });
     }
