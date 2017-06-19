@@ -1,0 +1,16 @@
+ <template name="PendingOrderClient">
+	<tr>
+      <td>{{dateHour date}}</td>
+      <td>
+        {{#if this.therapist}}
+          {{therapistName this.therapist}}
+        {{else}}
+          <div>{{_ "admin.orders.noTherapist"}}</div>
+        {{/if}}
+      </td>
+      <td>{{prettyProduct product}}</td>
+      <td>{{prettyType type}}</td>
+      <td>{{prettyTherapistType therapistsType}}</td>
+      <td>${{total}}</td>
+  </tr>
+</template>
