@@ -17,16 +17,9 @@ Template.HistoricalOrders.onRendered(function() {
 						3: { sorter: false },
 						8: { sorter: false },
 						9: { sorter: false },
-						10: { sorter: false },
 		      }
 				});
 			});
 		});
 	});
-});
-
-Template.HistoricalOrders.helpers({
-	editItem: () => {
-		return Orders.findOne(Session.get('editId'));
-	}
 });

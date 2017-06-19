@@ -10,7 +10,10 @@ Template.AssignTherapists.events({
 	'click .assign-btn': function () {
 		const order = Session.get('selectedOrder');
 		const therapist = Session.get('selectedTherapist');
-		if (!order || !therapist) return false;
+		if (!order || !therapist) {
+			Bert.alert( TAPi18n.__('admin.orders.failAssign', null), 'danger', 'growl-top-right' );
+			return false;
+		}
 
 		swal({
 			title: TAPi18n.__('admin.general.confirm', null),

@@ -21,7 +21,6 @@
                               <th>{{_ "admin.orders.type"}}</th>
                               <th>{{_ "admin.orders.therapistsType"}}</th>
                               <th>{{_ "admin.general.viewMore"}}</th>
-                              <th>{{_ "admin.general.edit"}}</th>
                               <th>{{_ "admin.general.delete"}}</th>
                           </tr>
                       </thead>
@@ -30,7 +29,7 @@
                               {{> HistoricalOrder}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=11}}
+                                  {{> NoResults cols=10}}
                               </tr>
                           {{/each}}
                       </tbody>
@@ -42,7 +41,6 @@
 
         {{> OrderInfo}}
         {{> ClientInfoOrder}}
-        {{> EditModal collection="Orders" editItem=editItem }}
 
     {{else}}
         {{> Forbidden}}
