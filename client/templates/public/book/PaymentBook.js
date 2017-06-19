@@ -34,6 +34,31 @@ const handleErrorPayment = error => {
   else Bert.alert(TAPi18n.__('book.errors.payment', null), 'danger');
 }
 
+// Make a call to the REST api to execute the payment
+const executePaypal = actions => actions.payment.execute().then(res => {
+  let orderDetails = getOrderDetails();
+  // Add paypal id to order
+  orderDetails.transactionId = res.id;
+  let accountDetails = null;
+
+  // Get account details
+  if(Session.get('createAccount')) {
+    accountDetails = getAccountDetails();
+  }
+
+  // Attempt to insert order and account
+  Meteor.call('paypalPostPay', orderDetails, accountDetails, (err, res) => {
+    if (err) {
+      handleErrorPayment(err);
+      return false;
+    } else {
+      const orderId = res;
+      // TODO: Add redirect to order review
+      console.log('payment success', orderId);
+    }
+  });
+})
+
 Template.PaymentBook.onCreated(function () {
     this.creditCard = new ReactiveVar(true);
 });
@@ -134,36 +159,17 @@ Template.PaypalBook.onRendered(() => {
       handleErrorPayment({ error: "payment" });
     },
     onAuthorize: (data, actions) => {
-      Meteor.call('verifyAvailableEmail', Session.get('email'), (err, res) => {
-        if(err || res) {
-          handleErrorPayment(err || { error: "email-invalid" });
-          return false;
-        }
-        // Make a call to the REST api to execute the payment
-        return actions.payment.execute().then(res => {
-          let orderDetails = getOrderDetails();
-          // Add paypal id to order
-          orderDetails.transactionId = res.id;
-          let accountDetails = null;
-
-          // Get account details
-          if(Session.get('createAccount')) {
-            accountDetails = getAccountDetails();
+      if (Session.get('createAccount')) {
+        Meteor.call('verifyAvailableEmail', Session.get('email'), (err, res) => {
+          if(err || res) {
+            handleErrorPayment(err || { error: "email-invalid" });
+            return false;
           }
-
-          // Attempt to insert order and account
-          Meteor.call('paypalPostPay', orderDetails, accountDetails, (err, res) => {
-            if (err) {
-              handleErrorPayment(err);
-              return false;
-            } else {
-              const orderId = res;
-              // TODO: Add redirect to order review
-              console.log('payment success', orderId);
-            }
-          });
+          return executePaypal(actions);
         });
-      });
+      } else {
+        return executePaypal(actions);
+      }
     }
   }, '#paypal-button-container');
 });
