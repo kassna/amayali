@@ -7,10 +7,7 @@
         <div class="form-cont">
           <div class="row">
             <div class="col-sm-5">
-              <select class="selectpicker">
-                <option>Monterrey</option>
-                <option>CDMX</option>
-              </select>
+              {{> SelectBook attribute="locationId" elements=locations placeholder="book.locationId"}}
             </div>
             <div class="col-sm-5 hidden-xs">
               <div class="input-with-icon dashhead-toolbar-item">
