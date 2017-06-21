@@ -52,6 +52,8 @@ useraccounts:flow-routing
 softwarerero:accounts-t9n
 useraccounts:unstyled
 alanning:roles                	# add roles to users
+accounts-facebook
+service-configuration
 
 # TEMPLATE PACKAGES
 aldeed:template-extension     	# boost templates functions

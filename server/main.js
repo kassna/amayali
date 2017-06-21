@@ -1,4 +1,3 @@
-import { Meteor } from 'meteor/meteor';
 import Templates from './lib/templates';
 import TemplateHelpers from './lib/templates-helpers';
 
@@ -10,6 +9,16 @@ Mailer.config({
     }
 });
 
+ServiceConfiguration.configurations.remove({
+    service: "facebook"
+});
+
+ServiceConfiguration.configurations.insert({
+    service: "facebook",
+    appId: process.env.FB_ID,
+    secret: process.env.FB_SECRET
+});
+
 Accounts.emailTemplates.resetPassword.from = () => {
   return 'Amayali <alex@2112studio.com>';
 };
@@ -18,6 +27,24 @@ AccountsTemplates.configure({
   postSignUpHook: (userId, info) => {
     Meteor.call('createClientFromSignUp', userId, info);
   },
+});
+
+Accounts.onCreateUser(function (options, user) {
+    if (!user.services.facebook) {
+        return user;
+    }
+    // Facebook method
+    const { email, first_name, last_name } = user.services.facebook;
+    const userId = user._id;
+    user.emails = [{ address: email }];
+    user.profile = {
+      firstname: first_name,
+      lastname: last_name,
+    }
+    user.roles = ["client"]
+		Clients.insert({ email, firstname: first_name, lastname: last_name, userId });
+
+    return user;
 });
 
 Meteor.startup(() => {
