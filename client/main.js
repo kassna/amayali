@@ -77,6 +77,8 @@ Template.registerHelper('humanDateHour', date => moment(date).format('lll'));
 
 Template.registerHelper('dateHour', date => moment(date, "MM/DD/YYYY h:mm a").format('llll'));
 
+Template.registerHelper('dateHourComplete', date => moment(date, "MM/DD/YYYY h:mm a").format('LLLL'));
+
 Template.registerHelper('fromNow', date => moment(date).fromNow());
 
 Template.registerHelper('prettyStatus', string => {

@@ -1,10 +1,3 @@
-.therapist-section {
-  margin-top: 90px;
-  @include bp(tablet) {
-    margin-top: 120px;
-  }
-}
-
 .therapist-form {
   @include bp(tablet) {
     .form-group:not(:last-child) {

@@ -143,6 +143,8 @@ Meteor.publish('orders', location => {
     }
 });
 
+Meteor.publish('order', _id => Orders.find({ _id }));
+
 Meteor.publish('pendingOrders', location => {
     if (location) {
       return Orders.find({ locationId: location, status: 'confirmed' });

@@ -76,6 +76,10 @@
     "therapistButton": {
       "lead": "¿Eres terapeuta profesional?",
       "action": "¡Únete al equipo!"
+    },
+    "therapistForm": {
+      "title": "¿Te gustaría ser parte de nuestro equipo?",
+      "lead": "Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a"
     }
   },
   "book": {
@@ -138,6 +142,10 @@
       "10": "Octubre",
       "11": "Noviembre",
       "12": "Diciembre"
+    },
+    "orderConfirmation": {
+      "title": "Tu reservación ha sido exitosa!",
+      "lead": "A continuación recibirás un correo de confirmación con los datos de tu orden. Si tienes alguna duda escribenos a "
     }
   },
   "schemas": {
