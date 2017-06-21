@@ -406,6 +406,7 @@
       "therapist": "Terapeuta",
       "therapistsType": "Pref. Terapeuta",
       "total": "Total",
+      "referencePromos": "Referencias acumuladas",
       "transactionId": "Aprobación",
       "status": "Estatus",
       "infoOrder": "Información de la orden",

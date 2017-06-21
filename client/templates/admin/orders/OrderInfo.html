@@ -24,6 +24,11 @@
                     <b>{{_ "admin.orders.promoCode"}}:</b> {{ currentOrder.promoCode }}
                   </div>
                   {{/if}}
+                  {{#if currentOrder.referencePromos}}
+                  <div class="group">
+                    <b>{{_ "admin.orders.referencePromos"}}:</b> {{ currentOrder.referencePromos }}
+                  </div>
+                  {{/if}}
                   <div class="group">
                     <b>{{_ "admin.general.createdAt"}}:</b> {{humanDateHour currentOrder.createdAt}}
                   </div>
