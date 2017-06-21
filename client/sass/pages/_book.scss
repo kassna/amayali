@@ -117,6 +117,48 @@ $borderRadius: 8px;
 }
 
 .book-form {
+  // Themes
+  &.turquoise {
+    .input__field--madoka,
+    .input__field--madoka:focus + .input__label--madoka,
+    .input--filled .input__label--madoka {
+      color: $turquoise;
+    }
+    .graphic--madoka {
+      stroke: $turquoise;
+    }
+    .dropdown-toggle {
+      border-bottom-color: $turquoise;
+      color: $turquoise !important;
+    }
+    .btn-group.open .dropdown-toggle,
+    .dropdown-toggle:not(.not-selected) {
+      border-color: $turquoise;
+    }
+    .button-select-cont {
+      .button-select {
+        button {
+          background-color: rgba(232, 232, 232, 0.6);
+          color: $green;
+          &:hover {
+            background-color: rgba(191, 189, 189, 0.5);
+          }
+          &.active {
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
+    }
+    .dropdown-menu.open {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .dropdown-menu.inner {
+      border: 3px solid $turquoise;
+    }
+  }
+
   h1 {
     margin-bottom: 0;
   }

@@ -120,6 +120,8 @@ Template.registerHelper('prettyDiscount', (type, amount) => {
 	return '';
 });
 
+Template.registerHelper('currentDiscount', pendingPromos => pendingPromos * 10);
+
 Template.registerHelper('locationsName', locationsId =>
 	_.map(locationsId, id => Locations.findOne(id).name)
 );

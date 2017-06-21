@@ -127,7 +127,8 @@
       "payment": "Ha habido un error en tu pago, por favor intenta de nuevo",
       "wrongPromoCode": "El código es incorrecto. Intenta de nuevo",
       "successPromoCode": "Éxito! Se ha aplicado tu descuento",
-      "removedReferencePromo": "Para usar un código de referencia, es necesario crear una cuenta"
+      "removedReferencePromo": "Para usar un código de referencia, es necesario crear una cuenta",
+      "referenceErrorClient": "Lo sentimos, los códigos de referencia solo son válidos en nuevos clientes"
     },
     "months": {
       "01": "Enero",
@@ -282,7 +283,7 @@
           "any": "Cualquiera",
           "male": "Hombre",
           "female": "Mujer",
-          "same": "Anterior"
+          "same": "Terapeuta anterior"
         }
       },
       "date": "Fecha y hora",
@@ -431,6 +432,12 @@
     }
   },
   "client": {
+    "bookNow": {
+      "forbidden": "Para poder realizar ordenes, es necesario que actualices todos tus datos",
+      "update": "Actualizar",
+      "pendingPromos1": "Tienes un ",
+      "pendingPromos2": " adicional disponible. ¿Deseas aplicarlo?"
+    },
     "orders": {
       "pendingOrders": "Próximas sesiones",
       "pastOrders": "Historial de sesiones"

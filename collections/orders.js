@@ -157,6 +157,13 @@ OrdersSchema = new SimpleSchema({
       omit: true
     },
   },
+  referencePromos: {
+    type: Number,
+    defaultValue: 0,
+    autoform: {
+      omit: true
+    },
+  },
   createdAt: {
     type: Date,
     autoValue: function() {

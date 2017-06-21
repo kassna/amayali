@@ -11,9 +11,9 @@
           <h3>{{_ "client.promoCode.text1"}}:</h3>
           <h1 class="big c-yellow">{{promoCodeCode client.promoCodeId}}</h1>
           <h3 class="c-green">{{_ "client.promoCode.text2"}}</h3>
-          {{#if currentDiscount}}
+          {{#if client.pendingPromos}}
             <h3 class="m-t-md">{{_ "client.promoCode.text3"}}:</h3>
-            <h1 class="big c-yellow m-t m-b">{{currentDiscount}}% {{_ "client.promoCode.text4"}}</h1>
+            <h1 class="big c-yellow m-t m-b">{{currentDiscount client.pendingPromos}}% {{_ "client.promoCode.text4"}}</h1>
             <h3 class="c-green">{{_ "client.promoCode.text5"}}</h3>
           {{/if}}
           <p class="m-t-lg">{{_ "client.promoCode.text6"}}</p>

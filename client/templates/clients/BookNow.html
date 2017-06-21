@@ -1,0 +1,79 @@
+<template name="BookNowClient">
+  {{#if isInRole 'client'}}
+      {{setLocationId client.locationId}}
+      {{setPendingPromos client.pendingPromos}}
+      {{setClientId client._id}}
+      <div class="dashhead">
+          <div class="dashhead-titles">
+              <h2 class="dashhead-title title-style c-green">{{_ "general.bookNow"}}<span class="c-yellow"> - Total ${{ total }}</span> </h2>
+          </div>
+      </div>
+
+      <div class="book-form turquoise">
+        <div class="simform">
+          {{#if client.completedProfile}}
+            {{> BookNowClientForm}}
+          {{else}}
+            <h3 class="c-yellow text-center">{{_ "client.bookNow.forbidden"}}</h3>
+            <div class="footer-buttons center">
+              <button class="btn-success edit-data">{{_ "client.bookNow.update"}}</button>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+  {{/if}}
+</template>
+
+<template name="BookNowClientForm">
+  <span class="input input--madoka select-date">
+    <input class="input__field input__field--madoka custom-input" type="text" name="date" data-input>
+    <label class="input__label input__label--madoka" for="date">
+      <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+        <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+      </svg>
+      <span class="input__label-content input__label-content--madoka">{{_ "book.date"}}</span>
+    </label>
+  </span>
+  {{> ButtonSelectBook attribute="type" elements=types placeholder="book.type"}}
+  {{> ButtonSelectBook attribute="product" elements=products placeholder="book.product"}}
+  {{> SelectBook attribute="therapistsType" elements=therapistsType placeholder="book.therapistsType"}}
+  {{#if client.pendingPromos}}
+    <div class="radio-select text-center">
+      <h2 class="c-yellow"><b>{{_ "client.bookNow.pendingPromos1"}} {{currentDiscount client.pendingPromos}}% {{_ "client.bookNow.pendingPromos2"}}</b></h2>
+      <br>
+      <div class="radio-inline custom-control custom-radio">
+        <label class="c-turquoise">
+          {{#if $.Session.get 'pendingPromos' true}}
+            <input type="radio" value="{{client.pendingPromos}}" name="pendingPromos" checked>
+          {{else}}
+            <input type="radio" value="{{client.pendingPromos}}" name="pendingPromos">
+          {{/if}}
+          <span class="custom-control-indicator"></span>
+          {{_ "schemas.general.yes"}}
+        </label>
+      </div>
+      <div class="radio-inline custom-control custom-radio">
+        <label class="c-turquoise">
+          {{#if $.Session.equals 'pendingPromos' false}}
+            <input type="radio" value="no" name="pendingPromos" checked>
+          {{else}}
+            <input type="radio" value="no" name="pendingPromos">
+          {{/if}}
+          <span class="custom-control-indicator"></span>
+          {{_ "schemas.general.no"}}
+        </label>
+      </div>
+    </div>
+  {{/if}}
+  {{> InputTextBook type="text" attribute="promoCode" placeholder="book.promoCode"}}
+  <div class="footer-buttons center">
+    <button class="btn-success small m-t" id="verifyPromo">{{_ "book.verify"}}</button>
+  </div>
+  {{> BookNowClientPaypal}}
+</template>
+
+<template name="BookNowClientPaypal">
+  <div class="text-center m-t-lg m-b-lg">
+    <div id="paypal-button-container"></div>
+  </div>
+</template>

@@ -132,6 +132,15 @@ Meteor.methods({
 		return Orders.insert(order);
 	},
 
+	paypalPostPayClient: order => {
+		const client = Clients.findOne(order.clientId);
+		const { firstname, lastname, email, phone, address } = client;
+		if (order.referencePromos) {
+			Clients.update({ _id: client._id }, { $set: { pendingPromos: 0 }});
+		}
+		return Orders.insert(_.merge(order, { firstname, lastname, email, phone, address }));
+	},
+
 	'assignOrderTherapist': (orderId, therapist) => {
 		if(Orders.findOne(orderId).locationId != Therapists.findOne(therapist).locationId) {
 			throw new Meteor.Error("different-location");

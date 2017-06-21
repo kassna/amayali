@@ -4,7 +4,3 @@ Template.PromoCodeClient.onCreated(function() {
 		self.subscribe('clientPromoCode');
 	});
 });
-
-Template.PromoCodeClient.helpers({
-	'currentDiscount': () => Clients.findOne().pendingPromos * 10,
-})

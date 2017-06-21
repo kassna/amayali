@@ -42,6 +42,6 @@ Template.MassageBook.events({
         break;
       default:
     }
-    Session.set('total', price);
+    Session.set('subTotal', price);
   }
 });
