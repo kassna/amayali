@@ -1,5 +1,5 @@
 const getOrderDetails = () => {
-  return {
+  let orderDetails = {
     locationId: Session.get('locationId'),
     product: Session.get('product'),
     type: Session.get('type'),
@@ -16,6 +16,11 @@ const getOrderDetails = () => {
       zip: Session.get('address.zip'),
     }
   };
+  if(Session.get('promoCodeValid')) {
+    orderDetails.promoCode = Session.get('promoCodeValid').code;
+  }
+  console.log(orderDetails);
+  return orderDetails;
 }
 
 const getAccountDetails = () => {
@@ -94,14 +99,18 @@ Template.PaymentBook.events({
     }
   },
   'click #verifyPromo': event => {
-    const code = $("[name='promoCode']").val();
+    const code = Session.get('promoCode');
     Meteor.call('verifyPromoCode', code, Session.get('locationId'), (err, res) => {
-      console.log(err, res);
       if (err || !res) {
         Bert.alert(TAPi18n.__('book.errors.wrongPromoCode', null), 'danger');
       } else {
-        Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
-        Session.set('promoCodeValid', res);
+        const createAccount = Session.get('createAccount');
+        if (res.reference && !createAccount) {
+          Bert.alert(TAPi18n.__('book.errors.removedReferencePromo', null), 'danger');
+        } else {
+          Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
+          Session.set('promoCodeValid', res);
+        }
       }
     })
   },

@@ -34,7 +34,7 @@
           </label>
         </div>
       </div>
-      {{#if createAccount}}
+      {{#if $.Session.equals 'createAccount' true}}
         {{> InputTextBook type="password" attribute="password" placeholder="book.password"}}
         {{> InputTextBook type="password" attribute="confirmPassword" placeholder="book.confirmPassword"}}
       {{/if}}

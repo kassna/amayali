@@ -24,15 +24,32 @@ Meteor.methods({
 	verifyPromoCode: (code, locationId) => {
 		const promoCode = PromoCodes.findOne({ code });
 		if (promoCode) {
-			const { locationsId, type, amount } = promoCode
-			// User codes have locationsId: [], so verify this or if it's a valid location
-			if(!locationsId.length || _.indexOf(locationsId, locationId) >= 0) {
-				return { type, amount };
-			} else {
-				return false;
+			const { locationsId, type, amount, code } = promoCode
+			// User codes have locationsId: [], so verify if code is from other user
+			if(!locationsId.length) {
+				return { code, type, amount, reference: true };
+			} else if(_.indexOf(locationsId, locationId) >= 0) {
+				// If it's a valid location, also apply
+				return { code, type, amount, reference: false };
 			}
 		}
+		// If location is invalid or code incorrect, return false
 		return false;
+	},
+
+	addClientPromo: order => {
+		const { promoCode } = order;
+		console.log('promoCode', promoCode);
+		if (promoCode) {
+			const promoCodeId = PromoCodes.findOne({ code: promoCode })._id;
+			console.log('promoCodeId', promoCodeId);
+			const client = Clients.findOne({ promoCodeId });
+			console.log('client', client);
+			if (client) {
+				console.log('currentPrmos', client.pendingPromos);
+				Clients.update({ _id: client._id }, { $set: { pendingPromos: client.pendingPromos + 1 }});
+			}
+		}
 	},
 
 	// Client
@@ -114,6 +131,7 @@ Meteor.methods({
 	paypalPostPay: (order, accountDetails) => {
 		if(accountDetails) {
 			order.clientId = Meteor.call('createClientFromOrder', accountDetails, order);
+			Meteor.call('addClientPromo', order);
 		}
 		return Orders.insert(order);
 	},
