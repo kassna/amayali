@@ -19,8 +19,16 @@ const getOrderDetails = () => {
   if(Session.get('promoCodeValid')) {
     orderDetails.promoCode = Session.get('promoCodeValid').code;
   }
-  console.log(orderDetails);
   return orderDetails;
+}
+
+const resetOrderSession = () => {
+  const toReset = ['locationId', 'product', 'type', 'therapistsType', 'date',
+                  'total', 'firstname', 'lastname', 'email', 'phone', 'address.street1',
+                  'address.street2', 'address.zip', 'promoCode', 'promoCodeValid'];
+  _.map(toReset, item => {
+    Session.set(item, null);
+  });
 }
 
 const getAccountDetails = () => {
@@ -58,8 +66,8 @@ const executePaypal = actions => actions.payment.execute().then(res => {
       return false;
     } else {
       const orderId = res;
-      // TODO: Add redirect to order review
-      console.log('payment success', orderId);
+      resetOrderSession();
+      FlowRouter.go('book-success', { id: orderId });
     }
   });
 })

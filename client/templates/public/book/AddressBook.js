@@ -32,6 +32,12 @@ Template.AddressBook.events({
                       'phone', 'email'];
     const createAccount = Session.get('createAccount');
 
+    const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegEx.test(Session.get('email'))) {
+      Bert.alert(TAPi18n.__('book.errors.emailInvalid', null), 'danger');
+      return false;
+    }
+
     // Add password to sent data
     if(createAccount) {
       // Add password as required

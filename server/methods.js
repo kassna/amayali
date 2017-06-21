@@ -39,14 +39,10 @@ Meteor.methods({
 
 	addClientPromo: order => {
 		const { promoCode } = order;
-		console.log('promoCode', promoCode);
 		if (promoCode) {
 			const promoCodeId = PromoCodes.findOne({ code: promoCode })._id;
-			console.log('promoCodeId', promoCodeId);
 			const client = Clients.findOne({ promoCodeId });
-			console.log('client', client);
 			if (client) {
-				console.log('currentPrmos', client.pendingPromos);
 				Clients.update({ _id: client._id }, { $set: { pendingPromos: client.pendingPromos + 1 }});
 			}
 		}
