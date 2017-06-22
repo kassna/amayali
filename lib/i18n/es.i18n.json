@@ -77,6 +77,11 @@
       "lead": "¿Eres terapeuta profesional?",
       "action": "¡Únete al equipo!"
     },
+    "contact": {
+      "lead": "¿Tienes alguna duda?",
+      "title": "Escríbenos cualquier duda o comentario en este espacio, o envíanos un correo a ",
+      "message": "Mensaje"
+    },
     "therapistForm": {
       "title": "¿Te gustaría ser parte de nuestro equipo?",
       "lead": "Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a"
