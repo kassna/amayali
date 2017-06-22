@@ -149,4 +149,20 @@ Meteor.methods({
 	},
 
 	'cancelOrder': _id => Orders.update(_id, { $set: { status: 'canceled' } }),
+
+	// Mails
+	'sendContactUs': (name, email, phone, message) => {
+		Mailer.send({
+      to: process.env.ADMIN_EMAIL,
+      // from: name + '<'+ email + '>',
+      subject: '[Amayali] Contacto página web',
+      template: 'contactUs',
+      data: {
+        name,
+				email,
+				phone,
+				message
+      }
+    });
+	}
 });

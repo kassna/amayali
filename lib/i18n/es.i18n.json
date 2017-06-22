@@ -80,7 +80,11 @@
     "contact": {
       "lead": "¿Tienes alguna duda?",
       "title": "Escríbenos cualquier duda o comentario en este espacio, o envíanos un correo a ",
-      "message": "Mensaje"
+      "message": "Mensaje",
+      "invalidEmail": "Por favor ingresa un email válido",
+      "requiredFields": "Hubo un error en tus datos, intenta de nuevo.",
+      "messageFail": "Hubo un error al enviar tu mensaje, intenta de nuevo.",
+      "messageSuccess": "Tu mensaje ha sido enviado, nos pondremos muy pronto en contacto contigo!"
     },
     "therapistForm": {
       "title": "¿Te gustaría ser parte de nuestro equipo?",
