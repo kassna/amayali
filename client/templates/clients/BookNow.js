@@ -92,8 +92,12 @@ Template.BookNowClient.helpers({
     let subTotal = Session.get('subTotal');
     const pendingPromos = Session.get('pendingPromos');
     const promoCode = Session.get('promoCodeValid');
+    if (!subTotal) {
+      Session.set('total', 0);
+      return 0;
+    }
     // Apply regular discount codes
-    if (subTotal && promoCode) {
+    if (promoCode) {
       if (promoCode.type === 'amount') {
         subTotal -= promoCode.amount;
       } else {
@@ -101,7 +105,7 @@ Template.BookNowClient.helpers({
       }
     }
     // Apply pending promos
-    if (subTotal && pendingPromos) {
+    if (pendingPromos) {
       subTotal *= ((10 - pendingPromos) * 0.1);
     }
 		const total = Math.round(subTotal);

@@ -394,9 +394,12 @@ $borderRadius: 8px;
         background-color: rgba(255, 255, 255, 0.25);
         border-color: #d9d9d9;
         font-size: 60%;
-        padding: 2em;
+        padding: 1em;
         font-weight: 600;
         font-family: $title-font;
+        @include bp(tablet) {
+          padding: 2em;
+        }
         &:hover {
           background-color: rgba(255, 255, 255, 0.50);
         }
