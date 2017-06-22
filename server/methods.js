@@ -53,7 +53,8 @@ Meteor.methods({
 		const { email } = info;
 		const { firstname, lastname } = info.profile;
 		Roles.setUserRoles(userId, 'client');
-		Clients.insert({ email, firstname, lastname, userId });
+		const clientId = Clients.insert({ email, firstname, lastname, userId });
+		Meteor.call('sendWelcome', clientId);
 	},
 
 	// Admins
@@ -128,7 +129,9 @@ Meteor.methods({
 		if(accountDetails) {
 			order.clientId = Meteor.call('createClientFromOrder', accountDetails, order);
 			Meteor.call('addClientPromo', order);
+			Meteor.call('sendWelcome', order.clientId);
 		}
+		Meteor.call('sendNewOrder', order);
 		return Orders.insert(order);
 	},
 
@@ -138,6 +141,7 @@ Meteor.methods({
 		if (order.referencePromos) {
 			Clients.update({ _id: client._id }, { $set: { pendingPromos: 0 }});
 		}
+		Meteor.call('sendNewOrder', order);
 		return Orders.insert(_.merge(order, { firstname, lastname, email, phone, address }));
 	},
 
@@ -164,5 +168,38 @@ Meteor.methods({
 				message
       }
     });
+	},
+
+	'sendNewOrder': order => {
+		const { clientId } = order;
+		// Send email to user
+		Mailer.send({
+			to: order.email,
+			subject: `[Amayali] Confirmación de orden`,
+			template: 'orderConfirmation',
+			data: order
+		});
+
+		// Send email to admin
+		order.location = Locations.findOne(order.locationId).name;
+
+		Mailer.send({
+			to: process.env.ADMIN_EMAIL,
+			subject: `[Amayali] Nueva orden en ${order.location}`,
+			template: 'newOrder',
+			data: order
+		});
+
 	}
+
+	'sendWelcome': clientId => {
+		const client = Clients.findOne(clientId);
+		Mailer.send({
+			to: order.email,
+			subject: `[Amayali] Bienvenido! ${order.firstname}`,
+			template: 'welcomeUser',
+			data: client
+		});
+	}
+
 });
