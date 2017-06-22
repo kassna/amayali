@@ -1,74 +1,88 @@
+const getOrderTime = orderId => {
+  const date = moment(Orders.findOne(id).date, "MM/DD/YYYY h:mm a");
+  return {
+    day: date.format('dddd D'),
+    month: date.format('MMMM'),
+    hour: date.format('H:mm A'),
+  };
+}
+
 export default {
     orderConfirmation: {
         path: 'emailTemplates/orderConfirmation.html',    // Relative to the 'private' dir.
-        scss: 'emailTemplates/sass/orderConfirmation.scss',     // Mail specific SCSS.
-
-        helpers: {
-            orderStatus: (order) => {
-                if (order === 'confirmed') return "Pagada";
-                else return "Pendiente de pago";
-            },
-            pendingPayment: (order) => {
-                return order === 'pending_payment';
-            }
-        },
-
         route: {
             path: '/prueba/:id',
             data: (params) => {
-                let order = Orders.findOne(params.id);
-                let cakes = [];
-                let kit;
-                let products = [];
-                let decoration;
-                // Create a reference id by location count and name
-                let location = Locations.findOne(order.location);
-                // Iterate over every cake
-                _.map(order.selectedCakes, function(n) {
-                    // Create string with name, provider name and quantity
-                    let cake = Cakes.findOne(n.cake);
-                    cake.providerName = CakeProviders.findOne(cake.provider).name;
-                    cake.quantity = n.quantity;
-                    cake.personalize = n.personalize;
-                    cakes.push(cake);
-                });
-
-                // Verify if kit was selected
-                if (order.selectedKit) {
-                    kit = Kits.findOne(order.selectedKit);
-                    kit.price = kit.unit_price * parseInt(order.people);
-                    // Products were selected
-                } else {
-                    _.map(order.selectedProducts, function(n) {
-                        // Verify if is product or product special
-                        let product = Products.findOne(n.product) ?
-                            Products.findOne(n.product) : ProductsSpecial.findOne(n.product);
-                        product.quantity = n.quantity;
-                        product.personalize = n.personalize;
-                        product.price = product.unit_price * parseInt(order.people);
-                        products.push(product);
-                    });
-                }
-                // Verify if decoration was selected and was personalized
-                if (order.selectedDecoration) {
-                    decoration = Decorations.findOne(order.selectedDecoration);
-                }
-                if (order.decorationPersonalization) {
-                    decoration.personalize = order.decorationPersonalization;
-                }
-
-                return {
-                    location: location,
-                    order: order,
-                    cakes: cakes,
-                    kit: kit,
-                    products: products,
-                    decoration: decoration
-                }
+              return Orders.findOne(params.id);
             }
         }
     },
+    newOrder: {
+        path: 'emailTemplates/newOrder.html',    // Relative to the 'private' dir.
+        route: {
+            path: '/prueba1/:id',
+            data: params => {
+              let order = Orders.findOne(params.id);
+              order.location = Locations.findOne(order.locationId).name;
+              return order;
+            }
+        }
+    },
+    welcomeUser: {
+      path: 'emailTemplates/welcomeUser.html',
+      route: {
+        path: '/welcomeUser/:id',
+        data: params => Clients.findOne(params.id),
+      }
+    },
+    survey: {
+      path: 'emailTemplates/survey.html',
+      route: {
+        path: '/survey/:id',
+        data: params => Orders.findOne(params.id),
+      }
+    },
     contactUs: {
         path: 'emailTemplates/contactUs.html',    // Relative to the 'private' dir.
-    }
+        route: {
+          path: '/contact',
+          data: () => {
+            return {
+              name: 'Alejandro Henkel',
+              email: 'alehenkel17@gmail.com',
+              phone: '7711992832',
+              message: 'hola k ase'
+            }
+          }
+        }
+    },
+    reminder: {
+        path: 'emailTemplates/reminder.html',    // Relative to the 'private' dir.
+        route: {
+          path: '/reminder/:id',
+          data: params => {
+            const date = moment(Orders.findOne(params.id).date, "MM/DD/YYYY h:mm a");
+            return {
+              day: date.format('dddd D'),
+              month: date.format('MMMM'),
+              hour: date.format('H:mm A'),
+            };
+          }
+        }
+    },
+
+    reminder1: {
+        path: 'emailTemplates/reminder1.html',    // Relative to the 'private' dir.
+        route: {
+          path: '/reminder1/:id',
+          data: params => {
+            const date = moment(Orders.findOne(params.id).date, "MM/DD/YYYY h:mm a");
+            return {
+              day: date.format('dddd D'),
+              month: date.format('MMMM'),
+              hour: date.format('H:mm A'),
+            };
+          }
+        }
+    },
 };

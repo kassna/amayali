@@ -1,158 +1,59 @@
 <div class="float-cont">
     <div class="float-right c-orange">
-        Fecha de orden: {{prettyDate order.createdAt}}
+        Fecha de orden: {{prettyDate createdAt}}
     </div>
 </div>
 
-<div class="box">
-    <h2><span class="c-white">Hola</span> <span class="c-aqua">{{firstName order.full_name}}!</span></h2>
-    <p class="c-dark-gray">
-        Nos encanta que estés preparando tu FiestON, muchas gracias por hacer tu pedido con nosotros.
+<div class="align-left p-a">
+    <h2 class="c-turquoise"><span class="">Hola</span> <span class="c-aqua">{{firstname}}!</span></h2>
+    <p>
+        Muchas gracias por tu reservación, tu orden está en proceso para llevarte la mejor experiencia.
         Si tienes algun comentario sobre tu orden, envía un mail a
-        <a href="mailto:contacto@fieston.mx">contacto@fieston.mx</a> o responde este mismo correo.
+        <a href="mailto:contacto@amayali.com">contacto@amayali.com</a> o responde este mismo correo.
     </p>
 </div>
 
-<h1 class="c-pink">Detalles de tu orden</h1>
+<h1 class="c-yellow">Detalles de tu orden</h1>
 
-<div class="float-cont m-b-5">
-    <div class="float-right c-orange">
-        Número de personas: <b>{{order.people}}</b>
-    </div>
+<div class="order-details">
+  <div class="group">
+    <b>Nombre:</b> {{ firstname }} {{ lastname }}
+  </div>
+  <div class="group">
+    <b>Fecha y hora:</b> {{ prettyHourComplete  date }}
+  </div>
+  <div class="group">
+    <b>Calle y Número:</b> {{ address.street1 }}
+  </div>
+  <div class="group">
+    <b>Colonia:</b> {{ address.street2 }}
+  </div>
+  <div class="group">
+    <b>Código Postal:</b> {{ address.zip }}
+  </div>
+  <div class="group">
+    <b>Total:</b> ${{ total }}
+  </div>
+  <div class="group">
+    <b>Tipo de masaje:</b> {{ prettyType type }}
+  </div>
+  <div class="group">
+    <b>Duración:</b> {{ prettyProduct product }}
+  </div>
+  <div class="group">
+    <b>Preferencia de terapeuta:</b> {{ prettyTherapistType therapistsType }}
+  </div>
 </div>
-<table class="w-100 order-details">
-    <thead>
-        <tr>
-            <th></th>
-            <th>Foto</th>
-            <th>Producto</th>
-            <th>Precio Unitario</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each cakes}}
-        <tr>
-            <td>{{quantity}}</td>
-            <td><img src="{{ imagePath picture}}"></td>
-            <td>
-                <p>
-                    <b>{{name}}</b> <br><br>
-                    {{details}}
-                    {{#if personalize}}
-                    <br><br> <b>Personalizar:</b> <em>{{personalize}}</em>
-                    {{/if}}
-                </p>
-            </td>
-            <td class="align-center">${{price}}</td>
-        </tr>
-        {{/each}}
-        {{#if kit}}
-        <tr>
-            <td>1</td>
-            <td><img src="{{ imagePath kit.picture}}"></td>
-            <td><p><b>{{kit.name}}</b> <br><br> {{kit.details}}</p></td>
-            <td class="align-center">${{kit.price}}</td>
-        </tr>
-        {{/if}}
-        {{#each products}}
-        <tr>
-            <td>{{quantity}}</td>
-            <td>
-                {{#if picture}}
-                <img src="{{ imagePath picture}} ">
-                {{/if}}
-            </td>
-            <td>
-                <p>
-                    <b>{{name}}</b>
-                    {{#if details}}
-                    <br><br>
-                    {{details}}
-                    {{/if}}
-                    {{#if personalize}}
-                    <br><br> <b>Personalizar:</b> <em>{{personalize}}</em>
-                    {{/if}}
-                </p>
-            </td>
-            <td class="align-center">${{price}}</td>
-        </tr>
-        {{/each}}
-        {{#if decoration}}
-        <tr>
-            <td>1</td>
-            <td><img src="{{ imagePath decoration.picture}}"></td>
-            <td>
-                <p><b>{{decoration.name}}</b> <br><br>
-                    {{decoration.details}} <br> <br>
-                    {{#if decoration.personalize}}
-                    <br><br> <b>Personalizar:</b> <em>{{personalize}}</em>
-                    {{/if}}
-                    <b class="c-aqua">Fecha de decoración</b>: {{prettyDateHour order.decoration_date}}
-                </p>
-            </td>
-            <td class="align-center">${{decoration.price}}</td>
-        </tr>
-        {{/if}}
-        <tr>
-            <td></td>
-            <td></td>
-            <td><p><b>Envío</b></p></td>
-            <td class="align-center">${{location.shipment_price}}</td>
-        </tr>
-        <tr class="total">
-            <td></td>
-            <td></td>
-            <td><p><b>Total</b></p></td>
-            <td class="align-center">${{order.total}}</td>
-        </tr>
-    </tbody>
-</table>
 
-<h1 class="c-pink">Detalles de pago y envío</h1>
-<table class="payment-details">
-    <tr>
-        <td><b>Fecha del evento</b></td>
-        <td>{{prettyDateHour order.date}}</td>
-    </tr>
-    <tr>
-        <td><b>Dirección del evento</b></td>
-        <td>
-            <ul>
-                <li>{{order.street}}</li>
-                {{#if order.interior_number}}
-                <li>{{order.interior_number}}</li>
-                {{/if}}
-                <li>Col. {{order.zone}} {{order.zip}}</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td><b>Indicaciones para llegar</b></td>
-        <td>{{order.place_specifications}}</td>
-    </tr>
-    <tr>
-        <td><b>Lugar del evento</b></td>
-        <td>{{order.type_place}}</td>
-    </tr>
-    <tr>
-        <td><b>Nombre del cliente</b></td>
-        <td>{{order.full_name}}</td>
-    </tr>
-    <tr>
-        <td><b>Email</b></td>
-        <td>{{order.email}}</td>
-    </tr>
-    <tr>
-        <td><b>Teléfono</b></td>
-        <td>{{order.phone}}</td>
-    </tr>
-    <tr>
-        <td><b>Estatus de pago</b></td>
-        <td>{{orderStatus order.status}}</td>
-    </tr>
-</table>
-{{#if pendingPayment order.status}}
-<p class="c-pink">
-    Para completar tu orden, realiza la tranferencia del monto de tu orden y envía el comprobante a contacto@fieston.mx
-</p>
+{{#if clientId}}
+<h3 class="align-left p-a">
+  Recuerda que puedes ingresar a tu cuenta en <a href="{{ emailUrlFor 'login' }}">
+    {{ emailUrlFor 'login' }}</a>
+    para ordenar más fácil y rápido, además de obtener grandes descuentos!
+</h3>
+{{else}}
+<h3 class="align-left p-a">
+  Si quieres obtener descuentos en tus próximas sesiones y ordenar de una manera más fácil y rápido,
+  crea tu cuenta en <a href="{{ emailUrlFor 'join' }}">{{ emailUrlFor 'join' }}</a>
+</h3>
 {{/if}}

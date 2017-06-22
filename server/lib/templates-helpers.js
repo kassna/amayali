@@ -36,10 +36,6 @@ export default {
         return '';
     },
 
-    firstName(name) {
-        return name.split(' ')[0];
-    },
-
     prettyDate(date) {
         return moment(date).format('LL');
     },
@@ -50,6 +46,39 @@ export default {
 
     imagePath(id) {
         return Mailer.settings.baseUrl + '/cfs/files/images/' + id;
+    },
+
+    prettyType (option) {
+      const options = {
+        relax: "Relajante",
+        decontracting: "Descontracturante",
+        sport: "Sport"
+      };
+      return options[option];
+    },
+
+    prettyTherapistType (option) {
+      const options = {
+        any: "Cualquiera",
+        male: "Hombre",
+        female: "Mujer",
+        same: "Terapeuta anterior"
+      }
+      return options[option];
+    },
+
+    prettyProduct (option) {
+      const options = {
+        60: "60 min",
+        90: "90 min",
+        120: "120 min"
+      };
+      return options[option];
+    },
+
+    prettyHourComplete (date) {
+      return moment(date, "MM/DD/YYYY h:mm a").format('LLLL');
     }
+
 
 };
