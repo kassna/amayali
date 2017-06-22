@@ -80,6 +80,9 @@
     "therapistForm": {
       "title": "¿Te gustaría ser parte de nuestro equipo?",
       "lead": "Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a"
+    },
+    "faq": {
+      "title": "Preguntas frequentes"
     }
   },
   "book": {

@@ -164,3 +164,27 @@
     margin-left: 5px;
   }
 }
+
+.panel-group {
+  .panel-heading {
+    a {
+      font-weight: 600;
+      color: $turquoise;
+      font-size: 1.5em;
+    }
+  }
+  .panel-body {
+    font-size: 1.2em;
+    color: $light-black;
+  }
+}
+
+/* footer block */
+.app-block-footer {
+  background-color: rgb(27, 28, 29);
+  color: #444;
+  color: rgba(116, 119, 123, .5);
+  h6 {
+    color: #adadad;
+  }
+}
