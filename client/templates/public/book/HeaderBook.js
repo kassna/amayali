@@ -2,7 +2,11 @@ Template.HeaderBook.helpers({
   'total': () => {
     let subTotal = Session.get('subTotal');
     const promoCode = Session.get('promoCodeValid');
-    if (subTotal && promoCode) {
+    if (!subTotal) {
+      Session.set('total', 0);
+      return 0;
+    }
+    if (promoCode) {
       if (promoCode.type === 'amount') {
         subTotal -= promoCode.amount;
       } else {

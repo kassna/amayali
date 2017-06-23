@@ -309,6 +309,12 @@
         "zip": "Código Postal",
         "locationId": "Ciudad"
       }
+    },
+    "surveys": {
+      "question1": "¿Cómo estuvo el servicio?",
+      "question2": "¿Cómo fue el trato de tu terapeuta?",
+      "question3": "¿Qué tan factible es que nos recomiendes de nuevo?",
+      "comments": "Escríbenos un comentario o sugerencia de nuestro servicio"
     }
   },
   "admin": {
@@ -320,6 +326,7 @@
       "add": "Agregar",
       "delete": "Borrar",
       "create": "Crear",
+      "answer": "Contestar",
       "noResults": "No hay elementos",
       "activate": "Activar",
       "deactivate": "Desactivar",
@@ -421,6 +428,7 @@
       "referencePromos": "Referencias acumuladas",
       "transactionId": "Aprobación",
       "status": "Estatus",
+      "survey": "Encuesta de satisfacción",
       "infoOrder": "Información de la orden",
       "noTherapist": "No asignado",
       "completed": "Completada",

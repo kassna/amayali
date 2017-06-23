@@ -196,7 +196,7 @@ Meteor.publish('clientOrders', location => {
 Meteor.publish('completedOrdersSurveysClient', function () {
     const clientId = Clients.findOne({ userId: this.userId })._id;
     const includeArr = Orders.find({ status: 'completed', clientId }).map(item => item.survey);
-    Surveys.find({ _id: { $in: includeArr }});
+    return Surveys.find({ _id: { $in: includeArr }});
 });
 
 Meteor.publish('completedOrdersSurveys', location => {

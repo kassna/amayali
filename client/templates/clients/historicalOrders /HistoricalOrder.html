@@ -7,10 +7,10 @@
           <span class="c-error">{{prettyStatus status}}</span>
         {{/if}}
       </td>
-      <td>
+      <td class="text-center">
         {{#if $eq status 'completed'}}
           {{#if unansweredSurvey survey}}
-            <button class="answer-survey btn btn-sm btn-pill btn-danger-outline">{{_ "admin.general.answer"}}</button>
+            <a href="{{pathFor 'survey' id=survey}}" target="_blank" class="answer-survey btn btn-sm btn-pill btn-danger-outline">{{_ "admin.general.answer"}}</a>
           {{/if}}
         {{/if}}
       </td>
