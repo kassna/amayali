@@ -1,10 +1,17 @@
  <template name="HistoricalOrderClient">
-	<tr class="{{#if this.therapist}}{{else}}danger-tr{{/if}}">
+	<tr class="">
       <td>
         {{#if $eq status 'completed'}}
           <span class="c-turquoise">{{prettyStatus status}}</span>
         {{else}}
           <span class="c-error">{{prettyStatus status}}</span>
+        {{/if}}
+      </td>
+      <td>
+        {{#if $eq status 'completed'}}
+          {{#if unansweredSurvey survey}}
+            <button class="answer-survey btn btn-sm btn-pill btn-danger-outline">{{_ "admin.general.answer"}}</button>
+          {{/if}}
         {{/if}}
       </td>
       <td>{{dateHour date}}</td>

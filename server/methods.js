@@ -189,14 +189,13 @@ Meteor.methods({
 			template: 'newOrder',
 			data: order
 		});
-
-	}
+	},
 
 	'sendWelcome': clientId => {
 		const client = Clients.findOne(clientId);
 		Mailer.send({
-			to: order.email,
-			subject: `[Amayali] Bienvenido! ${order.firstname}`,
+			to: client.email,
+			subject: `[Amayali] Bienvenido! ${client.firstname}`,
 			template: 'welcomeUser',
 			data: client
 		});

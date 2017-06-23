@@ -188,3 +188,24 @@ Meteor.publish('clientOrders', location => {
       return Orders.find({ clientId: { $in: includeArr } });
     }
 });
+
+////////////////////////
+///  Surveys
+////////////////////////
+
+Meteor.publish('completedOrdersSurveysClient', function () {
+    const clientId = Clients.findOne({ userId: this.userId })._id;
+    const includeArr = Orders.find({ status: 'completed', clientId }).map(item => item.survey);
+    Surveys.find({ _id: { $in: includeArr }});
+});
+
+Meteor.publish('completedOrdersSurveys', location => {
+  let includeArr = [];
+  Orders.find({ status: 'completed' }).map(item => includeArr.push(item.survey));
+  if (location) {
+    Orders.find({ status: 'completed', locationId: location }).map(item => includeArr.push(item.survey));
+  } else {
+    Orders.find({ status: 'completed' }).map(item => includeArr.push(item.survey));
+  }
+  return Surveys.find({ _id: { $in: includeArr }});
+});

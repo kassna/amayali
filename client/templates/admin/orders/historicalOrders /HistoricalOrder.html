@@ -7,6 +7,15 @@
           <span class="c-error">{{prettyStatus status}}</span>
         {{/if}}
       </td>
+      <td>
+        {{#if $eq status 'completed'}}
+          {{#if unansweredSurvey survey}}
+          <button type="" class="btn btn-round btn-info-outline view-more-btn">
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+          </button>
+          {{/if}}
+        {{/if}}
+      </td>
       <td>{{locationAbbr locationId}}</td>
       <td>{{firstname}} {{lastname}}</td>
       <td>{{dateHour date}}</td>

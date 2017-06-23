@@ -2,6 +2,7 @@ Template.HistoricalOrders.onCreated(function() {
 	let self = this;
 	self.autorun(() => {
 		self.subscribe('therapistHistoricalOrders', Session.get('currentCity'));
+		self.subscribe('completedOrdersSurveys', Session.get('currentCity'));
 	});
 });
 
@@ -13,10 +14,10 @@ Template.HistoricalOrders.onRendered(function() {
 				$("[data-sort=table]").tablesorter({
 					sortList: [[0,0]],
 					headers: {
-						2: { sorter: false },
-						3: { sorter: false },
-						8: { sorter: false },
+						1: { sorter: false },
+						4: { sorter: false },
 						9: { sorter: false },
+						11: { sorter: false },
 		      }
 				});
 			});
