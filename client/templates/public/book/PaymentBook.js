@@ -14,6 +14,7 @@ const getOrderDetails = () => {
       street1: Session.get('address.street1'),
       street2: Session.get('address.street2'),
       zip: Session.get('address.zip'),
+      reference: Session.get('address.reference'),
     }
   };
   if(Session.get('promoCodeValid')) {
@@ -25,7 +26,7 @@ const getOrderDetails = () => {
 const resetOrderSession = () => {
   const toReset = ['locationId', 'product', 'type', 'therapistsType', 'date',
                   'total', 'firstname', 'lastname', 'email', 'phone', 'address.street1',
-                  'address.street2', 'address.zip', 'promoCode', 'promoCodeValid'];
+                  'address.street2', 'address.zip', 'address.reference', 'promoCode', 'promoCodeValid'];
   _.map(toReset, item => {
     Session.set(item, null);
   });

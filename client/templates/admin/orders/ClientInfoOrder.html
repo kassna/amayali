@@ -38,6 +38,9 @@
                         <b>{{_ "schemas.clients.address.zip"}}:</b> {{ currentOrder.address.zip }}
                       </div>
                       <div class="group">
+                        <b>{{_ "schemas.clients.address.reference"}}:</b> {{ currentOrder.address.reference }}
+                      </div>
+                      <div class="group">
                         {{#if currentOrder.locationId}}
                         <b>{{_ "schemas.clients.locationId"}}:</b> {{ locationName currentOrder.locationId }}
                         {{/if}}

@@ -171,7 +171,8 @@
       "address": {
         "street1": "Calle y Número",
         "street2": "Colonia",
-        "zip": "Código Postal"
+        "zip": "Código Postal",
+        "reference": "Referencias del lugar"
       },
       "locationId": "Ciudad"
     },
@@ -307,6 +308,7 @@
         "street1": "Calle y Número",
         "street2": "Colonia",
         "zip": "Código Postal",
+        "reference": "Referencias del lugar",
         "locationId": "Ciudad"
       }
     },

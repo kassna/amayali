@@ -29,7 +29,7 @@ Template.AddressBook.events({
   'click #next3': event => {
     // Get all required fields
     const required = ['firstname', 'lastname', 'address.street1', 'address.street2', 'address.zip',
-                      'phone', 'email'];
+                      'address.reference', 'phone', 'email'];
     const createAccount = Session.get('createAccount');
 
     const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
