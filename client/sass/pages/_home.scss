@@ -124,8 +124,33 @@
 // HOW IT WORKS
 // -----------------------------------------------------------------------------
 .how-works {
-  .item-icon {
-    font-size: 70px;
+  .item {
+    &:hover {
+      .item-icon {
+        font-size: 90px;
+      }
+      p {
+        background-color: $turquoise;
+        color: $white;
+      }
+    }
+    .item-icon {
+      font-size: 70px;
+      transition: all 0.4s ease;
+      color: $cream;
+      display: block;
+    }
+    p {
+      transition: all 0.4s ease;
+      display: inline-block;
+      padding: 10px;
+    }
+  }
+  .lead {
+    transition: all 0.4s ease;
+    &.active {
+      text-decoration: underline;
+    }
   }
 }
 
