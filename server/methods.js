@@ -176,6 +176,8 @@ Meteor.methods({
 	verifyAvailableEmail: email => Accounts.findUserByEmail(email),
 
 	// Orders
+	getPaypalEnv: () => process.env.PAYPAL_ENV,
+
 	createClientFromOrder: (accountDetails, order) => {
 		try {
 			const userId = Accounts.createUser(accountDetails);

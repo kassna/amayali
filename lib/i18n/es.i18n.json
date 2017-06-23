@@ -18,19 +18,19 @@
       "logIn": "Ingresar"
     },
     "hero": {
-      "title": "¡Relájate en donde quieras!",
-      "lead": "Masajes por terapeutas calificados a tu casa, hotel u oficina",
+      "title": "Masajes profesionales a domicilio",
+      "lead": "Cuando quieras, donde quieras  con nuestros masoterapeutas certificados y cuidadosamente seleccionados",
       "lead1": "Reserva en menos de 90 segundos",
       "lead2": "Servicio diario de 8am a 10pm"
     },
     "steps": {
       "step1": "Reserva",
-      "step1Lead": "Reserva por internet",
+      "step1Lead": "Reserva en pocos segundos desde internet",
       "step2": "Recibe",
-      "step2Lead": "Un terapeuta profesional va a donde te encuentres",
+      "step2Lead": "Un masoterapeuta calificado llegará a tu puerta con todo lo necesario",
       "step3": "Relájate",
-      "step3Lead": "Relájate y disfruta tu masaje",
-      "feature1": "El masaje puede ser de cuerpo completo o enfocado en zonas específicas.",
+      "step3Lead": "¡Eso es todo! Ahora relájate y disfruta tu masaje",
+      "feature1": "Masajes llevados a tu casa, oficina u hotel.",
       "feature2": "Incluye todo el equipo necesario, por comodidad se recomienda tener dos toallas limpias.",
       "feature3": "Garantía del 100% si no estás satisfecho con el servicio."
     },
@@ -47,7 +47,7 @@
     },
     "prices": {
       "title": {
-        "muted": "¿Qué masaje te gustaría?",
+        "muted": "Elije tu masaje",
         "line1": "Relajarse nunca había sido tan",
         "line1bold": "fácil",
         "line2A": "Tú decides el",

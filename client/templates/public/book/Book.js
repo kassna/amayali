@@ -37,4 +37,13 @@ Template.Book.onCreated(function () {
   Session.set('instance', 1);
 	Session.set('maxIntance', 1);
   if(!Session.get('total')) Session.set('total', 0);
+
+  // Get paypal env
+  Meteor.call('getPaypalEnv', (err, res) => {
+    if (err) {
+      FlowRouter.reload();
+    } else {
+      Session.set('paypal_env', res);
+    }
+  })
 });

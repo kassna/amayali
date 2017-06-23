@@ -11,8 +11,8 @@
 	border-color: transparent;
 	transition: all 0.4s;
 	top: 10px;
-  left: 40px;
-  width: calc(100% - 80px);
+	left: 40px;
+	width: calc(100% - 80px);
 	@include bp(tablet) {
 		top: 40px;
 	}
@@ -26,7 +26,7 @@
 			height: 60px;
 		}
 		li a {
-			color: $cream;
+			color: $light-black;
 			padding: 20px 10px;
 
 			&.highlight {
@@ -46,7 +46,7 @@
 		}
 		a {
 			color: $white;
-			font-weight: 300;
+			font-weight: 500;
 			text-transform: uppercase;
 			margin-left: 10px;
 			margin-right: 10px;

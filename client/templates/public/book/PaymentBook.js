@@ -139,10 +139,12 @@ Template.PaymentBook.events({
 
 Template.PaypalBook.onRendered(() => {
   // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
+  const env = Session.get('paypal_env');
   paypal.Button.render({
-    env: 'sandbox',
+    env,
     client: {
-        sandbox: 'AVQe4DcFH4D27eWWia_9VpTnaB9CAEzG8okzy81BSI95-YMjrBnTRN0JYTMX0Lhj8yc3a9a26EkD9gFx',
+        sandbox: 'AVtJjNGKgPjKwxnQYwM_TtM-Nku0w86-PpBaNybLq3IcuNuMVmyVGQnmpxzXQBRrKtI17w5HkPW1TdXI',
+        production: 'Adgoszs37InoUs3Cl0UwVKuKsKjxlW-CIN83DoaRgQ9TogU-zJzLpzN79K_FF0Nx0nhGIB_QasHa4YZr'
     },
     style: {
       label: 'checkout', // checkout | credit | pay

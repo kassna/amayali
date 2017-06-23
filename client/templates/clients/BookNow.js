@@ -154,13 +154,13 @@ Template.BookNowClientForm.events({
     let price;
     switch (product) {
       case '60':
-        price = 799;
+        price = 699;
         break;
       case '90':
-        price = 1099;
+        price = 999;
         break;
       case '120':
-        price = 1399;
+        price = 1199;
         break;
       default:
     }
