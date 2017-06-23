@@ -24,4 +24,25 @@ Template.HistoricalOrder.events({
 	'click .view-survey-btn': function() {
 		// TODO: Open survey modal
 	},
+	'change input': function (event) {
+		const $input = $(event.target);
+		const attribute = $input.attr('name');
+		let val = $input.val();
+
+		if (val > 10) {
+			val = 10;
+			$input.val(val);
+		}
+
+		if (val < 0) {
+			val = 0;
+			$input.val(val);
+		}
+
+		Meteor.call('updateOrderGrade', this._id, attribute, val, err => {
+			if (err) {
+				$input.val('');
+			}
+		});
+	}
 });

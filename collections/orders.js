@@ -164,6 +164,24 @@ OrdersSchema = new SimpleSchema({
       omit: true
     },
   },
+  therapistGrade: {
+    type: Number,
+    min: 0,
+    max: 10,
+    optional: true,
+    autoform: {
+      omit: true
+    },
+  },
+  clientGrade: {
+    type: Number,
+    min: 0,
+    max: 10,
+    optional: true,
+    autoform: {
+      omit: true
+    },
+  },
   createdAt: {
     type: Date,
     autoValue: function() {
@@ -189,6 +207,11 @@ OrdersSchema = new SimpleSchema({
       omit: true
     },
   },
+});
+
+// Create survey for this order
+Orders.before.insert((userId, doc) => {
+  doc.survey = Surveys.insert({});
 });
 
 // Add translations to labels

@@ -431,6 +431,8 @@
       "survey": "Encuesta de satisfacción",
       "infoOrder": "Información de la orden",
       "noTherapist": "No asignado",
+      "ratingTherapist": "Cal. Terap",
+      "ratingClient": "Cal. Cliente",
       "completed": "Completada",
       "canceled": "Cancelada",
       "assign": "Asignar",

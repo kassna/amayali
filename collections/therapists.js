@@ -203,6 +203,13 @@ TherapistsSchema = new SimpleSchema({
       omit: true
     },
   },
+  rating: {
+    type: Number,
+    defaultValue: 0,
+    autoform: {
+      omit: true
+    }
+  },
   createdAt: {
     type: Date,
     autoValue: function() {

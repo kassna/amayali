@@ -13,6 +13,8 @@
                           <tr>
                               <th>{{_ "admin.orders.status"}}</th>
                               <th></th>
+                              <th>{{_ "admin.orders.ratingTherapist"}}</th>
+                              <th>{{_ "admin.orders.ratingClient"}}</th>
                               <th>{{_ "admin.orders.locationId"}}</th>
                               <th>{{_ "admin.orders.name"}}</th>
                               <th>{{_ "admin.orders.date"}}</th>
@@ -30,7 +32,7 @@
                               {{> HistoricalOrder}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=12}}
+                                  {{> NoResults cols=14}}
                               </tr>
                           {{/each}}
                       </tbody>

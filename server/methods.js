@@ -154,6 +154,14 @@ Meteor.methods({
 
 	'cancelOrder': _id => Orders.update(_id, { $set: { status: 'canceled' } }),
 
+	'updateOrderGrade': (_id, attribute, grade) => {
+		if (attribute === 'therapistGrade') {
+			Orders.update(_id, { $set: { therapistGrade: grade } })
+		} else {
+			Orders.update(_id, { $set: { clientGrade: grade } })
+		}
+	},
+
 	// Mails
 	'sendContactUs': (name, email, phone, message) => {
 		Mailer.send({

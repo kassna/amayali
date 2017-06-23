@@ -159,7 +159,14 @@ ClientsSchema = new SimpleSchema({
     autoform: {
       omit: true
     },
-  }
+  },
+  rating: {
+    type: Number,
+    defaultValue: 0,
+    autoform: {
+      omit: true
+    }
+  },
 });
 
 Clients.before.insert((userId, doc) => {

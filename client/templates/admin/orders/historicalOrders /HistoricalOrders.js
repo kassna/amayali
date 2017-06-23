@@ -15,9 +15,11 @@ Template.HistoricalOrders.onRendered(function() {
 					sortList: [[0,0]],
 					headers: {
 						1: { sorter: false },
-						4: { sorter: false },
-						9: { sorter: false },
-						11: { sorter: false },
+						2: { sorter: false },
+						3: { sorter: false },
+						6: { sorter: false },
+						12: { sorter: false },
+						13: { sorter: false },
 		      }
 				});
 			});
