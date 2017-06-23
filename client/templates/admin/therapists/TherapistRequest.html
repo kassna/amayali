@@ -30,12 +30,14 @@
       	</button>
       </td>
       <td>
-      	{{#quickRemoveButton collection="PromoCodes" _id=this._id class="hidden delete-btn"}}
-				Delete
-      	{{/quickRemoveButton}}
+        {{#if isInRole 'superadmin'}}
+        	{{#quickRemoveButton collection="PromoCodes" _id=this._id class="hidden delete-btn"}}
+  				Delete
+        	{{/quickRemoveButton}}
           <button class="btn btn-round btn-danger-outline confirm-remove">
 						<i class="fa fa-trash" aria-hidden="true"></i>
 					</button>
+        {{/if}}
       </td>
   </tr>
 </template>
