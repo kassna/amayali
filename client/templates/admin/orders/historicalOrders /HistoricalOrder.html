@@ -4,7 +4,7 @@
         {{#if $eq status 'completed'}}
           <span class="c-turquoise">{{prettyStatus status}}</span>
         {{else}}
-          <span class="c-error">{{prettyStatus status}}</span>
+          <span class="c-error">{{prettyStatus status}} por {{canceledBy}}</span>
         {{/if}}
       </td>
       <td class="text-center">

@@ -207,6 +207,13 @@ OrdersSchema = new SimpleSchema({
       omit: true
     },
   },
+  canceledBy: {
+    type: String,
+    optional: true,
+    autoform: {
+      omit: true
+    },
+  },
 });
 
 // Create survey for this order

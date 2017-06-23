@@ -179,7 +179,10 @@ Meteor.methods({
 		Orders.update({ _id: orderId }, { $set: { therapist }});
 	},
 
-	'cancelOrder': _id => Orders.update(_id, { $set: { status: 'canceled' } }),
+	'cancelOrder': _id => {
+		const { firstname, lastname } = Meteor.user().profile;
+		Orders.update(_id, { $set: { status: 'canceled', canceledBy: `${firstname} ${lastname}` } })
+	},
 
 	'updateOrderGrade': (_id, attribute, grade) => {
 		if (attribute === 'therapistGrade') {
