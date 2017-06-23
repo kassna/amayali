@@ -36,9 +36,79 @@ Template.AssignTherapists.events({
 	}
 });
 
+Template.AssignTherapistsOrder.onCreated(function() {
+	const self = this;
+	this.rating = new ReactiveVar(0);
+	this.clientId = new ReactiveVar(null);
+	self.autorun(() => {
+		Meteor.call('getClientRating', this.clientId.get(), (err, res) => {
+      if (res > 0) {
+				self.rating.set(res);
+			} else {
+				self.rating.set('N/A');
+			}
+    });
+	});
+});
+
+Template.AssignTherapistsOrder.helpers({
+	getClientId: function () {
+		Template.instance().clientId.set(this.clientId);
+	},
+	rating: () => Template.instance().rating.get(),
+	ratingColor: () => {
+		const rating = Template.instance().rating.get();
+		if (rating === 'N/A') {
+			return false;
+		}
+		else if (rating > 7) {
+			return 'c-green';
+		} else if (rating > 5) {
+			return 'c-yellow'
+		} else {
+			return 'c-error';
+		}
+	}
+});
+
 Template.AssignTherapistsOrder.events({
 	'click .order-item': function () {
 		Session.set('selectedOrder', this._id);
+	}
+});
+
+Template.AssignTherapistsTherapist.onCreated(function() {
+	const self = this;
+	this.rating = new ReactiveVar(0);
+	this.therapist = new ReactiveVar(null);
+	self.autorun(() => {
+		Meteor.call('getTherapistRating', this.therapist.get(), (err, res) => {
+      if (res > 0) {
+				self.rating.set(res);
+			} else {
+				self.rating.set('N/A');
+			}
+    });
+	});
+});
+
+Template.AssignTherapistsTherapist.helpers({
+	getTherapist: function () {
+		Template.instance().therapist.set(this._id);
+	},
+	rating: () => Template.instance().rating.get(),
+	ratingColor: () => {
+		const rating = Template.instance().rating.get();
+		if (rating === 'N/A') {
+			return false;
+		}
+		else if (rating > 7) {
+			return 'c-green';
+		} else if (rating > 5) {
+			return 'c-yellow'
+		} else {
+			return 'c-error';
+		}
 	}
 });
 

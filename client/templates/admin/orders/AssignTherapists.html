@@ -52,10 +52,11 @@
 </template>
 
 <template name="AssignTherapistsOrder">
+  {{getClientId}}
   <li class="list-group-item {{#if $.Session.equals 'selectedOrder' _id}}active{{/if}}">
     <div class="info order-item">
       <div class="group">
-        <b class="c-light-black">{{firstname}} {{lastname}}</b>
+        <b class="c-light-black">{{firstname}} {{lastname}} - <span class="{{ratingColor}}">Rate: {{rating}}</span></b>
       </div>
       <div class="group">
         {{dateHour date}}
@@ -79,10 +80,11 @@
 </template>
 
 <template name="AssignTherapistsTherapist">
+  {{getTherapist}}
   <li class="list-group-item {{#if $.Session.equals 'selectedTherapist' _id}}active{{/if}}">
     <div class="info therapist-item">
       <div class="group">
-        <b class="c-light-black">{{name}}</b> - {{prettySex sex}}
+        <b class="c-light-black">{{name}} - <span class="{{ratingColor}}">Rate: {{rating}}</span></b> - {{prettySex sex}}
       </div>
       <div class="group">
         <b class="c-green">{{locationName locationId}}</b> - <b>{{_ "admin.orders.zones"}}:</b> {{zone}} - <b>{{_ "admin.orders.zip"}}:</b> {{zip}}
