@@ -1,6 +1,14 @@
  <template name="PendingOrder">
+   {{getClientId}}
 	<tr class="{{#if this.therapist}}{{else}}danger-tr{{/if}}">
       <td>{{locationAbbr locationId}}</td>
+      <td class="{{ratingColor}}">
+        {{#if clientId}}
+          {{rating}}
+        {{else}}
+          N/A
+        {{/if}}
+      </td>
       <td>{{firstname}} {{lastname}}</td>
       <td>{{dateHour date}}</td>
       <td>

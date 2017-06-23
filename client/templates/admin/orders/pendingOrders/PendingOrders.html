@@ -12,6 +12,7 @@
                       <thead>
                           <tr>
                               <th>{{_ "admin.orders.locationId"}}</th>
+                              <th>{{_ "admin.general.rating"}}</th>
                               <th>{{_ "admin.orders.name"}}</th>
                               <th>{{_ "admin.orders.date"}}</th>
                               <th>{{_ "admin.orders.client"}}</th>
@@ -30,7 +31,7 @@
                               {{> PendingOrder}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=12}}
+                                  {{> NoResults cols=13}}
                               </tr>
                           {{/each}}
                       </tbody>

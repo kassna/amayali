@@ -57,6 +57,32 @@ Meteor.methods({
 		Meteor.call('sendWelcome', clientId);
 	},
 
+	getTherapistRating: therapist => {
+		if(!therapist) return -1;
+		// Get therapist orders with grade
+		const orders = Orders.find({ therapist, therapistGrade: { $exists: true } });
+		// Count orders
+		const count = orders.count();
+		if (!count) return -1;
+		// Get sum of reviews
+		const total = orders.map(item => item.therapistGrade).reduce((total, num) => total + num);
+		// Return average
+		return total / count;
+	},
+
+	getClientRating: clientId => {
+		if(!clientId) return -1;
+		// Get client orders with grade
+		const orders = Orders.find({ clientId, clientGrade: { $exists: true } });
+		// Count orders
+		const count = orders.count();
+		if (!count) return -1;
+		// Get sum of reviews
+		const total = orders.map(item => item.clientGrade).reduce((total, num) => total + num);
+		// Return average
+		return total / count;
+	},
+
 	// Admins
 	toggleAdmin: id => {
 		if(Roles.userIsInRole(id, 'admin')) {
@@ -141,8 +167,9 @@ Meteor.methods({
 		if (order.referencePromos) {
 			Clients.update({ _id: client._id }, { $set: { pendingPromos: 0 }});
 		}
+		_.merge(order, { firstname, lastname, email, phone, address });
 		Meteor.call('sendNewOrder', order);
-		return Orders.insert(_.merge(order, { firstname, lastname, email, phone, address }));
+		return Orders.insert(order);
 	},
 
 	'assignOrderTherapist': (orderId, therapist) => {
@@ -179,7 +206,6 @@ Meteor.methods({
 	},
 
 	'sendNewOrder': order => {
-		const { clientId } = order;
 		// Send email to user
 		Mailer.send({
 			to: order.email,
