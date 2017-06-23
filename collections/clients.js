@@ -10,17 +10,20 @@ class ClientsCollection extends Mongo.Collection {
 
   // Remove clients that has no orders, and also removes user and promoCode
   remove(selector, callback) {
-    const ids = this.find(selector).map(item => item._id);
-    if(Orders.find({ clientId: { $in: ids } }).count()) {
-      throw new Meteor.Error('client-has-orders', `Client can't be deleted because it has orders`);
-    }
-
-    this.find(selector).map(item => {
-      Meteor.users.remove(item.userId);
-      PromoCodes.remove(item.promoCodeId);
+    Meteor.call('removeClients', selector, err => {
+      if (err) {
+        Bert.alert( TAPi18n.__('admin.general.failDelete', null), 'danger', 'growl-top-right' );
+        return false;
+      }
+      this.find(selector).map(item => {
+        Meteor.users.remove(item.userId);
+        PromoCodes.remove(item.promoCodeId);
+      });
+      Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
+      return super.remove(selector, callback);
     });
 
-    return super.remove(selector, callback);
+
   }
 
   // Function to remove client without removing user. This is used to promote client to admin

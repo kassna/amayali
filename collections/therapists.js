@@ -1,5 +1,14 @@
 class TherapistsCollection extends Mongo.Collection {
-  // TODO: Can't remove if has orders
+  remove(selector, callback) {
+    Meteor.call('removeTherapists', selector, err => {
+      if (err) {
+        Bert.alert( TAPi18n.__('admin.general.failDelete', null), 'danger', 'growl-top-right' );
+        return false;
+      }
+      Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
+      return super.remove(selector, callback);
+    });
+  }
 }
 
 Therapists = new TherapistsCollection('therapists');

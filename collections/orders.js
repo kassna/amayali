@@ -4,6 +4,14 @@ class OrdersCollection extends Mongo.Collection {
     ourDoc.createdAt = new Date();
     return super.insert(ourDoc, callback);
   }
+
+  remove(selector, callback) {
+    this.find(selector).map(item => {
+      Surveys.remove(item.survey);
+    });
+    Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
+    return super.remove(selector, callback);
+  }
 }
 
 Orders = new OrdersCollection('orders');

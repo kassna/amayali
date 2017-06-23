@@ -20,7 +20,6 @@ Template.MainLayout.onCreated(function() {
 			confirmButtonText: TAPi18n.__('admin.general.confirmDelete', null),
 		}, () => {
 			$(event.target).parent().find(".delete-btn").trigger("click");
-			Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
 		});
 	});
 

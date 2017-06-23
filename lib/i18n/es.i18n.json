@@ -342,6 +342,7 @@
       "cantUndone": "No se pude deshacer esta acción",
       "confirmDelete": "Sí, ¡Borrar!",
       "successDelete": "Éxito! Se ha eliminado ese elemento",
+      "failDelete": "Hubo un error, revisa las dependencias del elemento",
       "successInsert": "Éxito! Se ha agregado a la base de datos",
       "active": "Activar",
       "createdAt": "Creado",

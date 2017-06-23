@@ -1,4 +1,17 @@
-Locations = new Mongo.Collection('locations');
+class LocationsCollection extends Mongo.Collection {
+  remove(selector, callback) {
+    Meteor.call('removeLocations', selector, err => {
+      if (err) {
+        Bert.alert( TAPi18n.__('admin.general.failDelete', null), 'danger', 'growl-top-right' );
+        return false;
+      }
+      Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
+      return super.remove(selector, callback);
+    });
+  }
+}
+
+Locations = new LocationsCollection('locations');
 
 Locations.allow({
   insert: function(userId, doc) {

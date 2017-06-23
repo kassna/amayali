@@ -21,6 +21,17 @@ class PromoCodesCollection extends Mongo.Collection {
     }
     return super.insert(ourDoc, callback);
   }
+
+  remove(selector, callback) {
+    Meteor.call('removePromoCodes', selector, err => {
+      if (err) {
+        Bert.alert( TAPi18n.__('admin.general.failDelete', null), 'danger', 'growl-top-right' );
+        return false;
+      }
+      Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
+      return super.remove(selector, callback);
+    });
+  }
 }
 
 PromoCodes = new PromoCodesCollection('promoCodes');

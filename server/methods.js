@@ -10,7 +10,30 @@ Meteor.methods({
 		}
 	},
 
+	removeLocations: selector => {
+		const ids = Locations.find(selector).map(item => item._id);
+		if(Orders.find({ locationId: { $in: ids } }).count()) {
+      throw new Meteor.Error('has-dependency', `Item can't be deleted because it has dependency`);
+    }
+    if(Clients.find({ locationId: { $in: ids } }).count()) {
+      throw new Meteor.Error('has-dependency', `Item can't be deleted because it has dependency`);
+    }
+    if(PromoCodes.find({ locationsId: { $in: ids } }).count()) {
+      throw new Meteor.Error('has-orders', `Item can't be deleted because it has dependency`);
+    }
+    if(Therapists.find({ locationId: { $in: ids } }).count()) {
+      throw new Meteor.Error('has-orders', `Item can't be deleted because it has dependency`);
+    }
+	},
+
 	// PromoCodes
+	removePromoCodes: selector => {
+		const ids = PromoCodes.find(selector).map(item => item._id);
+    if(Clients.find({ promoCodeId: { $in: ids } }).count()) {
+      throw new Meteor.Error('has-dependency', `Item can't be deleted because it has dependency`);
+    }
+	},
+
 	toggleStatusPromoCode: id => {
 		let status = PromoCodes.findOne(id).status;
 		if (status) {
@@ -49,6 +72,13 @@ Meteor.methods({
 	},
 
 	// Client
+	removeClients: selector => {
+		const ids = Clients.find(selector).map(item => item._id);
+    if(Orders.find({ clientId: { $in: ids } }).count()) {
+      throw new Meteor.Error('client-has-orders', `Client can't be deleted because it has orders`);
+    }
+	},
+
 	createClientFromSignUp: (userId, info) => {
 		const { email } = info;
 		const { firstname, lastname } = info.profile;
@@ -111,6 +141,13 @@ Meteor.methods({
 	},
 
 	// Therapists
+	removeTherapists: selector => {
+		const ids = Therapists.find(selector).map(item => item._id);
+		if(Orders.find({ therapist: { $in: ids } }).count()) {
+      throw new Meteor.Error('has-dependency', `Item can't be deleted because it has dependency`);
+    }
+	},
+
 	toggleStatusTherapist: id => {
 		let status = Therapists.findOne(id).status;
 		if (status) {

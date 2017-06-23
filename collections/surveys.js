@@ -2,11 +2,9 @@ Surveys = new Mongo.Collection('surveys');
 
 Surveys.allow({
   insert: function(userId, doc) {
-    // just admins can update
     return false;
   },
   update: function(userId, doc) {
-    // just admins can update
     return true;
   },
   remove: function (userId, doc) {
