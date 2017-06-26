@@ -121,7 +121,7 @@ ClientsSchema = new SimpleSchema({
     type: String,
     regEx: SimpleSchema.RegEx.Id,
     autoform: {
-      type: 'select-radio-inline',
+      firstOption: '(Selecciona)',
       options() {
         return Locations.find().map(location => ({ label: location.name, value: location._id }));
       },
@@ -191,6 +191,11 @@ for(const prop in ClientsSchema._schema) {
   ClientsSchema._schema[prop].label = function () {
     return TAPi18n.__(`schemas.clients.${prop}`, null);
   }
+}
+
+// Add address title label
+ClientsSchema._schema['address'].label = function () {
+  return TAPi18n.__(`schemas.clients.addressLabel`, null);
 }
 
 Clients.attachSchema(ClientsSchema);

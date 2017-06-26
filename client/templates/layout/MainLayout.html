@@ -11,19 +11,19 @@
 		<div class="container-fluid m-t-lg profile">
 	        <div class="row">
 	            <div class="col-sm-2 sidebar hidden-xs">
-								{{#if isInRole 'admin'}}
-									{{> SidebarAdmin}}
-								{{/if}}
-								{{#if isInRole 'client'}}
-									{{> SidebarClient}}
-								{{/if}}
+					{{#if isInRole 'admin'}}
+						{{> SidebarAdmin}}
+					{{/if}}
+					{{#if isInRole 'client'}}
+						{{> SidebarClient}}
+					{{/if}}
 	            </div>
 	            <div class="col-sm-10 content">
 	            	{{> Template.dynamic template=main}}
 
-								{{#if isInRole 'client'}}
-									{{> EditModal collection="Clients" editItem=client }}
-								{{/if}}
+					{{#if isInRole 'client'}}
+						{{> EditModal collection="Clients" editItem=client }}
+					{{/if}}
 	            </div>
 	        </div>
 	    </div>

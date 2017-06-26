@@ -181,7 +181,14 @@ Template.BookNowClientForm.events({
         Bert.alert(TAPi18n.__('book.errors.wrongPromoCode', null), 'danger');
       } else {
         if (res.reference) {
-          Bert.alert(TAPi18n.__('book.errors.referenceErrorClient', null), 'danger');
+          Meteor.call('clientOrders', (err1, number) => {
+            if (err1 || number) {
+              Bert.alert(TAPi18n.__('book.errors.referenceErrorClient', null), 'danger');
+            } else {
+              Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
+              Session.set('promoCodeValid', res);
+            }
+          });
         } else {
           Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
           Session.set('promoCodeValid', res);

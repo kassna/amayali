@@ -47,7 +47,13 @@ Meteor.methods({
 	verifyPromoCode: (code, locationId) => {
 		const promoCode = PromoCodes.findOne({ code });
 		if (promoCode) {
-			const { locationsId, type, amount, code } = promoCode
+			const { _id, locationsId, type, amount, code } = promoCode
+			// Verify if code isn't it's own code
+			const userId = Meteor.userId();
+			if (userId) {
+				const clientPromoCode = Clients.findOne({ userId }).promoCodeId;
+				if (clientPromoCode === _id) return false;
+			}
 			// User codes have locationsId: [], so verify if code is from other user
 			if(!locationsId.length) {
 				return { code, type, amount, reference: true };
@@ -173,6 +179,11 @@ Meteor.methods({
 	},
 
 	// User
+	clientOrders: () => {
+		const clientId = Clients.findOne({ userId: Meteor.userId() });
+		return Orders.find({ clientId }).count();
+	},
+
 	verifyAvailableEmail: email => Accounts.findUserByEmail(email),
 
 	// Orders

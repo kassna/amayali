@@ -321,7 +321,7 @@ $borderRadius: 8px;
 
   .btn-group.bootstrap-select {
     width: calc(100% - 2em) !important;
-    margin: 1.1em;
+    margin: 0.8em 1.1em;
   }
 
   .dropdown-toggle {
@@ -385,8 +385,7 @@ $borderRadius: 8px;
     position: relative;
     .button-select {
       display: flex;
-      margin: 2em 1em;
-      padding-bottom: 1em;
+      margin: 2em 1em 0.8em;
       button {
         flex-grow: 1;
         border: 1px solid #bababa;
@@ -413,7 +412,7 @@ $borderRadius: 8px;
     }
     label {
       position: absolute;
-      bottom: -24px;
+      top: -40px;
       font-size: 75%;
       left: 32px;
       color: $unactive;

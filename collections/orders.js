@@ -114,7 +114,10 @@ OrdersSchema = new SimpleSchema({
     regEx: SimpleSchema.RegEx.Id,
     optional: true,
     autoform: {
-      omit: true
+      firstOption: '(Selecciona)',
+      options() {
+        return Therapists.find().map(therapist => ({ label: therapist.name, value: therapist._id }));
+      },
     },
   },
   clientId: {
