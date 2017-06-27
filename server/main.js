@@ -20,33 +20,50 @@ AccountsTemplates.configure({
   },
 });
 
-Meteor.startup(() => {
-	// script to verify time of orders
+Mailer.init({
+    templates: Templates,     // Global Templates namespace, see lib/templates.js.
+    helpers: TemplateHelpers, // Global template helper namespace.
+    layout: {
+        name: 'emailLayout',
+        path: 'emailTemplates/layout.html',   // Relative to 'private' dir.
+        scss: 'emailTemplates/sass/layout.scss'
+    }
+});
 
+SyncedCron.add({
+  name: 'Send reminders',
+  schedule: parser => parser.recur().first().minute(),
+  job: () => {
+    // Get current date in ISO format
+	let now = new Date();
+	now = Date.parse(now);
+
+    Orders.find({ status: 'confirmed' }).map(order => {
+        const { _id, date } = order;
+	    // If date has passed, the order is completed
+	    if (moment(date, "MM/DD/YYYY h:mm a").valueOf() < now) {
+	        Orders.update({ _id }, { $set: { status: 'completed' } });
+	    }
+        // Send survey email
+        Meteor.call('sendSurvey', _id);
+	});
+  }
+});
+
+Meteor.startup(() => {
 	// Get current date in ISO format
 	let now = new Date();
 	now = Date.parse(now);
 
 	// Find all orders with status confirmed
-	// TODO: Send survey email
-	Orders.find({ status: 'confirmed' }).map(function(order) {
+	Orders.find({ status: 'confirmed' }).map(order => {
+        const { _id, date } = order;
 	    // If date has passed, the order is completed
-	    if (moment(order.date, "MM/DD/YYYY h:mm a").valueOf() < now) {
-	        Orders.update({ _id: order._id }, { $set: { status: 'completed' } });
+	    if (moment(date, "MM/DD/YYYY h:mm a").valueOf() < now) {
+	        Orders.update({ _id }, { $set: { status: 'completed' } });
 	    }
+        // Send survey email
+        Meteor.call('sendSurvey', _id);
 	});
-
-
-    Mailer.init({
-        templates: Templates,     // Global Templates namespace, see lib/templates.js.
-        helpers: TemplateHelpers, // Global template helper namespace.
-        layout: {
-            name: 'emailLayout',
-            path: 'emailTemplates/layout.html',   // Relative to 'private' dir.
-            scss: 'emailTemplates/sass/layout.scss'
-        }
-    });
-
-    // Meteor.call('sendMail');
 
 });

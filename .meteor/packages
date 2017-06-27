@@ -69,6 +69,7 @@ lookback:emails                 # rich functionality to email templates
 # GENERAL PACKAGES
 erasaur:meteor-lodash			# Javascript super useful helpers
 meteortoys:allthings          	# inspect collections in development mode with 'ctrl + m'
+percolate:synced-cron
 
 # OPTIONAL
 zimme:active-route				# check for active route in template

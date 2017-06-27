@@ -286,6 +286,16 @@ Meteor.methods({
 			template: 'welcomeUser',
 			data: client
 		});
-	}
+	},
+
+	'sendSurvey': orderId => {
+		const { firstname, survey, email } = Orders.findOne(orderId);
+		Mailer.send({
+			to: email,
+			subject: `[Amayali] Orden completada!`,
+			template: 'survey',
+			data: { firstname, survey }
+		});
+	},
 
 });
