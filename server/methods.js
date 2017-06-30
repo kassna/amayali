@@ -298,4 +298,19 @@ Meteor.methods({
 		});
 	},
 
+	'sendReminder1': email => {
+		Mailer.send({
+			to: email,
+			subject: `[Amayali] Tu cita en una hora`,
+			template: 'reminder',
+		});
+	},
+
+	'sendReminder4': email => {
+		Mailer.send({
+			to: email,
+			subject: `[Amayali] Tu cita en cuatro horas`,
+			template: 'reminder1',
+		});
+	},
 });

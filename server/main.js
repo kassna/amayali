@@ -34,23 +34,35 @@ SyncedCron.add({
   name: 'Send reminders',
   schedule: parser => parser.recur().first().minute(),
   job: () => {
-    // Get current date in ISO format
-	let now = new Date();
-	now = Date.parse(now);
+    console.log('Recurring');
+    // Get current date in moment format
+	const now = moment();
+    const currHour = now.hour();
+    console.log('hour', currHour);
 
     Orders.find({ status: 'confirmed' }).map(order => {
-        const { _id, date } = order;
-	    // If date has passed, the order is completed
-	    if (moment(date, "MM/DD/YYYY h:mm a").valueOf() < now) {
-	        Orders.update({ _id }, { $set: { status: 'completed' } });
+        const { _id, date, email } = order;
+        const clientDate = moment(date, "MM/DD/YYYY h:mm a");
+	    // Verify if order is in the same day
+	    if (clientDate.isSame(now, 'day')) {
+            // Get hour of order
+            const clientHour = clientDate.hour();
+            // Verify if is time for reminders
+            if (clientHour - currHour === 1) {
+                console.log('One hour sent');
+                Meteor.call('sendReminder1', email);
+            } else if (clientHour - currHour === 4) {
+                console.log('Four hour sent');
+                Meteor.call('sendReminder4', email);
+            }
 	    }
-        // Send survey email
-        Meteor.call('sendSurvey', _id);
 	});
   }
 });
 
 Meteor.startup(() => {
+    SyncedCron.start();
+
 	// Get current date in ISO format
 	let now = new Date();
 	now = Date.parse(now);
@@ -61,9 +73,9 @@ Meteor.startup(() => {
 	    // If date has passed, the order is completed
 	    if (moment(date, "MM/DD/YYYY h:mm a").valueOf() < now) {
 	        Orders.update({ _id }, { $set: { status: 'completed' } });
+            // Send survey email
+            Meteor.call('sendSurvey', _id);
 	    }
-        // Send survey email
-        Meteor.call('sendSurvey', _id);
 	});
 
 });
