@@ -68,7 +68,11 @@ const executePaypal = actions => actions.payment.execute().then(res => {
     } else {
       const orderId = res;
       resetOrderSession();
-      FlowRouter.go('book-success', { id: orderId });
+      if (Meteor.userId()) {
+        FlowRouter.go('admin');
+      } else {
+        FlowRouter.go('book-success', { id: orderId });
+      }
     }
   });
 })

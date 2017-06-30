@@ -23,6 +23,7 @@ scroll = function(target) {
 
 scrollTop = () => {
 	if ($('.stage-open').length) {
+		$('body').css('overflow', 'visible');
 		$('.navbar-toggle').trigger('click');
 	}
 	$('html,body').animate({ scrollTop: 0}, 0, 'easeInOutQuart');

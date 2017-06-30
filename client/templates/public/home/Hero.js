@@ -29,6 +29,15 @@ Template.Hero.onRendered(function () {
 	  style: 'btn-info',
 	  size: 4
 	});
+
+	// Hack to fix select not showing all cities
+	$(".selectpicker").selectpicker('refresh');
+	setTimeout(function doSomething() {
+	    $(".selectpicker").selectpicker('refresh');
+	    if($(".dropdown-menu.inner li").length <= 1) {
+	    	setTimeout(doSomething, 500);
+	    }
+	}, 500);
 });
 
 Template.Hero.events({

@@ -24,6 +24,10 @@
 
   .banner {
     padding: 8px 0;
+    font-size: 14px;
+    @include bp(tablet) {
+      font-size: 18px;
+    }
     a {
       font-weight: 600;
       color: $white;
@@ -36,7 +40,7 @@
   padding-top: 90px;
 
   .container {
-    margin-top: 25px;
+    margin-top: 35px;
     @include bp(tablet) {
       width: 750px;
       margin-top: 55px;
@@ -412,10 +416,15 @@ $borderRadius: 8px;
     }
     label {
       position: absolute;
-      top: -40px;
-      font-size: 75%;
+      top: -24px;
+      font-size: 90%;
       left: 32px;
       color: $unactive;
+
+      @include bp(tablet) {
+        top: -40px;
+        font-size: 75%;
+      }
 
       @include bp(tablet) {
         left: 65px;

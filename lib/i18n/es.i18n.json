@@ -25,25 +25,27 @@
     },
     "steps": {
       "step1": "Reserva",
-      "step1Lead": "Reserva en pocos segundos desde internet",
+      "step1Lead": "Agenda en pocos segundos desde tu móvil",
       "step2": "Recibe",
-      "step2Lead": "Un masoterapeuta calificado llegará a tu puerta con todo lo necesario",
+      "step2Lead": "Nosotros vamos a tu domicilio",
       "step3": "Relájate",
-      "step3Lead": "¡Eso es todo! Ahora relájate y disfruta tu masaje",
+      "step3Lead": "Disfruta tu masaje",
+      "step4": "Comparte",
+      "step4Lead": "Gana tu siguiente masaje recomendándonos",
       "feature1": "Masajes llevados a tu casa, oficina u hotel.",
-      "feature2": "Incluye todo el equipo necesario, por comodidad se recomienda tener dos toallas limpias.",
+      "feature2": "Nosotros llevamos todo el equipo necesario",
       "feature3": "Garantía del 100% si no estás satisfecho con el servicio."
     },
     "features": {
       "title": "Nuestros beneficios",
       "feature1": "Fácil",
-      "feature1Lead": "En menos de 90 segundos puedes hacer tu reservación desde nuestra página web.",
+      "feature1Lead": "Puedes hacer la reservación en menos de 90 segundos desde tu móvil.",
       "feature2": "Profesional",
-      "feature2Lead": "Todos nuestros terapeutas cuentan con acreditaciones oficiales y experiencia para ofrecer el mejor servicio.",
+      "feature2Lead": "Nuestros terapeutas cuantas con acreditaciones oficiales y altos niveles de servicio",
       "feature3": "Seguro",
-      "feature3Lead": "Contamos con un proceso de admisión de varios pasos para asegurar la integridad de todos nuestros terapeutas.",
+      "feature3Lead": "Seas cliente o terapeuta, tu seguridad es prioridad para nosotros.",
       "feature4": "Flexible",
-      "feature4Lead": "Donde quieras, cuando quieras."
+      "feature4Lead": "Dinos cuando y donde quieres tu masaje, nosotros nos encargamos del resto."
     },
     "prices": {
       "title": {
@@ -52,12 +54,12 @@
         "line1bold": "fácil",
         "line2A": "Tú decides el",
         "line2boldA": "tipo de masaje",
-        "line2B": "que quieres y la",
+        "line2B": "que quieres y su",
         "line2boldB": "duración",
         "line2C": "del mismo"
       },
       "prices": {
-        "title": "Tarifas"
+        "title": "Precio"
       },
       "types": {
         "title": "Elige tu masaje",
@@ -66,7 +68,7 @@
         "title2": "Descontracturante",
         "lead2": "Un masaje con presión intermedia-alta que elimina tensión muscular y dolores crónicos.",
         "title3": "Deportivo",
-        "lead3": "Mejora flexibilidad y reduce las probabilidades de lesión y el tiempo de recuperación. Puede realizarse pre y post ejercicio."
+        "lead3": "Mejora la flexibilidad para evitar lesiones y mejora tú recuperación. Puede realizarse antes o después del ejercicio."
       }
     },
     "image": {
@@ -79,7 +81,7 @@
     },
     "contact": {
       "lead": "¿Tienes alguna duda?",
-      "title": "Escríbenos cualquier duda o comentario en este espacio, o envíanos un correo a ",
+      "title": "Compártenos tus comentarios en este en este espacio, o envíanos un correo a ",
       "message": "Comentario",
       "invalidEmail": "Por favor ingresa un email válido",
       "requiredFields": "Hubo un error en tus datos, intenta de nuevo.",
@@ -168,10 +170,10 @@
     "step2": "Masaje",
     "step3": "Dirección",
     "step4": "Pago",
-    "currentUserLead": "!Ya tienes una cuenta!",
+    "currentUserLead": "¡Ya tienes una cuenta!",
     "currentUserLink": "Ingresa y ordena más facil y rápido",
     "noUserLead": "Si tienes una cuenta,",
-    "noUserLink": "ingresa ahora!",
+    "noUserLink": "ingresa aquí!",
     "step1Lead": "Selecciona la fecha y ubicación de tu cita",
     "step2Lead": "Personaliza tu masaje",
     "step3Lead": "Proporciona tus datos para llevarte tu masaje",
@@ -179,7 +181,7 @@
     "paymentMethod": "Selecciona tu método de pago",
     "paymentLead": "Proporciona tus datos de pago",
     "date": "Fecha y hora",
-    "locationId": "Ciudad",
+    "locationId": "Selecciona tu ciudad",
     "type": "Tipo de masaje",
     "product": "Duración de masaje",
     "therapistsType": "Terapeuta",
@@ -529,8 +531,8 @@
     "bookNow": {
       "forbidden": "Para poder realizar ordenes, es necesario que actualices todos tus datos",
       "update": "Actualizar",
-      "pendingPromos1": "Tienes un ",
-      "pendingPromos2": " adicional disponible. ¿Deseas aplicarlo?"
+      "pendingPromos1": "Tienes ",
+      "pendingPromos2": " de descuento disponible. ¿Deseas aplicarlo?"
     },
     "orders": {
       "pendingOrders": "Próximas sesiones",
@@ -542,7 +544,7 @@
     "promoCode": {
       "title": "Mi código de promoción",
       "text1": "Tu código es",
-      "text2": "Invita a todos y recibe un 10% de descuento por cada persona que lo use!",
+      "text2": "Invita a todos y recibe $140 de descuento por cada persona que lo use!",
       "text3": "En este momento tienes disponible",
       "text4": "de descuento",
       "text5": "Aprovéchalo y reserva ya tu próxima cita!",
