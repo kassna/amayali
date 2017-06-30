@@ -39,7 +39,7 @@
   {{> SelectBook attribute="therapistsType" elements=therapistsType placeholder="book.therapistsType"}}
   {{#if client.pendingPromos}}
     <div class="radio-select text-center">
-      <h2 class="c-yellow"><b>{{_ "client.bookNow.pendingPromos1"}} {{currentDiscount client.pendingPromos}}% {{_ "client.bookNow.pendingPromos2"}}</b></h2>
+      <h2 class="c-yellow"><b>{{_ "client.bookNow.pendingPromos1"}} ${{currentDiscount client.pendingPromos}} {{_ "client.bookNow.pendingPromos2"}}</b></h2>
       <br>
       <div class="radio-inline custom-control custom-radio">
         <label class="c-turquoise">

@@ -178,8 +178,8 @@ ClientsSchema = new SimpleSchema({
 
 Clients.before.insert((userId, doc) => {
   doc.promoCodeId = PromoCodes.insert({
-    type: 'percentage',
-    amount: 10,
+    type: 'amount',
+    amount: 140,
     locationsId: []
   });
 });

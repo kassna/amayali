@@ -532,7 +532,7 @@
       "forbidden": "Para poder realizar ordenes, es necesario que actualices todos tus datos",
       "update": "Actualizar",
       "pendingPromos1": "Tienes ",
-      "pendingPromos2": " de descuento disponible. ¿Deseas aplicarlo?"
+      "pendingPromos2": " de descuento adicional disponible. ¿Deseas aplicarlo?"
     },
     "orders": {
       "pendingOrders": "Próximas sesiones",
@@ -542,7 +542,7 @@
       "title": "Mis datos"
     },
     "promoCode": {
-      "title": "Mi código de promoción",
+      "title": "Código para compartir",
       "text1": "Tu código es",
       "text2": "Invita a todos y recibe $140 de descuento por cada persona que lo use!",
       "text3": "En este momento tienes disponible",

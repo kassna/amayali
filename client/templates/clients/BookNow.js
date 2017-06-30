@@ -106,7 +106,7 @@ Template.BookNowClient.helpers({
     }
     // Apply pending promos
     if (pendingPromos) {
-      subTotal *= ((10 - pendingPromos) * 0.1);
+      subTotal -= pendingPromos * 140;
     }
 		const total = Math.round(subTotal);
     Session.set('total', total);
