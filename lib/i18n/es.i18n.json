@@ -328,7 +328,8 @@
     },
     "locations": {
       "name": "Nombre de la ciudad",
-      "abbreviation": "Abreviación"
+      "abbreviation": "Abreviación",
+      "base_rate": "Tarífa base"
     },
     "promoCodes": {
       "code": "Código de promoción",

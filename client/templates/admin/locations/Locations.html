@@ -18,6 +18,7 @@
                           <tr>
                               <th>{{_ "admin.general.name"}}</th>
                               <th>{{_ "schemas.locations.abbreviation"}}</th>
+                              <th>{{_ "schemas.locations.base_rate"}}</th>
                               <th></th>
                               <th>{{_ "admin.general.active"}}</th>
                               <th></th>
@@ -29,7 +30,7 @@
                               {{> Location}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=6}}
+                                  {{> NoResults cols=7}}
                               </tr>
                           {{/each}}
                       </tbody>

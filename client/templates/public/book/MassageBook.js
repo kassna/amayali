@@ -29,16 +29,22 @@ Template.MassageBook.events({
   },
   'click #product button': event => {
     const product = $(event.target).attr('data-id');
+    // Get selected location base rate
+    const baseRate = Locations.findOne(Session.get('locationId')).base_rate;
+    
     let price;
     switch (product) {
       case '60':
-        price = 699;
+        // Set price to base rate
+        price = baseRate;
         break;
       case '90':
-        price = 999;
+        // Get price by formula
+        price = rate_90(baseRate);
         break;
       case '120':
-        price = 1199;
+        // Get price by formula
+        price = rate_120(baseRate);
         break;
       default:
     }

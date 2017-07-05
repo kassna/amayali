@@ -29,6 +29,10 @@ scrollTop = () => {
 	$('html,body').animate({ scrollTop: 0}, 0, 'easeInOutQuart');
 }
 
+// Get rates
+rate_90 = baseRate => baseRate * 1.5 - (baseRate - 599) * 0.495 + 0.005 * (699 - baseRate)
+rate_120 = baseRate => baseRate * 2 - (baseRate - 599) * 2 + 1
+
 let accountsTranslationsES = {
 	firstname: 'Nombre(s)',
 	lastname: 'Apellido(s)',

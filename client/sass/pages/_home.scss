@@ -222,7 +222,34 @@
   }
 }
 
-/* footer block */
+.pricing-select {
+  .bootstrap-select {
+    border: 1px solid $turquoise;
+    .dropdown-toggle {
+      color: $light-black !important;
+    }
+    .dropdown-menu {
+      top: 103%;
+      li {
+        border-left: 2px solid #eaeaea;
+        &:hover {
+          border-left: 2px solid rgba(101, 181, 168, 0.5);
+        }
+        &.selected {
+          border-left: 2px solid $green;
+        }
+        &:first-child,
+        &:first-child:hover {
+          border-left: 2px solid #eaeaea;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// FOOTER
+// -----------------------------------------------------------------------------
 .app-block-footer {
   background-color: rgb(27, 28, 29);
   color: #444;

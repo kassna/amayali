@@ -36,6 +36,10 @@ LocationsSchema = new SimpleSchema({
   abbreviation: {
     type: String,
   },
+  base_rate: {
+    type: Number,
+    min: 0
+  },
   status: {
     type: Boolean,
     defaultValue: true,
