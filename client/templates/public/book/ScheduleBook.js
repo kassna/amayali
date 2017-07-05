@@ -7,15 +7,17 @@ Template.ScheduleBook.onRendered(() => {
     $("[name='date']").parent().addClass('input--filled');
   }
 
+  let enableTime = true;
+
   $(".select-date").flatpickr({
-		enableTime: true,
+		enableTime,
 		altInput: true,
 		altFormat: "F j, Y h:i K",
     altInputClass: "",
     defaultDate: date,
 		minDate: moment().add(3, 'h').valueOf(),
 		minuteIncrement: 15,
-		disableMobile: true,
+		disableMobile: false,
 		wrap: true,
     onChange: (selectedDates, dateStr) => {
       Session.set('date', moment(dateStr).format("MM/DD/YYYY h:mm a"));
