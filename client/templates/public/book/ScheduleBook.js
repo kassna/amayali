@@ -7,30 +7,58 @@ Template.ScheduleBook.onRendered(() => {
     $("[name='date']").parent().addClass('input--filled');
   }
 
-  let enableTime = true;
+  const initDatepicker = () => {
+    $(".select-date").flatpickr({
+      enableTime: true,
+      altInput: true,
+      altFormat: "F j, Y h:i K",
+      altInputClass: "",
+      defaultDate: date,
+      minDate: moment().add(3, 'h').valueOf(),
+      minuteIncrement: 15,
+      disableMobile: false,
+      wrap: true,
+      onChange: (selectedDates, dateStr) => {
+        Session.set('date', moment(dateStr).format("MM/DD/YYYY h:mm a"));
+      },
+      onOpen: (selectedDates, dateStr, instance) => {
+          $(instance.element).addClass('input--filled');
+      },
+      onClose: (selectedDates, dateStr, instance) => {
+        if(dateStr.trim() === '') {
+          $(instance.element).removeClass('input--filled');
+        }
+      }
+    });
+  }
 
-  $(".select-date").flatpickr({
-		enableTime,
-		altInput: true,
-		altFormat: "F j, Y h:i K",
-    altInputClass: "",
-    defaultDate: date,
-		minDate: moment().add(3, 'h').valueOf(),
-		minuteIncrement: 15,
-		disableMobile: false,
-		wrap: true,
-    onChange: (selectedDates, dateStr) => {
-      Session.set('date', moment(dateStr).format("MM/DD/YYYY h:mm a"));
-    },
-    onOpen: (selectedDates, dateStr, instance) => {
-        $(instance.element).addClass('input--filled');
-    },
-    onClose: (selectedDates, dateStr, instance) => {
-       if(dateStr.trim() === '') {
-         $(instance.element).removeClass('input--filled');
-       }
+  // Keep track of user's window width
+  let pastWidth = $(window).width();
+
+  const updateDatepicker = () => {
+    
+  }
+
+  // Init datepicker on start
+  initDatepicker();
+  // Verify if window is mobile
+  if (pastWidth < 768) {
+    $('.select-date').addClass('input--filled');
+  }
+
+  // Event listener for resize
+  $(window).resize(() => {
+    const currWidth = $(window).width();
+    // User resize to mobile
+    if(pastWidth >= 768 && currWidth < 768) {
+      initDatepicker();
+      $('.select-date').addClass('input--filled');
+    } else if (pastWidth < 768 && currWidth >= 768) { // User resize from mobile
+      initDatepicker();
+      $('.select-date').removeClass('input--filled');
     }
-	});
+    pastWidth = currWidth;
+  });
 });
 
 Template.ScheduleBook.events({
