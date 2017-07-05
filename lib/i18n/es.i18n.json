@@ -12,14 +12,14 @@
       "howWorks": "Cómo funciona",
       "prices": "Precios",
       "therapists": "Terapeutas",
-      "faq": "FAQ",
+      "faq": "FAQs",
       "aboutUs": "Sobre Nosotros",
       "contact": "Contacto",
       "logIn": "Ingresar"
     },
     "hero": {
-      "title": "Masajes profesionales a domicilio",
-      "lead": "Cuando quieras, donde quieras  con nuestros masoterapeutas certificados y cuidadosamente seleccionados",
+      "title": "Masajes en tu casa",
+      "lead": "Con los mejores terapeutas profesionales desde $699",
       "lead1": "Reserva en menos de 90 segundos",
       "lead2": "Servicio diario de 8am a 10pm"
     },
@@ -32,20 +32,21 @@
       "step3Lead": "Disfruta tu masaje",
       "step4": "Comparte",
       "step4Lead": "Gana tu siguiente masaje recomendándonos",
-      "feature1": "Masajes llevados a tu casa, oficina u hotel.",
+      "feature1": "Masajes llevados a tu casa, oficina u hotel",
       "feature2": "Nosotros llevamos todo el equipo necesario",
-      "feature3": "Garantía del 100% si no estás satisfecho con el servicio."
+      "feature3": "Garantía del 100% si no estás satisfecho con el servicio",
+      "feature4": "Recibe $140 cada vez que un amigo use tu código de referencia"
     },
     "features": {
       "title": "Nuestros beneficios",
       "feature1": "Fácil",
       "feature1Lead": "Puedes hacer la reservación en menos de 90 segundos desde tu móvil.",
       "feature2": "Profesional",
-      "feature2Lead": "Nuestros terapeutas cuantas con acreditaciones oficiales y altos niveles de servicio",
+      "feature2Lead": "Nuestros terapeutas cuentan con acreditaciones oficiales y altos niveles de servicio.",
       "feature3": "Seguro",
       "feature3Lead": "Seas cliente o terapeuta, tu seguridad es prioridad para nosotros.",
       "feature4": "Flexible",
-      "feature4Lead": "Dinos cuando y donde quieres tu masaje, nosotros nos encargamos del resto."
+      "feature4Lead": "Dinos cuándo y dónde quieres tu masaje, nosotros nos encargamos del resto."
     },
     "prices": {
       "title": {
@@ -64,11 +65,11 @@
       "types": {
         "title": "Elige tu masaje",
         "title1": "Relajante",
-        "lead1": "Un masaje suave especial para liberar estrés.",
+        "lead1": "Un masaje suave, especial para liberar estrés.",
         "title2": "Descontracturante",
         "lead2": "Un masaje con presión intermedia-alta que elimina tensión muscular y dolores crónicos.",
         "title3": "Deportivo",
-        "lead3": "Mejora la flexibilidad para evitar lesiones y mejora tú recuperación. Puede realizarse antes o después del ejercicio."
+        "lead3": "Mejora la flexibilidad para evitar lesiones y acelera tu recuperación. Puede realizarse antes o después del ejercicio."
       }
     },
     "image": {
@@ -81,7 +82,7 @@
     },
     "contact": {
       "lead": "¿Tienes alguna duda?",
-      "title": "Compártenos tus comentarios en este en este espacio, o envíanos un correo a ",
+      "title": "Compártenos tus comentarios en este espacio, o envíanos un correo a ",
       "message": "Comentario",
       "invalidEmail": "Por favor ingresa un email válido",
       "requiredFields": "Hubo un error en tus datos, intenta de nuevo.",
@@ -155,7 +156,7 @@
       }
     },
     "terms": {
-      "title": "Términos y condiciones"
+      "title": "Términos y Condiciones"
     },
     "privacy": {
       "title": "Aviso de privacidad"
