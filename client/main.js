@@ -223,7 +223,9 @@ Template.registerHelper('userInRole', (id, role) => Roles.userIsInRole(id, role)
 
 Template.registerHelper('reloadSelect', () => {
 	if(Session.get('i18lLoaded')) {
-		$(".selectpicker").selectpicker('refresh');
+		$(".selectpicker").each(function() {
+			$(this).selectpicker('refresh');
+		});
 	}
 });
 

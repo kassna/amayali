@@ -34,7 +34,7 @@ Template.Hero.onRendered(function () {
 	$(".selectpicker").selectpicker('refresh');
 	setTimeout(function doSomething() {
 	    $(".selectpicker").selectpicker('refresh');
-	    if($(".dropdown-menu.inner li").length <= 1) {
+	    if($(".dropdown-menu.inner").first().find('li').length <= 1) {
 	    	setTimeout(doSomething, 500);
 	    }
 	}, 500);
