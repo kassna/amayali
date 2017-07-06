@@ -315,6 +315,10 @@ $borderRadius: 8px;
     z-index: 1;
   }
 
+  .flatpickr-mobile {
+    min-height: 48px;
+  }
+
   // SELECT
   .caret {
     border-top: 0.5em dashed;
