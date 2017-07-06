@@ -19,13 +19,28 @@ Template.ScheduleBook.onRendered(() => {
       disableMobile: false,
       wrap: true,
       onChange: (selectedDates, dateStr) => {
-        Session.set('date', moment(dateStr).format("MM/DD/YYYY h:mm a"));
+        // On desktop, date will change with dateStr as it's already validated
+        if ($(window).width() >= 768) {
+          Session.set('date', moment(dateStr).format("MM/DD/YYYY h:mm a"));
+        } else {
+          // If there's a valid date, update session
+          if (selectedDates.length) {
+            Session.set('date', moment(dateStr).format("MM/DD/YYYY h:mm a"));
+          } else {
+            // Nullify date so user will need to update date
+            Session.set('date', null);
+          }
+        }
       },
       onOpen: (selectedDates, dateStr, instance) => {
+        // Add input class on desktop
+        if ($(window).width() >= 768) {
           $(instance.element).addClass('input--filled');
+        }
       },
       onClose: (selectedDates, dateStr, instance) => {
-        if(dateStr.trim() === '') {
+        // Remove input class on desktop
+        if($(window).width() >= 768 && dateStr.trim() === '') {
           $(instance.element).removeClass('input--filled');
         }
       }
@@ -34,10 +49,6 @@ Template.ScheduleBook.onRendered(() => {
 
   // Keep track of user's window width
   let pastWidth = $(window).width();
-
-  const updateDatepicker = () => {
-    
-  }
 
   // Init datepicker on start
   initDatepicker();
@@ -49,12 +60,14 @@ Template.ScheduleBook.onRendered(() => {
   // Event listener for resize
   $(window).resize(() => {
     const currWidth = $(window).width();
-    // User resize to mobile
+    // User resize to mobile. Update picker to avoid crashing
     if(pastWidth >= 768 && currWidth < 768) {
       initDatepicker();
+      // Add filled class to input, as it's always on in mobile
       $('.select-date').addClass('input--filled');
-    } else if (pastWidth < 768 && currWidth >= 768) { // User resize from mobile
+    } else if (pastWidth < 768 && currWidth >= 768) { // User resize from mobile. Update picker to avoid crashing
       initDatepicker();
+      // Add filled class to input, as it's default is not filled
       $('.select-date').removeClass('input--filled');
     }
     pastWidth = currWidth;
