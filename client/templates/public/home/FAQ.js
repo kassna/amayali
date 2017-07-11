@@ -16,7 +16,7 @@ Template.FAQ.onRendered(() => {
 
 Template.FAQ.helpers({
     clientQuestions: () => {
-        return _.map([1,2,3,4,5,6,7,8,9], number => {
+        return _.map([1,2,3,4,5], number => {
             return {
                 number,
                 question: TAPi18n.__(`landing.faq.users.${number}question`, null),
@@ -25,16 +25,16 @@ Template.FAQ.helpers({
         });
     },
     networkQuestions: () => {
-        return _.map([1,2,3,4,5,6,7,8,9,10,11,12,13,14], number => {
+        return _.map([1,2,3,4,5,6,7,8,9], number => {
             let toReturn = {
                 number,
                 question: TAPi18n.__(`landing.faq.network.${number}question`, null),
                 answer: TAPi18n.__(`landing.faq.network.${number}answer`, null),
             }
-            if (number === 1) {
+            if (number === 2) {
                 toReturn.additionalList = _.map([1,2,3,4,5,6], question => {
                     return {
-                        item: TAPi18n.__(`landing.faq.network.1benefits.${question}`, null)
+                        item: TAPi18n.__(`landing.faq.network.2benefits.${question}`, null)
                     }
                 });
             }

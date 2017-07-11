@@ -121,7 +121,10 @@ let accountsTranslationsES = {
 		accounts: {
 			'Acceso denegado': 'Acceso denegado. Intenta de nuevo'
 		}
-	}
+	},
+	clickAgree: 'Al registrarse aprueba la',
+	privacyPolicy: 'Política de Privacidad',
+	terms: 'Términos y Condiciones'
 }
 
 // For translation, all language objects should contain the same keys
@@ -131,7 +134,7 @@ let accountsTranslationsEN = {
 
 Meteor.startup(function () {
 	Session.set("i18lLoaded", false);
-  TAPi18n.setLanguage('es')
+  	TAPi18n.setLanguage('es')
 		.done(function () {
 			Session.set("i18lLoaded", true);
 		});

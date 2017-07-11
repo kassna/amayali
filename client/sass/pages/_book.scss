@@ -89,10 +89,10 @@ $borderRadius: 8px;
 
     // Different state colors
     &.completed {
-      background-color: #1BC98E;
+      background-color: $dark-green;
       color: $white;
       &:after {
-        border-left-color: #1BC98E;
+        border-left-color: $dark-green;
       }
       .step-icon {
         display: none;
@@ -484,5 +484,15 @@ $borderRadius: 8px;
   font-size: 1.9em;
   b {
     color: $turquoise;
+  }
+}
+
+.terms-text {
+  font-size: 14px;
+  padding-top: 20px;
+  text-align: center;
+  color: $white;
+  @include bp(tablet) {
+    padding-top: 40px
   }
 }

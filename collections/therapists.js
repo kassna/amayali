@@ -32,6 +32,9 @@ TherapistsSchema = new SimpleSchema({
   name: {
     type: String
   },
+  training: {
+    type: String,
+  },
   sex: {
     type: String,
     autoform: {
@@ -46,80 +49,12 @@ TherapistsSchema = new SimpleSchema({
       }
     },
   },
-  birthday: {
-    type: String,
-  },
-  smartphone: {
-    type: String,
-    autoform: {
-      type: 'select-radio-inline',
-      options () {
-        return _.map(['yes', 'no'], option => {
-          return {
-            value: option,
-            label: TAPi18n.__(`schemas.general.${option}`, null),
-          }
-        });
-      }
-    },
-  },
-  languages: {
-    type: String,
-  },
-  locationId: {
-    type: String,
-    regEx: SimpleSchema.RegEx.Id,
-    autoform: {
-      type: 'select-radio-inline',
-      options() {
-        return Locations.find().map(location => ({ label: location.name, value: location._id }));
-      },
-    },
-  },
-  zone: {
-    type: String
-  },
-  schedulePreference: {
-    type: [String],
-    autoform: {
-      type: 'select-checkbox',
-      options () {
-        return _.map(['morning', 'evening', 'night', 'all'], option => {
-          return {
-            value: option,
-            label: TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null),
-          }
-        });
-      }
-    },
-  },
-  zip: {
-    type: String,
-    regEx: SimpleSchema.RegEx.ZipCode,
-  },
-  training: {
-    type: String,
-  },
-  jobStatus: {
-    type: String,
-  },
-  experience: {
-    type: [String],
-    autoform: {
-      type: 'select-checkbox-inline',
-      options () {
-        return _.map(['hospital', 'rehab', 'hotel', 'gym', 'spa', 'private', 'onDemand', 'school', 'other'], option => {
-          return {
-            value: option,
-            label: TAPi18n.__(`schemas.therapists.experienceSelect.options.${option}`, null),
-          }
-        });
-      }
-    },
-  },
   experienceYears: {
     type: Number,
     min: 0
+  },
+  phone: {
+    type: String,
   },
   experienceTypes: {
     type: [String],
@@ -135,8 +70,10 @@ TherapistsSchema = new SimpleSchema({
       }
     },
   },
-  herbs: {
+  email: {
     type: String,
+    regEx: SimpleSchema.RegEx.Email,
+    unique: true,
   },
   hasBed: {
     type: String,
@@ -150,6 +87,16 @@ TherapistsSchema = new SimpleSchema({
           }
         });
       }
+    },
+  },
+  locationId: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    autoform: {
+      type: 'select-radio-inline',
+      options() {
+        return Locations.find().map(location => ({ label: location.name, value: location._id }));
+      },
     },
   },
   hasChair: {
@@ -166,6 +113,16 @@ TherapistsSchema = new SimpleSchema({
       }
     },
   },
+  zip: {
+    type: String,
+    regEx: SimpleSchema.RegEx.ZipCode,
+  },
+  herbs: {
+    type: String,
+  },
+  zone: {
+    type: String
+  },
   hasCar: {
     type: String,
     autoform: {
@@ -180,16 +137,36 @@ TherapistsSchema = new SimpleSchema({
       }
     },
   },
-  phone: {
-    type: String,
+  schedulePreference: {
+    type: [String],
+    autoform: {
+      type: 'select-checkbox',
+      options () {
+        return _.map(['morning', 'evening', 'night', 'all'], option => {
+          return {
+            value: option,
+            label: TAPi18n.__(`schemas.therapists.schedulePreferenceSelect.options.${option}`, null),
+          }
+        });
+      }
+    },
   },
   contactTime: {
     type: String,
   },
-  email: {
+  smartphone: {
     type: String,
-    regEx: SimpleSchema.RegEx.Email,
-    unique: true,
+    autoform: {
+      type: 'select-radio-inline',
+      options () {
+        return _.map(['yes', 'no'], option => {
+          return {
+            value: option,
+            label: TAPi18n.__(`schemas.general.${option}`, null),
+          }
+        });
+      }
+    },
   },
   reference: {
     type: String,
@@ -200,6 +177,29 @@ TherapistsSchema = new SimpleSchema({
           return {
             value: option,
             label: TAPi18n.__(`schemas.therapists.referenceSelect.options.${option}`, null),
+          }
+        });
+      }
+    },
+  },
+  birthday: {
+    type: String,
+  },
+  languages: {
+    type: String,
+  },
+  jobStatus: {
+    type: String,
+  },
+  experience: {
+    type: [String],
+    autoform: {
+      type: 'select-checkbox-inline',
+      options () {
+        return _.map(['hospital', 'rehab', 'hotel', 'gym', 'spa', 'private', 'onDemand', 'school', 'other'], option => {
+          return {
+            value: option,
+            label: TAPi18n.__(`schemas.therapists.experienceSelect.options.${option}`, null),
           }
         });
       }

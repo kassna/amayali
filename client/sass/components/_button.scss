@@ -46,15 +46,27 @@
 }
 
 .btn-success-outline {
-	color: $green;
+	color: $dark-green;
 }
 
 .btn-success-outline.active, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline:focus, .btn-success-outline:hover, .open>.dropdown-toggle.btn-success-outline {
-	background-color: $green;
+	background-color: $dark-green;
 }
 
 .btn-success-outline, .btn-success-outline.disabled, .btn-success-outline.disabled.active, .btn-success-outline.disabled.focus, .btn-success-outline.disabled:active, .btn-success-outline.disabled:focus, .btn-success-outline.disabled:hover, .btn-success-outline[disabled], .btn-success-outline[disabled].active, .btn-success-outline[disabled].focus, .btn-success-outline[disabled]:active, .btn-success-outline[disabled]:focus, .btn-success-outline[disabled]:hover, fieldset[disabled] .btn-success-outline, fieldset[disabled] .btn-success-outline.active, fieldset[disabled] .btn-success-outline.focus, fieldset[disabled] .btn-success-outline:active, fieldset[disabled] .btn-success-outline:focus, fieldset[disabled] .btn-success-outline:hover {
-	border-color: $green;
+	border-color: $dark-green;
+}
+
+.btn-success {
+	color: $white;
+}
+
+.btn-success.active, .btn-success:active:focus, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success {
+	background-color: darken($dark-green, 10%);
+}
+
+.btn-success, .btn-success.disabled, .btn-success.disabled.active, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled:focus, .btn-success.disabled:hover, .btn-success[disabled], .btn-success[disabled].active, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled]:focus, .btn-success[disabled]:hover, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success.active, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:hover {
+	background-color: $dark-green;
 }
 
 .btn-warning-outline {

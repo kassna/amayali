@@ -4,16 +4,16 @@
     <div class="simform">
       {{> InputTextBook type="text" attribute="promoCode" placeholder="book.promoCode"}}
       <div class="footer-buttons center">
-        <button class="btn-success small m-t" id="verifyPromo">{{_ "book.verify"}}</button>
+        <button class="btn-success small m-t m-t-0-xs" id="verifyPromo">{{_ "book.verify"}}</button>
       </div>
-
+      <p class="terms-text">Al momento de hacer tu reservación aceptas los <a href="">Términos y Condiciones</a> del servicio.</p>
       {{> PaypalBook}}
     </div>
   </div>
 </template>
 
 <template name="PaypalBook">
-  <div class="text-center m-t-lg m-b-lg">
+  <div class="text-center m-t-lg m-b-lg m-t-md-xs m-b-lg-xs">
     <div id="paypal-button-container"></div>
   </div>
 
