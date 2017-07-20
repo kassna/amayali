@@ -201,6 +201,10 @@ Template.registerHelper('prettyTherapistType', option => TAPi18n.__(`schemas.ord
 Template.registerHelper('prettyProduct', option => TAPi18n.__(`schemas.orders.productSelect.options.${option}`, null));
 Template.registerHelper('prettyStatus', option => TAPi18n.__(`admin.orders.${option}`, null));
 
+// Survey
+Template.registerHelper('prettyAnswer', option => TAPi18n.__(`survey.enjoy.${option}`, null));
+Template.registerHelper('prettyCommentType', option => TAPi18n.__(`survey.comment.${option}`, null));
+
 // PromoCodes helpers
 Template.registerHelper('prettyDiscount', (type, amount) => {
 	if(type === 'amount') return `${amount}`;
@@ -250,6 +254,8 @@ Template.registerHelper('clients', () => Clients.find());
 
 Template.registerHelper('orders', () => Orders.find({}, {sort: {date: 1}}));
 
+Template.registerHelper('surveys', () => Surveys.find());
+
 //////////////////////////////////
 ///  SINGLE ELEMENTS
 /////////////////////////////////
@@ -263,3 +269,5 @@ Template.registerHelper('therapist', () => Therapists.findOne());
 Template.registerHelper('client', () => Clients.findOne());
 
 Template.registerHelper('order', () => Orders.findOne());
+
+Template.registerHelper('survey', () => Surveys.findOne());

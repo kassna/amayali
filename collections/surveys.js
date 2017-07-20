@@ -15,7 +15,7 @@ Surveys.allow({
 
 SurveysSchema = new SimpleSchema({
   question1: {
-    type: String,
+    type: Number,
     optional: true,
   },
   question2: {
@@ -23,6 +23,10 @@ SurveysSchema = new SimpleSchema({
     optional: true,
   },
   question3: {
+    type: String,
+    optional: true,
+  },
+  question4: {
     type: String,
     optional: true,
   },

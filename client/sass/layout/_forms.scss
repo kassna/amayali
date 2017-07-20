@@ -70,6 +70,15 @@ textarea.form-control,
 
 textarea {
     height: 150px;
+    resize: none;
+}
+
+.textarea-cont {
+  margin: 0 1em 0.8em;
+  textarea {
+    width: 100%;
+    height: 90px;
+  }
 }
 
 .flatpickr-input {

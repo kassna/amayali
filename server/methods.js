@@ -242,6 +242,11 @@ Meteor.methods({
 		}
 	},
 
+	// Survey
+	'completeSurvey': (_id, survey) => {
+		Surveys.update({ _id }, { $set: survey });
+	},
+
 	// Mails
 	'sendContactUs': (name, email, phone, message) => {
 		Mailer.send({

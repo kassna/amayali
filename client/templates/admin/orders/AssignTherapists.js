@@ -2,7 +2,7 @@ Template.AssignTherapists.onCreated(function() {
 	let self = this;
 	self.autorun(() => {
 		self.subscribe('noTherapistOrders', Session.get('currentCity'));
-    self.subscribe('activeTherapists', Session.get('currentCity'));
+		self.subscribe('activeTherapists', Session.get('currentCity'));
 	});
 });
 

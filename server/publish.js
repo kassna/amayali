@@ -200,3 +200,5 @@ Meteor.publish('completedOrdersSurveys', location => {
   }
   return Surveys.find({ _id: { $in: includeArr }});
 });
+
+Meteor.publish('survey', _id => Surveys.find({ _id }));

@@ -167,6 +167,16 @@ $borderRadius: 8px;
     margin-bottom: 0;
   }
 
+  &.survey {
+    .simform {
+      max-width: none;
+      .star {
+        color: #caaa00;
+        font-size: xx-large;
+      }
+    }
+  }
+
   .simform {
   	position: relative;
   	margin: 0 auto;
@@ -393,7 +403,11 @@ $borderRadius: 8px;
     position: relative;
     .button-select {
       display: flex;
+      flex-wrap: wrap;
       margin: 2em 1em 0.8em;
+      &.stars {
+        justify-content: space-around;
+      }
       button {
         flex-grow: 1;
         border: 1px solid #bababa;

@@ -22,7 +22,11 @@ Template.HistoricalOrder.events({
 		}, 500);
 	},
 	'click .view-survey-btn': function() {
-		// TODO: Open survey modal
+		Session.set('viewId', this.survey);
+		Session.set('surveyInfo', 1);
+		Meteor.setTimeout(function() {
+			$("#survey-info").modal('show');
+		}, 500);
 	},
 	'change input': function (event) {
 		const $input = $(event.target);

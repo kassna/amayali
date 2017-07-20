@@ -539,5 +539,32 @@
       "text5": "Aprovéchalo y reserva ya tu próxima cita!",
       "text6": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a info@amayali.com"
     }
+  },
+  "survey": {
+    "title": "Encuesta de satisfacción",
+    "thanks": "Gracias por tu participación. Esperamos verte pronto de nuevo.",
+    "experience": {
+      "title": "¿Cómo fue tu experiencia Amayali?"
+    },
+    "enjoy": {
+      "title": "¿Qué fue lo que más disfrutaste?",
+      "massage": "Masaje",
+      "service": "Servicio",
+      "punctuality": "Puntualidad",
+      "presentation": "Presentación",
+      "music": "Música",
+      "other": "Otro"
+   },
+   "improve": {
+     "title": "¿Qué puede mejorar?"
+   },
+   "comment": {
+     "title": "Déjanos tu comentario o sugerencia",
+     "type": "Tipo de comentario",
+     "field": "Comentario",
+     "suggestion": "Sugerencia",
+     "congratulations": "Felicitación",
+     "complain": "Queja"
+   }
   }
 }
