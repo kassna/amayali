@@ -10,8 +10,24 @@ Mailer.config({
     }
 });
 
-Accounts.emailTemplates.resetPassword.from = () => {
-  return 'Amayali <alex@2112studio.com>';
+Accounts.emailTemplates.resetPassword = {
+  from() {
+    return 'Amayali <alex@2112studio.com>';
+  },
+  subject() {
+    return "[Amayali] Reestablecer contraseña";
+  },
+  text(user, url) {
+    return `
+      Hola:
+
+      Hemos recibido una solicitud para reestablecer tu contraseña. Solo tienes que entrar al siguiente link ${url}.
+
+      Si esta es una solicitud erronea, por favor ignorala.
+
+      Amayali
+    `;
+  }
 };
 
 AccountsTemplates.configure({
