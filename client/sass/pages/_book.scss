@@ -171,8 +171,11 @@ $borderRadius: 8px;
     .simform {
       max-width: none;
       .star {
-        color: #caaa00;
-        font-size: xx-large;
+        fill: $turquoise;
+        cursor: pointer;
+        &.active {
+          fill: #caaa00;
+        }
       }
     }
   }
@@ -407,6 +410,12 @@ $borderRadius: 8px;
       margin: 2em 1em 0.8em;
       &.stars {
         justify-content: space-around;
+        flex-wrap: nowrap;
+        img {
+          border-style: none;
+          width: 15%;
+          height: 100%;
+        }
       }
       button {
         flex-grow: 1;
