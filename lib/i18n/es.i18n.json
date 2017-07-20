@@ -144,6 +144,11 @@
       "title": "Aviso de privacidad"
     }
   },
+  "login": {
+    "termsModal": "Es necesario aceptar los términos y condiciones para poder usar el servicio",
+    "cancel": "Lo pensaré mejor",
+    "accept": "NO acepto"
+  },
   "book": {
     "next": "Siguiente",
     "back": "Regresar",

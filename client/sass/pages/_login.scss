@@ -1,12 +1,20 @@
 .at-form {
 	.at-input {
 		overflow: hidden;
-		label {
-			display: block;
-		}
 	}
 	.at-btn {
 		margin-top: 10px;
+	}
+}
+
+.terms-input {
+	label {
+		color: $white;
+	}
+	input[type='checkbox'] {
+		display: inline;
+		width: 23px;
+		margin-top: 0;
 	}
 }
 

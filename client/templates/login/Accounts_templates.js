@@ -20,3 +20,22 @@ Template.atError.helpers({
     return newErrors;
   }
 });
+
+Template.termsForm.events({
+  'change #termsInput': event => {
+    $('#termsInput').prop('checked', true);
+    swal({
+			title: TAPi18n.__('admin.general.confirm', null),
+			text: TAPi18n.__('login.termsModal', null),
+			type: "warning",
+      showCancelButton: true,
+      cancelButtonText: TAPi18n.__('login.cancel', null),
+			confirmButtonColor: "#DD6B55",
+      confirmButtonText: TAPi18n.__('login.accept', null),
+      allowEscapeKey: false,
+      allowOutsideClick: false,
+		}, () => {
+			FlowRouter.go('home');
+		});
+  }
+});
