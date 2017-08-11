@@ -11,7 +11,7 @@
       <td>{{#if locationId}}{{locationName locationId}}{{/if}}</td>
       <td>{{clientOrders _id}}</td>
       <td>{{pendingPromos}}</td>
-      <td>{{humanDate createdAt}}</td>
+      <td>{{humanDateHour createdAt}}</td>
       <td>
       	{{#if completedProfile}}
           <button type="" class="btn btn-round btn-info-outline edit-button">
