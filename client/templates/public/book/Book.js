@@ -34,7 +34,7 @@ Template.Book.onCreated(function () {
 	self.autorun(function() {
 		self.subscribe('activeLocations');
 	});
-  Session.set('instance', 4);
+  Session.set('instance', 1);
 	Session.set('maxIntance', 1);
   if(!Session.get('total')) Session.set('total', 0);
 
