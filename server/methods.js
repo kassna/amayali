@@ -252,7 +252,7 @@ Meteor.methods({
 		Mailer.send({
       to: process.env.ADMIN_EMAIL,
       // from: name + '<'+ email + '>',
-      subject: '[Amayali] Contacto página web',
+      subject: '[Kassna] Contacto página web',
       template: 'contactUs',
       data: {
         name,
@@ -267,7 +267,7 @@ Meteor.methods({
 		// Send email to user
 		Mailer.send({
 			to: order.email,
-			subject: `[Amayali] Confirmación de orden`,
+			subject: `[Kassna] Confirmación de orden`,
 			template: 'orderConfirmation',
 			data: order
 		});
@@ -277,7 +277,7 @@ Meteor.methods({
 
 		Mailer.send({
 			to: process.env.ADMIN_EMAIL,
-			subject: `[Amayali] Nueva orden en ${order.location}`,
+			subject: `[Kassna] Nueva orden en ${order.location}`,
 			template: 'newOrder',
 			data: order
 		});
@@ -287,7 +287,7 @@ Meteor.methods({
 		const client = Clients.findOne(clientId);
 		Mailer.send({
 			to: client.email,
-			subject: `[Amayali] Bienvenido! ${client.firstname}`,
+			subject: `[Kassna] Bienvenido! ${client.firstname}`,
 			template: 'welcomeUser',
 			data: client
 		});
@@ -297,7 +297,7 @@ Meteor.methods({
 		const { firstname, survey, email } = Orders.findOne(orderId);
 		Mailer.send({
 			to: email,
-			subject: `[Amayali] Orden completada!`,
+			subject: `[Kassna] Orden completada!`,
 			template: 'survey',
 			data: { firstname, survey }
 		});
@@ -306,7 +306,7 @@ Meteor.methods({
 	'sendReminder1': email => {
 		Mailer.send({
 			to: email,
-			subject: `[Amayali] Tu cita en una hora`,
+			subject: `[Kassna] Tu cita en una hora`,
 			template: 'reminder',
 		});
 	},
@@ -314,7 +314,7 @@ Meteor.methods({
 	'sendReminder4': email => {
 		Mailer.send({
 			to: email,
-			subject: `[Amayali] Tu cita en cuatro horas`,
+			subject: `[Kassna] Tu cita en cuatro horas`,
 			template: 'reminder1',
 		});
 	},

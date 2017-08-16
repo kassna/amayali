@@ -96,22 +96,22 @@
     "faq": {
       "users": {
         "title": "Preguntas frecuentes (Usuarios)",
-        "1question": "¿Qué es Amayali?",
-        "1answer": "Amayali te permite reservar masajes con terapeutas profesionales que van a tu casa, hotel, oficina o evento en poco tiempo. Tú solo tienes que decirnos cuando y donde deseas el masaje y un terapeuta de nuestra red llegará con todo el equipo necesario a tu puerta. Todo lo que necesitas hacer es descansar, relajarte y disfrutar tu masaje con nosotros.",
-        "2question": "¿Hay servicio de Amayali en mi ciudad?",
+        "1question": "¿Qué es Kassna?",
+        "1answer": "Kassna te permite reservar masajes con terapeutas profesionales que van a tu casa, hotel, oficina o evento en poco tiempo. Tú solo tienes que decirnos cuando y donde deseas el masaje y un terapeuta de nuestra red llegará con todo el equipo necesario a tu puerta. Todo lo que necesitas hacer es descansar, relajarte y disfrutar tu masaje con nosotros.",
+        "2question": "¿Hay servicio de Kassna en mi ciudad?",
         "2answer": "Todos los días trabajamos para hacer crecer nuestra red de terapeutas y poder brindar servicio en nuevos lugares. Si no ves tu ciudad al momento de hacer tu reservación envíanos un mensaje por nuestra sección de contacto y buscaremos llegar a tu zona lo antes posible.",
         "3question": "¿Es posible cancelar o cambiar una reservación?",
         "3answer": "Puedes cancelar tu reservación hasta 4 horas antes o hacer cambios de agenda hasta 2 horas del servicio.",
         "4question": "¿Cómo me preparo para un masaje?",
         "4answer": "Es muy sencillo, solo necesitas tener un área despejada de aproximadamente 2x2 metros y nosotros nos encargamos del resto. Nuestro terapeuta llevará todo lo necesario y preparará todo para tu relajación. ",
         "5question": "¿Qué hago si no quedé satisfech@ con la experiencia?",
-        "5answer": "Queremos ayudarte a relajarte y que vivas buenos momentos con nosotros, por lo que tu satisfacción es nuestra prioridad. Si no quedas satisfecho con el servicio que recibiste por favor contáctanos. Estamos seguros en la calidad de nuestro servicio por lo que ofrecemos una garantía del 100% en  caso de que no cumplamos con tus expectativas. Pedimos que nos contactes dentro de las siguientes 24 horas después del servicio para procesar el reclamo. Durante el proceso se te solicitará algo de información para ayudarnos a seguir mejorando la calidad de nuestro servicio. El modo de contacto es por el correo cliente@amayali.com donde atenderemos tu reclamo lo antes posible."
+        "5answer": "Queremos ayudarte a relajarte y que vivas buenos momentos con nosotros, por lo que tu satisfacción es nuestra prioridad. Si no quedas satisfecho con el servicio que recibiste por favor contáctanos. Estamos seguros en la calidad de nuestro servicio por lo que ofrecemos una garantía del 100% en  caso de que no cumplamos con tus expectativas. Pedimos que nos contactes dentro de las siguientes 24 horas después del servicio para procesar el reclamo. Durante el proceso se te solicitará algo de información para ayudarnos a seguir mejorando la calidad de nuestro servicio. El modo de contacto es por el correo cliente@kassna.com donde atenderemos tu reclamo lo antes posible."
       },
       "network": {
         "title": "Preguntas frecuentes (Terapeutas)",
-        "1question": "¿Qué gano en Amayali?",
+        "1question": "¿Qué gano en Kassna?",
         "1answer": "¡Tú eres el principal beneficiario de cada servicio que das! El precio que ves publicado es tuyo y nosotros solo cobramos una pequeña comisión para poder mantener los servicios de la plataforma y cubrir las comisiones bancarias.",
-        "2question": "¿Por qué  debería unirme a Amayali?",
+        "2question": "¿Por qué  debería unirme a Kassna?",
         "2answer": "Nuestro objetivo es incrementar tus ingresos complementando tu agenda de trabajo sin que tengas que hacer nada. Para lograr esto te ofrecemos estos beneficios:",
         "2benefits": {
           "1": "INDEPENDENCIA: Tú decides cuando y en donde trabajar. Puedes complementar tu horario laboral o tu agenda con nuestras citas.",
@@ -134,7 +134,7 @@
         "8question": "¿Cuándo recibo el dinero por mis servicios?",
         "8answer": "Cada semana recibirás una transferencia junto con un resumen de todos los servicios que realizaste y un desglose de tus ingresos.",
         "9question": "¿Puedo ofrecerle mi servicio al cliente por mi cuenta de manera privada?",
-        "9answer": "No, los clientes que consigues por medio de Amayali son administrados exclusivamente por la plataforma y no pueden ser contactados de manera independiente. Amayali te brinda todo el soporte para que te puedas concentrar en lo que te gusta y solo cobramos una pequeña comisión para poderte mantener nuestro servicio. Es por esto que contactar a nuestros clientes de manera independiente lo consideramos como un acto deshonesto y puedes recibir una penalización o expulsión de la red por lo que ya no recibirás más clientes."
+        "9answer": "No, los clientes que consigues por medio de Kassna son administrados exclusivamente por la plataforma y no pueden ser contactados de manera independiente. Kassna te brinda todo el soporte para que te puedas concentrar en lo que te gusta y solo cobramos una pequeña comisión para poderte mantener nuestro servicio. Es por esto que contactar a nuestros clientes de manera independiente lo consideramos como un acto deshonesto y puedes recibir una penalización o expulsión de la red por lo que ya no recibirás más clientes."
       }
     },
     "terms": {
@@ -298,7 +298,7 @@
       "herbs": "¿Trabajas con bálsamos, aromaterapia, compresas herbales? Indica cuáles",
       "hasBed": "¿Tienes una cama portátil que puedas usar con los clientes?",
       "hasChair": "¿Tienes una silla portátil que puedas usar con los clientes?",
-      "hasCar": "Tienes auto u otra manera de llevar todo el equipo a la cita con el cliente? (Eres libre de elegir como transportarte pero la manera recomendada es por auto). Amayali no se hace responsable del transporte.",
+      "hasCar": "Tienes auto u otra manera de llevar todo el equipo a la cita con el cliente? (Eres libre de elegir como transportarte pero la manera recomendada es por auto). Kassna no se hace responsable del transporte.",
       "phone": "¿En qué número de teléfono te podemos contactar?",
       "contactTime": "¿En qué horario prefieres que te contactemos?",
       "email": "¿Cuál es tu dirección de correo electrónico personal?",
@@ -308,7 +308,7 @@
           "fb": "Facebook / Instagram",
           "web": "Página Web",
           "therapist": "Referido de otro terapeuta",
-          "staff": "Personal de Amayali",
+          "staff": "Personal de Kassna",
           "other": "Otro"
         }
       }
@@ -537,14 +537,14 @@
       "text3": "En este momento tienes disponible",
       "text4": "de descuento",
       "text5": "Aprovéchalo y reserva ya tu próxima cita!",
-      "text6": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a info@amayali.com"
+      "text6": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a info@kassna.com"
     }
   },
   "survey": {
     "title": "Encuesta de satisfacción",
     "thanks": "Gracias por tu participación. Esperamos verte pronto de nuevo.",
     "experience": {
-      "title": "¿Cómo fue tu experiencia Amayali?"
+      "title": "¿Cómo fue tu experiencia Kassna?"
     },
     "enjoy": {
       "title": "¿Qué fue lo que más disfrutaste?",

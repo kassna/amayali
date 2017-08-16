@@ -3,8 +3,8 @@ import Templates from './lib/templates';
 import TemplateHelpers from './lib/templates-helpers';
 
 Mailer.config({
-    from: 'Amayali <' + process.env.SENDER_EMAIL + '>',
-    replyTo: 'Amayali <' + process.env.SENDER_EMAIL + '>',
+    from: 'Kassna <' + process.env.SENDER_EMAIL + '>',
+    replyTo: 'Kassna <' + process.env.SENDER_EMAIL + '>',
     plainTextOpts: {
         ignoreImage: true
     }
@@ -12,10 +12,10 @@ Mailer.config({
 
 Accounts.emailTemplates.resetPassword = {
   from() {
-    return 'Amayali <alex@2112studio.com>';
+    return 'Kassna <alex@2112studio.com>';
   },
   subject() {
-    return "[Amayali] Reestablecer contraseña";
+    return "[Kassna] Reestablecer contraseña";
   },
   text(user, url) {
     return `
@@ -25,7 +25,7 @@ Accounts.emailTemplates.resetPassword = {
 
       Si esta es una solicitud erronea, por favor ignorala.
 
-      Amayali
+      Kassna
     `;
   }
 };
