@@ -177,11 +177,13 @@ Template.BookNowClientForm.events({
 });
 
 Template.BookNowClientPaypal.onRendered(() => {
-	// Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
+  // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
+  const env = Session.get('paypal_env');
   paypal.Button.render({
-    env: 'sandbox',
+    env,
     client: {
-      sandbox: 'AVQe4DcFH4D27eWWia_9VpTnaB9CAEzG8okzy81BSI95-YMjrBnTRN0JYTMX0Lhj8yc3a9a26EkD9gFx',
+      sandbox: 'Ab6JnNhuMzjNDVhueResuMYTirMOwVkmajYwGoD0mACP_0i1VczPp1NQ8vKFJYZYG2X8w27gFJwRySmQ',
+      production: 'AZCADNCbS-X7YzWstteXXP-6e-Mbmtt9QiGSNDH69y7a1QpsObsuVAW5o9fqQ1n9eg4nvGBM7uu_VmkT'
     },
     style: {
       label: 'checkout', // checkout | credit | pay

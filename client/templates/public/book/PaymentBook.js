@@ -147,8 +147,8 @@ Template.PaypalBook.onRendered(() => {
   paypal.Button.render({
     env,
     client: {
-        sandbox: 'AVtJjNGKgPjKwxnQYwM_TtM-Nku0w86-PpBaNybLq3IcuNuMVmyVGQnmpxzXQBRrKtI17w5HkPW1TdXI',
-        production: 'Adgoszs37InoUs3Cl0UwVKuKsKjxlW-CIN83DoaRgQ9TogU-zJzLpzN79K_FF0Nx0nhGIB_QasHa4YZr'
+        sandbox: 'Ab6JnNhuMzjNDVhueResuMYTirMOwVkmajYwGoD0mACP_0i1VczPp1NQ8vKFJYZYG2X8w27gFJwRySmQ',
+        production: 'AZCADNCbS-X7YzWstteXXP-6e-Mbmtt9QiGSNDH69y7a1QpsObsuVAW5o9fqQ1n9eg4nvGBM7uu_VmkT'
     },
     style: {
       label: 'checkout', // checkout | credit | pay
