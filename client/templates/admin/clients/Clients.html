@@ -1,0 +1,46 @@
+<template name="Clients">
+    {{#if isInRole 'admin'}}
+        {{#if Template.subscriptionsReady}}
+            <div class="dashhead">
+                <div class="dashhead-titles">
+                    <h2 class="dashhead-title title-style c-green">{{_ "admin.clients.title"}}</h2>
+                </div>
+            </div>
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.general.viewMore"}}</th>
+                              <th>{{_ "admin.general.name"}}</th>
+                              <th>{{_ "admin.general.email"}}</th>
+                              <th>{{_ "admin.general.phone"}}</th>
+                              <th>{{_ "admin.general.locationId"}}</th>
+                              <th>{{_ "admin.general.completedOrders"}}</th>
+                              <th>{{_ "admin.clients.pendingPromos"}}</th>
+                              <th>{{_ "admin.therapists.createdAt"}}</th>
+                              <th></th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each clients}}
+                              {{> Client}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=9}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+
+        {{> EditModal collection="Clients" editItem=editItem }}
+        {{> ClientInfo}}
+
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>

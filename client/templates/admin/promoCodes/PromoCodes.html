@@ -1,0 +1,51 @@
+<template name="PromoCodes">
+    {{#if isInRole 'admin'}}
+        <div class="dashhead">
+            <div class="dashhead-titles">
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.promoCodes.title"}}</h2>
+            </div>
+            <div class="btn-toolbar dashhead-toolbar">
+                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
+                    {{_ "admin.general.add"}}
+                </button>
+            </div>
+        </div>
+
+        {{#if Template.subscriptionsReady}}
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.promoCodes.code"}}</th>
+                              <th>{{_ "admin.promoCodes.type"}}</th>
+                              <th>{{_ "admin.promoCodes.amount"}}</th>
+                              <th>{{_ "admin.promoCodes.locationsId"}}</th>
+                              <th>{{_ "admin.general.createdAt"}}</th>
+                              <th></th>
+                              <th>{{_ "admin.general.active"}}</th>
+                              <th></th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each promoCodes}}
+                              {{> PromoCode}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=9}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+
+        {{> NewModal collection="PromoCodes"}}
+        {{> EditModal collection="PromoCodes" editItem=editItem }}
+
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>

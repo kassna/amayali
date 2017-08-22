@@ -1,0 +1,34 @@
+<template name="Survey">
+  {{#if survey.answered}}
+    <h1 class="c-turquoise text-center">
+      {{_ "survey.thanks"}}
+    </h1>
+  {{else}}
+    <h1 class="c-turquoise text-center">
+      {{_ "survey.title"}}
+    </h1>
+    <div class="book-form turquoise survey">
+      <div class="simform">
+        <div class="button-select-cont">
+          <label>{{_ "survey.experience.title"}}</label>
+          <div class="button-select stars">
+            <img src="/img/Terrible.svg" class="svg" data-star="1">
+            <img src="/img/Malo.svg" class="svg" data-star="2">
+            <img src="/img/Regular.svg" class="svg" data-star="3">
+            <img src="/img/Bueno.svg" class="svg" data-star="4">
+            <img src="/img/Excelente.svg" class="svg" data-star="5">
+          </div>
+        </div>
+        {{> ButtonSelectBook attribute="enjoy" elements=enjoy placeholder="survey.enjoy.title"}}
+        {{> ButtonSelectBook attribute="improve" elements=enjoy placeholder="survey.improve.title"}}
+        {{> ButtonSelectBook attribute="commentType" elements=comment placeholder="survey.comment.title"}}
+        <div class="textarea-cont">
+          <textarea id="comment"></textarea>
+        </div>
+        <div class="footer-buttons center m-b-lg">
+          <button class="btn-success" id="sendSurvey">{{_ "general.send"}}</button>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</template>

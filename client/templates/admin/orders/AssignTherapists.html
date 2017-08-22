@@ -1,0 +1,101 @@
+<template name="AssignTherapists">
+  {{#if isInRole 'admin'}}
+    <div class="dashhead">
+        <div class="dashhead-titles">
+            <h2 class="dashhead-title title-style c-green">{{_ "admin.orders.assignTherapist"}}</h2>
+            <p><i>{{_ "admin.orders.assignInstructions"}}</i></p>
+        </div>
+    </div>
+    {{#if Template.subscriptionsReady}}
+      <div class="row assign-therapists">
+        <div class="col-sm-2 col-sm-push-5 text-center">
+          <button type="button" class="btn btn-sm btn-pill btn-info assign-btn">
+              {{_ "admin.orders.assign"}}
+          </button>
+        </div>
+        <div class="col-sm-5 col-sm-pull-2">
+          <h3 class="c-green text-center">{{_ "admin.orders.pendingOrders"}}</h3>
+          <ul class="list-group">
+            {{#each orders}}
+              {{> AssignTherapistsOrder}}
+            {{else}}
+              <li class="list-group-header">
+                <div class="info">
+                  {{_ "admin.general.noResults"}}
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="col-sm-5">
+          <h3 class="c-green text-center">{{_ "admin.orders.therapists"}}</h3>
+          <ul class="list-group assign-therapists with-icon">
+            {{#each therapists}}
+              {{> AssignTherapistsTherapist}}
+            {{else}}
+              <li class="list-group-header">
+                <div class="info">
+                  {{_ "admin.general.noResults"}}
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    {{else}}
+      {{> Loading}}
+    {{/if}}
+    {{> TherapistInfo}}
+  {{else}}
+    {{> Forbidden}}
+  {{/if}}
+</template>
+
+<template name="AssignTherapistsOrder">
+  {{getClientId}}
+  <li class="list-group-item {{#if $.Session.equals 'selectedOrder' _id}}active{{/if}}">
+    <div class="info order-item">
+      <div class="group">
+        <b class="c-light-black">{{firstname}} {{lastname}} - <span class="{{ratingColor}}">Rate: {{rating}}</span></b>
+      </div>
+      <div class="group">
+        {{dateHour date}}
+      </div>
+      <div class="group">
+        {{prettyProduct product}} + {{prettyType type}}
+      </div>
+      <div class="group">
+        <b class="c-green">{{_ "admin.orders.preference"}}:</b> {{prettyTherapistType therapistsType}}
+      </div>
+      {{#if lastTherapist}}
+      <div class="group">
+        <b class="c-green">{{_ "admin.orders.last"}}:</b> {{therapistName lastTherapist}}
+      </div>
+      {{/if}}
+      <div class="group">
+        <b class="c-green">{{locationName locationId}}</b> - <b>{{_ "admin.orders.zone"}}:</b> {{address.street2}} - <b>{{_ "admin.orders.zip"}}:</b> {{address.zip}}
+      </div>
+    </div>
+  </li>
+</template>
+
+<template name="AssignTherapistsTherapist">
+  {{getTherapist}}
+  <li class="list-group-item {{#if $.Session.equals 'selectedTherapist' _id}}active{{/if}}">
+    <div class="info therapist-item">
+      <div class="group">
+        <b class="c-light-black">{{name}} - <span class="{{ratingColor}}">Rate: {{rating}}</span></b> - {{prettySex sex}}
+      </div>
+      <div class="group">
+        <b class="c-green">{{locationName locationId}}</b> - <b>{{_ "admin.orders.zones"}}:</b> {{zone}} - <b>{{_ "admin.orders.zip"}}:</b> {{zip}}
+      </div>
+      <div class="group">
+        <b class="c-green">{{_ "admin.orders.schedule"}}:</b> {{prettySchedules schedulePreference}}
+      </div>
+    </div>
+
+    <div class="info-icon">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </div>
+  </li>
+</template>

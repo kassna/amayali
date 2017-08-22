@@ -1,15 +1,6 @@
-Template.Home.onCreated(function() {
-
-});
-
 Template.Home.onRendered(function() {
-	
-});
-
-Template.Home.helpers({
-	
-});
-
-Template.Home.events({
-	
+	const { path = '' } = FlowRouter.current();
+	if(path.match(/home/)) {
+		easeScroll(`#${FlowRouter.getParam('scrollTo')}`)
+	}
 });

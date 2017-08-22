@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-@import url("https://fonts.googleapis.com/css?family=Karla:400,400i,700|Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Quicksand:400,500,700");
 
 // 1. Configuration and helpers
 @import
@@ -27,19 +27,25 @@
   'layout/hidden',
   'layout/modal',
   'layout/tables',
-  'layout/forms';
+  'layout/forms',
+  'layout/stage';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/block',
+  'components/featured-list',
+  'components/carousel',
+  'components/quote',
+  'components/iconlist';
 
 // 6. Page-specific styles
 @import
   'pages/home',
-  'pages/order',
-  'pages/adminOrders',
   'pages/login',
-  'pages/blog';
+  'pages/admin',
+  'pages/therapists',
+  'pages/book';
 
 // 7. Themes
 @import

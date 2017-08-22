@@ -1,0 +1,55 @@
+<template name="ClientInfoOrder">
+  {{#if $.Session.get 'viewMode'}}
+    <div class="modal modal-info" id="client-info">
+  	    <div class="modal-dialog modal-md">
+  	        <div class="modal-content">
+  	            <div class="modal-header">
+  	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  	                <h4 class="modal-title block-subtitle c-turquoise">{{_ "admin.clients.infoClient"}}</h4>
+  	            </div>
+  	            <div class="modal-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h3 class="c-cream m-t-0">{{_ "admin.general.personalData"}}</h3>
+                      <div class="group">
+                        <b>{{_ "admin.general.name"}}:</b> {{ currentOrder.firstname }} {{ currentOrder.lastname }}
+                      </div>
+                      <div class="group">
+                        <b>{{_ "admin.general.phone"}}:</b> <a href="tel:{{ currentOrder.phone }}">{{ currentOrder.phone }}</a>
+                      </div>
+                      <div class="group">
+                        <b>{{_ "admin.general.email"}}:</b> <a href="mailto:{{ currentOrder.email }}">{{ currentOrder.email }}</a>
+                      </div>
+                      <div class="group">
+                        {{#if currentOrder.locationId}}
+                        <b>{{_ "admin.general.locationId"}}:</b> {{ locationName currentOrder.locationId }}
+                        {{/if}}
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <h3 class="c-cream m-t-0">{{_ "admin.clients.address"}}</h3>
+                      <div class="group">
+                        <b>{{_ "schemas.clients.address.street1"}}:</b> {{ currentOrder.address.street1 }}
+                      </div>
+                      <div class="group">
+                        <b>{{_ "schemas.clients.address.street2"}}:</b> {{ currentOrder.address.street2 }}
+                      </div>
+                      <div class="group">
+                        <b>{{_ "schemas.clients.address.zip"}}:</b> {{ currentOrder.address.zip }}
+                      </div>
+                      <div class="group">
+                        <b>{{_ "schemas.clients.address.reference"}}:</b> {{ currentOrder.address.reference }}
+                      </div>
+                      <div class="group">
+                        {{#if currentOrder.locationId}}
+                        <b>{{_ "schemas.clients.locationId"}}:</b> {{ locationName currentOrder.locationId }}
+                        {{/if}}
+                      </div>
+                    </div>
+                  </div>
+  	            </div>
+  	        </div>
+  	    </div>
+  	</div>
+  {{/if}}
+</template>

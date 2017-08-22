@@ -1,0 +1,19 @@
+<template name="ScheduleBook">
+  <div class="book-form">
+    <h1 class="c-white text-center m-b-0">{{_ "book.step1Lead"}}</h1>
+    <div class="simform" id="book-form-1">
+      <span class="input input--madoka select-date">
+				<input class="input__field input__field--madoka custom-input" type="text" name="date" data-input>
+				<label class="input__label input__label--madoka" for="date">
+					<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+						<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+					</svg>
+					<span class="input__label-content input__label-content--madoka">{{_ "book.date"}}</span>
+				</label>
+			</span>
+
+      {{> SelectBook attribute="locationId" elements=locations placeholder="book.locationId"}}
+      {{> FooterButtonsBook stage=1 back=false finish=false}}
+    </div>
+  </div>
+</template>

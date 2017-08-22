@@ -1,0 +1,570 @@
+{
+  "general": {
+    "book": "Reservar",
+    "bookNow": "Reservar ahora",
+    "menu": "Menú",
+    "backHome": "Volver al inicio",
+    "send": "Envíar",
+    "total": "Total"
+  },
+  "landing": {
+    "navbar" : {
+      "howWorks": "Cómo funciona",
+      "prices": "Precios",
+      "therapists": "Terapeutas",
+      "faq": "FAQs",
+      "aboutUs": "Sobre Nosotros",
+      "contact": "Contacto",
+      "logIn": "Ingresar"
+    },
+    "hero": {
+      "title": "Masajes en tu casa",
+      "lead": "Con los mejores terapeutas profesionales desde $699",
+      "lead1": "Reserva en menos de 90 segundos",
+      "lead2": "Servicio diario de 8am a 10pm"
+    },
+    "steps": {
+      "step1": "Reserva",
+      "step1Lead": "Agenda en pocos segundos desde tu móvil",
+      "step2": "Recibe",
+      "step2Lead": "Nosotros vamos a tu domicilio",
+      "step3": "Relájate",
+      "step3Lead": "Disfruta tu masaje",
+      "step4": "Comparte",
+      "step4Lead": "Gana tu siguiente masaje recomendándonos",
+      "feature1": "Masajes llevados a tu casa, oficina u hotel",
+      "feature2": "Nosotros llevamos todo el equipo necesario",
+      "feature3": "Garantía del 100% si no estás satisfecho con el servicio",
+      "feature4": "Recibe $140 cada vez que un amigo use tu código de referencia"
+    },
+    "features": {
+      "title": "Nuestros beneficios",
+      "feature1": "Fácil",
+      "feature1Lead": "Puedes hacer la reservación en menos de 90 segundos desde tu móvil.",
+      "feature2": "Profesional",
+      "feature2Lead": "Nuestros terapeutas cuentan con acreditaciones oficiales y altos niveles de servicio.",
+      "feature3": "Seguro",
+      "feature3Lead": "Seas cliente o terapeuta, tu seguridad es prioridad para nosotros.",
+      "feature4": "Flexible",
+      "feature4Lead": "Dinos cuándo y dónde quieres tu masaje, nosotros nos encargamos del resto."
+    },
+    "prices": {
+      "title": {
+        "muted": "Elije tu masaje",
+        "line1": "Relajarse nunca había sido tan",
+        "line1bold": "fácil",
+        "line2A": "Tú decides el",
+        "line2boldA": "tipo de masaje",
+        "line2B": "que quieres y su",
+        "line2boldB": "duración",
+        "line2C": "del mismo"
+      },
+      "prices": {
+        "title": "Precio"
+      },
+      "types": {
+        "title": "Elige tu masaje",
+        "title1": "Relajante",
+        "lead1": "Un masaje suave, especial para liberar estrés.",
+        "title2": "Descontracturante",
+        "lead2": "Un masaje con presión intermedia-alta que elimina tensión muscular y dolores crónicos.",
+        "title3": "Deportivo",
+        "lead3": "Mejora la flexibilidad para evitar lesiones y acelera tu recuperación. Puede realizarse antes o después del ejercicio."
+      }
+    },
+    "image": {
+      "title": "Déjanos consentirte",
+      "lead": "Pide uno de nuestros masajes profesionales y un terapeuta calificado irá a tu casa."
+    },
+    "therapistButton": {
+      "lead": "¿Eres terapeuta profesional?",
+      "action": "¡Únete al equipo!"
+    },
+    "contact": {
+      "lead": "¿Tienes alguna duda?",
+      "title": "Compártenos tus comentarios en este espacio, o envíanos un correo a ",
+      "message": "Comentario",
+      "invalidEmail": "Por favor ingresa un email válido",
+      "requiredFields": "Hubo un error en tus datos, intenta de nuevo.",
+      "messageFail": "Hubo un error al enviar tu mensaje, intenta de nuevo.",
+      "messageSuccess": "Tu mensaje ha sido enviado, nos pondremos muy pronto en contacto contigo!"
+    },
+    "therapistForm": {
+      "title": "¿Te gustaría ser parte de nuestro equipo?",
+      "lead": "Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a"
+    },
+    "faq": {
+      "users": {
+        "title": "Preguntas frecuentes (Usuarios)",
+        "1question": "¿Qué es Kassna?",
+        "1answer": "Kassna te permite reservar masajes con terapeutas profesionales que van a tu casa, hotel, oficina o evento en poco tiempo. Tú solo tienes que decirnos cuando y donde deseas el masaje y un terapeuta de nuestra red llegará con todo el equipo necesario a tu puerta. Todo lo que necesitas hacer es descansar, relajarte y disfrutar tu masaje con nosotros.",
+        "2question": "¿Hay servicio de Kassna en mi ciudad?",
+        "2answer": "Todos los días trabajamos para hacer crecer nuestra red de terapeutas y poder brindar servicio en nuevos lugares. Si no ves tu ciudad al momento de hacer tu reservación envíanos un mensaje por nuestra sección de contacto y buscaremos llegar a tu zona lo antes posible.",
+        "3question": "¿Es posible cancelar o cambiar una reservación?",
+        "3answer": "Puedes cancelar tu reservación hasta 4 horas antes o hacer cambios de agenda hasta 2 horas del servicio.",
+        "4question": "¿Cómo me preparo para un masaje?",
+        "4answer": "Es muy sencillo, solo necesitas tener un área despejada de aproximadamente 2x2 metros y nosotros nos encargamos del resto. Nuestro terapeuta llevará todo lo necesario y preparará todo para tu relajación. ",
+        "5question": "¿Qué hago si no quedé satisfech@ con la experiencia?",
+        "5answer": "Queremos ayudarte a relajarte y que vivas buenos momentos con nosotros, por lo que tu satisfacción es nuestra prioridad. Si no quedas satisfecho con el servicio que recibiste por favor contáctanos. Estamos seguros en la calidad de nuestro servicio por lo que ofrecemos una garantía del 100% en  caso de que no cumplamos con tus expectativas. Pedimos que nos contactes dentro de las siguientes 24 horas después del servicio para procesar el reclamo. Durante el proceso se te solicitará algo de información para ayudarnos a seguir mejorando la calidad de nuestro servicio. El modo de contacto es por el correo cliente@kassna.com donde atenderemos tu reclamo lo antes posible."
+      },
+      "network": {
+        "title": "Preguntas frecuentes (Terapeutas)",
+        "1question": "¿Qué gano en Kassna?",
+        "1answer": "¡Tú eres el principal beneficiario de cada servicio que das! El precio que ves publicado es tuyo y nosotros solo cobramos una pequeña comisión para poder mantener los servicios de la plataforma y cubrir las comisiones bancarias.",
+        "2question": "¿Por qué  debería unirme a Kassna?",
+        "2answer": "Nuestro objetivo es incrementar tus ingresos complementando tu agenda de trabajo sin que tengas que hacer nada. Para lograr esto te ofrecemos estos beneficios:",
+        "2benefits": {
+          "1": "INDEPENDENCIA: Tú decides cuando y en donde trabajar. Puedes complementar tu horario laboral o tu agenda con nuestras citas.",
+          "2": "SOPORTE: Nosotros hacemos el trabajo de marketing, servicio al cliente y cobranza, para que tú puedas enfocarte en lo que más te gusta: el masaje.",
+          "3": "ALCANCE: Trabajamos constantemente en campañas de publicidad para conseguirte nuevos clientes.",
+          "4": "SERIEDAD: Contamos con un sistema de cobranza seguro, además de que todos los servicios son pre-pagados, por lo que tú dinero esta siempre asegurado.",
+          "5": "SEGURIDAD: Los usuarios deben registrarse y proporcionar su tarjeta de crédito, además de que damos seguimiento a cada servicio por tu seguridad. ",
+          "6": "RESPALDO: Contamos con políticas de cancelación para asegurar tu pago en caso de cancelaciones de último minuto."
+        },
+        "3question": "¿Cómo me puedo inscribir?",
+        "3answer": "Es muy sencillo, solo tienes que llenar tu información en nuestro <a href='/terapeutas' class='scroll-top' target='_blank'>formulario</a> y nosotros nos pondremos en contacto con los siguientes pasos.",
+        "4question": "¿Debo llevar mi propio equipo a las citas?",
+        "4answer": "Si, es importante que siempre lleves todo lo necesario para dar un servicio de calidad.",
+        "5question": "¿Qué sucede si el cliente no se encuentra al momento de la cita?",
+        "5answer": "Puede ser que haya un malentendido en la dirección por lo que te pedimos que nos contactes de inmediato para revisar el caso. Nosotros contactaremos al cliente para solucionar la situación y nos pondremos en contacto nuevamente contigo. En caso de que sea un problema generado por el cliente se te pagará el servicio.",
+        "6question": "¿Cómo recibo las solicitudes de servicio?",
+        "6answer": "Nos pondremos en contacto contigo para revisar tu disponibilidad y confirmar las citas. En caso de aceptar una te enviaremos un correo electrónico con la información de la reservación y toda la información relevante.",
+        "7question": "¿Cuantas órdenes de servicio puedo recibir?",
+        "7answer": "¡Tantas como puedas atender! Entre mayor disponibilidad tengas mayor prioridad tendrás en la asignación de órdenes.",
+        "8question": "¿Cuándo recibo el dinero por mis servicios?",
+        "8answer": "Cada semana recibirás una transferencia junto con un resumen de todos los servicios que realizaste y un desglose de tus ingresos.",
+        "9question": "¿Puedo ofrecerle mi servicio al cliente por mi cuenta de manera privada?",
+        "9answer": "No, los clientes que consigues por medio de Kassna son administrados exclusivamente por la plataforma y no pueden ser contactados de manera independiente. Kassna te brinda todo el soporte para que te puedas concentrar en lo que te gusta y solo cobramos una pequeña comisión para poderte mantener nuestro servicio. Es por esto que contactar a nuestros clientes de manera independiente lo consideramos como un acto deshonesto y puedes recibir una penalización o expulsión de la red por lo que ya no recibirás más clientes."
+      }
+    },
+    "terms": {
+      "title": "Términos y Condiciones"
+    },
+    "privacy": {
+      "title": "Aviso de privacidad"
+    }
+  },
+  "login": {
+    "termsModal": "Es necesario aceptar los términos y condiciones para poder usar el servicio",
+    "cancel": "Lo pensaré mejor",
+    "accept": "NO acepto"
+  },
+  "book": {
+    "next": "Siguiente",
+    "back": "Regresar",
+    "finish": "Comprar",
+    "verify": "Verificar",
+    "step1": "Horario",
+    "step2": "Masaje",
+    "step3": "Dirección",
+    "step4": "Pago",
+    "currentUserLead": "¡Ya tienes una cuenta!",
+    "currentUserLink": "Ingresa y ordena más facil y rápido",
+    "noUserLead": "Si tienes una cuenta,",
+    "noUserLink": "ingresa aquí!",
+    "step1Lead": "Selecciona la fecha y ubicación de tu cita",
+    "step2Lead": "Personaliza tu masaje",
+    "step3Lead": "Proporciona tus datos para llevarte tu masaje",
+    "step4Lead": "Si tienes un código de promoción, insertalo para recibir tu descuento ahora",
+    "paymentMethod": "Selecciona tu método de pago",
+    "paymentLead": "Proporciona tus datos de pago",
+    "date": "Fecha y hora",
+    "locationId": "Selecciona tu ciudad",
+    "type": "Tipo de masaje",
+    "product": "Duración de masaje",
+    "therapistsType": "Terapeuta",
+    "firstname": "Nombre(s)",
+    "lastname": "Apellido(s)",
+    "email": "Email",
+    "createAccount": "¿Desea crear una cuenta?",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "promoCode": "Código de promoción",
+    "cardNumber": "Número de tarjeta",
+    "ccv": "CCV",
+    "expMonth": "Mes de expiración",
+    "expYear": "Año de expiración",
+    "creditCard": "Tarjeta de crédito",
+    "paypal": "PayPal",
+    "errors": {
+      "requiredInputs": "Todos los campos son obligatorios",
+      "invalidHour": "No podemos atenderte en esa hora, por favor selecciona otra.",
+      "passwordMatch": "Tus contraseñas no coinciden, intenta de nuevo.",
+      "emailInvalid": "El email es incorrecto o ya existe, intenta de nuevo.",
+      "payment": "Ha habido un error en tu pago, por favor intenta de nuevo",
+      "wrongPromoCode": "El código es incorrecto. Intenta de nuevo",
+      "successPromoCode": "Éxito! Se ha aplicado tu descuento",
+      "removedReferencePromo": "Para usar un código de referencia, es necesario crear una cuenta",
+      "referenceErrorClient": "Lo sentimos, los códigos de referencia solo son válidos en nuevos clientes"
+    },
+    "months": {
+      "01": "Enero",
+      "02": "Febrero",
+      "03": "Marzo",
+      "04": "Abril",
+      "05": "Mayo",
+      "06": "Junio",
+      "07": "Julio",
+      "08": "Agosto",
+      "09": "Septiembre",
+      "10": "Octubre",
+      "11": "Noviembre",
+      "12": "Diciembre"
+    },
+    "orderConfirmation": {
+      "title": "Tu reservación ha sido exitosa!",
+      "lead": "A continuación recibirás un correo de confirmación con los datos de tu orden. Si tienes alguna duda escribenos a "
+    }
+  },
+  "schemas": {
+    "general": {
+      "yes": "Si",
+      "no": "No"
+    },
+    "clients": {
+      "phone": "Télefono",
+      "address": {
+        "street1": "Calle y Número",
+        "street2": "Colonia",
+        "zip": "Código Postal",
+        "reference": "Referencias del lugar"
+      },
+      "locationId": "Ciudad",
+      "locationFirst": "(Selecciona)",
+      "addressLabel": "Dirección"
+    },
+    "therapists": {
+      "name": "Nombre completo",
+      "sex": "Sexo",
+      "sexSelect": {
+        "options": {
+          "male": "Masculino",
+          "female": "Femenino"
+        }
+      },
+      "birthday": "Fecha de nacimiento",
+      "smartphone": "¿Cuentas con Smartphone y plan de datos que te permita recibir correos en cualquier momento?",
+      "languages": "¿Qué idiomas hablas? Por favor solo menciona idiomas en los que puedas entablar una conversación",
+      "locationId": "¿En qué ciudad vives?",
+      "zone": "¿De qué zona/colonia/municipio quieres recibir solicitudes de clientes?",
+      "schedulePreference": "¿Tienes alguna preferencia de horario para atender las solicitudes?",
+      "schedulePreferenceSelect": {
+        "options": {
+          "morning": "Mañana (08:00 a 12:00)",
+          "evening": "Tarde (12:00 a 16:00)",
+          "night": "Noche (16:00 a 21:00)",
+          "all": "Todas"
+        }
+      },
+      "zip": "¿Cuál es el código postal de donde vives?",
+      "training": "¿Con qué entrenamiento y/o estudio cuentas?",
+      "jobStatus": "¿Cuál es tu estado actual de trabajo?",
+      "experience": "¿Dónde adquiriste tu experiencia?",
+      "experienceSelect": {
+        "options": {
+          "hospital": "Hospital",
+          "rehab": "Centro de rehabilitación",
+          "hotel": "Hotel",
+          "gym": "Gimnasio",
+          "spa": "SPA",
+          "private": "Masajes particulares",
+          "onDemand": "Servicio de masaje a domicilio",
+          "school": "Escuela/Instituto",
+          "other": "Otro"
+        }
+      },
+      "experienceYears": "¿Cuantos años de experiencia practicando masajes tienes?",
+      "experienceTypes": "¿En qué tipo de masajes tienes experiencia? (Seleccionar uno o más)",
+      "experienceTypesSelect": {
+        "options": {
+          "a": "Masaje Lomi Lomi / Hawaiano",
+          "b": "Masaje Shiatsu",
+          "c": "Masaje Ayurvédico",
+          "d": "Masaje Prenatal",
+          "e": "Masaje Post-parto",
+          "f": "Masaje Tailandés",
+          "g": "Masaje Sueco",
+          "h": "Masaje Deportivo",
+          "i": "Masaje Descontracturante",
+          "j": "Reflexología Podal",
+          "k": "Masaje Reductivo",
+          "l": "Masaje Terapéutico",
+          "m": "Drenaje Linfático",
+          "n": "Masaje Champi (cabeza)",
+          "o": "Masaje Geriátrico",
+          "p": "Otros"
+        }
+      },
+      "herbs": "¿Trabajas con bálsamos, aromaterapia, compresas herbales? Indica cuáles",
+      "hasBed": "¿Tienes una cama portátil que puedas usar con los clientes?",
+      "hasChair": "¿Tienes una silla portátil que puedas usar con los clientes?",
+      "hasCar": "Tienes auto u otra manera de llevar todo el equipo a la cita con el cliente? (Eres libre de elegir como transportarte pero la manera recomendada es por auto). Kassna no se hace responsable del transporte.",
+      "phone": "¿En qué número de teléfono te podemos contactar?",
+      "contactTime": "¿En qué horario prefieres que te contactemos?",
+      "email": "¿Cuál es tu dirección de correo electrónico personal?",
+      "reference": "¿Cómo te enteraste de nosotros?",
+      "referenceSelect": {
+        "options": {
+          "fb": "Facebook / Instagram",
+          "web": "Página Web",
+          "therapist": "Referido de otro terapeuta",
+          "staff": "Personal de Kassna",
+          "other": "Otro"
+        }
+      }
+    },
+    "locations": {
+      "name": "Nombre de la ciudad",
+      "abbreviation": "Abreviación",
+      "base_rate": "Tarífa base"
+    },
+    "promoCodes": {
+      "code": "Código de promoción",
+      "type": "Tipo de descuento del código",
+      "typeSelect": {
+        "options": {
+          "percentage": "Porcentaje de descuento",
+          "amount": "Restar cantidad al total"
+        }
+      },
+      "amount": "Si es porcentaje, escribir de 0 a 100 sin el signo %. Si es para restar, escribir la cantidad de descuento",
+      "locationsId": "Ciudades disponibles"
+    },
+    "orders": {
+      "locationId": "Ciudad",
+      "product": "Producto",
+      "productSelect": {
+        "options": {
+          "60": "60 min",
+          "90": "90 min",
+          "120": "120 min"
+        }
+      },
+      "type": "Tipo",
+      "typeSelect": {
+        "options": {
+          "relax": "Relajante",
+          "decontracting": "Descontracturante",
+          "sport": "Sport"
+        }
+      },
+      "therapistsType": "Selecciona terapeuta",
+      "therapistsTypeSelect": {
+        "options": {
+          "any": "Cualquiera",
+          "male": "Hombre",
+          "female": "Mujer",
+          "same": "Terapeuta anterior"
+        }
+      },
+      "date": "Fecha y hora",
+      "total": "Total",
+      "therapist": "Terapeuta",
+      "clientId": "Cliente",
+      "phone": "Teléfono",
+      "address": {
+        "street1": "Calle y Número",
+        "street2": "Colonia",
+        "zip": "Código Postal",
+        "reference": "Referencias del lugar",
+        "locationId": "Ciudad"
+      }
+    },
+    "surveys": {
+      "question1": "¿Cómo estuvo el servicio?",
+      "question2": "¿Cómo fue el trato de tu terapeuta?",
+      "question3": "¿Qué tan factible es que nos recomiendes de nuevo?",
+      "comments": "Escríbenos un comentario o sugerencia de nuestro servicio"
+    }
+  },
+  "admin": {
+    "general": {
+      "edit": "Editar",
+      "cancel": "Cancelar",
+      "forbidden": "Acceso denegado",
+      "loading": "Cargando",
+      "add": "Agregar",
+      "delete": "Borrar",
+      "create": "Crear",
+      "answer": "Contestar",
+      "rating": "Rating",
+      "noResults": "No hay elementos",
+      "activate": "Activar",
+      "deactivate": "Desactivar",
+      "name": "Nombre",
+      "phone": "Teléfono",
+      "email": "Email",
+      "locationId": "Ciudad",
+      "completedOrders": "Ordenes",
+      "confirm": "¿Estás seguro?",
+      "cantUndone": "No se pude deshacer esta acción",
+      "confirmDelete": "Sí, ¡Borrar!",
+      "successDelete": "Éxito! Se ha eliminado ese elemento",
+      "failDelete": "Hubo un error, revisa las dependencias del elemento",
+      "successInsert": "Éxito! Se ha agregado a la base de datos",
+      "active": "Activar",
+      "createdAt": "Creado",
+      "orders": "Ordenes",
+      "submit": "Envíar",
+      "viewMore": "Más",
+      "personalData": "Datos personales"
+    },
+    "header": {
+      "selectCity": "Selecciona",
+      "general": "General",
+      "settings": "Ajustes",
+      "logOut": "Cerrar sesión"
+    },
+    "locations": {
+      "title": "Ciudades"
+    },
+    "promoCodes": {
+      "title": "Códigos de Promoción",
+      "code": "Código",
+      "type": "Tipo",
+      "typeOptions": {
+        "amount": "Restar cantidad",
+        "percentage": "Porcentaje"
+      },
+      "amount": "Descuento",
+      "locationsId": "Ciudades"
+    },
+    "admins": {
+      "title": "Administradores",
+      "lead1": "Para agregar adminisitradores, enviar este link",
+      "lead2": "y este código"
+    },
+    "requestAdmin": {
+      "title": "Solicitar acceso de administrador",
+      "lead": "Ingresa el código proporcionado por el administrador",
+      "error": "El código es inválido, intenta de nuevo."
+    },
+    "therapists": {
+      "title": "Terapeutas activos",
+      "infoTitle": "Información del terapeuta",
+      "sex": "Sexo",
+      "languages": "Idiomas",
+      "zone": "Zona de cobertura",
+      "schedulePreference": "Horario",
+      "createdAt": "Miembro desde",
+      "birthday": "Fecha de nacimiento",
+      "smartphone": "¿Tiene smartphone?",
+      "zip": "Código postal",
+      "training": "Preparación",
+      "jobStatus": "Estado laboral",
+      "experience": "Experiencia",
+      "experienceYears": "Años de experiencia",
+      "experienceTypes": "Conocimiento de masajes",
+      "herbs": "Balsamos, aromaterapia, compresas herbales",
+      "hasBed": "¿Tiene cama?",
+      "hasChair": "¿Tiene silla?",
+      "hasCar": "¿Tiene carro?",
+      "contactTime": "Horario de contacto",
+      "reference": "Referencia",
+      "jobData": "Datos laborales"
+    },
+    "therapistRequests": {
+      "title": "Solicitudes de terapeutas"
+    },
+    "clients": {
+      "title": "Clientes",
+      "pendingPromos": "Cupones pendientes",
+      "infoClient": "Información del cliente",
+      "address": "Dirección",
+      "createdAt": "Miembro desde"
+    },
+    "orders": {
+      "pendingOrders": "Ordenes pendientes",
+      "pastOrders": "Historial de ordenes",
+      "assignTherapist": "Asignar Terapeutas",
+      "locationId": "Ciudad",
+      "date": "Fecha",
+      "client": "Cliente",
+      "name": "Nombre",
+      "address": "Dirección",
+      "type": "Tipo",
+      "product": "Duración",
+      "therapist": "Terapeuta",
+      "therapistsType": "Pref. Terapeuta",
+      "total": "Total",
+      "referencePromos": "Referencias acumuladas",
+      "transactionId": "Aprobación",
+      "status": "Estatus",
+      "survey": "Encuesta de satisfacción",
+      "infoOrder": "Información de la orden",
+      "noTherapist": "No asignado",
+      "ratingTherapist": "Cal. Terap",
+      "ratingClient": "Cal. Cliente",
+      "completed": "Completada",
+      "canceled": "Cancelada",
+      "assign": "Asignar",
+      "assignInstructions": "Selecciona una orden, un terapeuta y presiona el botón de asignar",
+      "preference": "Preferencia",
+      "last": "Anterior",
+      "zone": "Colonia",
+      "zones": "Zona de cobertura",
+      "zip": "CP",
+      "promoCode": "Código de promoción",
+      "therapists": "Terapeutas",
+      "schedule": "Horario",
+      "confirmAssignQ": "¿Deseas asignar este terapeuta a esta orden?",
+      "confirmAssign": "Si, asignar",
+      "successAssign": "Éxito! La orden ha sido asignada",
+      "failAssign": "Hubo un error! Intenta de nuevo",
+      "confirmCancel": "Si! Cancelar",
+      "failCancel": "Hubo un error! Intenta de nuevo",
+      "successCancel": "Éxito! La orden ha sido cancelada"
+    }
+  },
+  "client": {
+    "bookNow": {
+      "forbidden": "Para poder realizar ordenes, es necesario que actualices todos tus datos",
+      "update": "Actualizar",
+      "pendingPromos1": "Tienes ",
+      "pendingPromos2": " de descuento adicional disponible. ¿Deseas aplicarlo?"
+    },
+    "orders": {
+      "pendingOrders": "Próximas sesiones",
+      "pastOrders": "Historial de sesiones"
+    },
+    "personalData": {
+      "title": "Mis datos"
+    },
+    "promoCode": {
+      "title": "Código para compartir",
+      "text1": "Tu código es",
+      "text2": "Invita a todos y recibe $140 de descuento por cada persona que lo use!",
+      "text3": "En este momento tienes disponible",
+      "text4": "de descuento",
+      "text5": "Aprovéchalo y reserva ya tu próxima cita!",
+      "text6": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a info@kassna.com"
+    }
+  },
+  "survey": {
+    "title": "Encuesta de satisfacción",
+    "thanks": "Gracias por tu participación. Esperamos verte pronto de nuevo.",
+    "experience": {
+      "title": "¿Cómo fue tu experiencia Kassna?"
+    },
+    "enjoy": {
+      "title": "¿Qué fue lo que más disfrutaste?",
+      "massage": "Masaje",
+      "service": "Servicio",
+      "punctuality": "Puntualidad",
+      "presentation": "Presentación",
+      "music": "Música",
+      "other": "Otro"
+   },
+   "improve": {
+     "title": "¿Qué puede mejorar?"
+   },
+   "comment": {
+     "title": "Déjanos tu comentario o sugerencia",
+     "type": "Tipo de comentario",
+     "field": "Comentario",
+     "suggestion": "Sugerencia",
+     "congratulations": "Felicitación",
+     "complain": "Queja"
+   }
+  }
+}

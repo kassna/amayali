@@ -1,0 +1,35 @@
+<template name="OrderInfo">
+  {{#if $.Session.get 'orderInfo'}}
+    <div class="modal modal-info" id="order-info">
+  	    <div class="modal-dialog modal-sm">
+  	        <div class="modal-content">
+  	            <div class="modal-header">
+  	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  	                <h4 class="modal-title block-subtitle c-turquoise">{{_ "admin.orders.infoOrder"}}</h4>
+  	            </div>
+  	            <div class="modal-body">
+                  <div class="group">
+                    <b>{{_ "admin.orders.total"}}:</b> ${{ currentOrder.total }}
+                  </div>
+                  <div class="group">
+                    <b>{{_ "admin.orders.transactionId"}}:</b> {{ currentOrder.transactionId }}
+                  </div>
+                  {{#if currentOrder.promoCode}}
+                  <div class="group">
+                    <b>{{_ "admin.orders.promoCode"}}:</b> {{ currentOrder.promoCode }}
+                  </div>
+                  {{/if}}
+                  {{#if currentOrder.referencePromos}}
+                  <div class="group">
+                    <b>{{_ "admin.orders.referencePromos"}}:</b> {{ currentOrder.referencePromos }}
+                  </div>
+                  {{/if}}
+                  <div class="group">
+                    <b>{{_ "admin.general.createdAt"}}:</b> {{humanDateHour currentOrder.createdAt}}
+                  </div>
+  	            </div>
+  	        </div>
+  	    </div>
+  	</div>
+  {{/if}}
+</template>

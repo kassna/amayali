@@ -1,0 +1,38 @@
+<template name="Footer">
+  <div class="block app-block-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 m-b">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Navegación</h6></li>
+            {{> HeaderLandingLinks}}
+          </ul>
+        </div>
+        <div class="col-sm-4 m-b">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Redes Sociales</h6></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 m-b">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Soporte</h6></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="{{pathFor 'terms'}}" class="scroll-top">Términos y condiciones</a></li>
+            <li><a href="{{pathFor 'privacy'}}" class="scroll-top">Aviso de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-xs-12 col-sm-9">
+          <h6>
+            Copyright 2017 © KASSNA TECHNOLOGIES SAPI DE CV. Todos los derechos reservados
+          </h6>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <h6>Made with ❤️ by <a href="http://2112studio.com">2112studio</a></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,28 @@
+//
+// Wrapper for all page contents, including shelf
+//
+
+.stage {
+  background-color: $stage-bg;
+}
+
+
+//
+// Shelf contents that is shown/hidden
+//
+
+.stage-shelf {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: $stage-shelf-width;
+  padding-top: 30px;
+  background-color: darken($stage-bg, 5%);
+  overflow: auto;
+}
+.stage-shelf-right {
+  left: auto;
+  right: 0;
+}

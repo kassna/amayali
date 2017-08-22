@@ -1,0 +1,13 @@
+<template name="TherapistsForm">
+  <div class="margin-section">
+    <div class="container">
+      <h1 class="block-title text-center c-yellow">{{_ "landing.therapistForm.title"}}</h1>
+      <h3 class="text-center">{{_ "landing.therapistForm.lead"}} <a href="">info@kassna.com</a></h3>
+      <hr class="m-b-md m-t-md">
+      <div class="therapist-form m-b-lg">
+        {{> quickForm collection="Therapists" id="insertTherapistForm" type="insert" buttonClasses="btn btn-success btn-full submit-button" buttonContent=sendText}}
+      </div>
+    </div>
+  </div>
+  {{> Footer}}
+</template>

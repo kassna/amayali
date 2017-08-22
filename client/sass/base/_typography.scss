@@ -30,14 +30,24 @@ strong, b {
 	font-weight: 700;
 }
 
-.dashhead-title {
-	color: $pink;
-}
-
 h2 {
 	&.small-phone {
 		@include bp(phone) {
 			font-size: 18px;
 		}
 	}
+}
+
+.title-style {
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.text-muted {
+  font-family: $body-font;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: 18px;
 }

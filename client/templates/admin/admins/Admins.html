@@ -1,0 +1,42 @@
+<template name="Admins">
+    {{#if isInRole 'superadmin'}}
+        {{#if Template.subscriptionsReady}}
+            <div class="dashhead">
+                <div class="dashhead-titles">
+                    <h2 class="dashhead-title title-style c-green">{{_ "admin.admins.title"}}</h2>
+                    <p><i><b>
+                      {{_ "admin.admins.lead1"}}:
+                      <a href="{{adminLink}}">{{adminLink}}</a> {{_ "admin.admins.lead2"}}:
+                      <span class="c-green">{{adminCode}}</span>
+                      <a href="" class="refresh-code"><i class="fa fa-refresh c-yellow m-l" aria-hidden="true"></i></a>
+                    </b></i></p>
+                </div>
+            </div>
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.general.name"}}</th>
+                              <th></th>
+                              <th>{{_ "admin.general.active"}}</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each users}}
+                              {{> Admin}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=4}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>

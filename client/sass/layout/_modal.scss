@@ -11,15 +11,15 @@
 			height: inherit;
 		}
 		.autoform-add-item {
-			background-color: $aqua;
-			border-color: $aqua;
+			background-color: $cream;
+			border-color: $cream;
 			&:before {
 				content: "Agregar elemento";
 			}
 		}
 		.autoform-remove-item {
-			background-color: $aqua;
-			border-color: $aqua;
+			background-color: $cream;
+			border-color: $cream;
 			&:before {
 				content: "Quitar";
 			}
@@ -27,5 +27,13 @@
 		input {
 			width: 100%;
 		}
+	}
+}
+
+.modal-info {
+	b {
+		display: block;
+		color: $turquoise;
+		font-size: 14px;
 	}
 }

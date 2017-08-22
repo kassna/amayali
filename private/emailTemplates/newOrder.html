@@ -1,0 +1,39 @@
+<div class="align-left p-a">
+  <h3 class="c-yellow">Hola, has recibido una nueva orden</h3>
+  <p><b class="c-turquoise">Ver ordenes:</b> <a href="{{emailUrlFor 'admin-pending-orders'}}">{{emailUrlFor 'admin-pending-orders'}}</a></p>
+</div>
+
+<h1 class="c-yellow">Detalles de tu orden</h1>
+
+<div class="order-details">
+  <div class="group">
+    <b>Nombre:</b> {{ firstname }} {{ lastname }}
+  </div>
+  <div class="group">
+    <b>Fecha y hora:</b> {{ prettyHourComplete  date }}
+  </div>
+  <div class="group">
+    <b>Ciudad:</b> {{ location }}
+  </div>
+  <div class="group">
+    <b>Calle y Número:</b> {{ address.street1 }}
+  </div>
+  <div class="group">
+    <b>Colonia:</b> {{ address.street2 }}
+  </div>
+  <div class="group">
+    <b>Código Postal:</b> {{ address.zip }}
+  </div>
+  <div class="group">
+    <b>Total:</b> ${{ total }}
+  </div>
+  <div class="group">
+    <b>Tipo de masaje:</b> {{ prettyType type }}
+  </div>
+  <div class="group">
+    <b>Duración:</b> {{ prettyProduct product }}
+  </div>
+  <div class="group">
+    <b>Preferencia de terapeuta:</b> {{ prettyTherapistType therapistsType }}
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<template name="SurveyInfo">
+  {{#if $.Session.get 'surveyInfo'}}
+    <div class="modal modal-info" id="survey-info">
+  	    <div class="modal-dialog modal-sm">
+  	        <div class="modal-content">
+  	            <div class="modal-header">
+  	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  	                <h4 class="modal-title block-subtitle c-turquoise">{{_ "survey.title"}}</h4>
+  	            </div>
+  	            <div class="modal-body">
+                  {{#if currentSurvey.question1}}
+                  <div class="group">
+                    <b>{{_ "survey.experience.title"}}:</b> {{ currentSurvey.question1 }}
+                  </div>
+                  {{/if}}
+                  {{#if currentSurvey.question2}}
+                  <div class="group">
+                    <b>{{_ "survey.enjoy.title"}}:</b> {{ prettyAnswer currentSurvey.question2 }}
+                  </div>
+                  {{/if}}
+                  {{#if currentSurvey.question3}}
+                  <div class="group">
+                    <b>{{_ "survey.improve.title"}}:</b> {{ prettyAnswer currentSurvey.question3 }}
+                  </div>
+                  {{/if}}
+                  {{#if currentSurvey.question4}}
+                  <div class="group">
+                    <b>{{_ "survey.comment.type"}}:</b> {{ prettyCommentType currentSurvey.question4 }}
+                  </div>
+                  {{/if}}
+                  {{#if currentSurvey.comments}}
+                  <div class="group">
+                    <b>{{_ "survey.comment.field"}}:</b> {{ currentSurvey.comments }}
+                  </div>
+                  {{/if}}
+  	            </div>
+  	        </div>
+  	    </div>
+  	</div>
+  {{/if}}
+</template>

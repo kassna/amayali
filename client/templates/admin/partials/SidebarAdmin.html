@@ -1,0 +1,86 @@
+<template name="SidebarAdmin">
+	<nav class="sidebar-nav">
+        <div class="collapse in nav-toggleable-sm m-t" id="nav-toggleable-sm">
+            <select class="custom-select m-b" id="city-selection">
+                <option value="">{{_ "admin.header.selectCity"}}..</option>
+                {{#each locations}}
+                    {{#if isCurrentCity _id}}
+                        <option value="{{_id}}" selected>{{name}}</option>
+                    {{else}}
+                        <option value="{{_id}}">{{name}}</option>
+                    {{/if}}
+                {{/each}}
+            </select>
+            <ul class="nav nav-pills nav-stacked">
+				<li class="nav-header text-center">{{_ "admin.general.orders"}}</li>
+				<li class="{{isActiveRoute 'admin-pending-orders'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-pending-orders'}}">
+							<i class="fa fa-exclamation" aria-hidden="true"></i>
+							{{_ "admin.orders.pendingOrders"}}
+						</a>
+				</li>
+				<li class="{{isActiveRoute 'admin-assign-therapists'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-assign-therapists'}}">
+							<i class="fa fa-link" aria-hidden="true"></i>
+							{{_ "admin.orders.assignTherapist"}}
+						</a>
+				</li>
+				<li class="{{isActiveRoute 'admin-history-orders'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-history-orders'}}">
+							<i class="fa fa-history" aria-hidden="true"></i>
+							{{_ "admin.orders.pastOrders"}}
+						</a>
+				</li>
+
+				<li class="nav-header text-center">{{_ "admin.header.general"}}</li>
+				<li class="{{isActiveRoute 'admin-clients'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-clients'}}">
+							<i class="fa fa-address-book-o" aria-hidden="true"></i>
+							{{_ "admin.clients.title"}}
+						</a>
+				</li>
+				<li class="{{isActiveRoute 'admin-therapists'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-therapists'}}">
+							<i class="fa fa-id-card" aria-hidden="true"></i>
+							{{_ "admin.therapists.title"}}
+						</a>
+				</li>
+				<li class="{{isActiveRoute 'admin-promoCodes'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-promoCodes'}}">
+							<i class="fa fa-tags" aria-hidden="true"></i>
+							{{_ "admin.promoCodes.title"}}
+						</a>
+				</li>
+				<li class="{{isActiveRoute 'admin-therapists-requests'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-therapists-requests'}}">
+							<i class="fa fa-user-plus" aria-hidden="true"></i>
+							{{_ "admin.therapistRequests.title"}}
+						</a>
+				</li>
+				<li class="{{isActiveRoute 'admin-locations'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-locations'}}">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{_ "admin.locations.title"}}
+						</a>
+				</li>
+				{{#if isInRole 'superadmin'}}
+				<li class="{{isActiveRoute 'admin-admins'}}">
+						<a class="scroll-top text-center" href="{{pathFor 'admin-admins'}}">
+							<i class="fa fa-key" aria-hidden="true"></i>
+							{{_ "admin.admins.title"}}
+						</a>
+				</li>
+				{{/if}}
+
+				<li class="nav-header text-center">{{_ "admin.header.settings"}}</li>
+				<li>
+						<a class="scroll-top text-center" id="logout">
+							<i class="fa fa-power-off" aria-hidden="true"></i>
+							{{_ "admin.header.logOut"}}
+						</a>
+				</li>
+            </ul>
+            <hr class="visible-xs m-t">
+        </div>
+    </nav>
+</template>

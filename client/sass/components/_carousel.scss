@@ -1,0 +1,21 @@
+.carousel-light {
+  .carousel-control {
+    text-shadow: none;
+    color: $turquoise;
+    background-image: none;
+  }
+
+  .carousel-indicators {
+    bottom: 0;
+    
+    li {
+      background-color: $gray;
+      border: 0;
+    }
+
+    .active {
+      background-color: $turquoise;
+      border: 1px solid $turquoise;
+    }
+  }
+}

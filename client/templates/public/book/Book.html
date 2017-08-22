@@ -1,0 +1,26 @@
+<template name="Book">
+  {{reloadSelect}}
+  <div class="full-bg" style="background-image: url(/img/masaje3.jpg)"></div>
+  <div class="book-cont">
+    {{> HeaderBook}}
+    <div class="container">
+      {{#if Template.subscriptionsReady}}
+        {{> StepsBook}}
+        {{#if $.Session.equals 'instance' 1}}
+          {{> ScheduleBook}}
+        {{/if}}
+        {{#if $.Session.equals 'instance' 2}}
+          {{> MassageBook}}
+        {{/if}}
+        {{#if $.Session.equals 'instance' 3}}
+          {{> AddressBook}}
+        {{/if}}
+        {{#if $.Session.equals 'instance' 4}}
+          {{> PaymentBook}}
+        {{/if}}
+      {{else}}
+        {{> Loading}}
+      {{/if}}
+    </div>
+  </div>
+</template>

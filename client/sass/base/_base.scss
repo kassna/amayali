@@ -2,10 +2,14 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+body {
+	color: $light-black;
+}
+
 a {
-	color: $pink;
+	color: $turquoise;
 	&:hover {
-		color: $orange;
+		color: $yellow;
 	}
 }
 

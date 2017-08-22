@@ -1,0 +1,71 @@
+ <template name="HistoricalOrder">
+	<tr class="{{#if this.therapist}}{{else}}danger-tr{{/if}}">
+      <td>
+        {{#if $eq status 'completed'}}
+          <span class="c-turquoise">{{prettyStatus status}}</span>
+        {{else}}
+          <span class="c-error">{{prettyStatus status}} por {{canceledBy}}</span>
+        {{/if}}
+      </td>
+      <td class="text-center">
+        {{#if $eq status 'completed'}}
+          {{#if answeredSurvey this.survey}}
+          <button type="" class="btn btn-round btn-info-outline view-survey-btn">
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+          </button>
+          {{/if}}
+        {{/if}}
+      </td>
+      <td>
+        {{#if $eq status 'completed'}}
+          {{#if clientId}}
+            <input type="number" name="therapistGrade" min="0" max="10" style="width: 50px" value="{{therapistGrade}}">
+          {{else}}
+          N/A
+          {{/if}}
+        {{/if}}
+      </td>
+      <td>
+        {{#if $eq status 'completed'}}
+          {{#if clientId}}
+            <input type="number" name="clientGrade" min="0" max="10" style="width: 50px" value="{{clientGrade}}">
+          {{else}}
+          N/A
+          {{/if}}
+        {{/if}}
+      </td>
+      <td>{{locationAbbr locationId}}</td>
+      <td>{{firstname}} {{lastname}}</td>
+      <td>{{dateHour date}}</td>
+      <td>
+      	<button type="" class="btn btn-round btn-info-outline view-more-btn">
+      		<i class="fa fa-home" aria-hidden="true"></i>
+      	</button>
+      </td>
+      <td>
+        {{#if this.therapist}}
+          {{therapistName this.therapist}}
+        {{else}}
+          <div class="c-error">{{_ "admin.orders.noTherapist"}}</div>
+        {{/if}}
+      </td>
+      <td>{{prettyProduct product}}</td>
+      <td>{{prettyType type}}</td>
+      <td>{{prettyTherapistType therapistsType}}</td>
+      <td>
+      	<button type="" class="btn btn-round btn-info-outline order-info-btn">
+      		<i class="fa fa-plus" aria-hidden="true"></i>
+      	</button>
+      </td>
+      <td>
+      	{{#if isInRole 'superadmin'}}
+          {{#quickRemoveButton collection="Orders" _id=this._id class="hidden delete-btn"}}
+          Delete
+          {{/quickRemoveButton}}
+          <button class="btn btn-round btn-danger-outline confirm-remove">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </button>
+        {{/if}}
+      </td>
+  </tr>
+</template>

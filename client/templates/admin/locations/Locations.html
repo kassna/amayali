@@ -1,0 +1,49 @@
+<template name="Locations">
+    {{#if isInRole 'admin'}}
+        <div class="dashhead">
+            <div class="dashhead-titles">
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.locations.title"}}</h2>
+            </div>
+            <div class="btn-toolbar dashhead-toolbar">
+                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
+                    {{_ "admin.general.add"}}
+                </button>
+            </div>
+        </div>
+
+        {{#if Template.subscriptionsReady}}
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+                              <th>{{_ "admin.general.name"}}</th>
+                              <th>{{_ "schemas.locations.abbreviation"}}</th>
+                              <th>{{_ "schemas.locations.base_rate"}}</th>
+                              <th></th>
+                              <th>{{_ "admin.general.active"}}</th>
+                              <th></th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each locations}}
+                              {{> Location}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=7}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+
+        {{> NewModal collection="Locations"}}
+        {{> EditModal collection="Locations" editItem=editItem }}
+
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>

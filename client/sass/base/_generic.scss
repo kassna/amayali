@@ -1,22 +1,11 @@
 /////////////////
 ///  Colors
 ////////////////
-
-.c-pink,
-.canceled {
-	color: $pink !important;
+.c-turquoise {
+	color: $turquoise !important;
 }
 
-.c-aqua {
-	color: $aqua !important;
-}
-
-.c-dark-gray {
-	color: $dark-gray !important;
-}
-
-.c-green,
-.completed {
+.c-green {
 	color: $green !important;
 }
 
@@ -24,32 +13,32 @@
 	color: $yellow !important;
 }
 
-.c-orange {
-	color: $orange !important;
+.c-cream {
+	color: $cream !important;
+}
+
+.c-gray {
+	color: $gray !important;
+}
+
+.c-black {
+	color: $black !important;
+}
+
+.c-light-black {
+	color: $light-black !important;
 }
 
 .c-white {
 	color: $white !important;
 }
 
-.c-light-yellow {
-	color: $light-yellow !important;
+.c-error {
+	color: $error !important;
 }
 
-.c-light-green {
-	color: $light-green !important;
-}
-
-.bg-pink {
-	background-color: $pink !important;
-}
-
-.bg-aqua {
-	background-color: $aqua !important;
-}
-
-.bg-dark-gray {
-	background-color: $dark-gray !important;
+.bg-turquoise {
+	background-color: $turquoise !important;
 }
 
 .bg-green {
@@ -60,21 +49,105 @@
 	background-color: $yellow !important;
 }
 
-.bg-orange {
-	background-color: $orange !important;
+.bg-cream {
+	background-color: $cream !important;
 }
 
-.bg-light-yellow {
-	background-color: $light-yellow !important;
+.bg-gray {
+	background-color: $gray !important;
 }
 
-.bg-light-green {
-	background-color: $light-green !important;
+.bg-light-gray {
+	background-color: $light-gray !important;
+}
+
+.bg-black {
+	background-color: $black !important;
+}
+
+.bg-white {
+	background-color: $white !important;
+}
+
+.btn-success.btn-book-now,
+.btn-success.btn-login {
+	font-size: 24px;
+	color: $white;
+	background-color: $green;
+	font-weight: 700;
+	&:hover {
+		color: $green;
+		background-color: $white;
+	}
+
+	&.btn-xs {
+		font-size: 14px;
+	}
+
+	&.btn-sm {
+		font-size: 18px;
+	}
 }
 
 /////////////////
 ///  Helpers
 ////////////////
+
+.full-bg {
+	/* Full height */
+  height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.margin-section {
+  margin-top: 90px;
+  @include bp(tablet) {
+    margin-top: 120px;
+  }
+}
+
+.m-b-0-xs {
+	@include bp(phone) {
+		margin-bottom: 0 !important;
+	}
+}
+
+.m-b-0-sm {
+	@include bp(tablet) {
+		margin-bottom: 0 !important;
+	}
+}
+
+.p-b-0-xs {
+	@include bp(phone) {
+		padding-bottom: 0 !important;
+	}
+}
+
+.m-b-lg-xs {
+	@include bp(phone) {
+		margin-bottom: 40px !important;
+	}
+}
+
+.m-t-md-xs {
+	@include bp(phone) {
+		margin-top: 20px !important;
+	}
+}
+
+.m-t-0-xs {
+	@include bp(phone) {
+		margin-top: 0 !important;
+	}
+}
 
 .spacer-small {
 	height: 100px;

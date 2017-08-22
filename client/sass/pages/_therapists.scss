@@ -1,0 +1,16 @@
+.therapist-form {
+  @include bp(tablet) {
+    .form-group:not(:last-child) {
+      width: 48%;
+      float: left;
+      &:nth-child(odd) {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      &:nth-child(even) {
+        margin-left: 4%;
+      }
+    }
+  }
+}
