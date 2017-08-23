@@ -93,6 +93,18 @@
       "title": "¿Te gustaría ser parte de nuestro equipo?",
       "lead": "Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a"
     },
+    "therapistInfo": {
+      "title": "Conviertete en un terapeuta de Kassna",
+      "lead": "conectate con clientes cerca de ti, haz tu propio horario, y gana lo que mereces.",
+      "title2": "Incrementa tus ingresos",
+      "ingresos1": "Recibe depositos semanales de tus ingresos.",
+      "ingresos2": "Protegemos a nuestros terapeutas contra cancelaciones de último minuto hasta por el total del costo del servicio.",
+      "title3": "Trabaja de manera segura",
+      "seguro1": "Todos los clientes deben validar su identidad y pagar con tarjeta de crédito." ,
+      "seguro2": "Contamos con sistema de check in / check out de cada sota ára saber que completaste el servicio de manera segura (en desarrollo).",
+      "seguro3": "Nuestros terapeutas evaluan a los clientes. Cualquier cliente que no cumpla con las normas de conducta es bloqueado de nuestra plataforma.",
+      "seguro4": "El servicio a clientes de Kassna esta disponible para ti los 365 días del año para ayudarte a resolver cualquier problema o duda."
+    },
     "faq": {
       "users": {
         "title": "Preguntas frecuentes (Usuarios)",
