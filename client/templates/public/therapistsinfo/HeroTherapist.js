@@ -30,9 +30,9 @@ Template.HeroTherapist.onRendered(function () {
 	  size: 4
 	});
 
+});
 
-
-Template.HeroTherapist.events({
+Template.Hero.events({
   'click .submit-landing': () => {
     FlowRouter.go('book');
   }
