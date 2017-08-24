@@ -97,9 +97,11 @@
     "therapistInfo": {
       "title": "Únete a Kassna",
       "lead": "Conectate con clientes cerca de ti, haz tu propio horario, y gana lo que mereces.",
-      "title2": "Incrementa tus ingresos",
+      "titleincome": "Incrementa tus ingresos",
+      "incomeline": "Logra tu independencia complementando tus ingresos con Kassna.",
       "ingresos1": "Recibe depositos semanales de tus ingresos.",
       "ingresos2": "Protegemos a nuestros terapeutas contra cancelaciones de último minuto hasta por el total del costo del servicio.",
+      "ingresos3": ",",
       "title3": "Trabaja de manera segura",
       "seguro1": "Todos los clientes deben validar su identidad y pagar con tarjeta de crédito." ,
       "seguro2": "Contamos con sistema de check in / check out de cada sota ára saber que completaste el servicio de manera segura (en desarrollo).",
