@@ -5,7 +5,8 @@
     "menu": "Menú",
     "backHome": "Volver al inicio",
     "send": "Envíar",
-    "total": "Total"
+    "total": "Total",
+    "apply": "Aplicar"
   },
   "landing": {
     "navbar" : {
@@ -95,7 +96,7 @@
     },
     "therapistInfo": {
       "title": "Conviertete en un terapeuta de Kassna",
-      "lead": "conectate con clientes cerca de ti, haz tu propio horario, y gana lo que mereces.",
+      "lead": "Conectate con clientes cerca de ti, haz tu propio horario, y gana lo que mereces.",
       "title2": "Incrementa tus ingresos",
       "ingresos1": "Recibe depositos semanales de tus ingresos.",
       "ingresos2": "Protegemos a nuestros terapeutas contra cancelaciones de último minuto hasta por el total del costo del servicio.",
