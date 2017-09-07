@@ -12,7 +12,7 @@ Mailer.config({
 
 Accounts.emailTemplates.resetPassword = {
   from() {
-    return 'Kassna <alex@2112studio.com>';
+    return 'Kassna <' + process.env.SENDER_EMAIL + '>';
   },
   subject() {
     return "[Kassna] Reestablecer contraseña";
