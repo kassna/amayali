@@ -33,7 +33,7 @@
       "step3Lead": "Disfruta tu masaje",
       "step4": "Comparte",
       "step4Lead": "Gana tu siguiente masaje recomendándonos",
-      "feature1": "Masajes llevados a tu casa, oficina u hotel",
+      "feature1": "Masajes en tu casa, oficina u hotel",
       "feature2": "Nosotros llevamos todo el equipo necesario",
       "feature3": "Garantía del 100% si no estás satisfecho con el servicio",
       "feature4": "Recibe $140 cada vez que un amigo use tu código de referencia"
@@ -191,7 +191,7 @@
     "firstname": "Nombre(s)",
     "lastname": "Apellido(s)",
     "email": "Email",
-    "createAccount": "¿Desea crear una cuenta?",
+    "createAccount": "¿Deseas crear una cuenta?",
     "password": "Contraseña",
     "confirmPassword": "Confirmar contraseña",
     "promoCode": "Código de promoción",
