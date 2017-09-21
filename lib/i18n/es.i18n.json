@@ -61,7 +61,10 @@
         "line2C": "del mismo"
       },
       "prices": {
-        "title": "Precio"
+        "title": "Precio",
+        "precio60": "$699",
+        "precio90": "$999",
+        "precio120": "$1199"
       },
       "types": {
         "title": "Elige tu masaje",
