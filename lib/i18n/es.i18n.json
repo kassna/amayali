@@ -536,8 +536,11 @@
   },
   "client": {
     "bookNow": {
-      "forbidden": "Para poder realizar ordenes, es necesario que actualices todos tus datos",
-      "update": "Actualizar",
+      "forbidden": "¡Bienvenido a kassna!",
+      "forbidden2": "Invita a tus amigos con tu código kassna ",
+      "forbidden3": "y gana $140 por cada persona que lo use.",
+      "forbidden4": "Para poder agendar tu primer masaje necesitamos un poco de información adicional.",
+      "update": "Completar datos",
       "pendingPromos1": "Tienes ",
       "pendingPromos2": " de descuento adicional disponible. ¿Deseas aplicarlo?"
     },
@@ -549,7 +552,7 @@
       "title": "Mis datos"
     },
     "promoCode": {
-      "title": "Código para compartir",
+      "title": "Código kassna",
       "text1": "Tu código es",
       "text2": "Invita a tus amigos y recibe $140 de descuento por cada uno que lo use!",
       "text3": "En este momento tienes disponible",
