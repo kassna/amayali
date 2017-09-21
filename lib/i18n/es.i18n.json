@@ -295,21 +295,20 @@
       "experienceTypes": "¿En qué tipo de masajes tienes experiencia? (Seleccionar uno o más)",
       "experienceTypesSelect": {
         "options": {
-          "a": "Masaje Lomi Lomi / Hawaiano",
-          "b": "Masaje Shiatsu",
-          "c": "Masaje Ayurvédico",
+          "a": "Masaje Relajandte",
+          "b": "Masaje Descontracturante",
+          "c": "Masaje Deportivo",
           "d": "Masaje Prenatal",
-          "e": "Masaje Post-parto",
+          "e": "Masaje Ayurvédico",
           "f": "Masaje Tailandés",
           "g": "Masaje Sueco",
-          "h": "Masaje Deportivo",
-          "i": "Masaje Descontracturante",
+          "h": "Masaje Shiatsu (Silla)",
+          "i": "Masaje Shiatsu (Cama)",
           "j": "Reflexología Podal",
           "k": "Masaje Reductivo",
           "l": "Masaje Terapéutico",
           "m": "Drenaje Linfático",
-          "n": "Masaje Champi (cabeza)",
-          "o": "Masaje Geriátrico",
+          "o": "Masaje Lomi Lomi / Hawaiano",
           "p": "Otros"
         }
       },
