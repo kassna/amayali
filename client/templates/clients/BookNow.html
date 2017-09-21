@@ -3,29 +3,26 @@
       {{setLocationId client.locationId}}
       {{setPendingPromos client.pendingPromos}}
       {{setClientId client._id}}
+      
+      {{#if client.completedProfile}}
       <div class="dashhead">
           <div class="dashhead-titles">
               <h2 class="dashhead-title title-style c-green">{{_ "general.bookNow"}}<span class="c-yellow"> - Total ${{ total }}</span> </h2>
           </div>
       </div>
+      {{else}}
+      {{/if}}
 
       <div class="book-form turquoise">
         <div class="simform">
           {{#if client.completedProfile}}
             {{> BookNowClientForm}}
           {{else}}
-            <p>
             <h2 class="c-yellow text-center">{{_ "client.bookNow.forbidden"}}</h2>
-            </p>
-            <p>
             <h3 class="c-green text-center">{{_ "client.bookNow.forbidden2"}}</h3>
             <h1 class="big c-yellow text-center">{{promoCodeCode client.promoCodeId}}</h1>
             <h3 class="c-green text-center">{{_ "client.bookNow.forbidden3"}}</h3>
-            </p>
-            <p> </p>
-            <p>
             <h3 class="c-green text-center">{{_ "client.bookNow.forbidden4"}}</h3>
-            </p>
             <div class="footer-buttons center">
               <button class="btn-success edit-data">{{_ "client.bookNow.update"}}</button>
             </div>
