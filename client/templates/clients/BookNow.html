@@ -15,15 +15,16 @@
             {{> BookNowClientForm}}
           {{else}}
             <p>
-            <h1 class="c-yellow text-center">{{_ "client.bookNow.forbidden"}}</h1>
+            <h2 class="c-yellow text-center">{{_ "client.bookNow.forbidden"}}</h2>
             </p>
             <p>
-            <h3 class="c-yellow text-center">{{_ "client.bookNow.forbidden2"}}</h3>
-            <h1 class="big c-yellow">{{promoCodeCode client.promoCodeId}}</h1>
-            <h3 class="c-yellow text-center">{{_ "client.bookNow.forbidden3"}}</h3>
+            <h3 class="c-green text-center">{{_ "client.bookNow.forbidden2"}}</h3>
+            <h1 class="big c-yellow text-center">{{promoCodeCode client.promoCodeId}}</h1>
+            <h3 class="c-green text-center">{{_ "client.bookNow.forbidden3"}}</h3>
             </p>
+            <p> </p>
             <p>
-            <h3 class="c-yellow text-center">{{_ "client.bookNow.forbidden4"}}</h3>
+            <h3 class="c-green text-center">{{_ "client.bookNow.forbidden4"}}</h3>
             </p>
             <div class="footer-buttons center">
               <button class="btn-success edit-data">{{_ "client.bookNow.update"}}</button>

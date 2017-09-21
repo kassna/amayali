@@ -538,8 +538,8 @@
     "bookNow": {
       "forbidden": "¡Bienvenido a kassna!",
       "forbidden2": "Invita a tus amigos con tu código kassna ",
-      "forbidden3": "y gana $140 por cada persona que lo use.",
-      "forbidden4": "Para poder agendar tu primer masaje necesitamos un poco de información adicional.",
+      "forbidden3": "y ganen $140 cada uno cuando lo usen.",
+      "forbidden4": "Completa tus datos para agendar tu primer masaje.",
       "update": "Completar datos",
       "pendingPromos1": "Tienes ",
       "pendingPromos2": " de descuento adicional disponible. ¿Deseas aplicarlo?"
