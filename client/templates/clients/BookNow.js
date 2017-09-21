@@ -53,6 +53,10 @@ const resetOrderSession = () => {
 
 Template.BookNowClient.onCreated(function () {
   if (!Session.get('total')) Session.set('total', 0);
+	let self = this;
+	self.autorun(function() {
+		self.subscribe('clientPromoCode');
+	});
 });
 
 Template.BookNowClientForm.onRendered(() => {
@@ -227,11 +231,4 @@ Template.BookNowClientPaypal.onRendered(() => {
       return executePaypal(actions);
     }
   }, '#paypal-button-container');
-});
-
-Template.PromoCodeClient.onCreated(function() {
-	let self = this;
-	self.autorun(function() {
-		self.subscribe('clientPromoCode');
-	});
 });
