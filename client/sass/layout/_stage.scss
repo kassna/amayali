@@ -20,7 +20,7 @@
   width: $stage-shelf-width;
   padding-top: 30px;
   background-color: darken($stage-bg, 5%);
-  overflow: hidden;
+  overflow: auto;
   touch-action: pan-y;
 }
 .stage-shelf-right {
