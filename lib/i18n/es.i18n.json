@@ -22,7 +22,8 @@
       "title": "Masajes en tu casa",
       "lead": "Con los mejores terapeutas profesionales desde $699",
       "lead1": "Reserva en menos de 90 segundos",
-      "lead2": "Servicio diario de 8am a 10pm"
+      "lead2": "Servicio diario de 8am a 10pm",
+      "lead3": "Reserva con 4 horas de anticipación"
     },
     "steps": {
       "step1": "Reserva",
@@ -171,7 +172,7 @@
     "next": "Siguiente",
     "back": "Regresar",
     "finish": "Comprar",
-    "verify": "Verificar",
+    "verify": "Aplicar",
     "step1": "Horario",
     "step2": "Masaje",
     "step3": "Dirección",
