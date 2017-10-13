@@ -214,6 +214,7 @@ Meteor.methods({
 	paypalPostPayClient: order => {
 		const client = Clients.findOne(order.clientId);
 		const { firstname, lastname, email, phone, address } = client;
+		Meteor.call('addClientPromo', order);
 		if (order.referencePromos) {
 			Clients.update({ _id: client._id }, { $set: { pendingPromos: 0 }});
 		}
