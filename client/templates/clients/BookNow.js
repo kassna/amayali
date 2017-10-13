@@ -56,7 +56,16 @@ Template.BookNowClient.onCreated(function () {
 	let self = this;
 	self.autorun(function() {
 		self.subscribe('clientPromoCode');
-	});
+  });
+  
+  // Get paypal env
+  Meteor.call('getPaypalEnv', (err, res) => {
+    if (err) {
+      FlowRouter.reload();
+    } else {
+      Session.set('paypal_env', res);
+    }
+  })
 });
 
 Template.BookNowClientForm.onRendered(() => {
@@ -186,6 +195,7 @@ Template.BookNowClientForm.events({
 Template.BookNowClientPaypal.onRendered(() => {
   // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
   const env = Session.get('paypal_env');
+  console.log(env);
   paypal.Button.render({
     env,
     client: {
