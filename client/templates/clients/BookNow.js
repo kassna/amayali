@@ -168,6 +168,7 @@ Template.BookNowClientForm.events({
       Session.set('pendingPromos', Number(val));
     }
   },
+  'change [name="date"]': event => verifySchedule(event.target.value),
   'click #verifyPromo': event => {
     const code = Session.get('promoCode');
     Meteor.call('verifyPromoCode', code, Session.get('locationId'), (err, res) => {
@@ -211,7 +212,7 @@ Template.BookNowClientPaypal.onRendered(() => {
     commit: true,
     payment: (data, actions) => {
       const orderDetails = getOrderDetails();
-      if (!verifyRequired(requiredInputs)) {
+      if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
         return false;
       }
       return actions.payment.create({

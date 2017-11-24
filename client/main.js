@@ -33,6 +33,16 @@ scrollTop = () => {
 rate_90 = baseRate => baseRate * 1.5 - (baseRate - 599) * 0.495 + 0.005 * (699 - baseRate)
 rate_120 = baseRate => baseRate * 2 - (baseRate - 599) * 2 + 1
 
+// Verify valid hours
+verifySchedule = (value) => {
+	let notAllowed = [0, 1, 2, 3, 4, 5, 6, 7, 22, 23];
+	if (_.includes(notAllowed, moment(value).hour())) {
+		Bert.alert(TAPi18n.__('book.errors.invalidHour', null), 'danger');
+		return false;
+	}
+	return true;
+}  
+
 // Initialize datepicker
 datepickerSetup = () => {
 	let date = Session.get('date') || "";

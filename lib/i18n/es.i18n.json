@@ -209,7 +209,7 @@
     "paypal": "PayPal",
     "errors": {
       "requiredInputs": "Todos los campos son obligatorios",
-      "invalidHour": "No podemos atenderte en esa hora, por favor selecciona otra.",
+      "invalidHour": "No podemos atenderte en esa hora. Nuestro horario es de 8AM a 10PM",
       "passwordMatch": "Tus contraseñas no coinciden, intenta de nuevo.",
       "emailInvalid": "El email es incorrecto o ya existe, intenta de nuevo.",
       "payment": "Ha habido un error en tu pago, por favor intenta de nuevo",
