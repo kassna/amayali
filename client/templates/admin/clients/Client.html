@@ -13,11 +13,9 @@
       <td>{{pendingPromos}}</td>
       <td>{{humanDateHour createdAt}}</td>
       <td>
-      	{{#if completedProfile}}
-          <button type="" class="btn btn-round btn-info-outline edit-button">
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-          </button>
-        {{/if}}
+        <button type="" class="btn btn-round btn-info-outline edit-button">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
       </td>
       <td>
       	{{#if isInRole 'superadmin'}}
