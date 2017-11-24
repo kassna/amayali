@@ -180,7 +180,7 @@ Meteor.methods({
 
 	// User
 	clientOrders: () => {
-		const clientId = Clients.findOne({ userId: Meteor.userId() });
+		const clientId = Clients.findOne({ userId: Meteor.userId() })._id;
 		return Orders.find({ clientId }).count();
 	},
 
