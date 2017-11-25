@@ -347,6 +347,14 @@
           "amount": "Restar cantidad al total"
         }
       },
+      "usage": "Uso del cupón",
+      "usageSelect": {
+        "options": {
+          "regular": "Normal",
+          "gift": "Regalo",
+          "new": "Exclusivo nuevos clientes"
+        }
+      },
       "amount": "Si es porcentaje, escribir de 0 a 100 sin el signo %. Si es para restar, escribir la cantidad de descuento",
       "locationsId": "Ciudades disponibles"
     },
@@ -445,6 +453,12 @@
       "typeOptions": {
         "amount": "Restar cantidad",
         "percentage": "Porcentaje"
+      },
+      "usage": "Uso",
+      "usageOptions": {
+        "regular": "Normal",
+        "gift": "Regalo",
+        "new": "Nuevos clientes"
       },
       "amount": "Descuento",
       "locationsId": "Ciudades"

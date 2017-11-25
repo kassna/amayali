@@ -19,6 +19,7 @@
                               <th>{{_ "admin.promoCodes.code"}}</th>
                               <th>{{_ "admin.promoCodes.type"}}</th>
                               <th>{{_ "admin.promoCodes.amount"}}</th>
+                              <th>{{_ "admin.promoCodes.usage"}}</th>
                               <th>{{_ "admin.promoCodes.locationsId"}}</th>
                               <th>{{_ "admin.general.createdAt"}}</th>
                               <th></th>
@@ -32,7 +33,7 @@
                               {{> PromoCode}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=9}}
+                                  {{> NoResults cols=10}}
                               </tr>
                           {{/each}}
                       </tbody>

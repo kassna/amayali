@@ -31,7 +31,7 @@ Meteor.methods({
 		const ids = PromoCodes.find(selector).map(item => item._id);
     if(Clients.find({ promoCodeId: { $in: ids } }).count()) {
       throw new Meteor.Error('has-dependency', `Item can't be deleted because it has dependency`);
-    }
+		}
 	},
 
 	toggleStatusPromoCode: id => {
@@ -66,13 +66,19 @@ Meteor.methods({
 		return false;
 	},
 
-	addClientPromo: order => {
+	checkoutPromoCode: order => {
 		const { promoCode } = order;
 		if (promoCode) {
-			const promoCodeId = PromoCodes.findOne({ code: promoCode })._id;
+			const { _id: promoCodeId, usage } = PromoCodes.findOne({ code: promoCode });
+			// Verify if it's a reference code, to add pendingPromo to code owner
 			const client = Clients.findOne({ promoCodeId });
 			if (client) {
 				Clients.update({ _id: client._id }, { $set: { pendingPromos: client.pendingPromos + 1 }});
+				return;
+			}
+			// Verify if code is a gift, so it's removed
+			if (usage === 'gift') {
+				PromoCodes.remove({ _id: promoCodeId });
 			}
 		}
 	},
@@ -204,9 +210,9 @@ Meteor.methods({
 	paypalPostPay: (order, accountDetails) => {
 		if(accountDetails) {
 			order.clientId = Meteor.call('createClientFromOrder', accountDetails, order);
-			Meteor.call('addClientPromo', order);
 			Meteor.call('sendWelcome', order.clientId);
 		}
+		Meteor.call('checkoutPromoCode', order);
 		Meteor.call('sendNewOrder', order);
 		return Orders.insert(order);
 	},
@@ -214,7 +220,7 @@ Meteor.methods({
 	paypalPostPayClient: order => {
 		const client = Clients.findOne(order.clientId);
 		const { firstname, lastname, email, phone, address } = client;
-		Meteor.call('addClientPromo', order);
+		Meteor.call('checkoutPromoCode', order);
 		if (order.referencePromos) {
 			Clients.update({ _id: client._id }, { $set: { pendingPromos: 0 }});
 		}

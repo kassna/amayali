@@ -25,10 +25,10 @@ class PromoCodesCollection extends Mongo.Collection {
   remove(selector, callback) {
     Meteor.call('removePromoCodes', selector, err => {
       if (err) {
-        Bert.alert( TAPi18n.__('admin.general.failDelete', null), 'danger', 'growl-top-right' );
+        Meteor.isClient && Bert.alert( TAPi18n.__('admin.general.failDelete', null), 'danger', 'growl-top-right' );
         return false;
       }
-      Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
+      Meteor.isClient && Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
       return super.remove(selector, callback);
     });
   }
@@ -64,6 +64,20 @@ PromoCodesSchema = new SimpleSchema({
         return [
           {value: "amount", label: TAPi18n.__(`schemas.promoCodes.typeSelect.options.amount`, null)},
           {value: "percentage", label: TAPi18n.__(`schemas.promoCodes.typeSelect.options.percentage`, null)}
+        ]
+      }
+    },
+  },
+  usage: {
+    type: String,
+    defaultValue: 'regular',
+    autoform: {
+      type: 'select-radio-inline',
+      options() {
+        return [
+          { value: "regular", label: TAPi18n.__(`schemas.promoCodes.usageSelect.options.regular`, null) },
+          { value: "gift", label: TAPi18n.__(`schemas.promoCodes.usageSelect.options.gift`, null) },
+          { value: "new", label: TAPi18n.__(`schemas.promoCodes.usageSelect.options.new`, null) }
         ]
       }
     },
