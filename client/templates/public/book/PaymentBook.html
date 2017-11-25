@@ -11,17 +11,20 @@
         <label for="">Acepto los <a href="">Términos y Condiciones</a> del servicio</label> -->
         {{> termsForm}}
       </p>
-      {{> PaypalBook}}
+        {{> PaypalBook}}
     </div>
   </div>
 </template>
 
 <template name="PaypalBook">
-  <div class="text-center m-t-lg m-b-lg m-t-md-xs m-b-lg-xs">
+  <div class="text-center m-t-lg m-b-lg m-t-md-xs m-b-lg-xs {{#if $not payWithPaypal}}hidden{{/if}}">
     <div id="paypal-button-container"></div>
   </div>
 
   <div class="footer-buttons start">
     <button class="btn-default m-t-0" id="back4">{{_ "book.back"}}</button>
+    {{#if $not payWithPaypal}}
+      <button class="btn-success m-t-0" id="payWithoutPaypal">{{_ "book.book"}}</button>
+    {{/if}}
   </div>
 </template>

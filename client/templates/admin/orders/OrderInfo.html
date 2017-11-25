@@ -12,7 +12,12 @@
                     <b>{{_ "admin.orders.total"}}:</b> ${{ currentOrder.total }}
                   </div>
                   <div class="group">
-                    <b>{{_ "admin.orders.transactionId"}}:</b> {{ currentOrder.transactionId }}
+                    <b>{{_ "admin.orders.transactionId"}}:</b>
+                    {{#if currentOrder.transactionId }}
+                      {{ currentOrder.transactionId }}
+                    {{else}}
+                       {{_ "admin.orders.freeOrder"}}
+                    {{/if}}
                   </div>
                   {{#if currentOrder.promoCode}}
                   <div class="group">

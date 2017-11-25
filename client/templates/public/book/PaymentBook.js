@@ -48,15 +48,17 @@ const handleErrorPayment = error => {
   else Bert.alert(TAPi18n.__('book.errors.payment', null), 'danger');
 }
 
-// Make a call to the REST api to execute the payment
-const executePaypal = actions => actions.payment.execute().then(res => {
+const postPayment = (withPaypal, res) => {
   let orderDetails = getOrderDetails();
-  // Add paypal id to order
-  orderDetails.transactionId = res.id;
-  let accountDetails = null;
 
+  if (withPaypal) {
+    // Add paypal id to order
+    orderDetails.transactionId = res.id;
+  }
+
+  let accountDetails = null;
   // Get account details
-  if(Session.get('createAccount')) {
+  if (Session.get('createAccount')) {
     accountDetails = getAccountDetails();
   }
 
@@ -75,42 +77,12 @@ const executePaypal = actions => actions.payment.execute().then(res => {
       }
     }
   });
-})
+}
 
-Template.PaymentBook.onCreated(function () {
-    this.creditCard = new ReactiveVar(true);
-});
-
-Template.PaymentBook.helpers({
-  'creditCard': () => Template.instance().creditCard.get(),
-  'months': () => _.map(['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], _id => {
-    return {
-      _id,
-      name: () => TAPi18n.__(`book.months.${_id}`, null)
-    }
-  }),
-  'years': () => {
-    const currYear = moment().year();
-    const arr = [];
-    for (var i = 0; i <= 12; i++) {
-      arr.push({
-        _id: String(currYear + i).substring(2),
-        name: currYear + i
-      });
-    }
-    return arr;
-  }
-});
+// Make a call to the REST api to execute the payment
+const executePaypal = actions => actions.payment.execute().then(res => postPayment(true, res))
 
 Template.PaymentBook.events({
-  'change [name="creditCard"]': (event, template) => {
-    const val = $("[name='creditCard']:checked").val();
-    if(val === 'yes') {
-      template.creditCard.set(true);
-    } else {
-      template.creditCard.set(false);
-    }
-  },
   'click #verifyPromo': event => {
     const code = Session.get('promoCode');
     Meteor.call('verifyPromoCode', code, Session.get('locationId'), (err, res) => {
@@ -197,3 +169,12 @@ Template.PaypalBook.onRendered(() => {
     }
   }, '#paypal-button-container');
 });
+
+Template.PaypalBook.helpers({
+  // If total is 0, payment should be skipped
+  payWithPaypal: () => Session.get('total') > 0,
+});
+
+Template.PaypalBook.events({
+  'click #payWithoutPaypal': () => postPayment(false),
+})

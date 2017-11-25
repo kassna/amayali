@@ -207,7 +207,7 @@ Meteor.methods({
 		}
 	},
 
-	paypalPostPay: (order, accountDetails) => {
+	postPayment: (order, accountDetails) => {
 		if(accountDetails) {
 			order.clientId = Meteor.call('createClientFromOrder', accountDetails, order);
 			Meteor.call('sendWelcome', order.clientId);
@@ -217,7 +217,7 @@ Meteor.methods({
 		return Orders.insert(order);
 	},
 
-	paypalPostPayClient: order => {
+	postPaymentClient: order => {
 		const client = Clients.findOne(order.clientId);
 		const { firstname, lastname, email, phone, address } = client;
 		Meteor.call('checkoutPromoCode', order);

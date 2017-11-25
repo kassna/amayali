@@ -1,4 +1,4 @@
-const requiredInputs = ['product', 'type', 'therapistsType', 'date', 'total'];
+const requiredInputs = ['product', 'type', 'therapistsType', 'date'];
 
 const getOrderDetails = () => {
   let orderDetails = {
@@ -25,14 +25,16 @@ const handleErrorPayment = error => {
   Bert.alert(TAPi18n.__('book.errors.payment', null), 'danger');
 }
 
-// Make a call to the REST api to execute the payment
-const executePaypal = actions => actions.payment.execute().then(res => {
+const postPayment = (withPaypal, res) => {
   let orderDetails = getOrderDetails();
-  // Add paypal id to order
-  orderDetails.transactionId = res.id;
+
+  if (withPaypal) {
+    // Add paypal id to order
+    orderDetails.transactionId = res.id;
+  }
 
   // Attempt to insert order and account
-  Meteor.call('paypalPostPayClient', orderDetails, (err, res) => {
+  Meteor.call('postPaymentClient', orderDetails, (err, res) => {
     if (err) {
       handleErrorPayment(err);
       return false;
@@ -42,7 +44,10 @@ const executePaypal = actions => actions.payment.execute().then(res => {
       FlowRouter.go('client-pending-orders');
     }
   });
-})
+}
+
+// Make a call to the REST api to execute the payment
+const executePaypal = actions => actions.payment.execute().then(res => postPayment(true, res))
 
 const resetOrderSession = () => {
   const toReset = _.concat(requiredInputs, ['promoCodeValid', 'promoCode']);
@@ -92,11 +97,9 @@ Template.BookNowClient.helpers({
     // Apply pending promos
     if (pendingPromos) {
       subTotal -= pendingPromos * 140;
-      if(subTotal < 0) {
-        subTotal = 5;
-      }
     }
-		const total = Math.round(subTotal);
+    // Safe asign total
+    const total = subTotal > 0 ? Math.round(subTotal) : 0;
     Session.set('total', total);
     return total;
   },
@@ -196,7 +199,6 @@ Template.BookNowClientForm.events({
 Template.BookNowClientPaypal.onRendered(() => {
   // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
   const env = Session.get('paypal_env');
-  console.log(env);
   paypal.Button.render({
     env,
     client: {
@@ -243,3 +245,18 @@ Template.BookNowClientPaypal.onRendered(() => {
     }
   }, '#paypal-button-container');
 });
+
+Template.BookNowClientPaypal.helpers({
+  // If total is 0, payment should be skipped
+  payWithPaypal: () => Session.get('total') > 0,
+});
+
+Template.BookNowClientPaypal.events({
+  'click #payWithoutPaypal': () => {
+    const orderDetails = getOrderDetails();
+    if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
+      return false;
+    }
+    postPayment(false);
+  }
+})
