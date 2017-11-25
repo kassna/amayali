@@ -10,6 +10,7 @@
     "bootstrap-select": "*",
     "braintree": "^2.1.1",
     "braintree-web": "^3.19.0",
+    "clipboard": "^1.7.1",
     "conekta": "^2.1.0",
     "masonry-layout": "^4.1.1",
     "meteor-node-stubs": "~0.2.0",

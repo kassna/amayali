@@ -17,6 +17,17 @@
         {{/if}}
       </td>
       <td>
+        {{#if clientId}}
+          {{#if $eq status 'completed'}}
+            {{#if $not answeredSurvey this.survey}}
+              <button class="btn btn-round btn-info-outline copy-to-clipboard" data-clipboard-text="{{surveyLink this.survey}}">
+                <i class="fa fa-clipboard" aria-hidden="true"></i>
+              </button>
+            {{/if}}
+          {{/if}}
+        {{/if}}
+      </td>
+      <td>
         {{#if $eq status 'completed'}}
           {{#if clientId}}
             <input type="number" name="therapistGrade" min="0" max="10" style="width: 50px" value="{{therapistGrade}}">

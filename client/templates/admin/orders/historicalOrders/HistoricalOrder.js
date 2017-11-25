@@ -2,7 +2,8 @@ Template.HistoricalOrder.helpers({
 	answeredSurvey: surveyId => {
 		const survey = Surveys.findOne(surveyId);
 		return survey && survey.answered;
-	}
+	},
+	surveyLink: surveyId => `${Meteor.absoluteUrl()}encuesta/${surveyId}`
 });
 
 
