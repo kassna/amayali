@@ -9,7 +9,7 @@ class OrdersCollection extends Mongo.Collection {
     this.find(selector).map(item => {
       Surveys.remove(item.survey);
     });
-    Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
+    Meteor.isClient && Bert.alert( TAPi18n.__('admin.general.successDelete', null), 'success', 'growl-top-right' );
     return super.remove(selector, callback);
   }
 }
