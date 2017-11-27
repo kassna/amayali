@@ -2,6 +2,17 @@ class OrdersCollection extends Mongo.Collection {
   insert(doc, callback) {
     const ourDoc = doc;
     ourDoc.createdAt = new Date();
+
+    const client = Clients.findOne(ourDoc.clientId);
+    // If order has client, get info from account
+    if (client) {
+      const { firstname, lastname, email, phone, address } = client;
+      _.merge(ourDoc, { firstname, lastname, email, phone, address });
+      $('#new-modal').modal('hide');
+      Bert.alert(TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right');
+    }
+    // Send new order emails
+    Meteor.call('sendNewOrder', ourDoc);
     return super.insert(ourDoc, callback);
   }
 
@@ -18,8 +29,8 @@ Orders = new OrdersCollection('orders');
 
 Orders.allow({
   insert: function(userId, doc) {
-    // orders can be created just server-side
-    return false;
+    // just admins can create
+    return Roles.userIsInRole(userId, ['admin']);
   },
   update: function(userId, doc) {
     // just admins can update
@@ -98,9 +109,6 @@ OrdersSchema = new SimpleSchema({
   total: {
     type: Number,
     decimal: true,
-    autoform: {
-      omit: true
-    },
   },
   promoCode: {
     type: String,
@@ -125,30 +133,24 @@ OrdersSchema = new SimpleSchema({
     regEx: SimpleSchema.RegEx.Id,
     optional: true,
     autoform: {
-      omit: true
+      firstOption: '(Selecciona)',
+      options() {
+        return Clients.find().map(({ _id, firstname, lastname }) => ({ label: `${firstname} ${lastname}`, value: _id }));
+      },
     },
   },
   firstname: {
     type: String,
-    autoform: {
-      omit: true
-    },
   },
   lastname: {
     type: String,
-    autoform: {
-      omit: true
-    },
   },
   email: {
     type: String,
     regEx: SimpleSchema.RegEx.Email,
-    autoform: {
-      omit: true
-    },
   },
   phone: {
-    type: String
+    type: String,
   },
   address: {
     type: AddressSchema,

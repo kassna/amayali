@@ -2,7 +2,7 @@ Surveys = new Mongo.Collection('surveys');
 
 Surveys.allow({
   insert: function(userId, doc) {
-    return false;
+    return Roles.userIsInRole(userId, ['admin']);
   },
   update: function(userId, doc) {
     return true;

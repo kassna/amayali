@@ -4,6 +4,11 @@
             <div class="dashhead-titles">
                 <h2 class="dashhead-title title-style c-green">{{_ "admin.orders.pendingOrders"}}</h2>
             </div>
+            <div class="btn-toolbar dashhead-toolbar">
+                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
+                    {{_ "admin.general.add"}}
+                </button>
+            </div>
         </div>
 
         {{#if Template.subscriptionsReady}}
@@ -43,6 +48,7 @@
 
         {{> OrderInfo}}
         {{> ClientInfoOrder}}
+        {{> NewModal collection="Orders"}}
         {{> EditModal collection="Orders" editItem=editItem }}
 
     {{else}}

@@ -387,12 +387,15 @@
         }
       },
       "date": "Fecha y hora",
-      "total": "Total",
+      "total": "Total (Recuerda mantener sincronizados los totales con los recibos de Paypal)",
       "therapist": "Terapeuta",
       "clientId": "Cliente",
-      "phone": "Teléfono",
+      "firstname": "Nombre(s) (Si es una nueva orden para un cliente existente, deja vacío este campo)",
+      "lastname": "Apellido(s) (Si es una nueva orden para un cliente existente, deja vacío este campo)",
+      "email": "Email (Si es una nueva orden para un cliente existente, deja vacío este campo)",
+      "phone": "Teléfono (Si es una nueva orden para un cliente existente, deja vacío este campo)",
       "address": {
-        "street1": "Calle y Número",
+        "street1": "Calle y Número (Si es una nueva orden para un cliente existente, deja vacíos todos los campos de dirección)",
         "street2": "Colonia",
         "zip": "Código Postal",
         "reference": "Referencias del lugar",

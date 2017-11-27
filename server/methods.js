@@ -216,19 +216,14 @@ Meteor.methods({
 			Meteor.call('sendWelcome', order.clientId);
 		}
 		Meteor.call('checkoutPromoCode', order);
-		Meteor.call('sendNewOrder', order);
 		return Orders.insert(order);
 	},
 
 	postPaymentClient: order => {
-		const client = Clients.findOne(order.clientId);
-		const { firstname, lastname, email, phone, address } = client;
 		Meteor.call('checkoutPromoCode', order);
 		if (order.referencePromos) {
 			Clients.update({ _id: client._id }, { $set: { pendingPromos: 0 }});
 		}
-		_.merge(order, { firstname, lastname, email, phone, address });
-		Meteor.call('sendNewOrder', order);
 		return Orders.insert(order);
 	},
 

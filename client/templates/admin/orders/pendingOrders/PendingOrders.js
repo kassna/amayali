@@ -3,6 +3,7 @@ Template.PendingOrders.onCreated(function() {
 	self.autorun(() => {
 		self.subscribe('therapistPendingOrders', Session.get('currentCity'));
 		self.subscribe('activeTherapists', Session.get('currentCity'));
+		self.subscribe('clients', Session.get('currentCity'));
 	});
 });
 
