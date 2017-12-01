@@ -8,8 +8,8 @@ class OrdersCollection extends Mongo.Collection {
     if (client) {
       const { firstname, lastname, email, phone, address } = client;
       _.merge(ourDoc, { firstname, lastname, email, phone, address });
-      $('#new-modal').modal('hide');
-      Bert.alert(TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right');
+      Meteor.isClient && $('#new-modal').modal('hide');
+      Meteor.isClient && Bert.alert(TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right');
     }
     // Send new order emails
     Meteor.call('sendNewOrder', ourDoc);

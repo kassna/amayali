@@ -3,7 +3,11 @@
       <td>{{code}}</td>
       <td>{{prettyPromoType type}}</td>
       <td><b>{{prettyDiscount type amount}}</b></td>
-      <td>{{usageType usage}}</td>
+      <td>
+          {{#if usage}}
+          {{usageType usage}}
+          {{/if}}
+      </td>
       <td>{{locationsName locationsId}}</td>
       <td>{{humanDate createdAt}}</td>
       <td><i class="status-icon {{#if status}}active{{else}}not-active{{/if}}"></i></td>
