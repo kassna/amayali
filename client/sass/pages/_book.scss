@@ -470,6 +470,13 @@ $borderRadius: 8px;
     }
   }
 
+  // TEXT-AREA
+  .text-area-cont {
+    label {
+      position: static !important;
+    }
+  }
+
   // FOOTER BUTTONS
   .footer-buttons {
     display: flex;

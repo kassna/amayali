@@ -252,6 +252,11 @@ Meteor.methods({
 		Surveys.update({ _id }, { $set: survey });
 	},
 
+	// Therapist Survey
+	'completeTherapistSurvey': (_id, survey) => {
+		TherapistSurveys.update({ _id }, { $set: survey });
+	},
+
 	// Mails
 	'sendContactUs': (name, email, phone, message) => {
 		Mailer.send({

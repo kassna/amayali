@@ -202,3 +202,25 @@ Meteor.publish('completedOrdersSurveys', location => {
 });
 
 Meteor.publish('survey', _id => Surveys.find({ _id }));
+
+////////////////////////
+///  Therapist Surveys
+////////////////////////
+
+Meteor.publish('completedOrdersTherapistSurveysClient', function () {
+  const clientId = Clients.findOne({ userId: this.userId })._id;
+  const includeArr = Orders.find({ status: 'completed', clientId }).map(item => item.therapistSurvey);
+  return TherapistSurveys.find({ _id: { $in: includeArr } });
+});
+
+Meteor.publish('completedOrdersTherapistSurveys', location => {
+  const includeArr = Orders.find({ status: 'completed' }).map(item => item.therapistSurvey);
+  if (location) {
+    Orders.find({ status: 'completed', locationId: location }).map(item => includeArr.push(item.therapistSurvey));
+  } else {
+    Orders.find({ status: 'completed' }).map(item => includeArr.push(item.therapistSurvey));
+  }
+  return TherapistSurveys.find({ _id: { $in: includeArr } });
+});
+
+Meteor.publish('therapistSurvey', _id => TherapistSurveys.find({ _id }));

@@ -9,7 +9,7 @@
       </td>
       <td class="text-center">
         {{#if $eq status 'completed'}}
-          {{#if answeredSurvey this.survey}}
+          {{#if answeredSurvey this.survey false}}
           <button type="" class="btn btn-round btn-info-outline view-survey-btn">
             <i class="fa fa-smile-o" aria-hidden="true"></i>
           </button>
@@ -17,13 +17,29 @@
         {{/if}}
       </td>
       <td>
-        {{#if clientId}}
-          {{#if $eq status 'completed'}}
-            {{#if $not answeredSurvey this.survey}}
-              <button class="btn btn-round btn-info-outline copy-to-clipboard" data-clipboard-text="{{surveyLink this.survey}}">
-                <i class="fa fa-clipboard" aria-hidden="true"></i>
-              </button>
-            {{/if}}
+        {{#if $eq status 'completed'}}
+          {{#if answeredSurvey this.survey true}}
+            <button class="btn btn-round btn-info-outline copy-to-clipboard" data-clipboard-text="{{surveyLink this.survey}}">
+              <i class="fa fa-clipboard" aria-hidden="true"></i>
+            </button>
+          {{/if}}
+        {{/if}}
+      </td>
+      <td class="text-center">
+        {{#if $eq status 'completed'}}
+          {{#if answeredTherapistSurvey this.therapistSurvey false}}
+          <button type="" class="btn btn-round btn-info-outline view-therapist-survey-btn">
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+          </button>
+          {{/if}}
+        {{/if}}
+      </td>
+      <td>
+        {{#if $eq status 'completed'}}
+          {{#if answeredTherapistSurvey this.therapistSurvey true}}
+            <button class="btn btn-round btn-info-outline copy-to-clipboard" data-clipboard-text="{{therapistSurveyLink this.therapistSurvey}}">
+              <i class="fa fa-clipboard" aria-hidden="true"></i>
+            </button>
           {{/if}}
         {{/if}}
       </td>

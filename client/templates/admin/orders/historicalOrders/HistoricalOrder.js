@@ -1,8 +1,18 @@
 Template.HistoricalOrder.helpers({
-	answeredSurvey: surveyId => {
+	answeredSurvey: (surveyId, inverse) => {
 		const survey = Surveys.findOne(surveyId);
-		return survey && survey.answered;
+		console.log(survey, inverse);
+		return inverse
+		  ? !survey || !survey.answered
+			: survey && survey.answered;
 	},
+	answeredTherapistSurvey: (surveyId, inverse) => {
+		const survey = TherapistSurveys.findOne(surveyId);
+		return inverse
+		? !survey || !survey.answered
+		: survey && survey.answered;
+	},
+	therapistSurveyLink: surveyId => `${Meteor.absoluteUrl()}encuestaTerapeuta/${surveyId}`,
 	surveyLink: surveyId => `${Meteor.absoluteUrl()}encuesta/${surveyId}`
 });
 
@@ -27,6 +37,13 @@ Template.HistoricalOrder.events({
 		Session.set('surveyInfo', 1);
 		Meteor.setTimeout(function() {
 			$("#survey-info").modal('show');
+		}, 500);
+	},
+	'click .view-therapist-survey-btn': function () {
+		Session.set('viewId', this.therapistSurvey);
+		Session.set('therapistSurveyInfo', 1);
+		Meteor.setTimeout(function () {
+			$("#therapist-survey-info").modal('show');
 		}, 500);
 	},
 	'change input': function (event) {

@@ -12,10 +12,12 @@
                       <thead>
                           <tr>
                               <th>{{_ "admin.orders.status"}}</th>
-                              <th>{{_ "admin.orders.surveyShort"}}</th>
-                              <th>{{_ "admin.orders.copySurvey"}}</th>
-                              <th>{{_ "admin.orders.ratingTherapist"}}</th>
+                              <th>{{_ "admin.orders.surveyClient"}}</th>
+                              <th>{{_ "admin.orders.copySurveyClient"}}</th>
                               <th>{{_ "admin.orders.ratingClient"}}</th>
+                              <th>{{_ "admin.orders.ratingTherapist"}}</th>
+                              <th>{{_ "admin.orders.surveyTherapist"}}</th>
+                              <th>{{_ "admin.orders.copySurveyTherapist"}}</th>
                               <th>{{_ "admin.orders.locationId"}}</th>
                               <th>{{_ "admin.orders.name"}}</th>
                               <th>{{_ "admin.orders.date"}}</th>
@@ -33,7 +35,7 @@
                               {{> HistoricalOrder}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=15}}
+                                  {{> NoResults cols=17}}
                               </tr>
                           {{/each}}
                       </tbody>
@@ -46,6 +48,7 @@
         {{> OrderInfo}}
         {{> ClientInfoOrder}}
         {{> SurveyInfo}}
+        {{> TherapistSurveyInfo}}
 
     {{else}}
         {{> Forbidden}}

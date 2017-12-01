@@ -5,6 +5,7 @@ Template.HistoricalOrders.onCreated(function() {
 	self.autorun(() => {
 		self.subscribe('therapistHistoricalOrders', Session.get('currentCity'));
 		self.subscribe('completedOrdersSurveys', Session.get('currentCity'));
+		self.subscribe('completedOrdersTherapistSurveys', Session.get('currentCity'));
 	});
 });
 
@@ -20,9 +21,11 @@ Template.HistoricalOrders.onRendered(function() {
 						2: { sorter: false },
 						3: { sorter: false },
 						4: { sorter: false },
-						7: { sorter: false },
-						13: { sorter: false },
-						14: { sorter: false },
+						5: { sorter: false },
+						6: { sorter: false },
+						9: { sorter: false },
+						15: { sorter: false },
+						16: { sorter: false },
 		      }
 				});
 				const clipboard = new Clipboard('.copy-to-clipboard');

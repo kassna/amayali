@@ -92,6 +92,13 @@ Meteor.startup(() => {
             // Send survey email
             Meteor.call('sendSurvey', _id);
 	    }
-	});
+    });
 
+    Orders.find({ status: 'completed' }).map(order => {
+        let { _id, therapistSurvey } = order
+        if (therapistSurvey) return false;
+        therapistSurvey = TherapistSurveys.insert({});
+        Orders.update({ _id }, { $set: { therapistSurvey } });
+    });
+    
 });

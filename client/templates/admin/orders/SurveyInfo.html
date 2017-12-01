@@ -23,15 +23,15 @@
                     <b>{{_ "survey.improve.title"}}:</b> {{ prettyAnswer currentSurvey.question3 }}
                   </div>
                   {{/if}}
-                  {{#if currentSurvey.question4}}
-                  <div class="group">
-                    <b>{{_ "survey.comment.type"}}:</b> {{ prettyCommentType currentSurvey.question4 }}
-                  </div>
-                  {{/if}}
                   {{#if currentSurvey.comments}}
-                  <div class="group">
-                    <b>{{_ "survey.comment.field"}}:</b> {{ currentSurvey.comments }}
-                  </div>
+                    {{#if currentSurvey.question4}}
+                      <div class="group">
+                        <b>{{_ "survey.comment.type"}}:</b> {{ prettyCommentType currentSurvey.question4 }}
+                      </div>
+                    {{/if}}
+                    <div class="group">
+                      <b>{{_ "survey.comment.field"}}:</b> {{ currentSurvey.comments }}
+                    </div>
                   {{/if}}
   	            </div>
   	        </div>

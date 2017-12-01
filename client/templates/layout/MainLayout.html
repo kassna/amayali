@@ -2,7 +2,8 @@
 	<div class="stage-shelf stage-shelf-right hidden p-a" id="sidebar">
 		{{#if isInRole 'admin'}}
 			{{> SidebarAdmin}}
-		{{else}}
+		{{/if}}
+		{{#if isInRole 'client'}}
 			{{> SidebarClient}}
 		{{/if}}
 	</div>

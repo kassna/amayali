@@ -1,0 +1,46 @@
+<template name="TherapistSurveyInfo">
+  {{#if $.Session.get 'therapistSurveyInfo'}}
+    <div class="modal modal-info" id="therapist-survey-info">
+  	    <div class="modal-dialog modal-sm">
+  	        <div class="modal-content">
+  	            <div class="modal-header">
+  	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  	                <h4 class="modal-title block-subtitle c-turquoise">{{_ "therapistSurvey.title"}}</h4>
+  	            </div>
+  	            <div class="modal-body">
+                  {{#if currentSurvey.question1}}
+                    <div class="group">
+                      <b>{{_ "therapistSurvey.client.title"}}:</b> {{ currentSurvey.question1 }}
+                    </div>
+                  {{/if}}
+                  {{#if currentSurvey.question2}}
+                    <div class="group">
+                      <b>{{_ "therapistSurvey.kindness.title"}}:</b> {{ currentSurvey.question2 }}
+                    </div>
+                  {{/if}}
+                  {{#if currentSurvey.question3}}
+                    <div class="group">
+                      <b>{{_ "therapistSurvey.clean.title"}}:</b> {{ prettyAnswerTherapist1 currentSurvey.question3 }}
+                    </div>
+                  {{/if}}
+                  {{#if currentSurvey.question4}}
+                    <div class="group">
+                      <b>{{_ "therapistSurvey.agression.title"}}:</b> {{ prettyAnswerTherapist2 currentSurvey.question3 }}
+                    </div>
+                  {{/if}}
+                  {{#if currentSurvey.question5}}
+                    <div class="group">
+                      <b>{{_ "therapistSurvey.observations.title"}}:</b> {{ currentSurvey.question5 }}
+                    </div>
+                  {{/if}}
+                  {{#if currentSurvey.question6}}
+                    <div class="group">
+                      <b>{{_ "therapistSurvey.comments.title"}}:</b> {{ currentSurvey.question6 }}
+                    </div>
+                  {{/if}}
+  	            </div>
+  	        </div>
+  	    </div>
+  	</div>
+  {{/if}}
+</template>

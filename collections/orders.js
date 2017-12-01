@@ -170,6 +170,14 @@ OrdersSchema = new SimpleSchema({
       omit: true
     },
   },
+  therapistSurvey: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    optional: true,
+    autoform: {
+      omit: true
+    },
+  },
   referencePromos: {
     type: Number,
     defaultValue: 0,
@@ -229,9 +237,10 @@ OrdersSchema = new SimpleSchema({
   },
 });
 
-// Create survey for this order
+// Create client and therapist survey for this order
 Orders.before.insert((userId, doc) => {
   doc.survey = Surveys.insert({});
+  doc.therapistSurvey = TherapistSurveys.insert({});
 });
 
 // Add translations to labels

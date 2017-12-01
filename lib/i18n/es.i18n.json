@@ -403,10 +403,18 @@
       }
     },
     "surveys": {
-      "question1": "¿Cómo estuvo el servicio?",
-      "question2": "¿Cómo fue el trato de tu terapeuta?",
-      "question3": "¿Qué tan factible es que nos recomiendes de nuevo?",
-      "comments": "Escríbenos un comentario o sugerencia de nuestro servicio"
+      "question1": "¿Cómo fue tu experiencia Kassna",
+      "question2": "¿Qué fue lo que más disfrutaste?",
+      "question3": "¿Qué puede mejorar",
+      "comments": "Déjanos tu comentario o sugerenciao"
+    },
+    "therapistSurveys": {
+      "question1": "¿Cómo evaluarías al cliente?",
+      "question2": "¿Cómo evalúas la amabilidad y la limpieza del cliente?",
+      "question3": "¿Estaba el área despejada y limpia para preparar tu equipo cuando llegaste?",
+      "question4": "¿El cliente hizo alguna insinuación o comentario inapropiado durante la sesión?",
+      "question5": "Observaciones del cliente (contracturas, retención de líquidos, lesiones, focos de atención, etc.)",
+      "question6": "¿Quieres dejar un comentario adicional para recordar para la siguiente sesión con este cliente?"
     }
   },
   "admin": {
@@ -532,8 +540,10 @@
       "survey": "Encuesta de satisfacción",
       "infoOrder": "Información de la orden",
       "noTherapist": "No asignado",
-      "surveyShort": "Encuesta",
-      "copySurvey": "Copiar Encuesta",
+      "surveyClient": "Encuesta Cliente",
+      "copySurveyClient": "Copiar Encuesta Cliente",
+      "surveyTherapist": "Encuesta Terap.",
+      "copySurveyTherapist": "Copiar Encuesta Terap.",
       "copySuccess": "¡Éxito! El link de la encuesta ha sido copiada al portapapeles",
       "ratingTherapist": "Cal. Terap",
       "ratingClient": "Cal. Cliente",
@@ -611,5 +621,32 @@
      "congratulations": "Felicitación",
      "complain": "Queja"
    }
+  },
+  "therapistSurvey": {
+    "title": "Encuesta de satisfacción",
+    "thanks": "Gracias por tu participación.",
+    "client": {
+      "title": "¿Cómo evaluarías al cliente?"
+    },
+    "kindness": {
+      "title": "¿Cómo evalúas la amabilidad y la limpieza del cliente?"
+    },
+    "clean": {
+      "title": "¿Estaba el área despejada y limpia para preparar tu equipo cuando llegaste?",
+      "yes": "Si",
+      "no": "No" 
+    },
+    "agression": {
+      "title": "¿El cliente hizo alguna insinuación o comentario inapropiado durante la sesión?",
+      "yes": "Si",
+      "no": "No",
+      "unsure": "No estoy segur@"
+    },
+    "observations": {
+      "title": "Observaciones del cliente (contracturas, retención de líquidos, lesiones, focos de atención, etc.)"
+    },
+    "comments": {
+      "title": "¿Quieres dejar un comentario adicional para recordar para la siguiente sesión con este cliente?"
+    }
   }
 }

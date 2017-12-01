@@ -1,0 +1,48 @@
+<template name="TherapistSurvey">
+  {{#if therapistSurvey.answered}}
+  <h1 class="c-turquoise text-center">
+    {{_ "therapistSurvey.thanks"}}
+  </h1>
+  {{else}}
+  <h1 class="c-turquoise text-center">
+    {{_ "therapistSurvey.title"}}
+  </h1>
+  <div class="book-form turquoise survey">
+    <div class="simform">
+      <div class="button-select-cont">
+        <label>{{_ "therapistSurvey.client.title"}}</label>
+        <div class="button-select stars">
+          <img src="/img/Terrible.svg" class="svg star-client" data-star="1">
+          <img src="/img/Malo.svg" class="svg star-client" data-star="2">
+          <img src="/img/Regular.svg" class="svg star-client" data-star="3">
+          <img src="/img/Bueno.svg" class="svg star-client" data-star="4">
+          <img src="/img/Excelente.svg" class="svg star-client" data-star="5">
+        </div>
+      </div>
+      <div class="button-select-cont">
+        <label>{{_ "therapistSurvey.kindness.title"}}</label>
+        <div class="button-select stars">
+          <img src="/img/Terrible.svg" class="svg star-kindness" data-star="1">
+          <img src="/img/Malo.svg" class="svg star-kindness" data-star="2">
+          <img src="/img/Regular.svg" class="svg star-kindness" data-star="3">
+          <img src="/img/Bueno.svg" class="svg star-kindness" data-star="4">
+          <img src="/img/Excelente.svg" class="svg star-kindness" data-star="5">
+        </div>
+      </div>
+      {{> ButtonSelectBook attribute="clean" elements=clean placeholder="therapistSurvey.clean.title"}}
+      {{> ButtonSelectBook attribute="agression" elements=agression placeholder="therapistSurvey.agression.title"}}
+      <div class="text-area-cont button-select-cont textarea-cont">
+        <label>{{_ "therapistSurvey.observations.title"}}</label>        
+        <textarea id="observations"></textarea>
+      </div>
+      <div class="text-area-cont button-select-cont textarea-cont">
+        <label>{{_ "therapistSurvey.comments.title"}}</label>
+        <textarea id="comments"></textarea>
+      </div>
+      <div class="footer-buttons center m-b-lg">
+        <button class="btn-success" id="sendSurvey">{{_ "general.send"}}</button>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</template>
