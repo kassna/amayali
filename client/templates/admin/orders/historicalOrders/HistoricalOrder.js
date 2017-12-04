@@ -1,7 +1,6 @@
 Template.HistoricalOrder.helpers({
 	answeredSurvey: (surveyId, inverse) => {
 		const survey = Surveys.findOne(surveyId);
-		console.log(survey, inverse);
 		return inverse
 		  ? !survey || !survey.answered
 			: survey && survey.answered;
