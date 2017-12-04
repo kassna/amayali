@@ -79,8 +79,8 @@ SyncedCron.add({
 Meteor.startup(() => {
     SyncedCron.start();
 
-    // Simulated now, with 2 hours delay to avoid any issue
-    const now = moment().subtract(2, 'hours')
+    // Simulated now, with 1 hours delay to avoid any issue
+    const now = moment().subtract(1, 'hours')
 
 	// Find all orders with status confirmed
 	Orders.find({ status: 'confirmed' }).map(order => {
