@@ -79,15 +79,18 @@ SyncedCron.add({
 Meteor.startup(() => {
     SyncedCron.start();
 
-	// Get current date in ISO format
-	let now = new Date();
-	now = Date.parse(now);
+    // Simulated now, with 2 hours delay to avoid any issue
+    const now = moment().subtract(2, 'hours')
 
 	// Find all orders with status confirmed
 	Orders.find({ status: 'confirmed' }).map(order => {
         const { _id, date } = order;
 	    // If date has passed, the order is completed
-	    if (moment(date, "MM/DD/YYYY h:mm a").valueOf() < now) {
+	    if (moment(date, "MM/DD/YYYY h:mm a").isBefore(now)) {
+            // Log in server to have proof
+            console.log('order date', moment(date, "MM/DD/YYYY h:mm a").format('lll'));
+            console.log('time as of now', now.format('lll'));
+            // Update order to completed
 	        Orders.update({ _id }, { $set: { status: 'completed' } });
             // Send survey email
             Meteor.call('sendSurvey', _id);
