@@ -16,7 +16,7 @@ Template.FAQ.onRendered(() => {
 
 Template.FAQ.helpers({
     clientQuestions: () => {
-        return _.map([1,2,3,4,5], number => {
+        return _.map([1,2,3,4,5,6], number => {
             return {
                 number,
                 question: TAPi18n.__(`landing.faq.users.${number}question`, null),
