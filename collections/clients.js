@@ -70,9 +70,7 @@ AddressSchema = new SimpleSchema({
   },
   zip: {
     type: String,
-    regEx: SimpleSchema.RegEx.ZipCode,
     optional: true,
-    max: 5
   },
   reference: {
     type: String,
