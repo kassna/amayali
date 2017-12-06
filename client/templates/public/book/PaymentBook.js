@@ -63,9 +63,9 @@ const postPayment = (withPaypal, res) => {
   }
 
   // Attempt to insert order and account
-  Meteor.call('paypalPostPay', orderDetails, accountDetails, (err, res) => {
+  Meteor.call('postPayment', orderDetails, accountDetails, (err, res) => {
     if (err) {
-      handleErrorPayment(err);
+      withPaypal && handleErrorPayment(err);
       return false;
     } else {
       const orderId = res;
