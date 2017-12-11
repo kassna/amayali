@@ -52,8 +52,9 @@ SyncedCron.add({
   job: () => {
     console.log('Recurring');
     // Get current date in moment format
-	const now = moment();
+	const now = moment().subtract(6, 'hours');
     const currHour = now.hour();
+    console.log('curr time', now.valueOf());
     console.log('hour', currHour);
 
     Orders.find({ status: 'confirmed' }).map(order => {
@@ -71,37 +72,22 @@ SyncedCron.add({
                 console.log('Four hour sent');
                 Meteor.call('sendReminder4', email);
             }
-	    }
-	});
+        }
+        
+        // If date has passed, the order is completed
+        if (clientDate.isBefore(now)) {
+            // Log in server to have proof
+            console.log('order date', clientDate.format('lll'));
+            console.log('time as of now', now.format('lll'));
+            // Update order to completed
+            Orders.update({ _id }, { $set: { status: 'completed' } });
+            // Send survey email
+            Meteor.call('sendSurvey', _id);
+        }
+    });
   }
 });
 
 Meteor.startup(() => {
     SyncedCron.start();
-
-    // Simulated now, with 1 hours delay to avoid any issue
-    const now = moment().subtract(1, 'hours')
-
-	// Find all orders with status confirmed
-	Orders.find({ status: 'confirmed' }).map(order => {
-        const { _id, date } = order;
-	    // If date has passed, the order is completed
-	    if (moment(date, "MM/DD/YYYY h:mm a").isBefore(now)) {
-            // Log in server to have proof
-            console.log('order date', moment(date, "MM/DD/YYYY h:mm a").format('lll'));
-            console.log('time as of now', now.format('lll'));
-            // Update order to completed
-	        Orders.update({ _id }, { $set: { status: 'completed' } });
-            // Send survey email
-            Meteor.call('sendSurvey', _id);
-	    }
-    });
-
-    Orders.find({ status: 'completed' }).map(order => {
-        let { _id, therapistSurvey } = order
-        if (therapistSurvey) return false;
-        therapistSurvey = TherapistSurveys.insert({});
-        Orders.update({ _id }, { $set: { therapistSurvey } });
-    });
-    
 });
