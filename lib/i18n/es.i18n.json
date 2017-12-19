@@ -23,7 +23,7 @@
       "lead": "Con los mejores terapeutas profesionales desde $699",
       "lead1": "Reserva en menos de 90 segundos",
       "lead2": "Servicio diario de 8am a 10pm",
-      "lead3": "Reserva con 4 horas de anticipación"
+      "lead3": "Reserva con 4 horas de anticipación. Si requieres un servicio en menos tiempo contáctanos al 8110601776."
     },
     "steps": {
       "step1": "Reserva",
@@ -211,15 +211,15 @@
     "creditCard": "Tarjeta de crédito",
     "paypal": "PayPal",
     "errors": {
-      "requiredInputs": "Todos los campos son obligatorios",
-      "invalidHour": "No podemos atenderte en esa hora. Nuestro horario es de 8AM a 10PM",
+      "requiredInputs": "Todos los campos son obligatorios.",
+      "invalidHour": "No podemos atenderte en esa hora. Nuestro horario es de 8AM a 10PM.",
       "passwordMatch": "Tus contraseñas no coinciden, intenta de nuevo.",
       "emailInvalid": "El email es incorrecto o ya existe, intenta de nuevo.",
-      "payment": "Ha habido un error en tu pago, por favor intenta de nuevo",
-      "wrongPromoCode": "El código es incorrecto. Intenta de nuevo",
-      "successPromoCode": "Éxito! Se ha aplicado tu descuento",
-      "removedReferencePromo": "Para usar un código de referencia, es necesario crear una cuenta",
-      "referenceErrorClient": "Lo sentimos, los códigos de referencia solo son válidos en nuevos clientes"
+      "payment": "Ha habido un error en tu pago, por favor intenta de nuevo o contáctanos al 8110601776.",
+      "wrongPromoCode": "El código es incorrecto. Intenta de nuevo.",
+      "successPromoCode": "Éxito! Se ha aplicado tu descuento.",
+      "removedReferencePromo": "Es necesario crear una cuenta para usar un código de referido.",
+      "referenceErrorClient": "Lo sentimos, los códigos de referido solo son válidos en nuevos clientes."
     },
     "months": {
       "01": "Enero",
@@ -237,7 +237,7 @@
     },
     "orderConfirmation": {
       "title": "Tu reservación ha sido exitosa!",
-      "lead": "A continuación recibirás un correo de confirmación con los datos de tu orden. Si tienes alguna duda escribenos a "
+      "lead": "A continuación recibirás un correo de confirmación con los datos de tu orden. Si tienes alguna duda contáctanos al 8110601776."
     }
   },
   "schemas": {
