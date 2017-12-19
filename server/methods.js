@@ -51,8 +51,11 @@ Meteor.methods({
 
 			// Verify if code isn't it's own code or if code is only for new clients
 			const userId = Meteor.userId();
-			if (userId) {
-				const clientPromoCode = Clients.findOne({ userId }).promoCodeId;
+			const client = Clients.findOne({ userId });
+			// Had to do this trick, because it was passing if with client as undefined
+			let clientPromoCode = null;
+			if (client) clientPromoCode = client.promoCodeId;
+			if (userId && clientPromoCode) {
 				if (clientPromoCode === _id) return false;
 				if (usage === 'new' && Meteor.call('clientOrders')) return false;
 			}
