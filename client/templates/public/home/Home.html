@@ -1,24 +1,15 @@
 <template name="Home">
 	
+	{{> Hero}}
+	{{> Prices}}
+	{{> Steps}}
+	{{> Features}}
+	{{> Testimonies}}
 
-	<!doctype html>
-	<title>En mantenimiento</title>
-	<style>
-	  body { text-align: center; padding: 150px; bgcolor: #009999; }
-	  h1 { font-size: 50px; }
-	  body { font: 20px Helvetica, sans-serif; color: #333; }
-	  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-	  a { color: #dc8100; text-decoration: none; }
-	  a:hover { color: #333; text-decoration: none; }
-	</style>
-	
-	<article>
-		<h1>Estamos en mantenimiento</h1>
-		<div>
-			<p>Te informamos que estamos haciendo mejoras a nuestros sistemas por lo que no podemos tomar reservaciones. Si lo deseas, contáctanos a través de nuestro <a href="mailto:info@kassna.com">correo</a> o al 8110601776.</p>
-			<p>&mdash; Equipo Kassna</p>
-		</div>
-	</article>
-	
-
+	<a href="{{pathFor 'therapist-form'}}" class="btn btn-full cream scroll-top">
+		<p class="lead">{{_ "landing.therapistButton.lead"}}</p>
+		<h1 class="m-b-0">{{_ "landing.therapistButton.action"}}</h1>
+	</a>
+	{{> ContactUs}}
+	{{> Footer}}
 </template>
