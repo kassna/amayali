@@ -68,7 +68,7 @@ $borderRadius: 8px;
       &:after {
         content: "";
         position: absolute;
-        right: -29px;
+        right: -19px;
         top: 0;
         z-index: 1;
         @include arrow('right', $white, 20);
