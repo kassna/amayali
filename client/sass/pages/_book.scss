@@ -71,7 +71,7 @@ $borderRadius: 8px;
         right: -29px;
         top: 0;
         z-index: 1;
-        @include arrow('right', $white, 30);
+        @include arrow('right', $white, 10);
       }
     }
 
