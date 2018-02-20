@@ -49,7 +49,7 @@ Template.Survey.onRendered(() => {
 });
 
 Template.Survey.helpers({
-  enjoy: () => _.map(['massage', 'service', 'punctuality', 'presentation', 'music', 'other'], _id => {
+  enjoy: () => _.map(['massage', 'service', 'punctuality', 'presentation', 'music', 'other', 'nothing'], _id => {
     return {
       _id,
       name: () => TAPi18n.__(`survey.enjoy.${_id}`, null)
