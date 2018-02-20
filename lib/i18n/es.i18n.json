@@ -611,13 +611,14 @@
       "punctuality": "Puntualidad",
       "presentation": "Presentación",
       "music": "Música",
-      "other": "Otro"
+      "other": "Otro",
+      "nothing": "Nada"
    },
    "improve": {
-     "title": "¿Qué puede mejorar?"
+     "title": "¿Qué podemos mejorar?"
    },
    "comment": {
-     "title": "Déjanos tu comentario o sugerencia",
+     "title": "Déjanos tus comentarios",
      "type": "Tipo de comentario",
      "field": "Comentario",
      "suggestion": "Sugerencia",
@@ -627,29 +628,30 @@
   },
   "therapistSurvey": {
     "title": "Encuesta de satisfacción",
+    "title2": "Hagamos juntos una experiencia extraordinaria",
     "thanks": "Gracias por tu participación.",
     "client": {
-      "title": "¿Cómo evaluarías al cliente?"
+      "title": "¿Cómo evaluarías tu experiencia?"
     },
     "kindness": {
-      "title": "¿Cómo evalúas la amabilidad y la limpieza del cliente?"
+      "title": "¿Cómo evalúas la amabilidad del cliente?"
     },
     "clean": {
-      "title": "¿Estaba el área despejada y limpia para preparar tu equipo cuando llegaste?",
+      "title": "¿Estaba el área despejada para el masaje?",
       "yes": "Si",
       "no": "No" 
     },
     "agression": {
-      "title": "¿El cliente hizo alguna insinuación o comentario inapropiado durante la sesión?",
+      "title": "¿El cliente hizo algún comentario inapropiado durante la sesión?",
       "yes": "Si",
       "no": "No",
       "unsure": "No estoy segur@"
     },
     "observations": {
-      "title": "Observaciones del cliente (contracturas, retención de líquidos, lesiones, focos de atención, etc.)"
+      "title": "¿Qué contracturas, inflamaciones, líquidos retenidos, lesiones o focos de atención detectaste?"
     },
     "comments": {
-      "title": "¿Quieres dejar un comentario adicional para recordar para la siguiente sesión con este cliente?"
+      "title": "¿Cómo podemos sorprender a este cliente en su siguiente masaje? ¿Qué fue lo que más le gustó?"
     }
   }
 }
