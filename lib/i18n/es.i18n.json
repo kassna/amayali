@@ -628,7 +628,7 @@
   },
   "therapistSurvey": {
     "title": "Encuesta de satisfacción",
-    "title2": "Hagamos juntos una experiencia extraordinaria",
+    "title2": "Sigamos creando experiencias extraordinarias",
     "thanks": "Gracias por tu participación.",
     "client": {
       "title": "¿Cómo evaluarías tu experiencia?"
@@ -642,7 +642,7 @@
       "no": "No" 
     },
     "agression": {
-      "title": "¿El cliente hizo algún comentario inapropiado durante la sesión?",
+      "title": "¿Hubo algún comportamiento inapropiado?",
       "yes": "Si",
       "no": "No",
       "unsure": "No estoy segur@"
