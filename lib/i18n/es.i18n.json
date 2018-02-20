@@ -408,16 +408,16 @@
     "surveys": {
       "question1": "¿Cómo fue tu experiencia Kassna",
       "question2": "¿Qué fue lo que más disfrutaste?",
-      "question3": "¿Qué puede mejorar",
-      "comments": "Déjanos tu comentario o sugerenciao"
+      "question3": "¿Qué podemos mejorar",
+      "comments": "Déjanos tus comentarios"
     },
     "therapistSurveys": {
-      "question1": "¿Cómo evaluarías al cliente?",
-      "question2": "¿Cómo evalúas la amabilidad y la limpieza del cliente?",
-      "question3": "¿Estaba el área despejada y limpia para preparar tu equipo cuando llegaste?",
-      "question4": "¿El cliente hizo alguna insinuación o comentario inapropiado durante la sesión?",
-      "question5": "Observaciones del cliente (contracturas, retención de líquidos, lesiones, focos de atención, etc.)",
-      "question6": "¿Quieres dejar un comentario adicional para recordar para la siguiente sesión con este cliente?"
+      "question1": "¿Cómo fue tu experiencia?",
+      "question2": "¿Cómo evalúas la amabilidad del cliente?",
+      "question3": "¿Estaba el área despejada para el masaje",
+      "question4": "¿Hubo algún comportamiento inapropiado?",
+      "question5": "¿Qué contracturas, inflamaciones, líquidos retenidos, lesiones o focos de atención detectaste?",
+      "question6": "¿Cómo podemos sorprender a este cliente en su siguiente masaje? ¿Qué fue lo que más le gustó?"
     }
   },
   "admin": {
