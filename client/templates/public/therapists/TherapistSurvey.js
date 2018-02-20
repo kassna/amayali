@@ -55,7 +55,7 @@ Template.TherapistSurvey.helpers({
       name: () => TAPi18n.__(`therapistSurvey.clean.${_id}`, null)
     }
   }),
-  agression: () => _.map(['yes', 'no', 'unsure'], _id => {
+  agression: () => _.map(['yes', 'no'], _id => {
     return {
       _id,
       name: () => TAPi18n.__(`therapistSurvey.agression.${_id}`, null)
