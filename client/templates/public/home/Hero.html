@@ -11,6 +11,18 @@
               <div class="col-sm-5">
                 {{> SelectBook attribute="locationId" elements=locations placeholder="book.locationId"}}
               </div>
+              <div class="col-sm-5 hidden-xs">
+                <div class="input-with-icon dashhead-toolbar-item">
+                  <div class="form-group select-date">
+                    <div class='input-group date'>
+                      <input type='text' class="form-control" name="date" data-input placeholder="Fecha y hora">
+                      <span class="input-group-addon" data-toggle>
+                      <span class="icon icon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <br class="visible-xs-block">
               <div class="col-sm-2">
                 <button class="submit-landing">
