@@ -23,18 +23,18 @@
       "lead": "Con los mejores terapeutas profesionales",
       "lead1": "Reserva en menos de 90 segundos",
       "lead2": "Servicio diario de 8am a 10pm. Reserva con 4 horas de anticipación.",
-      "lead3": "Si requieres un servicio en menos tiempo contáctanos al ",
-      "lead4": "8110601776."
+      "lead3": "Si requieres un servicio en menos tiempo contáctanos haciendo click ",
+      "lead4": "aquí."
     },
     "steps": {
       "step1": "Reserva",
-      "step1Lead": "Agenda en pocos segundos desde tu móvil",
+      "step1Lead": "Selecciona el tipo de masaje y duración",
       "step2": "Recibe",
-      "step2Lead": "Nosotros vamos a tu domicilio",
+      "step2Lead": "Nosotros vamos a tu domicilio con todo el equipo necesario",
       "step3": "Relájate",
-      "step3Lead": "Disfruta tu masaje",
+      "step3Lead": "Disfruta tu masaje sin salir al tráfico",
       "step4": "Comparte",
-      "step4Lead": "Gana tu siguiente masaje recomendándonos",
+      "step4Lead": "Comparte tu código Kassna y recibe $140 para tu siguiente masaje",
       "feature1": "Masajes en tu casa, oficina u hotel",
       "feature2": "Nosotros llevamos todo el equipo necesario",
       "feature3": "Garantía del 100% si no estás satisfecho con el servicio",
@@ -53,7 +53,7 @@
     },
     "prices": {
       "title": {
-        "muted": "Elije tu masaje",
+        "muted": "Personaliza tu masaje",
         "line1": "Relajarse nunca había sido tan",
         "line1bold": "fácil",
         "line2A": "Tú decides el",
