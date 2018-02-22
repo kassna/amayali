@@ -7,22 +7,11 @@
         <p class="lead">{{_ "landing.hero.lead"}}</p>
         <div class="form-cont">
           <div class="container">
-            <div class="row">
-              <div class="col-sm-5">
+            <div class="row justify-content-center">
+              <div class="col-sm-4">
                 {{> SelectBook attribute="locationId" elements=locations placeholder="book.locationId"}}
               </div>
-              <div class="col-sm-5 hidden-xs">
-                <div class="input-with-icon dashhead-toolbar-item">
-                  <div class="form-group select-date">
-                    <div class='input-group date'>
-                      <input type='text' class="form-control" name="date" data-input placeholder="Fecha y hora">
-                      <span class="input-group-addon" data-toggle>
-                      <span class="icon icon-calendar"></span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               <br class="visible-xs-block">
               <div class="col-sm-2">
                 <button class="submit-landing">
@@ -33,7 +22,7 @@
           </div>
         </div>
         <p class="lead m-t">{{_ "landing.hero.lead2"}}</p>
-        <p class="lead m-t">{{_ "landing.hero.lead3"}}<a href="https://api.whatsapp.com/send?phone=+5218110601776">{{_ "landing.hero.lead4"}}</a></p>
+        <p class="lead m-t">{{_ "landing.hero.lead3"}}<a class="phone m-t" href="https://api.whatsapp.com/send?phone=+5218110601776"> <b>{{_ "landing.hero.lead4"}}</b></a></p>
       </div>
     </div>
   </div>
