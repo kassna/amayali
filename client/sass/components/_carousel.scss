@@ -1,7 +1,7 @@
 .carousel-light {
   .carousel-control {
     text-shadow: none;
-    color: $turquoise;
+    color: $blue;
     background-image: none;
   }
 
@@ -14,8 +14,8 @@
     }
 
     .active {
-      background-color: $turquoise;
-      border: 1px solid $turquoise;
+      background-color: $blue;
+      border: 1px solid $blue;
     }
   }
 }
