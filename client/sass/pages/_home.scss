@@ -55,22 +55,13 @@
       @include bp(tablet) {
         font-size: 21px;
       }
-    .phone {
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 1.6;
-      letter-spacing: -0.02em;
-      color: $yellow;
-      @include bp(tablet) {
-        font-size: 21px;
-      }
-    }
     }
     .form-cont {
       width: 100%;
       margin: 0 auto;
       @include bp(tablet) {
-        .col-sm-4 {
+        background: $white;
+        .col-sm-5 {
           padding-right: 5px;
           padding-left: 5px;
         }
@@ -79,7 +70,7 @@
         }
       }
       @include bp(desk) {
-        width: 45%;
+        width: 80%;
       }
       .form-group {
         margin-bottom: 0;
@@ -212,7 +203,7 @@
     content: "min";
     font-size: 24px;
     font-weight: 100;
-    color: $turquoise;
+    color: $gray;
     margin-left: 5px;
   }
 }
