@@ -40,6 +40,27 @@
       "feature3": "Garantía del 100% si no estás satisfecho con el servicio",
       "feature4": "Recibe $140 cada vez que un amigo use tu código de referencia"
     },
+    "OurTherapist": {
+      "title": "Conoce algunos terapeutas",
+      "name1": "Aniek",
+      "job1": "Lic. Terapia Física y Rehabilitación",
+      "school1": "Centro Nacional de Rehabilitación Hospital Julio Díaz (Cuba)",
+      "name2": "Luis de Armas",
+      "job2": "Lic. Terapia Física y Rehabilitación",
+      "school2": "Facultad de Ciencias Médicas Jose Assef Yara (Cuba)",
+      "name3": "Karen",
+      "job3": "Terapeuta SPA",
+      "school3": "Palmer Escuela de Ciencias Quirofísicas",
+      "name4": "Ricardo",
+      "job4": "Masoterapia Profesional",
+      "school4": "Colegio Mexicano de Terapeutas Profesionales en Masaje y Enfermeria Holistica",
+      "name5": "Rebeca",
+      "job5": "Masoterapia Profesional",
+      "school5": "Instituto Fleming",
+      "name6": "Angeles",
+      "job6": "Cosmetología con Especialidad en Terpia Corporal",
+      "school6": "Instituto OSSE"
+    },
     "features": {
       "title": "Beneficios de Kassna",
       "feature1": "Masajes personalizados",
@@ -83,6 +104,9 @@
     "image": {
       "title": "Déjanos consentirte",
       "lead": "Pide uno de nuestros masajes profesionales y un terapeuta calificado irá a tu casa."
+    },
+    "testimonies": {
+      "title": "¿Qué dicen nuestros clientes"
     },
     "therapistButton": {
       "lead": "¿Eres terapeuta profesional?",

@@ -14,6 +14,25 @@
   }
 }
 
+.our-cont{
+  .our-text{
+    .title{
+      font-size: 30px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 500;
+      margin-bottom: 11px;
+      @include bp(tablet) {
+        font-size: 46px;
+      }
+      @include bp(desk) {
+        font-size: 56px;
+      }
+    }
+  }
+}
+
 .hero-cont {
   height: 485px;
   position: absolute;
