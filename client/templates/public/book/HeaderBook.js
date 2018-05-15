@@ -21,3 +21,19 @@ Template.HeaderBook.helpers({
     return total;
   },
 });
+
+Template.HeaderBook.onRendered(() => {
+  let scrollNavbar = () => {
+    if ($(window).scrollTop() > 60){
+      $('.navbar-brand img').attr("src","/img/logo_small.png");
+    }
+    else {
+      $('.navbar-brand img').attr("src","/img/logo_small.png");
+    }
+  }
+  scrollNavbar();
+
+  $(document).scroll(() => {
+    scrollNavbar();
+  });
+})
