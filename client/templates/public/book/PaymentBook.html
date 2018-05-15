@@ -2,16 +2,24 @@
   <div class="book-form">
     <h1 class="c-white text-center">{{_ "book.step4Lead"}}</h1>
     <div class="simform">
-      {{> InputTextBook type="text" attribute="promoCode" placeholder="book.promoCode"}}
-      <div class="footer-buttons center">
-        <button class="btn-success m-t m-t-0" id="verifyPromo">{{_ "book.verify"}}</button>
-      </div>
-      <p class="terms-text">
-        <!-- <input type="checkbox" checked id="termsInput">
-        <label for="">Acepto los <a href="">Términos y Condiciones</a> del servicio</label> -->
-        {{> termsForm}}
-      </p>
+      <div class="row">
+        <div class="col-xs-9">
+          {{> InputTextBook type="text" attribute="promoCode" placeholder="book.promoCode"}}
+        </div>
+        <div class="col-xs-3">
+          <div class="footer-buttons center">
+            <button class="btn-success m-t m-t-0" id="verifyPromo">{{_ "book.verify"}}</button>
+          </div>
+        </div>  
+    </div>
+
         {{> PaypalBook}}
+        
+        <p class="terms-text">
+            <!-- <input type="checkbox" checked id="termsInput">
+            <label for="">Acepto los <a href="">Términos y Condiciones</a> del servicio</label> -->
+            {{> termsForm}}
+          </p>
     </div>
   </div>
 </template>
