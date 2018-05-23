@@ -33,6 +33,14 @@
   }
 }
 
+.txt-container--break-long-word {
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
 .hero-cont {
   height: 485px;
   position: absolute;
@@ -234,6 +242,12 @@
     color: $turquoise;
     margin-left: 5px;
   }
+}
+
+.pricing-prenatal {
+  font-size: 60px;
+  margin: 0;
+  font-weight: 700;
 }
 
 .panel-group {

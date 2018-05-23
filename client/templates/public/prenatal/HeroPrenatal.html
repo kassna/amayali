@@ -1,0 +1,32 @@
+<template name="HeroPrenatal">
+  {{reloadSelect}}
+  <div id="TopPrenatal" class="hero-bg parallax-section" data-parallax-image="/img/relaxbg.png">
+    <div class="hero-cont">
+      <div class="hero-text">
+        <h1 class="title">{{_ "landing.prenatal.title"}}</h1>
+        <br>
+        <br>
+        <div class="form-cont">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-4">
+                {{> SelectBook attribute="locationId" elements=locations placeholder="book.locationId"}}
+              </div>
+              <br class="visible-xs-block">
+              <div class="col-sm-2">
+                <button class="submit-landing">
+                {{_ "general.book"}}
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <p class="lead m-t">{{_ "landing.prenatal.lead2"}} <a class="phone" href="https://api.whatsapp.com/send?phone=5218110601776"><b> {{_ "landing.hero.lead4"}}</b></a></p>
+        
+      </div>
+    </div>
+  </div>
+
+</template>

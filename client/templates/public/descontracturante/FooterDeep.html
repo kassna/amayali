@@ -1,0 +1,36 @@
+<template name="FooterDeep">
+  <div class="block app-block-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 m-b">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Navegación</h6></li>
+            {{> HeaderLandingLinks}}
+          </ul>
+        </div>
+        <div class="col-sm-4 m-b">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Redes Sociales</h6></li>
+            <li><a href="https://www.facebook.com/kassna.mx"><i class="fa fa-facebook" style="color:#009999" aria-hidden="true"></i>  Facebook</a></li>
+            <li><a href="https://www.instagram.com/kassna.mx/"><i class="fa fa-instagram" style="color:#009999" aria-hidden="true"></i>  Instagram</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5218110601776"><i class="fa fa-whatsapp" style="color:#009999" aria-hidden="true"></i>  WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 m-b">
+          <ul class="list-unstyled list-spaced">
+            <li><h6 class="text-uppercase">Soporte</h6></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5218110601776">811 060 1776</a></li>
+            <li><a href="{{pathFor 'terms'}}" class="scroll-top">Términos y condiciones</a></li>
+            <li><a href="{{pathFor 'privacy'}}" class="scroll-top">Aviso de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-xs-12 col-sm-9">
+          <h6>
+            Copyright 2017 © AMAYALI TECHNOLOGIES SAPI DE CV. Todos los derechos reservados
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

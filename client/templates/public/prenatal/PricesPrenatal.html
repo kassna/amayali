@@ -1,0 +1,28 @@
+<template name="PricesPrenatal">
+  <div class="block">
+    <div class="container text-center">
+      {{> PricesRowPrenatal}}
+    </div>
+  </div>
+</template>
+
+<template name="PricesRowPrenatal">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center m-b-md">
+      <h2 class="c-cream title-style">{{_ "landing.prices.prices.title"}}</h2>
+      <!-- <h1 class="block-title c-green m-b-0">{{_ "landing.relax.pricetitle"}}</h1> -->
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row pricing-table">
+        <div class="col m-b-lg-xs">
+          <div class="pricing-item">
+            <h1 class="c-turquoise pricing-price">60</h1>
+            <h3>{{_ "landing.prices.prices.precio90"}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
