@@ -6,7 +6,7 @@ Template.HeaderLanding.onRendered(() => {
     }
     else {
       $('.navbar.toChange').removeClass('small-nav');
-      $('.navbar-brand img').attr("src","/img/logosupbco.png");
+      $('.navbar-brand img').attr("src","/img/logosup.png");
     }
   }
   scrollNavbar();
