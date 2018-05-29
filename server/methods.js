@@ -289,7 +289,7 @@ Meteor.methods({
 		order.location = Locations.findOne(order.locationId).name;
 
 		Mailer.send({
-			to: process.env.ADMIN_EMAIL,
+			to: process.env.ORDER_EMAIL,
 			subject: `[Kassna] Nueva orden en ${order.location}`,
 			template: 'newOrder',
 			data: order
