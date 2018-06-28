@@ -36,7 +36,7 @@ rate_prenatal = baserate => baseRate * 1.5 - (baseRate - 599) * 0.495 + 0.005 * 
 
 // Verify valid hours
 verifySchedule = (value) => {
-	let notAllowed = [0, 1, 2, 3, 4, 5, 6, 7, 22, 23];
+	let notAllowed = [0, 1, 2, 3, 4, 5, 6, 7, 21, 22, 23];
 	if (_.includes(notAllowed, moment(value).hour())) {
 		Bert.alert(TAPi18n.__('book.errors.invalidHour', null), 'danger');
 		return false;
@@ -61,7 +61,7 @@ datepickerSetup = () => {
 		altFormat: "F j, Y h:i K",
 		altInputClass: "",
 		defaultDate: date,
-		minDate: moment().add(3, 'h').valueOf(),
+		minDate: moment().add(4, 'h').valueOf(),
 		minuteIncrement: 15,
 		disableMobile: false,
 		wrap: true,
