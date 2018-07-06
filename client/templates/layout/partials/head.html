@@ -75,6 +75,27 @@
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
   gtag('config', 'UA-107032750-1');
+  gtag('config', 'AW-834878021');
 </script>
+
+<!-- Event snippet for Click_Reservar conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-834878021/bdd1CNvAt4UBEMX0jI4D',
+          'transaction_id': '',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
+    
 
 </head>
