@@ -68,9 +68,6 @@ SyncedCron.add({
             if (clientHour - currHour === 1) {
                 console.log('One hour sent');
                 Meteor.call('sendReminder1', email);
-            } else if (clientHour - currHour === 4) {
-                console.log('Four hour sent');
-                Meteor.call('sendReminder4', email);
             }
         }
         
