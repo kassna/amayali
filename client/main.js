@@ -31,7 +31,7 @@ scrollTop = () => {
 
 // Get rates
 rate_90 = baseRate => baseRate * 1.5 - (baseRate - 599) * 0.495 + 0.005 * (699 - baseRate)
-rate_120 = baseRate => baseRate + 500
+rate_120 = baseRate => baseRate + 600
 rate_prenatal = baserate => baseRate * 1.5 - (baseRate - 599) * 0.495 + 0.005 * (699 - baseRate)
 
 // Verify valid hours
