@@ -15,7 +15,7 @@
               </div>
               <br class="visible-xs-block">
               <div class="col-sm-2">
-                <button class="submit-landing">
+                <button class="submit-landing" onclick="return gtag_click_reservar('https://www.kassna.com/reserva');">
                 {{_ "general.book"}}
               </button>
               </div>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <br>
-        <p class="lead m-t">{{_ "landing.hero.lead2"}} <a class="phone" onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=5218110601776');" href="https://api.whatsapp.com/send?phone=5218110601776"><b> {{_ "landing.hero.lead4"}}</b></a></p>
+        <p class="lead m-t">{{_ "landing.hero.lead2"}} <a class="phone" onclick="return gtag_hero_wapp('https://api.whatsapp.com/send?phone=5218110601776') ;" href="https://api.whatsapp.com/send?phone=5218110601776"><b> {{_ "landing.hero.lead4"}}</b></a></p>
 
       </div>
     </div>
