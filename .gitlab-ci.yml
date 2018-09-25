@@ -21,4 +21,4 @@ build:
     - curl https://install.meteor.com | sh
     - npm install --silent
   script:
-    - meteor build --directory ./build --allow-superuser --server-only
+    - meteor build --directory .meteor/local/build --allow-superuser --server-only
