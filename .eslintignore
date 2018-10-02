@@ -1,11 +1,11 @@
-###################################################################################
-## This file defines that all files and directories that has been created before ##
-## eslint was included should be ignored. The reason for that is to ensure       ##
-## consistent and less error prone code in newly created files but to not touch  ##
-## and change all already existing files.                                        ##
-##                                                                               ##
-## Author Matthias Bräuer                                                        ##
-###################################################################################
+###############################################################################
+## This file defines that all files and directories that have been created   ##
+## before eslint was included should be ignored. The reason for that is to   ##
+## ensure consistent and less error prone code in newly created files but to ##
+## not touch and change all already existing files.                          ##
+##                                                                           ##
+## Author Matthias Bräuer                                                    ##
+###############################################################################
 
 #####################
 # Lib to be ignored #
