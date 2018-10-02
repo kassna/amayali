@@ -1,0 +1,21 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "meteor": true,
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "meteor"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:meteor/recommended"
+  ]
+}

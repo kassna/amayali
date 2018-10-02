@@ -1,0 +1,24 @@
+image: node:8
+
+stages:
+  - build
+  - test
+
+test:
+  stage: test
+  before_script:
+    # Shared dependencies between jobs should be cached
+    # in the future to avoid multiple downloads of the
+    # same dependencies and to improve speed of each job.
+    # (see 'build' job)
+    - curl https://install.meteor.com | sh
+    - npm install --silent
+  script:
+    - npm run lint
+
+build:
+  before_script:
+    - curl https://install.meteor.com | sh
+    - npm install --silent
+  script:
+    - meteor build --directory .meteor/local/build --allow-superuser --server-only

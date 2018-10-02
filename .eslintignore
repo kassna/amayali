@@ -1,0 +1,138 @@
+###############################################################################
+## This file defines that all files and directories that have been created   ##
+## before eslint was included should be ignored. The reason for that is to   ##
+## ensure consistent and less error prone code in newly created files but to ##
+## not touch and change all already existing files.                          ##
+##                                                                           ##
+## Author Matthias Bräuer                                                    ##
+###############################################################################
+
+#####################
+# Lib to be ignored #
+#####################
+lib/**/*.js
+
+###########################
+# Templates to be ignored #
+###########################
+# Admin Templates
+client/templates/admin/admins/Admin.js
+client/templates/admin/admins/Admins.js
+client/templates/admin/admins/RequestAccess.js
+
+client/templates/admin/clients/Client.js
+client/templates/admin/clients/ClientInfo.js
+client/templates/admin/clients/Clients.js
+
+client/templates/admin/general/EditModal.js
+client/templates/admin/general/NewModal.js
+
+client/templates/admin/locations/Location.js
+client/templates/admin/locations/Locations.js
+
+client/templates/admin/orders/historicalOrders/HistoricalOrder.js
+client/templates/admin/orders/historicalOrders/HistoricalOrders.js
+client/templates/admin/orders/pendingOrders/PendingOrder.js
+client/templates/admin/orders/pendingOrders/PendingOrders.js
+client/templates/admin/orders/AssignTherapists.js
+client/templates/admin/orders/ClientInfoOrder.js
+client/templates/admin/orders/OrderInfo.js
+client/templates/admin/orders/SurveyInfo.js
+client/templates/admin/orders/TherapistSurveyInfo.js
+
+client/templates/admin/partials/SidebarAdmin.js
+
+client/templates/admin/promoCodes/PromoCode.js
+client/templates/admin/promoCodes/PromoCodes.js
+
+client/templates/admin/therapists/Therapist.js
+client/templates/admin/therapists/TherapistInfo.js
+client/templates/admin/therapists/TherapistRequest.js
+client/templates/admin/therapists/Therapists.js
+client/templates/admin/therapists/TherapistsRequest.js
+
+# Client Templates
+client/templates/clients/partials/SidebarClient.js
+client/templates/clients/pendingOrders/PendingOrders.js
+client/templates/clients/BookNow.js
+client/templates/clients/PromoCode.js
+client/templates/clients/Survey.js
+
+# Layout Templates
+client/templates/layout/partials/HeaderLanding.js
+client/templates/layout/partials/HeaderLandingLinks.js
+client/templates/layout/MainLayout.js
+
+# Login Templates
+client/templates/login/Accounts_templates.js
+
+# Public Templates
+client/templates/public/antiestres/HeroAntistress.js
+client/templates/public/book/inputs/ButtonSelectBook.js
+client/templates/public/book/inputs/InputTextBook.js
+client/templates/public/book/inputs/SelectBook.js
+
+client/templates/public/book/AddressBook.js
+client/templates/public/book/Book.js
+client/templates/public/book/HeaderBook.js
+client/templates/public/book/MassageBook.js
+client/templates/public/book/OrderConfirmation.js
+client/templates/public/book/PaymentBook.js
+client/templates/public/book/ScheduleBook.js
+client/templates/public/book/StepsBook.js
+
+client/templates/public/deportivo/HeroSport.js
+
+client/templates/public/descontracturante/HeroDeep.js
+
+client/templates/public/home/ContactUs.js
+client/templates/public/home/FAQ.js
+client/templates/public/home/Hero.js
+client/templates/public/home/Home.js
+client/templates/public/home/Prices.js
+client/templates/public/home/Steps.js
+
+client/templates/public/login/Accounts.js
+client/templates/public/login/Login.js
+
+client/templates/public/prenatal/HeroPrenatal.js
+
+client/templates/public/relajante/HeroRelax.js
+
+client/templates/public/therapists/TherapistsForm.js
+client/templates/public/therapists/TherapistSurvey.js
+
+client/templates/public/therapistsinfo/HeroTherapist.js
+client/templates/public/therapistsinfo/Income.js
+
+#############################
+# Client libs to be ignored #
+#############################
+client/js/*.js
+
+################################
+# Client main.js to be ignored #
+################################
+client/main.js
+
+#############################
+# Collections to be ignored #
+#############################
+collections/admin.js
+collections/clients.js
+collections/locations.js
+collections/orders.js
+collections/promoCodes.js
+collections/surveys.js
+collections/therapists.js
+collections/therapistSurveys.js
+collections/users.js
+
+##############################
+# Server Files to be ignored #
+##############################
+server/lib/templates.js
+server/lib/templates-helpers.js
+server/main.js
+server/methods.js
+server/publish.js
