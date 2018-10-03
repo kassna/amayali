@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "lint": "node_modules/eslint/bin/eslint.js ."
+    "lint": "node_modules/eslint/bin/eslint.js .",
+    "import:fixtures": "import/import_fixtures.sh"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",

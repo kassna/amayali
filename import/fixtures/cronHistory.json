@@ -1,0 +1,674 @@
+[
+  {
+    "_id": "2jASCFftXkPfBWy5G",
+    "intendedAt": {
+      "$date": "2018-10-02T09:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T09:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T09:00:00.019Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "3662WBvLkhLdvPxJL",
+    "intendedAt": {
+      "$date": "2018-10-02T01:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T01:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T01:00:01.526Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "6qFTG8kb4sKFzGekH",
+    "intendedAt": {
+      "$date": "2018-10-01T07:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T07:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T07:00:00.025Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "76wmfboZbCbJpmQYS",
+    "intendedAt": {
+      "$date": "2018-10-01T04:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T04:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T04:00:00.044Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "7iCEPqvQc7PG9suZM",
+    "intendedAt": {
+      "$date": "2018-10-01T05:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T05:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T05:00:00.030Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "9fx6be9WAK6NtPEJq",
+    "intendedAt": {
+      "$date": "2018-10-01T08:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T08:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T08:00:00.050Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "A3e5AmeN6QpMC4uSr",
+    "intendedAt": {
+      "$date": "2018-10-02T19:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T19:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T19:00:00.028Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "BQwSWW99HiPacwrGz",
+    "intendedAt": {
+      "$date": "2018-10-01T02:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T02:00:00.011Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T02:00:00.068Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "D5RfXYkXXDCMZJLCE",
+    "intendedAt": {
+      "$date": "2018-10-02T10:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T10:00:00.005Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T10:00:00.036Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "D94JTSkAQScbDtPTn",
+    "intendedAt": {
+      "$date": "2018-10-01T00:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T00:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T00:00:00.022Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "DdSZoi7hb9Rub7WTX",
+    "intendedAt": {
+      "$date": "2018-10-01T12:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T12:00:00.000Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T12:00:00.028Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "FXgxdzPhJMbKkx6QF",
+    "intendedAt": {
+      "$date": "2018-10-01T22:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T22:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T22:00:00.020Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "J43pG7LMRbgJn6CXR",
+    "intendedAt": {
+      "$date": "2018-10-02T08:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T08:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T08:00:00.024Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "Kdsv6esTACgnaKiki",
+    "intendedAt": {
+      "$date": "2018-10-02T11:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T11:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T11:00:00.016Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "LNbMiHLYS3TQ8CAfs",
+    "intendedAt": {
+      "$date": "2018-10-01T17:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T17:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T17:00:02.118Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "P4LxMyR2yRHhi3TsX",
+    "intendedAt": {
+      "$date": "2018-10-01T06:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T06:00:00.005Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T06:00:00.085Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "SXTzqN3G3ZMXjGWq2",
+    "intendedAt": {
+      "$date": "2018-10-02T15:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T15:00:00.008Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T15:00:00.037Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "SkZonW9p62NdLMgg6",
+    "intendedAt": {
+      "$date": "2018-10-01T19:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T19:00:00.001Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T19:00:00.021Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "SmGicJsrD8LLoCZF2",
+    "intendedAt": {
+      "$date": "2018-10-02T02:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T02:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T02:00:00.030Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "XyBmprAeBxnwTqjA7",
+    "intendedAt": {
+      "$date": "2018-10-02T03:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T03:00:00.014Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T03:00:00.663Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "a92xmce4EhHkH558Z",
+    "intendedAt": {
+      "$date": "2018-10-02T07:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T07:00:00.012Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T07:00:00.094Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "avBNzBvuE6oe8fc8J",
+    "intendedAt": {
+      "$date": "2018-10-02T14:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T14:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T14:00:00.023Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "bZkCAKdeDaRdtW3hs",
+    "intendedAt": {
+      "$date": "2018-10-02T12:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T12:00:00.005Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T12:00:00.025Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "bnA2CxCpzzgFte8sX",
+    "intendedAt": {
+      "$date": "2018-10-01T23:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T23:00:00.000Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T23:00:00.027Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "crQWpZq4NGa2Pwzju",
+    "intendedAt": {
+      "$date": "2018-10-01T15:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T15:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T15:00:00.020Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "cv6R2HbSSxrnfbTiW",
+    "intendedAt": {
+      "$date": "2018-10-01T20:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T20:00:00.001Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T20:00:00.026Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "eZwe97NYiJKtHDZFg",
+    "intendedAt": {
+      "$date": "2018-10-02T20:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T20:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T20:00:00.044Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "fYDAwRe9BuiYmsEx4",
+    "intendedAt": {
+      "$date": "2018-10-01T18:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T18:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T18:00:00.020Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "gxjjBg2GPo493q7Ak",
+    "intendedAt": {
+      "$date": "2018-10-01T10:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T10:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T10:00:00.029Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "hAqd93GhoWhPMo3fG",
+    "intendedAt": {
+      "$date": "2018-10-02T18:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T18:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T18:00:00.026Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "hFLfGigLkgvnRnAMQ",
+    "intendedAt": {
+      "$date": "2018-10-01T09:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T09:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T09:00:00.062Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "hMhPbgxz4fGCKfcMu",
+    "intendedAt": {
+      "$date": "2018-10-01T21:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T21:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T21:00:00.038Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "hmFhLDkvKvZ5LEjB5",
+    "intendedAt": {
+      "$date": "2018-10-01T01:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T01:00:00.000Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T01:00:00.019Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "jMswWqn3qfHzovRvr",
+    "intendedAt": {
+      "$date": "2018-10-02T13:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T13:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T13:00:00.030Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "kNpdffAJAX55mewtX",
+    "intendedAt": {
+      "$date": "2018-10-01T03:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T03:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T03:00:00.071Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "oADS2ce5MQX3Xf8dD",
+    "intendedAt": {
+      "$date": "2018-09-30T23:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-09-30T23:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-09-30T23:00:00.026Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "pvQs2nc22F6249vPk",
+    "intendedAt": {
+      "$date": "2018-10-02T17:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T17:00:00.001Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T17:00:00.034Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "qEt3Y26kskmqQq5uY",
+    "intendedAt": {
+      "$date": "2018-10-01T14:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T14:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T14:00:00.031Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "qntoKqf5g5mj9t8tp",
+    "intendedAt": {
+      "$date": "2018-10-02T00:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T00:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T00:00:00.030Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "sP7BPGtnzfJo5hvCu",
+    "intendedAt": {
+      "$date": "2018-10-01T16:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T16:00:00.003Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T16:00:00.153Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "sXCzyzwCGp9cWG4dB",
+    "intendedAt": {
+      "$date": "2018-10-02T16:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T16:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T16:00:00.202Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "sbog7orByPxaRT5bv",
+    "intendedAt": {
+      "$date": "2018-10-02T06:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T06:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T06:00:00.031Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "t58kSsDyk7cvQ42qp",
+    "intendedAt": {
+      "$date": "2018-10-01T13:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T13:00:00.002Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T13:00:00.061Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "tijjXhQaoXA7CtAMM",
+    "intendedAt": {
+      "$date": "2018-10-02T22:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T22:00:00.023Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T22:00:00.082Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "uibuYnZfgvSbkypb2",
+    "intendedAt": {
+      "$date": "2018-10-02T05:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T05:00:00.001Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T05:00:00.034Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "xeZw3CoYYehQMu9Fy",
+    "intendedAt": {
+      "$date": "2018-10-02T04:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T04:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T04:00:00.048Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "yS72GBX7Rm3fxgQWj",
+    "intendedAt": {
+      "$date": "2018-10-02T21:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-02T21:00:00.004Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-02T21:00:00.026Z"
+    },
+    "result": null
+  },
+  {
+    "_id": "zRDXjcPkq6TjSoY5Q",
+    "intendedAt": {
+      "$date": "2018-10-01T11:00:00.000Z"
+    },
+    "name": "Send reminders",
+    "startedAt": {
+      "$date": "2018-10-01T11:00:00.000Z"
+    },
+    "finishedAt": {
+      "$date": "2018-10-01T11:00:00.024Z"
+    },
+    "result": null
+  }
+]

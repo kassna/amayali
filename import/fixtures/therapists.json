@@ -1,0 +1,1233 @@
+﻿[
+  {
+    "_id": "45qWh8iK9oyWNm6bS",
+    "name": "Ricardo Carrera Moreno",
+    "training": "Colegio Mexicano de Terapeutas Profesionales en Masaje y Enfermeria Holistica",
+    "sex": "male",
+    "experienceYears": 1,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "c",
+      "g",
+      "i",
+      "k",
+      "l",
+      "p"
+    ],
+    "email": "ricardo.carreramty@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "no",
+    "zip": "64145",
+    "herbs": "Aromaterapia",
+    "zone": "Cumbres",
+    "hasCar": "no",
+    "schedulePreference": [
+      "morning"
+    ],
+    "contactTime": "Mañana",
+    "smartphone": "yes",
+    "reference": "therapist",
+    "birthday": "25 - 01 - 1983",
+    "languages": "Español",
+    "jobStatus": "Trabajando",
+    "experience": [
+      "onDemand",
+      "school"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-09-18T21:03:11.530Z"
+    }
+  },
+  {
+    "_id": "4N2myZBBkoTsbZPEs",
+    "name": "Clara Aguilar Padilla",
+    "training": "Colegio Mexicano de Terapeutas",
+    "sex": "female",
+    "experienceYears": 2,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "b",
+      "d",
+      "g",
+      "h",
+      "i"
+    ],
+    "email": "clara.aguilarp@example.com",
+    "hasBed": "yes",
+    "locationId": "J7oRyBHAGQgkfnRwe",
+    "hasChair": "yes",
+    "zip": "64988",
+    "herbs": "Aromateriapia",
+    "zone": "Zona sur",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "night"
+    ],
+    "contactTime": "Después de las 6",
+    "smartphone": "yes",
+    "reference": "staff",
+    "birthday": "22-05-1988",
+    "languages": "Español",
+    "jobStatus": "Trabajando",
+    "experience": [
+      "spa",
+      "onDemand",
+      "school"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-09-18T20:43:55.375Z"
+    }
+  },
+  {
+    "_id": "6FsxSSGdrxEqN87ym",
+    "name": "Gerardo Encinia Escalante",
+    "training": "Terapeuta en masaje relajante y terapeutico",
+    "sex": "male",
+    "experienceYears": 2,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "e",
+      "g",
+      "h",
+      "i",
+      "l"
+    ],
+    "email": "gerardoencinia@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "yes",
+    "zip": "64100",
+    "herbs": "Si",
+    "zone": "Monterrey",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "night"
+    ],
+    "contactTime": "Por la mañana",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "02 agosto 1967",
+    "languages": "Español",
+    "jobStatus": "Empleado en empresa de imgenieria",
+    "experience": [
+      "gym",
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-01-22T20:24:45.141Z"
+    }
+  },
+  {
+    "_id": "6Y7tvLsKhDiQMZaSt",
+    "name": "Beatriz delabra moreno",
+    "training": "Diplomado en Masajes",
+    "sex": "female",
+    "experienceYears": 6,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "g",
+      "i",
+      "j",
+      "l",
+      "m",
+      "o"
+    ],
+    "email": "beatrizdelabra@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "no",
+    "zip": "64117",
+    "herbs": "Aromaterapia",
+    "zone": "Zona poniente (cumbres)",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "night"
+    ],
+    "contactTime": "9 a 12",
+    "smartphone": "yes",
+    "reference": "fb",
+    "birthday": "17 Agosto",
+    "languages": "Espanhol",
+    "jobStatus": "Independiente",
+    "experience": [
+      "hotel",
+      "spa",
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-12-06T04:46:01.690Z"
+    }
+  },
+  {
+    "_id": "8c32Lzf4bXSB3KQ9y",
+    "name": "Ruth Esther González Sánchez",
+    "training": "15 años trabajando con reflexologia y shiat su. Certificaciones en Terapia delos hologramas, masaje bioinformático, masaje tailandés",
+    "sex": "female",
+    "experienceYears": 15,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "f",
+      "h",
+      "i",
+      "j",
+      "l"
+    ],
+    "email": "ruthgzz3311@example.com",
+    "hasBed": "yes",
+    "locationId": "J7oRyBHAGQgkfnRwe",
+    "hasChair": "yes",
+    "zip": "67323",
+    "herbs": "Arimaterapia y productos herbales de Nature's Sunshine",
+    "zone": "San Pedro, Monterrey (zona sur de preferencia) Santiago N.L.,ahí vivo. Allende N.L.",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "all"
+    ],
+    "contactTime": "De 19AM a 7PM",
+    "smartphone": "yes",
+    "reference": "other",
+    "birthday": "11/04/74",
+    "languages": "Español",
+    "jobStatus": "Activo. Cuento con cartera de clientes a dimicilio",
+    "experience": [
+      "rehab",
+      "spa",
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-11-19T23:23:49.079Z"
+    }
+  },
+  {
+    "_id": "9GP6poeKnZGKAkfaq",
+    "name": "Ana Priscila González Reyes",
+    "training": "Técnica en rehabilitación física y Lic en.fisioterapia",
+    "sex": "female",
+    "experienceYears": 8,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "m"
+    ],
+    "email": "priscigzz@example.com",
+    "hasBed": "yes",
+    "locationId": "dsYbt8Z2vwgR9mt6A",
+    "hasChair": "no",
+    "zip": "67174",
+    "herbs": "Compresas eléctricas",
+    "zone": "Guadalupe y Monterrey",
+    "hasCar": "no",
+    "schedulePreference": [
+      "morning",
+      "evening"
+    ],
+    "contactTime": "De 9:00am a 4;00pm",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "17 abril 1992",
+    "languages": "Español y portugués",
+    "jobStatus": "Nuevo León",
+    "experience": [
+      "hospital",
+      "rehab",
+      "private",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-06-30T18:54:10.509Z"
+    }
+  },
+  {
+    "_id": "9KsecLS5EcJcqFgE6",
+    "name": "Margaret Iracheta",
+    "training": "certificación",
+    "sex": "female",
+    "experienceYears": 2,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "k",
+      "l",
+      "m",
+      "p"
+    ],
+    "email": "adylenm@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "no",
+    "zip": "67190",
+    "herbs": "aroma-terapia, cojín de calor herbal, esencias minerales",
+    "zone": "Guadalupe, Juarez, Monterrey",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening"
+    ],
+    "contactTime": "8 a.m. a 4 p.m.",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "18/08/87",
+    "languages": "español",
+    "jobStatus": "independiente",
+    "experience": [
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-08-09T00:49:48.724Z"
+    }
+  },
+  {
+    "_id": "9Y4cp4stFFDzp9LBc",
+    "name": "Marcela Martinez Garcia",
+    "training": "Diplomado de masajes terapéuticos(IDH)",
+    "sex": "female",
+    "experienceYears": 4,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "e",
+      "g",
+      "j",
+      "p"
+    ],
+    "email": "marcelaveronica72@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "no",
+    "zip": "67160",
+    "herbs": "Aceite base de coco, enebro, menta y otros que se aplican al final de la terapia",
+    "zone": "Linda Vista, Contry, Monterrey Sur",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "night"
+    ],
+    "contactTime": "Por la mañana",
+    "smartphone": "yes",
+    "reference": "other",
+    "birthday": "20-Dic-72",
+    "languages": "Ingles",
+    "jobStatus": "Autoempleada",
+    "experience": [
+      "private",
+      "school"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-02-14T14:13:16.239Z"
+    }
+  },
+  {
+    "_id": "9vYAmCgSgyDd3HH9s",
+    "name": "MARVIN TEPOZ LUNA",
+    "training": "LICENCIADO EN TERAPIA FISICA Y CERTIFICADO EN TERAPIA MANUAL E INSTRUMENTALIZADA.",
+    "sex": "male",
+    "experienceYears": 6,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "l",
+      "m"
+    ],
+    "email": "mtl_8020@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "no",
+    "zip": "64320",
+    "herbs": "aceite, crema, compresas, agentes fisicos, us, electroterapia, ganchos, cupping, y cinta.",
+    "zone": "centro de monterrey, cumbres, san pedro, san nicolas, realmente podría moverme en toda esta zona.",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening"
+    ],
+    "contactTime": "de 7:00am a 4:00 pm",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "01 octubre 1988",
+    "languages": "español",
+    "jobStatus": "tengo un consultorio y lo atiendo por las tardes/noches.",
+    "experience": [
+      "hospital",
+      "rehab",
+      "gym",
+      "spa",
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-10-27T17:43:05.925Z"
+    }
+  },
+  {
+    "_id": "BG8bJ8cRSmgyhBNwh",
+    "name": "Xavier",
+    "training": "Colegio",
+    "sex": "male",
+    "experienceYears": 20,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b"
+    ],
+    "email": "edxandrade@example.com",
+    "hasBed": "no",
+    "locationId": "J7oRyBHAGQgkfnRwe",
+    "hasChair": "no",
+    "zip": "64680",
+    "herbs": "no",
+    "zone": "alta vista, monterrey",
+    "hasCar": "no",
+    "schedulePreference": [
+      "all"
+    ],
+    "contactTime": "mañana",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "03 octubre 1978",
+    "languages": "ingles",
+    "jobStatus": "horario rotativo",
+    "experience": [
+      "private",
+      "onDemand",
+      "school",
+      "other"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-08-01T00:28:40.890Z"
+    }
+  },
+  {
+    "_id": "Cf8HAZw42i2nqb9oJ",
+    "name": "Gerardo Manuel Alvarado Barajas",
+    "training": "Lic en ciencias del ejercicio, terapeuta en masajes corporales, masaje chino tui na en silla, aplicación de ventosa tradicional, aplicacion de kinesiotaping",
+    "sex": "male",
+    "experienceYears": 1,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "i",
+      "j",
+      "l"
+    ],
+    "email": "lce.gerardoalvarado26@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "no",
+    "zip": "67115",
+    "herbs": "aromaterapia",
+    "zone": "Guadalupe",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening"
+    ],
+    "contactTime": "Por la tarde",
+    "smartphone": "yes",
+    "reference": "fb",
+    "birthday": "23-09-1994",
+    "languages": "Español",
+    "jobStatus": "Desempleado",
+    "experience": [
+      "private",
+      "other"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-01-02T08:05:06.230Z"
+    }
+  },
+  {
+    "_id": "EHLhpC5xPpaavFLCx",
+    "name": "Gerardo Guadalupe Navarro Borjas",
+    "training": "Certificación en quiromasaje,  par biomagnetico,  tecnicas chinas de masaje,  dígito presión y acupuntura.",
+    "sex": "male",
+    "experienceYears": 6,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "f",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l"
+    ],
+    "email": "gernavarromx@example.com",
+    "hasBed": "yes",
+    "locationId": "dsYbt8Z2vwgR9mt6A",
+    "hasChair": "yes",
+    "zip": "64000",
+    "herbs": "Aromaterapia en difusor de aceite y preparo mi propio aceite para masajes.",
+    "zone": "Toda el area metropolitana.  Cuento con coche propio",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "all"
+    ],
+    "contactTime": "En cualquier horario estoy disponible y dispuesto",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "17 de noviembre de 1980",
+    "languages": "Español e Inglés",
+    "jobStatus": "Auto empleado",
+    "experience": [
+      "gym",
+      "private",
+      "onDemand",
+      "other"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-08-23T16:12:51.540Z"
+    }
+  },
+  {
+    "_id": "EJFaeM4Nc4GuHsjnp",
+    "name": "Maria de Jesús Garza Saenz (SUSY)",
+    "training": "Masoterapeuta",
+    "sex": "female",
+    "experienceYears": 4,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "h"
+    ],
+    "email": "susysaenz@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "no",
+    "zip": "64117",
+    "herbs": "Si",
+    "zone": "Cumbres",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening",
+      "night"
+    ],
+    "contactTime": "Cualquier hora",
+    "smartphone": "yes",
+    "reference": "other",
+    "birthday": "7-Mayo-1962",
+    "languages": "Español",
+    "jobStatus": "Propio negocio",
+    "experience": [
+      "spa"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-12-15T17:09:19.194Z"
+    }
+  },
+  {
+    "_id": "EJbxkKrNjkur3zbis",
+    "name": "MIRIAM JUDITH GONZALEZ RAMIREZ",
+    "training": "DIPLOMADO EN MASAJES CORPORALES",
+    "sex": "female",
+    "experienceYears": 1,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "d",
+      "h"
+    ],
+    "email": "mirigzz2087@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "yes",
+    "zip": "66351",
+    "herbs": "PRODUCTO NATURAL PROPIO",
+    "zone": "SANTA CATARINA , SAN PEDRO",
+    "hasCar": "no",
+    "schedulePreference": [
+      "all"
+    ],
+    "contactTime": "7PM",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "20 SEPT 1987",
+    "languages": "ESPAÑOL",
+    "jobStatus": "NUEVO LEON",
+    "experience": [
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-07-11T16:12:41.757Z"
+    }
+  },
+  {
+    "_id": "EycvR8eLErTkSLxyo",
+    "name": "Diana Patricia Martinez Castillo",
+    "training": "diplomado en profesional de masaje relajante y terapeutico",
+    "sex": "female",
+    "experienceYears": 1,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "e",
+      "g",
+      "i",
+      "k"
+    ],
+    "email": "patricia221894@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "no",
+    "zip": "67190",
+    "herbs": "difusor para aromaterapia,aceites y mantequillas",
+    "zone": "Guadalupe,Monterrey",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "evening",
+      "night"
+    ],
+    "contactTime": "tarde",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "18 mayo 1994",
+    "languages": "español,inglés",
+    "jobStatus": "activo",
+    "experience": [
+      "private",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-03-02T02:12:48.349Z"
+    }
+  },
+  {
+    "_id": "Fn2RM3BrK4ZbjNK82",
+    "name": "Patricio Garcia Landois Fernandez",
+    "training": "Carrera tecnica en rehabilitacion fisica",
+    "sex": "male",
+    "experienceYears": 2,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "l",
+      "m"
+    ],
+    "email": "patriciolandois@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "no",
+    "zip": "64649",
+    "herbs": "aromaterapia y balsamos",
+    "zone": "cumbres, san nicolas, san pedro, contry",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "evening",
+      "night"
+    ],
+    "contactTime": "cualquier hora antes de las 3 de la tarde o despues de las 6 de la tarde",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "29/enero/1998",
+    "languages": "Español, Ingles",
+    "jobStatus": "Desempleado",
+    "experience": [
+      "rehab",
+      "private",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-02-01T17:04:32.842Z"
+    }
+  },
+  {
+    "_id": "FtsqteyaFqkzF6fJm",
+    "name": "Blanca Elizabeth Rios Conizales",
+    "training": "Terapeuta SPA en Masajes",
+    "sex": "female",
+    "experienceYears": 3,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "d",
+      "h"
+    ],
+    "email": "lizzy2514@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "no",
+    "zip": "66214",
+    "herbs": "Si",
+    "zone": "Todo Monterrey",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "all"
+    ],
+    "contactTime": "Cualquier",
+    "smartphone": "yes",
+    "reference": "staff",
+    "birthday": "25 de Marzo de 1984",
+    "languages": "Español",
+    "jobStatus": "Masaje a domicilio",
+    "experience": [
+      "spa",
+      "private",
+      "onDemand"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-04-05T15:03:21.173Z"
+    }
+  },
+  {
+    "_id": "HvzEg6BoaBpxYSRoN",
+    "name": "Rebecca Denise Montoya Rendon",
+    "training": "Masoterapeuta",
+    "sex": "female",
+    "experienceYears": 4,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "h",
+      "k",
+      "m"
+    ],
+    "email": "larebemontoya@example.com",
+    "hasBed": "yes",
+    "locationId": "HJSWyqx4hacuTKr3v",
+    "hasChair": "yes",
+    "zip": "66024",
+    "herbs": "Aromaterapia",
+    "zone": "Cumbres",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening",
+      "night"
+    ],
+    "contactTime": "Todo el dia",
+    "smartphone": "yes",
+    "reference": "staff",
+    "birthday": "26-Mayo-1986",
+    "languages": "Español, entiendo ingles",
+    "jobStatus": "Local propio",
+    "experience": [
+      "spa",
+      "onDemand",
+      "school"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-11-09T15:34:41.943Z"
+    }
+  },
+  {
+    "_id": "JJxkKy3zNJs2ARTdB",
+    "name": "Nallely Sarahi Cavazos Briones",
+    "training": "Lic en Fisioterapia y Rehabilitación",
+    "sex": "female",
+    "experienceYears": 3,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "m"
+    ],
+    "email": "nallelycavazos08@example.com",
+    "hasBed": "yes",
+    "locationId": "J7oRyBHAGQgkfnRwe",
+    "hasChair": "no",
+    "zip": "64000",
+    "herbs": "No",
+    "zone": "Monterrey y Sur",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "night"
+    ],
+    "contactTime": "1",
+    "smartphone": "yes",
+    "reference": "other",
+    "birthday": "29/01/95",
+    "languages": "Español",
+    "jobStatus": "Trabajo en las mañanas",
+    "experience": [
+      "rehab"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-03-13T02:38:44.415Z"
+    }
+  },
+  {
+    "_id": "NSNT6ehhHEqm2qXwZ",
+    "name": "Ulises missael",
+    "training": "Rehabilitador fisico",
+    "sex": "male",
+    "experienceYears": 7,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "l",
+      "m"
+    ],
+    "email": "Grcia835@example.com",
+    "hasBed": "yes",
+    "locationId": "dsYbt8Z2vwgR9mt6A",
+    "hasChair": "no",
+    "zip": "66460",
+    "herbs": "Aromaterapia compresas calientes eléctricas aceites con aroma",
+    "zone": "San Nicolás, Monterrey sur, San Pedro",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening"
+    ],
+    "contactTime": "En la mañana",
+    "smartphone": "yes",
+    "reference": "other",
+    "birthday": "7 abril 1992",
+    "languages": "Inglés",
+    "jobStatus": "Rehabilitador fisico",
+    "experience": [
+      "rehab",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-02-08T19:41:56.734Z"
+    }
+  },
+  {
+    "_id": "PZT7JTkHD8o5zjgq7",
+    "name": "Orlando Espinosa Sosa",
+    "training": "Lic en Fisioterapia",
+    "sex": "male",
+    "experienceYears": 2,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c"
+    ],
+    "email": "oespinosasosa@example.com",
+    "hasBed": "yes",
+    "locationId": "J7oRyBHAGQgkfnRwe",
+    "hasChair": "no",
+    "zip": "64700",
+    "herbs": "No",
+    "zone": "Sur",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "all"
+    ],
+    "contactTime": "Tarde",
+    "smartphone": "yes",
+    "reference": "staff",
+    "birthday": "6-Jun-1992",
+    "languages": "Ingles",
+    "jobStatus": "A domicilio",
+    "experience": [
+      "rehab"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-06-29T22:48:07.478Z"
+    }
+  },
+  {
+    "_id": "PpvcXS7oEa6PDjtgN",
+    "name": "Aranza Sanchez Arreozola",
+    "training": "Carrera: Terapeuta en masajes corporales",
+    "sex": "female",
+    "experienceYears": 3,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "d",
+      "h",
+      "i",
+      "j",
+      "k",
+      "m",
+      "p"
+    ],
+    "email": "aranza_comunicaciones@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "no",
+    "zip": "67100",
+    "herbs": "aromaterapia",
+    "zone": "Guadalupe",
+    "hasCar": "no",
+    "schedulePreference": [
+      "evening",
+      "night"
+    ],
+    "contactTime": "Tarde 12:00pm a 6:00pm",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "19-08-1994",
+    "languages": "Solo español",
+    "jobStatus": "desempleada",
+    "experience": [
+      "spa",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-07-24T19:02:10.367Z"
+    }
+  },
+  {
+    "_id": "Qcma5LZLf8NY7SwWX",
+    "name": "Eduardo Flores Guajardo",
+    "training": "Terapeuta Spa, Maestro de Friki, Contador Publicó Auditor",
+    "sex": "male",
+    "experienceYears": 12,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "p"
+    ],
+    "email": "masaje.reiki15@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "yes",
+    "zip": "66463",
+    "herbs": "Aceite de almendras y aceites esenciales",
+    "zone": "Monterrey,San Pedro Garza García,Guadalupe,San Nicolás De Los Garza",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "evening",
+      "night"
+    ],
+    "contactTime": "De 2 pm 11 pm",
+    "smartphone": "yes",
+    "reference": "fb",
+    "birthday": "24 junio 1965",
+    "languages": "Español",
+    "jobStatus": "Terapeuta Spa",
+    "experience": [
+      "hotel",
+      "spa",
+      "private",
+      "onDemand"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-12-02T01:34:36.857Z"
+    }
+  },
+  {
+    "_id": "Re6wHYJdojCHPninm",
+    "name": "Ulises missael García rios",
+    "training": "Técnico en rehabilitación física",
+    "sex": "male",
+    "experienceYears": 7,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "l",
+      "m",
+      "p"
+    ],
+    "email": "grcia835@example.com",
+    "hasBed": "no",
+    "locationId": "dsYbt8Z2vwgR9mt6A",
+    "hasChair": "no",
+    "zip": "66414",
+    "herbs": "Si aromaterapia, bálsamos , compresas",
+    "zone": "Monterrey , San Nicolás , cumbres , San Pedro",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening"
+    ],
+    "contactTime": "En la mañana",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "7 abril 1992",
+    "languages": "Inglés",
+    "jobStatus": "Por mi cuenta",
+    "experience": [
+      "hospital",
+      "rehab",
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-04-25T18:59:45.164Z"
+    }
+  },
+  {
+    "_id": "Sd25XPZy2ybFfXiGG",
+    "name": "Karla Celina Toledo Meza",
+    "training": "Cosmetologia",
+    "sex": "female",
+    "experienceYears": 9,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "d",
+      "j",
+      "k",
+      "m",
+      "p"
+    ],
+    "email": "Brockaos19@example.com",
+    "hasBed": "yes",
+    "locationId": "CD77JST6ZMyZprPWG",
+    "hasChair": "no",
+    "zip": "64250",
+    "herbs": "Aromaterapia, aceites esenciales",
+    "zone": "San pedro, cumbres",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "evening"
+    ],
+    "contactTime": "A la hora que sea",
+    "smartphone": "yes",
+    "reference": "fb",
+    "birthday": "19 Julio 1987",
+    "languages": "Ingles - español",
+    "jobStatus": "Terapeuta Spa en Hotel Camino Real",
+    "experience": [
+      "hotel",
+      "spa",
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-11-22T16:11:01.561Z"
+    }
+  },
+  {
+    "_id": "Tff3mjXH8X2MqgpkW",
+    "name": "Karen Ariana Alvarado Zurita",
+    "training": "Terapeuta SPA",
+    "sex": "female",
+    "experienceYears": 10,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "k",
+      "m",
+      "o"
+    ],
+    "email": "ariana.zurita@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "no",
+    "zip": "66647",
+    "herbs": "Aromateriapia",
+    "zone": "Cumbres",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "all"
+    ],
+    "contactTime": "Siempre",
+    "smartphone": "yes",
+    "reference": "staff",
+    "birthday": "18-03-1979",
+    "languages": "Español",
+    "jobStatus": "SPA propio",
+    "experience": [
+      "hotel",
+      "spa",
+      "private",
+      "onDemand"
+    ],
+    "status": true,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2017-09-23T03:15:04.884Z"
+    }
+  },
+  {
+    "_id": "Ts8ozi3ZJjxgYcYnL",
+    "name": "Mayra Elizabeth Salazar Gzz",
+    "training": "masoterapeuta y estoy estudiando fisioterapia",
+    "sex": "female",
+    "experienceYears": 1,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "m"
+    ],
+    "email": "maya.salazar35@example.com",
+    "hasBed": "yes",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "hasChair": "no",
+    "zip": "67150",
+    "herbs": "Aceites (sinergias)",
+    "zone": "Guadalupe. dentro del área metropolitana",
+    "hasCar": "yes",
+    "schedulePreference": [
+      "morning",
+      "night"
+    ],
+    "contactTime": "de 9 a 12 o después de las 2",
+    "smartphone": "yes",
+    "reference": "fb",
+    "birthday": "26 Diciembre 80",
+    "languages": "Español",
+    "jobStatus": "disponible",
+    "experience": [
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-02-21T03:15:57.126Z"
+    }
+  },
+  {
+    "_id": "XaEddBanoWtFvZmXf",
+    "name": "Tomás Meza Montaño",
+    "training": "TSU en Terapia Física Área Rehabilitación",
+    "sex": "male",
+    "experienceYears": 3,
+    "phone": "8112345678",
+    "experienceTypes": [
+      "a",
+      "b",
+      "c",
+      "g",
+      "h",
+      "i",
+      "k",
+      "l",
+      "m"
+    ],
+    "email": "Aguilas-05@example.com",
+    "hasBed": "yes",
+    "locationId": "dsYbt8Z2vwgR9mt6A",
+    "hasChair": "no",
+    "zip": "64000",
+    "herbs": "Aceites y escénicas.",
+    "zone": "Centro alameda o cuauhtémoc, pino Suárez",
+    "hasCar": "no",
+    "schedulePreference": [
+      "evening"
+    ],
+    "contactTime": "10:00 AM - 16:00 PM",
+    "smartphone": "yes",
+    "reference": "web",
+    "birthday": "19/05/1993",
+    "languages": "Español",
+    "jobStatus": "Enfermero",
+    "experience": [
+      "rehab",
+      "private",
+      "onDemand",
+      "school"
+    ],
+    "status": false,
+    "rating": 0,
+    "createdAt": {
+      "$date": "2018-02-13T22:54:55.566Z"
+    }
+  }
+]

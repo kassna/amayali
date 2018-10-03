@@ -1,0 +1,1275 @@
+[
+  {
+    "_id": "2Fr6DNuJrDt5KcYDt",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 250,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "code": "FelizCumpleEzme",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-17T16:20:23.432Z"
+    }
+  },
+  {
+    "_id": "2XWRXpqoom3PjhusR",
+    "code": "HappyBDaySteph",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 300,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-16T03:41:43.128Z"
+    }
+  },
+  {
+    "_id": "43pR6eKiFvCoa3Mou",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "815VDL",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-08-24T19:39:40.445Z"
+    }
+  },
+  {
+    "_id": "455b4DTrmAn2crHTy",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "SO561J",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-01T01:03:36.191Z"
+    }
+  },
+  {
+    "_id": "4qvDZHP8jkqT7MA3k",
+    "code": "ShelHa",
+    "type": "percentage",
+    "usage": "new",
+    "amount": 10,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP",
+      "AfGQwHRbq6D9ePg3u"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-08-23T15:59:55.476Z"
+    }
+  },
+  {
+    "_id": "5B8m9Cj3JWr22dQop",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "PP771T",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-07-11T21:50:31.463Z"
+    }
+  },
+  {
+    "_id": "5KAPXRSRRz7SknWCs",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "56K0AP",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-11-04T15:28:14.256Z"
+    }
+  },
+  {
+    "_id": "5hebudEH8tNjheP6q",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "464XXM",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-07-15T17:28:48.391Z"
+    }
+  },
+  {
+    "_id": "6YSo6pNFW2bHWvPbC",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "9O7O0L",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-26T20:59:13.570Z"
+    }
+  },
+  {
+    "_id": "6jsK6QMmX9wjbFp2r",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "88C2ZS",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-06-25T23:22:01.164Z"
+    }
+  },
+  {
+    "_id": "6yYaJvmp28gxZjBYs",
+    "code": "TheDayLulu",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 250,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP",
+      "AfGQwHRbq6D9ePg3u"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-19T23:35:03.468Z"
+    }
+  },
+  {
+    "_id": "7hvigeu7xpDFWB3wt",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "OE6N85",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-18T16:26:26.989Z"
+    }
+  },
+  {
+    "_id": "8K5cGX8jREuPRAoPC",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "1DTE82",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-07-04T05:55:24.567Z"
+    }
+  },
+  {
+    "_id": "8mnmSGRBKBpJpjTuG",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "LCL612",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-10-17T21:12:16.493Z"
+    }
+  },
+  {
+    "_id": "8yc6CiLDgYW8sKomf",
+    "type": "percentage",
+    "amount": 10,
+    "locationsId": [],
+    "code": "ivokassna",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-21T01:47:39.015Z"
+    }
+  },
+  {
+    "_id": "94ukTAMH6TQA9EFx8",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "S8I2J8",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-11T18:52:11.818Z"
+    }
+  },
+  {
+    "_id": "9FWYJd78dJ5AKXYev",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "VR916H",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-07-28T19:16:58.191Z"
+    }
+  },
+  {
+    "_id": "BnwoaF4XgpxeNCDbm",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "N67TU4",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-07-26T18:04:13.997Z"
+    }
+  },
+  {
+    "_id": "C2BeJZNGrcvCwBE9x",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "J2RO67",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-18T16:37:36.334Z"
+    }
+  },
+  {
+    "_id": "CBsdwrb8HNvDTPHjs",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "4K4TR8",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-12-22T18:38:46.844Z"
+    }
+  },
+  {
+    "_id": "E2apuHvdReXeuE8PX",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "7K8ZI6",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-16T22:10:12.391Z"
+    }
+  },
+  {
+    "_id": "EKXQJhuNZagZuqz7L",
+    "code": "TheDayZihil",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 250,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP",
+      "AfGQwHRbq6D9ePg3u"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-19T23:34:53.345Z"
+    }
+  },
+  {
+    "_id": "En5nTgpnWL35PsGQF",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "F1RY16",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-08-17T17:53:17.968Z"
+    }
+  },
+  {
+    "_id": "F3Rv7wHuoiLRQwqb2",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "I70CI7",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-21T14:09:59.011Z"
+    }
+  },
+  {
+    "_id": "FfuuhxKgux66G8MDm",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "R82QJ9",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-12-13T21:39:33.387Z"
+    }
+  },
+  {
+    "_id": "Fnp4qioMZFQEDbEQS",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "B2DC93",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-28T17:52:12.904Z"
+    }
+  },
+  {
+    "_id": "FzMEwds48hut7i4vA",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "57M9CD",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-01-26T22:18:13.198Z"
+    }
+  },
+  {
+    "_id": "GDQKMP83tSq5KRtpd",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "O1CZ23",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-01-28T21:41:41.824Z"
+    }
+  },
+  {
+    "_id": "Gf3fpvYiea7rB44Tp",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "6G0JL1",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-23T16:46:33.809Z"
+    }
+  },
+  {
+    "_id": "GpWcQhr97QvpF8cNh",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "Y1M01P",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-11-25T14:00:33.118Z"
+    }
+  },
+  {
+    "_id": "HNaEW4WhLAosvHccq",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "4RCW60",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-25T23:36:30.766Z"
+    }
+  },
+  {
+    "_id": "HgxeGK7DyfxzjiGMJ",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "137TTJ",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-07-17T10:53:18.642Z"
+    }
+  },
+  {
+    "_id": "HkBLrg2qurBisQbyL",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "2N3VG6",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-21T20:58:01.408Z"
+    }
+  },
+  {
+    "_id": "Hqv3S3XGRD2gXgFhA",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "H092TY",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-25T16:05:26.928Z"
+    }
+  },
+  {
+    "_id": "J5Jugr6dsigdnfx3E",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "287OBD",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-06-20T21:49:32.981Z"
+    }
+  },
+  {
+    "_id": "KCHYMXRmzzW4SkwfM",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "RV2V93",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-29T02:20:35.655Z"
+    }
+  },
+  {
+    "_id": "NSfMqCRK6BMk8JrXs",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "54E3CH",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-10-09T02:49:04.267Z"
+    }
+  },
+  {
+    "_id": "NfCrgkA38sQk7tRej",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "914TOP",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-24T17:57:02.464Z"
+    }
+  },
+  {
+    "_id": "P6Z29gycaHRHGRoWc",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "DaysGourmet",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-10-02T20:33:38.542Z"
+    }
+  },
+  {
+    "_id": "Pad9TQ7TbDKCjQa78",
+    "code": "HappyBDayJimmy",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 300,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-26T23:18:20.561Z"
+    }
+  },
+  {
+    "_id": "PqLwcbACKgWLmgkuA",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "H33PK5",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-15T20:37:54.305Z"
+    }
+  },
+  {
+    "_id": "RBn4mJp2RBcWNYHwA",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "79SSO9",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-10-30T22:05:32.936Z"
+    }
+  },
+  {
+    "_id": "TFPzrppqbRuMLZttQ",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "K95PJ3",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-09-13T12:17:09.835Z"
+    }
+  },
+  {
+    "_id": "TSRRtzD63EGfKMLyr",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "T96N9U",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-09-22T18:37:34.838Z"
+    }
+  },
+  {
+    "_id": "WeLGdFNt797Xm35jr",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "27WN1H",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-06-08T00:23:15.458Z"
+    }
+  },
+  {
+    "_id": "XjLX8E9dY3s4kXtft",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "98K7AL",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-12-02T17:52:18.306Z"
+    }
+  },
+  {
+    "_id": "Xo5xoxnuy7EpWqm4q",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "JZ2O40",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-25T21:11:53.796Z"
+    }
+  },
+  {
+    "_id": "Y8uYFyHz9NT7tmGJs",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "Q80NB6",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-08-04T17:41:41.358Z"
+    }
+  },
+  {
+    "_id": "YXcQ6xnYChHPRaWtE",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "L60K2O",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-21T03:25:23.247Z"
+    }
+  },
+  {
+    "_id": "YdMHpvxWei7wv4czb",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "O6S68E",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-09-01T16:02:59.918Z"
+    }
+  },
+  {
+    "_id": "Z8BRoFbsEAzNGZ765",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "716XQV",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-17T22:19:37.448Z"
+    }
+  },
+  {
+    "_id": "aCo6pMAJvwtdXtkwk",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "89UR7G",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-17T15:51:19.880Z"
+    }
+  },
+  {
+    "_id": "ambBCXsZPFzrHHYGh",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "SM01H2",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-10T00:08:17.418Z"
+    }
+  },
+  {
+    "_id": "b8MvYp2DWNij8DE99",
+    "type": "amount",
+    "amount": 100,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "code": "KarlaKassna",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-11-24T05:13:13.628Z"
+    }
+  },
+  {
+    "_id": "bbaYrB3dmZXDPqkXb",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "UW8J86",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-01-14T02:09:57.214Z"
+    }
+  },
+  {
+    "_id": "cNEQGiyLzf7Edzirw",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "IH314B",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-23T03:52:59.710Z"
+    }
+  },
+  {
+    "_id": "cYXMGSKSsXzMbbzdG",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "25RJ4K",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-11-24T15:38:57.586Z"
+    }
+  },
+  {
+    "_id": "dM9KzaGECDGPBY6NH",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "5OX34B",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-06T20:40:04.311Z"
+    }
+  },
+  {
+    "_id": "dRudoTfyaTEcFotJ2",
+    "code": "ZZZZZZZZZZZZ",
+    "type": "amount",
+    "usage": "new",
+    "amount": 1,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP",
+      "AfGQwHRbq6D9ePg3u"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-06-21T21:34:50.967Z"
+    }
+  },
+  {
+    "_id": "dofxb7J8G8fiY5kDN",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "V27S3Y",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-17T17:41:47.633Z"
+    }
+  },
+  {
+    "_id": "eKW3vrvyvifSpu9yo",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "8IZI69",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-09-21T16:57:56.587Z"
+    }
+  },
+  {
+    "_id": "fFDBZvNAdeMoNjuf4",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "25J0ZG",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-24T18:33:58.670Z"
+    }
+  },
+  {
+    "_id": "fYPjB7F4N6LGtXosA",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "RS03G0",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-24T18:05:46.389Z"
+    }
+  },
+  {
+    "_id": "fhs82DxQAWr3Hi6rk",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "0R48LS",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-12-21T05:42:32.750Z"
+    }
+  },
+  {
+    "_id": "fvFoiXjBW8EjQ29Df",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "Roru",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-11-20T22:55:44.277Z"
+    }
+  },
+  {
+    "_id": "g4ohhmry3KauKWgFA",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "7Q3M6O",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-11T18:48:17.834Z"
+    }
+  },
+  {
+    "_id": "gYMLeEEvoFY2mEGWL",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "17QD2J",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-23T18:53:54.281Z"
+    }
+  },
+  {
+    "_id": "hycmKB9ibL82hbPsx",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "1FU55V",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-01-15T00:07:16.114Z"
+    }
+  },
+  {
+    "_id": "iZ9HYKs4YQfFX7xba",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "F61SU0",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-23T21:31:51.959Z"
+    }
+  },
+  {
+    "_id": "iu3yZwZighy3dMrwj",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "XO0U48",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-25T17:28:20.677Z"
+    }
+  },
+  {
+    "_id": "jhWP6sKmW8yyZpKPr",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "TK549U",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-07-12T02:39:06.993Z"
+    }
+  },
+  {
+    "_id": "jqm4TQxxYg2ksSD4i",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "M7FL38",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-01-24T07:37:24.282Z"
+    }
+  },
+  {
+    "_id": "kLEHMg4ubQcpF6hkD",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "5PO7W5",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-10-03T19:44:56.439Z"
+    }
+  },
+  {
+    "_id": "kghJYzb3FuHW4w7Wo",
+    "code": "FelizCumpleArturo",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 250,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-11T23:14:51.944Z"
+    }
+  },
+  {
+    "_id": "m3ugnJSXJj9t3cHwZ",
+    "code": "VeroMarcos",
+    "type": "percentage",
+    "usage": "new",
+    "amount": 10,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-24T15:10:14.535Z"
+    }
+  },
+  {
+    "_id": "mXCYinhnMF9KCuJHg",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "S7LW25",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-12T15:31:13.381Z"
+    }
+  },
+  {
+    "_id": "mZEvCGY3d8H4d2AS7",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "U59Z1W",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-02-13T21:43:26.828Z"
+    }
+  },
+  {
+    "_id": "mmSmcaWij7JqWLqwH",
+    "code": "TheDayCathy",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 250,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP",
+      "AfGQwHRbq6D9ePg3u"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-19T23:34:57.961Z"
+    }
+  },
+  {
+    "_id": "nfxpAJ7C7KSjHkdSj",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "4ER7L5",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-11-06T15:13:32.734Z"
+    }
+  },
+  {
+    "_id": "oaXQQAsLSnqMcCxE6",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "8N9S8C",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-08-08T23:34:08.139Z"
+    }
+  },
+  {
+    "_id": "pr8iASASq9hc4TsNM",
+    "type": "percentage",
+    "amount": 10,
+    "locationsId": [],
+    "code": "serkassna",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-08-16T22:11:23.065Z"
+    }
+  },
+  {
+    "_id": "qxx5eu2AnQTKuaDAd",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "ML58O2",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-23T11:54:58.136Z"
+    }
+  },
+  {
+    "_id": "r5CZvbCFRw8dJofFC",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "R1G79J",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-08-24T19:32:43.233Z"
+    }
+  },
+  {
+    "_id": "rH9zbDGhyajckEdya",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "G14M3Y",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-10-12T18:33:37.372Z"
+    }
+  },
+  {
+    "_id": "rX9D8zMXMkpfTcpKD",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "8SNR91",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-09-26T14:55:14.301Z"
+    }
+  },
+  {
+    "_id": "skT9XmfntPjoLqf6r",
+    "code": "FelizCumpleBren",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 250,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-12T22:25:39.203Z"
+    }
+  },
+  {
+    "_id": "tMqxXokgtSpdvoHK5",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "U150HC",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-13T16:33:12.511Z"
+    }
+  },
+  {
+    "_id": "tWQGR4H2oxfAMakdz",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "7OWC11",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-06-08T00:25:56.626Z"
+    }
+  },
+  {
+    "_id": "tYHEFDsW827N37DRr",
+    "code": "HappyBDayLaura",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 250,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-07T16:42:38.180Z"
+    }
+  },
+  {
+    "_id": "u4o5Db7DgNquF7MAJ",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "H597WB",
+    "status": true,
+    "createdAt": {
+      "$date": "2017-08-28T15:12:48.257Z"
+    }
+  },
+  {
+    "_id": "uG2MpbZ2tEnuCnZqF",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "X7K7B6",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-04-24T03:03:18.476Z"
+    }
+  },
+  {
+    "_id": "uPo9ofH9MMAoHbZ2N",
+    "code": "RegaloJuanPablo",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 799,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP",
+      "AfGQwHRbq6D9ePg3u"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-09-10T17:44:22.526Z"
+    }
+  },
+  {
+    "_id": "vLsRnAj9bJvxh3GY7",
+    "code": "ISC81",
+    "type": "percentage",
+    "amount": 50,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2017-11-18T13:53:22.395Z"
+    },
+    "usage": "new"
+  },
+  {
+    "_id": "weNawXqpcgTzcQgqQ",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "GH9I43",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-28T12:56:20.087Z"
+    }
+  },
+  {
+    "_id": "xFTzjiQj9ouCrzE4y",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "4XUW47",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-29T02:27:25.731Z"
+    }
+  },
+  {
+    "_id": "xkXCSgy2ySuHdxSbj",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "C1J0L9",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-09-12T21:52:12.607Z"
+    }
+  },
+  {
+    "_id": "yDN9cCAEngrBoByrZ",
+    "code": "PROMagazine",
+    "type": "amount",
+    "usage": "new",
+    "amount": 100,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-03-26T16:15:46.030Z"
+    }
+  },
+  {
+    "_id": "yibLwvAyf6KusfSWB",
+    "code": "HappyBDayGloria",
+    "type": "amount",
+    "usage": "gift",
+    "amount": 300,
+    "locationsId": [
+      "J7oRyBHAGQgkfnRwe",
+      "CD77JST6ZMyZprPWG",
+      "dsYbt8Z2vwgR9mt6A",
+      "HJSWyqx4hacuTKr3v",
+      "8kw2HWAo3jG8hR4RP",
+      "AfGQwHRbq6D9ePg3u"
+    ],
+    "status": true,
+    "createdAt": {
+      "$date": "2018-08-02T22:30:10.021Z"
+    }
+  },
+  {
+    "_id": "ypkZwMfjLB9JjN9yh",
+    "type": "amount",
+    "amount": 140,
+    "locationsId": [],
+    "code": "3F73HM",
+    "usage": "regular",
+    "status": true,
+    "createdAt": {
+      "$date": "2018-05-31T20:08:23.725Z"
+    }
+  }
+]

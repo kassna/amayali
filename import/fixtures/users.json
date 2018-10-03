@@ -1,0 +1,52 @@
+﻿[
+  {
+    "_id": "Ev93an7sGhbL4Sbm8",
+    "createdAt": {
+      "$date": "2018-10-03T22:36:55.701Z"
+    },
+    "services": {
+      "password": {
+        "bcrypt": "$2a$10$ZrWx9XiEg8J7NueqUjohB.rYOSzAbQRFkqoxjtOIoasdFoIC5kCiG"
+      }
+    },
+    "emails": [
+      {
+        "address": "admin@example.com",
+        "verified": false
+      }
+    ],
+    "profile": {
+      "firstname": "Admin",
+      "lastname": "Schmadmin",
+      "terms": false
+    },
+    "roles": [
+      "admin"
+    ]
+  },
+  {
+    "_id": "FKks9ReELFFeZjQ92",
+    "createdAt": {
+      "$date": "2018-10-03T22:40:14.805Z"
+    },
+    "services": {
+      "password": {
+        "bcrypt": "$2a$10$JspA.e66zjhOW/E6bdhxn.Ka1m1.72VFNhNQCfoGBkW7ob7pqdCse"
+      }
+    },
+    "emails": [
+      {
+        "address": "client@example.com",
+        "verified": false
+      }
+    ],
+    "profile": {
+      "firstname": "Client",
+      "lastname": "Schmient",
+      "terms": false
+    },
+    "roles": [
+      "client"
+    ]
+  }
+]
