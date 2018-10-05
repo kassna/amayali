@@ -1,0 +1,68 @@
+﻿[
+  {
+    "_id": "2yHspuC25Mpho5MuF",
+    "firstname": "Jorg",
+    "lastname": "Paz Soldan",
+    "email": "jorge@axample.com",
+    "phone": "8119998888",
+    "locationId": "HJSWyqx4hacuTKr3v",
+    "address": {
+      "street1": "Garza Sada 123",
+      "street2": "Calle Diego de Montemayor 543",
+      "zip": "66554",
+      "reference": "Hotel Comfort Inn"
+    },
+    "userId": "HDCB4zLudidbab9Ck",
+    "completedProfile": true,
+    "createdAt": {
+      "$date": "2017-11-25T14:00:33.087Z"
+    },
+    "pendingPromos": 0,
+    "rating": 0,
+    "promoCodeId": "GpWcQhr97QvpF8cNh"
+  },
+  {
+    "_id": "3DgvwngmkG9jWBWHh",
+    "email": "mauricio@axample.com",
+    "firstname": "Alvaro Mauricio",
+    "lastname": "Rocha Ramirez",
+    "userId": "nxtM53eXcoavWjH9E",
+    "createdAt": {
+      "$date": "2018-08-24T19:32:43.095Z"
+    },
+    "completedProfile": true,
+    "pendingPromos": 0,
+    "rating": 0,
+    "promoCodeId": "r5CZvbCFRw8dJofFC",
+    "address": {
+      "reference": "Cerca a Plaza Esfera",
+      "street1": "Garza Sada 123",
+      "street2": "Calle Diego de Montemayor 543",
+      "zip": "66554"
+    },
+    "locationId": "J7oRyBHAGQgkfnRwe",
+    "phone": "5522233331"
+  },
+  {
+    "_id": "3eG3ez38q2ZMFEMuL",
+    "email": "erick@example.com",
+    "firstname": "Erick Gabriel",
+    "lastname": "Alanis Gallegos",
+    "userId": "Y7cuuL46777JedTXf",
+    "createdAt": {
+      "$date": "2017-09-24T18:05:46.380Z"
+    },
+    "completedProfile": true,
+    "pendingPromos": 0,
+    "rating": 0,
+    "promoCodeId": "fYPjB7F4N6LGtXosA",
+    "phone": "8112223333",
+    "address": {
+      "street1": "Garza Sada 123",
+      "street2": "Calle Diego de Montemayor 543",
+      "zip": "66554",
+      "reference": "Torre 140, Departamento en 3er piso"
+    },
+    "locationId": "J7oRyBHAGQgkfnRwe"
+  }
+]

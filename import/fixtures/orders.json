@@ -1,0 +1,85 @@
+﻿[
+  {
+    "_id": "26uWaLGR4pLasDs5f",
+    "locationId": "HJSWyqx4hacuTKr3v",
+    "product": "60",
+    "type": "relax",
+    "therapistsType": "female",
+    "date": "06/09/2018 3:00 pm",
+    "total": 799,
+    "therapist": "g5KLqzjgYL6TsteLr",
+    "firstname": "Roman",
+    "lastname": "Figueroa",
+    "email": "figueroa.roman@example.com",
+    "phone": "8112434543",
+    "address": {
+      "street1": "Calle Diego de Montemayor 463",
+      "street2": "Garza Sada Sur 111",
+      "zip": "64650",
+      "reference": "Torre Livin. Departamento 11L"
+    },
+    "survey": "f526wNRAHqzK6PEfX",
+    "therapistSurvey": "Q4uqwPgdgbR8K3SaK",
+    "createdAt": {
+      "$date": "2018-06-15T22:21:52.795Z"
+    },
+    "referencePromos": 0,
+    "status": "completed"
+  },
+  {
+    "_id": "28perpAA9KKkNyZTB",
+    "locationId": "8kw2HWAo3jG8hR4RP",
+    "product": "60",
+    "type": "decontracting",
+    "therapistsType": "female",
+    "date": "02/17/2018 1:30 pm",
+    "total": 699,
+    "therapist": "Tff3mjXH8X2MqgpkW",
+    "clientId": "bpDNH7Tyd3zqjDPt8",
+    "survey": "Ky3c99FicRNqMK88x",
+    "therapistSurvey": "4dANnfdgBfKGtcgPa",
+    "createdAt": {
+      "$date": "2018-02-17T21:38:49.459Z"
+    },
+    "firstname": "Leonel",
+    "lastname": "Hernandez",
+    "email": "cpclehernandez@example.com",
+    "phone": "8117017421",
+    "address": {
+      "street1": "Calle Diego de Montemayor 463",
+      "street2": "Garza Sada Sur 111",
+      "zip": "67110",
+      "reference": "Colonia privada, esta casi enfrente de un carwash de Miguel Aleman"
+    },
+    "referencePromos": 0,
+    "status": "confirmed",
+    "therapistGrade": 10
+  },
+  {
+    "_id": "2M2YGgs8Y2wffAzAX",
+    "locationId": "dsYbt8Z2vwgR9mt6A",
+    "product": "90",
+    "type": "decontracting",
+    "therapistsType": "female",
+    "date": "08/27/2018 7:30 pm",
+    "total": 1099,
+    "therapist": "fQrFuMtmxcb9TqNTT",
+    "firstname": "Ruth",
+    "lastname": "Flores",
+    "email": "rurhfloresdiaz@example.com",
+    "phone": "5554043116",
+    "address": {
+      "street1": "Calle Diego de Montemayor 463",
+      "street2": "Garza Sada Sur 111",
+      "zip": "64000",
+      "reference": "Sheraton Ambassador Inn, hab 420"
+    },
+    "survey": "vJRRbAeLAQnE7tFLu",
+    "therapistSurvey": "NiuHTvcoKxk7ro7SQ",
+    "createdAt": {
+      "$date": "2018-08-29T19:40:40.981Z"
+    },
+    "referencePromos": 0,
+    "status": "canceled"
+  }
+]

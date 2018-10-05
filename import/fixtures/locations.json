@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "8kw2HWAo3jG8hR4RP",
+    "name": "Guadalupe (Linda Vista)",
+    "abbreviation": "MTY Linda Vista",
+    "base_rate": 799,
+    "status": true
+  },
+  {
+    "_id": "AfGQwHRbq6D9ePg3u",
+    "name": "San Nicolás de los Garza",
+    "abbreviation": "SN",
+    "base_rate": 799,
+    "status": true
+  },
+  {
+    "_id": "CD77JST6ZMyZprPWG",
+    "name": "Monterrey (Cumbres)",
+    "abbreviation": "MYT Cumbres",
+    "base_rate": 799,
+    "status": true
+  },
+  {
+    "_id": "HJSWyqx4hacuTKr3v",
+    "name": "San Pedro Garza Garcia",
+    "abbreviation": "MTY SP",
+    "base_rate": 799,
+    "status": true
+  },
+  {
+    "_id": "J7oRyBHAGQgkfnRwe",
+    "name": "Monterrey (Sur)",
+    "abbreviation": "MTY Sur",
+    "base_rate": 799,
+    "status": true
+  },
+  {
+    "_id": "dsYbt8Z2vwgR9mt6A",
+    "name": "Monterrey (Centro)",
+    "abbreviation": "MTY Centro",
+    "base_rate": 799,
+    "status": true
+  }
+]
