@@ -18,4 +18,6 @@
 - For better and easier management (Installing/Updating) of different IDEs of Jetbrains using [Toolbox](https://www.jetbrains.com/toolbox/app) is recomended.
 - As a student you can get a free license. Just go to [https://www.jetbrains.com/student](https://www.jetbrains.com/student).
 
-**Notice:** If you are using **PHPStorm** you have to install and enable the **EditorConfig**-Plugin to ensure consistent code formatting.
+#### Notice: 
+- If you are using **PHPStorm** you have to install and enable the **EditorConfig**-Plugin to ensure consistent code formatting.
+- Installing and enabling the **Meteor**-Plugin is recommended as well.
