@@ -1,0 +1,45 @@
+<template name="SidebarAgent">
+	<nav class="sidebar-nav">
+        <div class="collapse in nav-toggleable-sm m-t" id="nav-toggleable-sm">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="nav-header text-center">{{_ "admin.general.orders"}}</li>
+                <li class="{{isActiveRoute 'agent-book-now'}}">
+                    <a class="scroll-top text-center" href="{{pathFor 'agent-book-now'}}">
+                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        {{_ "general.bookNow"}}
+                    </a>
+                </li>
+                <li class="{{isActiveRoute 'agent-history-orders'}}">
+                        <a class="scroll-top text-center" href="{{pathFor 'agent-history-orders'}}">
+                            <i class="fa fa-history" aria-hidden="true"></i>
+                            {{_ "agent.orders.pastOrders"}}
+                        </a>
+                </li>
+
+                <li class="nav-header text-center">{{_ "admin.header.general"}}</li>
+                <li>
+                        <a class="scroll-top text-center edit-data" href="#">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                            {{_ "agent.personalData.title"}}
+                        </a>
+                </li>
+
+                <li class="{{isActiveRoute 'agent-promoCode'}}">
+                    <a class="scroll-top text-center" href="{{pathFor 'agent-promoCode'}}">
+                        <i class="fa fa-tags" aria-hidden="true"></i>
+                        {{_ "agent.promoCode.title"}}
+                    </a>
+                </li>
+
+                <li class="nav-header text-center">{{_ "admin.header.settings"}}</li>
+                <li>
+                        <a class="scroll-top text-center" id="logout">
+                            <i class="fa fa-power-off" aria-hidden="true"></i>
+                            {{_ "admin.header.logOut"}}
+                        </a>
+                </li>
+            </ul>
+            <hr class="visible-xs m-t">
+        </div>
+    </nav>
+</template>

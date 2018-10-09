@@ -4,8 +4,11 @@
 			{{> SidebarAdmin}}
 		{{/if}}
 		{{#if isInRole 'client'}}
-			{{> SidebarClient}}
+			{{> SidebarAgent}}
 		{{/if}}
+        {{#if isInRole 'agent'}}
+            {{> SidebarAgent}}
+        {{/if}}
 	</div>
 	<div class="stage">
 		{{> HeaderAdmin}}
@@ -16,13 +19,16 @@
 						{{> SidebarAdmin}}
 					{{/if}}
 					{{#if isInRole 'client'}}
-						{{> SidebarClient}}
+						{{> SidebarAgent}}
 					{{/if}}
+                    {{#if isInRole 'agent'}}
+                        {{> SidebarAgent}}
+                    {{/if}}
 	            </div>
 	            <div class="col-sm-10 content">
 	            	{{> Template.dynamic template=main}}
 
-					{{#if isInRole 'client'}}
+					{{#if isInRole 'client' $or isInRole 'agent'}}
 						{{> EditModal collection="Clients" editItem=client }}
 					{{/if}}
 	            </div>

@@ -697,6 +697,29 @@
       "text6": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a info@kassna.com"
     }
   },
+  "agent": {
+    "bookNow": {
+      "forbidden": "¡Bienvenido a kassna!",
+      "forbidden2": "Completa los datos de tus clientes para empezar",
+      "update": "Completar datos",
+      "pendingPromos1": "Tienes ",
+      "pendingPromos2": " de descuento adicional disponible. ¿Deseas aplicarlo?"
+    },
+    "orders": {
+      "pastOrders": "Historial de sesiones"
+    },
+    "personalData": {
+      "title": "Mis datos"
+    },
+    "promoCode": {
+      "title": "Código kassna",
+      "text1": "Tu código kassna es",
+      "text2": "En este momento tienes disponible",
+      "text3": "de descuento",
+      "text4": "Aprovéchalo y reserva ya tu próxima cita!",
+      "text5": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a info@kassna.com"
+    }
+  },
   "survey": {
     "title": "Encuesta de satisfacción",
     "thanks": "Gracias por tu participación. Esperamos verte pronto de nuevo.",
