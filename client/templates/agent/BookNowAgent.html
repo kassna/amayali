@@ -20,7 +20,7 @@
         {{else}}
           <h2 class="c-yellow text-center">{{_ "agent.bookNow.forbidden"}}</h2>
           <h3 class="c-green text-center">{{_ "agent.bookNow.forbidden2"}}</h3>
-          <h1 class="big c-yellow text-center">{{promoCodeCode client.promoCodeId}}</h1>
+          <h1 class="big c-yellow text-center">{{promoCodeCode agent.promoCodeId}}</h1>
           <div class="footer-buttons center">
             <button class="btn-success edit-data">{{_ "agent.bookNow.update"}}</button>
           </div>
@@ -79,12 +79,13 @@
 </template>
 
 <template name="BookNowAgentPaypal">
-  <div class="text-center m-t-lg m-b-lg {{#if $not payWithPaypal}}hidden{{/if}}">
-    <div id="paypal-button-container"></div>
+  <div class="text-center m-t-lg m-b-lg">
+        <span id="paypal-button-container"></span>
+      {{#if creditCardPayMode}}
+          <button id="cancel-credit" class="btn btn-primary-outline btn-lg btn-block">Cancelar</button>
+          {{>paypalCreditCardForm}}
+      {{else}}
+          <button id="credit-pay" class="btn btn-primary-outline btn-lg btn-block">Pagar con tarjeta de crédito</button>
+      {{/if}}
   </div>
-  {{#if $not payWithPaypal}}
-    <div class="footer-buttons center m-t-lg m-b-lg">
-      <button class="btn-default with-border m-t-0" id="payWithoutPaypal">{{_ "book.book"}}</button>
-    </div>
-  {{/if}}
 </template>

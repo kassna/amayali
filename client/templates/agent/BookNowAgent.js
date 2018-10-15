@@ -75,6 +75,7 @@ Template.BookNowAgent.onCreated(function () {
 
 Template.BookNowAgentForm.onRendered(() => {
 	datepickerSetup();
+    Session.set('creditCardPayMode',false);
 });
 
 Template.BookNowAgent.helpers({
@@ -245,18 +246,40 @@ Template.BookNowAgentPaypal.onRendered(() => {
     }
   }, '#paypal-button-container');
 });
+Template.paypalCreditCardForm.events({
+    'submit #paypal-payment-form': function(event, tmp){
+        event.preventDefault();
+
+        var card_data = Template.paypalCreditCardForm.card_data();
+        if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
+            return false;
+        }
+
+
+        //Probably a good idea to disable the submit button here to prevent multiple submissions.
+
+        Meteor.Paypal.purchase(card_data, {total: '100.50', currency: 'USD'}, function(err, results){
+            if (err) console.error(err);
+            else console.log(results);
+        });
+    }
+});
 
 Template.BookNowAgentPaypal.helpers({
   // If total is 0, payment should be skipped
+    creditCardPayMode(){
+        return Session.get('creditCardPayMode');
+    },
   payWithPaypal: () => Session.get('total') > 0,
 });
 
 Template.BookNowAgentPaypal.events({
-  'click #payWithoutPaypal': () => {
-    const orderDetails = getOrderDetails();
-    if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
-      return false;
+  'click #credit-pay': (e) => {
+      e.preventDefault();
+      Session.set('creditCardPayMode',true);
+  },
+    'click #cancel-credit': (e) => {
+        e.preventDefault();
+        Session.set('creditCardPayMode',false);
     }
-    postPayment(false);
-  }
 })
