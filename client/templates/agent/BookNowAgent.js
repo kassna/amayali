@@ -251,11 +251,12 @@ Template.paypalCreditCardForm.events({
         event.preventDefault();
 
         var card_data = Template.paypalCreditCardForm.card_data();
+
         if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
             return false;
         }
 
-
+        Session.set('creditCardPayMode',false);
         //Probably a good idea to disable the submit button here to prevent multiple submissions.
 
         Meteor.Paypal.purchase(card_data, {total: '100.50', currency: 'USD'}, function(err, results){
@@ -270,7 +271,7 @@ Template.BookNowAgentPaypal.helpers({
     creditCardPayMode(){
         return Session.get('creditCardPayMode');
     },
-  payWithPaypal: () => Session.get('total') > 0,
+    payWithPaypal: () => Session.get('total') > 0,
 });
 
 Template.BookNowAgentPaypal.events({
