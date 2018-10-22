@@ -125,6 +125,10 @@
       "title": "¿Te gustaría ser parte de nuestro equipo?",
       "lead": "Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a"
     },
+    "agentForm": {
+      "title": "¿Te gustaría ser parte de nuestro equipo?",
+      "lead": "Llena este formulario y nos pondremos en contacto contigo. Si tienes alguna duda, escríbenos a"
+    },
     "therapistInfo": {
       "title": "Únete a Kassna",
       "lead": "Conectate con clientes cerca de ti, haz tu propio horario y gana lo que mereces.",
@@ -356,6 +360,24 @@
       "locationId": "Ciudad",
       "locationFirst": "(Selecciona)",
       "addressLabel": "Dirección"
+    },
+
+    "agents" : {
+      "agent": {
+        "fullname": "Nombre completo",
+        "email": "Correo electrónico",
+        "personalPhone": "Teléfono personal"
+      },
+      "company": {
+        "name": "Nombre",
+        "companyType": "Tipo(hotel, gimnasio, etc)",
+        "phone": "Teléfono",
+        "zip": "Código Postal",
+        "address": "Dirección"
+      },
+      "companyLabel": "Datos del lugar de trabajo",
+      "agentLabel" : "Datos personales"
+
     },
     "therapists": {
       "name": "Nombre completo",
