@@ -10,7 +10,6 @@
             <h2 class="dashhead-title title-style c-green">{{_ "general.bookNow"}}<span class="c-yellow"> - Total ${{ total }}</span> </h2>
         </div>
     </div>
-    {{else}}
     {{/if}}
 
     <div class="book-form turquoise">
@@ -86,7 +85,7 @@
   </div>
   {{#if $not payWithPaypal}}
     <div class="footer-buttons center m-t-lg m-b-lg">
-      <button class="btn-default with-border m-t-0" id="payWithoutPaypal">{{_ "book.book"}}</button>
+      <button class="btn-default with-border m-t-0" id="creditCardPayMode">{{_ "book.book"}}</button>
     </div>
   {{/if}}
 </template>

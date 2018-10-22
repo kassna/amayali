@@ -252,11 +252,16 @@ Template.BookNowClientPaypal.helpers({
 });
 
 Template.BookNowClientPaypal.events({
-  'click #payWithoutPaypal': () => {
-    const orderDetails = getOrderDetails();
-    if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
-      return false;
+    'click #credit-pay': (e) => {
+        e.preventDefault();
+        const orderDetails = getOrderDetails();
+        if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
+            return false;
+        }
+        Session.set('creditCardPayMode', true);
+    },
+    'click #cancel-credit': (e) => {
+        e.preventDefault();
+        Session.set('creditCardPayMode',false);
     }
-    postPayment(false);
-  }
 })

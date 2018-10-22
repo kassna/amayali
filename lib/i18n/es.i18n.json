@@ -614,6 +614,19 @@
     "therapistRequests": {
       "title": "Solicitudes de terapeutas"
     },
+    "agents": {
+      "title": "Agentes activos",
+      "infoTitle": "Información del agente",
+      "surname": "Apellido",
+      "workLocation": "Dirección de trabajo",
+      "enterprise": "Empresa/Hotel",
+      "personalPhone" : "Teléfono Personal",
+      "workPhone" : "Teléfono de Trabajo"
+
+    },
+    "agentRequests": {
+      "title": "Solicitudes de agentes"
+    },
     "clients": {
       "title": "Clientes",
       "pendingPromos": "Cupones pendientes",

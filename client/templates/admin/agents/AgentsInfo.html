@@ -1,0 +1,22 @@
+<template name="AgentInfo">
+  {{#if $.Session.get 'viewMode'}}
+    <div class="modal modal-info" id="agent-info">
+  	    <div class="modal-dialog modal-lg">
+  	        <div class="modal-content">
+  	            <div class="modal-header">
+  	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  	                <h4 class="modal-title block-subtitle c-turquoise">{{_ "admin.agents.infoTitle"}}</h4>
+  	            </div>
+  	            <div class="modal-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h3 class="c-cream m-t-0">{{_ "admin.general.personalData"}}</h3>
+                    </div>
+
+                  </div>
+  	            </div>
+  	        </div>
+  	    </div>
+  	</div>
+  {{/if}}
+</template>

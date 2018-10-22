@@ -136,7 +136,7 @@ Template.BookNowAgent.events({
     Session.set('editMode', 1);
     Meteor.setTimeout(function () {
       $("#edit-modal").modal('show');
-    }, 500);
+    }, 1);
   },
 });
 

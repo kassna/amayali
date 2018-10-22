@@ -1,8 +1,8 @@
-<template name="AdminTherapists">
-    {{#if $not  isInRole 'admin'}}
+<template name="AdminAgentsRequest">
+    {{#if $not isInRole 'admin'}}
         <div class="dashhead">
             <div class="dashhead-titles">
-                <h2 class="dashhead-title title-style c-green">{{_ "admin.therapists.title"}}</h2>
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.agentRequests.title"}}</h2>
             </div>
             <div class="btn-toolbar dashhead-toolbar">
                 <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
@@ -22,23 +22,19 @@
                               <th>{{_ "admin.general.email"}}</th>
                               <th>{{_ "admin.general.phone"}}</th>
                               <th>{{_ "admin.general.locationId"}}</th>
-                              <th>{{_ "admin.therapists.zone"}}</th>
-                              <th>{{_ "admin.therapists.schedulePreference"}}</th>
-                              <th>{{_ "admin.therapists.languages"}}</th>
-                              <th>{{_ "admin.general.completedOrders"}}</th>
-                              <th>{{_ "admin.therapists.createdAt"}}</th>
-                              <th></th>
+                              <th>{{_ "admin.agents.zone"}}</th>
+                              <th>{{_ "admin.agents.experience"}}</th>
                               <th>{{_ "admin.general.active"}}</th>
                               <th></th>
                               <th></th>
                           </tr>
                       </thead>
                       <tbody>
-                          {{#each therapists}}
-                              {{> Therapist}}
+                          {{#each agents}}
+                              {{> AgentRequest}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=15}}
+                                  {{> NoResults cols=16}}
                               </tr>
                           {{/each}}
                       </tbody>
@@ -48,9 +44,9 @@
             {{> Loading}}
         {{/if}}
 
-        {{> NewModal collection="Therapists"}}
-        {{> EditModal collection="Therapists" editItem=editItem }}
-        {{> TherapistInfo}}
+
+        {{> EditModal collection="Agents" editItem=editItem }}
+        {{> AgentInfo}}
 
     {{else}}
         {{> Forbidden}}
