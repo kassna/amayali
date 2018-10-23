@@ -57,7 +57,6 @@ const PersonSchema = new SimpleSchema({
 });
 
 const AgentsSchema = new SimpleSchema({
-
     agent: {
         type: PersonSchema
     },

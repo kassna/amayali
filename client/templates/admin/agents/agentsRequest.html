@@ -2,10 +2,12 @@
     {{#if isInRole 'admin'}}
         <div class="dashhead">
             <div class="dashhead-titles">
-                <h2 class="dashhead-title title-style c-green">{{_ "admin.agentRequests.title"}}</h2>
+                <h2 class="dashhead-title title-style c-green">{{_
+                        "admin.agentRequests.title"}}</h2>
             </div>
             <div class="btn-toolbar dashhead-toolbar">
-                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
+                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal"
+                        data-target="#new-modal">
                     {{_ "admin.general.add"}}
                 </button>
             </div>
@@ -13,33 +15,32 @@
 
         {{#if Template.subscriptionsReady}}
             <div class="table-responsive">
-                  <table class="table table-hover table-condensed" data-sort="table">
-                      <thead>
-                          <tr>
-                              <th>{{_ "admin.general.viewMore"}}</th>
-                              <th>{{_ "admin.general.name"}}</th>
-                              <th>{{_ "admin.therapists.sex"}}</th>
-                              <th>{{_ "admin.general.email"}}</th>
-                              <th>{{_ "admin.general.phone"}}</th>
-                              <th>{{_ "admin.general.locationId"}}</th>
-                              <th>{{_ "admin.agents.zone"}}</th>
-                              <th>{{_ "admin.agents.experience"}}</th>
-                              <th>{{_ "admin.general.active"}}</th>
-                              <th></th>
-                              <th></th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          {{#each agents}}
-                              {{> AgentRequest}}
-                          {{else}}
-                              <tr>
-                                  {{> NoResults cols=16}}
-                              </tr>
-                          {{/each}}
-                      </tbody>
-                  </table>
-              </div>
+                <table class="table table-hover table-condensed" data-sort="table">
+                    <thead>
+                    <tr>
+                        <th>{{_ "admin.general.viewMore"}}</th>
+                        <th>{{_ "admin.agents.fullname"}}</th>
+                        <th>{{_ "admin.general.email"}}</th>
+                        <th>{{_ "admin.general.phone"}}</th>
+                        <th>{{_ "admin.company.name"}}</th>
+                        <th>{{_ "admin.company.phone"}}</th>
+                        <th>{{_ "admin.company.address"}}</th>
+                        <th>{{_ "admin.general.active"}}</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each agents}}
+                        {{> agentRequest}}
+                    {{else}}
+                        <tr>
+                            {{> NoResults cols=11}}
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
         {{else}}
             {{> Loading}}
         {{/if}}
