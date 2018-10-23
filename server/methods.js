@@ -1,4 +1,5 @@
 import {check} from 'meteor/check';
+import {Agents} from '../collections/agents';
 
 Meteor.methods({
     createTherapistRequest: doc => {
@@ -20,6 +21,18 @@ Meteor.methods({
             throw new Meteor.Error(exception);
         }
     },
+
+    toggleStatusAgent: (id) => {
+        const status = Agents.findOne(id).status;
+
+        if (status) {
+            Agents.update({_id: id}, {$set: {status: false}});
+        }
+        else {
+            Agents.update({_id: id}, {$set: {status: true}});
+        }
+    },
+
     // Locations
     toggleStatusLocation: id => {
         let status = Locations.findOne(id).status;
