@@ -1,90 +1,93 @@
 <template name="TherapistInfo">
-  {{#if $.Session.get 'viewMode'}}
-    <div class="modal modal-info" id="therapist-info">
-  	    <div class="modal-dialog modal-lg">
-  	        <div class="modal-content">
-  	            <div class="modal-header">
-  	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  	                <h4 class="modal-title block-subtitle c-turquoise">{{_ "admin.therapists.infoTitle"}}</h4>
-  	            </div>
-  	            <div class="modal-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h3 class="c-cream m-t-0">{{_ "admin.general.personalData"}}</h3>
-                      <div class="group">
-                        <b>{{_ "admin.general.name"}}:</b> {{ currentTherapist.name }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.sex"}}:</b> {{ prettySex currentTherapist.sex }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.general.phone"}}:</b> <a href="tel:{{ currentTherapist.phone }}">{{ currentTherapist.phone }}</a>
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.general.email"}}:</b> <a href="mailto:{{ currentTherapist.email }}">{{ currentTherapist.email }}</a>
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.general.locationId"}}:</b> {{ locationName currentTherapist.locationId }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.schedulePreference"}}:</b> {{ prettySchedules currentTherapist.schedulePreference }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.languages"}}:</b> {{ currentTherapist.languages }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.zone"}}:</b> {{ currentTherapist.zone }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.zip"}}:</b> {{ currentTherapist.zip }}
-                      </div>
+    {{#if $.Session.get 'viewMode'}}
+        <div class="modal modal-info" id="therapist-info">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title block-subtitle c-turquoise">{{_
+                                "admin.therapists.infoTitle"}}</h4>
                     </div>
-                    <div class="col-sm-6">
-                      <h3 class="c-cream m-t-0">{{_ "admin.therapists.jobData"}}</h3>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.birthday"}}:</b> {{ currentTherapist.birthday }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.training"}}:</b> {{ currentTherapist.training }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.jobStatus"}}:</b> {{ currentTherapist.jobStatus }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.experience"}}:</b> {{ prettyExperience currentTherapist.experience }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.experienceYears"}}:</b> {{ currentTherapist.experienceYears }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.experienceTypes"}}:</b> {{ prettyExperienceTypes currentTherapist.experienceTypes }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.herbs"}}:</b> {{ currentTherapist.herbs }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.smartphone"}}:</b> {{ prettyBoolean currentTherapist.smartphone }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.hasBed"}}:</b> {{ prettyBoolean currentTherapist.hasBed }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.hasChair"}}:</b> {{ prettyBoolean currentTherapist.hasChair }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.hasCar"}}:</b> {{ prettyBoolean currentTherapist.hasCar }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.contactTime"}}:</b> {{ currentTherapist.contactTime }}
-                      </div>
-                      <div class="group">
-                        <b>{{_ "admin.therapists.reference"}}:</b> {{ prettyReference currentTherapist.reference }}
-                      </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="c-cream m-t-0">{{_ "admin.general.personalData"}}</h3>
+                                <div class="group">
+                                    <b>{{_ "admin.general.name"}}:</b> {{ currentTherapist.name }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.sex"}}:</b> {{ prettySex
+                                        currentTherapist.sex }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.general.phone"}}:</b> <a
+                                        href="tel:{{ currentTherapist.phone }}">{{ currentTherapist.phone }}</a>
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.general.email"}}:</b> <a
+                                        href="mailto:{{ currentTherapist.email }}">{{ currentTherapist.email }}</a>
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.general.locationId"}}:</b> {{ locationName
+                                        currentTherapist.locationId }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.schedulePreference"}}
+                                        :</b> {{ prettySchedules
+                                        currentTherapist.schedulePreference }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.zip"}}:</b> {{ currentTherapist.zip }}
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="c-cream m-t-0">{{_ "admin.therapists.jobData"}}</h3>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.birthday"}}:</b> {{ humanDate
+                                        currentTherapist.birthday }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.training"}}
+                                        :</b> {{ currentTherapist.training }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.jobStatus"}}
+                                        :</b> {{ currentTherapist.jobStatus }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.experienceYears"}}
+                                        :</b> {{ currentTherapist.experienceYears }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.experienceTypes"}}
+                                        :</b> {{ prettyExperienceTypes
+                                        currentTherapist.experienceTypes }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.hasBed"}}:</b> {{ prettyBoolean
+                                        currentTherapist.hasBed }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.hasChair"}}:</b> {{ prettyBoolean
+                                        currentTherapist.hasChair }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.mot"}}:</b> {{ currentTherapist.mot }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.contactTime"}}
+                                        :</b> {{ currentTherapist.contactTime }}
+                                </div>
+                                <div class="group">
+                                    <b>{{_ "admin.therapists.reference"}}:</b> {{ prettyReference
+                                        currentTherapist.reference }}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-  	            </div>
-  	        </div>
-  	    </div>
-  	</div>
-  {{/if}}
+                </div>
+            </div>
+        </div>
+    {{/if}}
 </template>

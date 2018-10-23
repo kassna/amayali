@@ -389,15 +389,12 @@
         }
       },
       "birthday": "Fecha de nacimiento",
-      "smartphone": "¿Cuentas con Smartphone y plan de datos que te permita recibir correos en cualquier momento?",
-      "languages": "¿Qué idiomas hablas? Por favor solo menciona idiomas en los que puedas entablar una conversación",
-      "location": "¿En qué ciudad vives?",
+      "locationId": "¿En qué ciudad vives?",
       "locationTypesSelect": {
         "options": {
           "other": "Otra"
         }
       },
-      "zone": "¿De qué zona/colonia/municipio quieres recibir solicitudes de clientes?",
       "schedulePreference": "¿Tienes alguna preferencia de horario para atender las solicitudes?",
       "schedulePreferenceSelect": {
         "options": {
@@ -414,8 +411,7 @@
       "zip": "¿Cuál es el código postal de donde vives?",
       "training": "¿Con qué entrenamiento y/o estudio cuentas?",
       "jobStatus": "¿Cuál es tu estado actual de trabajo?",
-      "experience": "¿Dónde adquiriste tu experiencia?",
-      "experienceYears": "¿Cuantos años de experiencia practicando masajes tienes?",
+      "experienceYears": "¿Cuántos años de experiencia practicando masajes tienes?",
       "experienceTypes": "¿En qué tipo de masajes tienes experiencia? (Seleccionar uno o más)",
       "experienceTypesSelect": {
         "options": {
@@ -428,13 +424,15 @@
         }
       },
       "spaExperience": "¿Has trabajado en un SPA?",
-      "school": "¿Donde realizaste tus estudios?",
+      "school": "¿Dónde realizaste tus estudios?",
       "hasBed": "¿Tienes una cama portátil?",
       "hasChair": "¿Tienes una silla portátil?",
       "mot": "¿Cómo te transportas en la ciudad con tu equipo?",
       "motTypesSelect": {
         "options": {
-          "car": "Auto propio / Taxi / Uber",
+          "car": "Auto propio",
+          "taxi": "Taxi",
+          "uber": "Uber",
           "other": "Otro"
         }
       },
@@ -608,22 +606,17 @@
       "title": "Terapeutas activos",
       "infoTitle": "Información del terapeuta",
       "sex": "Sexo",
-      "languages": "Idiomas",
-      "zone": "Zona de cobertura",
       "schedulePreference": "Horario",
       "createdAt": "Miembro desde",
       "birthday": "Fecha de nacimiento",
-      "smartphone": "¿Tiene smartphone?",
       "zip": "Código postal",
       "training": "Preparación",
       "jobStatus": "Estado laboral",
-      "experience": "Experiencia",
       "experienceYears": "Años de experiencia",
       "experienceTypes": "Conocimiento de masajes",
-      "herbs": "Balsamos, aromaterapia, compresas herbales",
       "hasBed": "¿Tiene cama?",
       "hasChair": "¿Tiene silla?",
-      "hasCar": "¿Tiene carro?",
+      "mot": "Medio de transporte",
       "contactTime": "Horario de contacto",
       "reference": "Referencia",
       "jobData": "Datos laborales"
