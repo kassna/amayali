@@ -1,29 +1,28 @@
-<template name="BookNowClient">
-  {{#if isInRole 'client'}}
-    {{setLocationId client.locationId}}
-    {{setPendingPromos client.pendingPromos}}
-    {{setClientId client._id}}
+<template name="BookNowAgent">
+  {{#if isInRole 'agent'}}
+    {{setLocationId agent.locationId}}
+    {{setPendingPromos agent.pendingPromos}}
+    {{setAgentId agent._id}}
     
-    {{#if client.completedProfile}}
+    {{#if $not agent.completedProfile}}
     <div class="dashhead">
         <div class="dashhead-titles">
             <h2 class="dashhead-title title-style c-green">{{_ "general.bookNow"}}<span class="c-yellow"> - Total ${{ total }}</span> </h2>
         </div>
     </div>
+    {{else}}
     {{/if}}
 
     <div class="book-form turquoise">
       <div class="simform">
-        {{#if client.completedProfile}}
-          {{> BookNowClientForm}}
+        {{#if $not agent.completedProfile}}
+          {{> BookNowAgentForm}}
         {{else}}
-          <h2 class="c-yellow text-center">{{_ "client.bookNow.forbidden"}}</h2>
-          <h3 class="c-green text-center">{{_ "client.bookNow.forbidden2"}}</h3>
-          <h1 class="big c-yellow text-center">{{promoCodeCode client.promoCodeId}}</h1>
-          <h3 class="c-green text-center">{{_ "client.bookNow.forbidden3"}}</h3>
-          <h3 class="c-green text-center">{{_ "client.bookNow.forbidden4"}}</h3>
+          <h2 class="c-yellow text-center">{{_ "agent.bookNow.forbidden"}}</h2>
+          <h3 class="c-green text-center">{{_ "agent.bookNow.forbidden2"}}</h3>
+          <h1 class="big c-yellow text-center">{{promoCodeCode agent.promoCodeId}}</h1>
           <div class="footer-buttons center">
-            <button class="btn-success edit-data">{{_ "client.bookNow.update"}}</button>
+            <button class="btn-success edit-data">{{_ "agent.bookNow.update"}}</button>
           </div>
         {{/if}}
       </div>
@@ -31,7 +30,7 @@
   {{/if}}
 </template>
 
-<template name="BookNowClientForm">
+<template name="BookNowAgentForm">
   <span class="input input--madoka select-date">
     <input class="input__field input__field--madoka custom-input" type="text" name="date" data-input>
     <label class="input__label input__label--madoka" for="date">
@@ -44,16 +43,16 @@
   {{> ButtonSelectBook attribute="type" elements=types placeholder="book.type"}}
   {{> ButtonSelectBook attribute="product" elements=products placeholder="book.product"}}
   {{> SelectBook attribute="therapistsType" elements=therapistsType placeholder="book.therapistsType"}}
-  {{#if client.pendingPromos}}
+  {{#if agent.pendingPromos}}
     <div class="radio-select text-center">
-      <h2 class="c-yellow"><b>{{_ "client.bookNow.pendingPromos1"}} ${{currentDiscount client.pendingPromos}} {{_ "client.bookNow.pendingPromos2"}}</b></h2>
+      <h2 class="c-yellow"><b>{{_ "agent.bookNow.pendingPromos1"}} ${{currentDiscount agent.pendingPromos}} {{_ "agent.bookNow.pendingPromos2"}}</b></h2>
       <br>
       <div class="radio-inline custom-control custom-radio">
         <label class="c-turquoise">
           {{#if $.Session.get 'pendingPromos' true}}
-            <input type="radio" value="{{client.pendingPromos}}" name="pendingPromos" checked>
+            <input type="radio" value="{{agent.pendingPromos}}" name="pendingPromos" checked>
           {{else}}
-            <input type="radio" value="{{client.pendingPromos}}" name="pendingPromos">
+            <input type="radio" value="{{agent.pendingPromos}}" name="pendingPromos">
           {{/if}}
           <span class="custom-control-indicator"></span>
           {{_ "schemas.general.yes"}}
@@ -76,16 +75,17 @@
   <div class="footer-buttons center">
     <button class="btn-success small m-t" id="verifyPromo">{{_ "book.verify"}}</button>
   </div>
-  {{> BookNowClientPaypal}}
+  {{> BookNowAgentPaypal}}
 </template>
-
-<template name="BookNowClientPaypal">
-  <div class="text-center m-t-lg m-b-lg {{#if $not payWithPaypal}}hidden{{/if}}">
-    <div id="paypal-button-container"></div>
+ 
+<template name="BookNowAgentPaypal">
+  <div class="text-center m-t-lg m-b-lg">
+        <div id="paypal-button-container"></div>
+      {{#if creditCardPayMode}}
+          <button id="cancel-credit" class="btn btn-primary-outline btn-lg btn-block">Cancelar</button>
+          {{>paypalCreditCardForm}}
+      {{else}}
+          <button id="credit-pay" class="btn btn-primary-outline btn-lg btn-block">Pagar con tarjeta de crédito</button>
+      {{/if}}
   </div>
-  {{#if $not payWithPaypal}}
-    <div class="footer-buttons center m-t-lg m-b-lg">
-      <button class="btn-default with-border m-t-0" id="creditCardPayMode">{{_ "book.book"}}</button>
-    </div>
-  {{/if}}
 </template>

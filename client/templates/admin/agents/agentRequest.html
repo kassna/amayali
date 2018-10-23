@@ -1,0 +1,36 @@
+ <template name="AgentRequest">
+	<tr>
+      <td>
+        <button type="" class="btn btn-round btn-info-outline view-more-btn">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+      </td>
+      <td>{{name}}</td>
+      <td>{{surname}}</td>
+      <td><a href="mailto:{{email}}">{{email}}</a></td>
+      <td><a href="tel:{{personalPhone}}">{{personalPhone}}</a></td>
+      <td>{{workLocation}}</td>
+      <td>
+          {{#if status }}
+              <button class="toggle-status btn btn-sm btn-pill btn-danger-outline">{{_ "admin.general.deactivate"}}</button>
+          {{else}}
+              <button class="toggle-status btn btn-sm btn-pill btn-success-outline">{{_ "admin.general.activate"}}</button>
+          {{/if}}
+      </td>
+      <td>
+      	<button type="" class="btn btn-round btn-info-outline edit-button">
+      		<i class="fa fa-pencil" aria-hidden="true"></i>
+      	</button>
+      </td>
+      <td>
+        {{#if isInRole 'superadmin'}}
+        	{{#quickRemoveButton collection="PromoCodes" _id=this._id class="hidden delete-btn"}}
+  				Delete
+        	{{/quickRemoveButton}}
+          <button class="btn btn-round btn-danger-outline confirm-remove">
+						<i class="fa fa-trash" aria-hidden="true"></i>
+					</button>
+        {{/if}}
+      </td>
+  </tr>
+</template>

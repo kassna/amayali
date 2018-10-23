@@ -1,0 +1,56 @@
+<template name="AdminAgents">
+    {{#if isInRole 'admin'}}
+        <div class="dashhead">
+            <div class="dashhead-titles">
+                <h2 class="dashhead-title title-style c-green">{{_ "admin.agents.title"}}</h2>
+            </div>
+            <div class="btn-toolbar dashhead-toolbar">
+                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
+                    {{_ "admin.general.add"}}
+                </button>
+            </div>
+        </div>
+
+        {{#if Template.subscriptionsReady}}
+            <div class="table-responsive">
+                  <table class="table table-hover table-condensed" data-sort="table">
+                      <thead>
+                          <tr>
+
+                              <th>{{_ "admin.general.name"}}</th>
+                              <th>{{_ "admin.agents.surname"}}</th>
+                              <th>{{_ "admin.general.email"}}</th>
+                              <th>{{_ "admin.general.phone"}}</th>
+                              <th>{{_ "admin.agents.workLocation"}}</th>
+                              <th>{{_ "admin.agents.enterprise"}}</th>
+                              <th>{{_ "admin.agents.personalPhone"}}</th>
+                              <th>{{_ "admin.agents.workPhone"}}</th>
+                              <th></th>
+                              <th>{{_ "admin.general.active"}}</th>
+                              <th></th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {{#each agents}}
+                              {{> Agent}}
+                          {{else}}
+                              <tr>
+                                  {{> NoResults cols=15}}
+                              </tr>
+                          {{/each}}
+                      </tbody>
+                  </table>
+              </div>
+        {{else}}
+            {{> Loading}}
+        {{/if}}
+
+        {{> NewModal collection="Agents"}}
+        {{> EditModal collection="Agents" editItem=editItem }}
+        {{> AgentInfo}}
+
+    {{else}}
+        {{> Forbidden}}
+    {{/if}}
+</template>

@@ -3,9 +3,15 @@
 		{{#if isInRole 'admin'}}
 			{{> SidebarAdmin}}
 		{{/if}}
-		{{#if isInRole 'client'}}
-			{{> SidebarClient}}
-		{{/if}}
+
+        {{#if isInRole 'client'}}
+            {{> SidebarClient}}
+        {{/if}}
+
+        {{#if isInRole 'agent'}}
+            {{> SidebarAgent}}
+        {{/if}}
+
 	</div>
 	<div class="stage">
 		{{> HeaderAdmin}}
@@ -15,9 +21,14 @@
 					{{#if isInRole 'admin'}}
 						{{> SidebarAdmin}}
 					{{/if}}
-					{{#if isInRole 'client'}}
-						{{> SidebarClient}}
-					{{/if}}
+
+                    {{#if isInRole 'client'}}
+                        {{> SidebarClient}}
+                    {{/if}}
+
+                    {{#if isInRole 'agent'}}
+                        {{> SidebarAgent}}
+                    {{/if}}
 	            </div>
 	            <div class="col-sm-10 content">
 	            	{{> Template.dynamic template=main}}

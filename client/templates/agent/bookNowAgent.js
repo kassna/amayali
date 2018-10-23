@@ -2,7 +2,7 @@ const requiredInputs = ['product', 'type', 'therapistsType', 'date'];
 
 const getOrderDetails = () => {
   let orderDetails = {
-    clientId: Session.get('clientId'),
+    agentId: Session.get('agentId'),
     locationId: Session.get('locationId'),
     product: Session.get('product'),
     type: Session.get('type'),
@@ -34,14 +34,14 @@ const postPayment = (withPaypal, res) => {
   }
 
   // Attempt to insert order and account
-  Meteor.call('postPaymentClient', orderDetails, (err, res) => {
+  Meteor.call('postPaymentAgent', orderDetails, (err, res) => {
     if (err) {
       handleErrorPayment(err);
       return false;
     } else {
       const orderId = res;
       resetOrderSession();
-      FlowRouter.go('client-pending-orders');
+      FlowRouter.go('agent-pending-orders');
     }
   });
 }
@@ -56,11 +56,11 @@ const resetOrderSession = () => {
   });
 }
 
-Template.BookNowClient.onCreated(function () {
+Template.BookNowAgent.onCreated(function () {
   if (!Session.get('total')) Session.set('total', 0);
 	let self = this;
 	self.autorun(function() {
-		self.subscribe('clientPromoCode');
+		self.subscribe('agentPromoCode');
   });
   
   // Get paypal env
@@ -73,11 +73,12 @@ Template.BookNowClient.onCreated(function () {
   })
 });
 
-Template.BookNowClientForm.onRendered(() => {
+Template.BookNowAgentForm.onRendered(() => {
 	datepickerSetup();
+    Session.set('creditCardPayMode',false);
 });
 
-Template.BookNowClient.helpers({
+Template.BookNowAgent.helpers({
 	total: () => {
     let subTotal = Session.get('subTotal');
     const pendingPromos = Session.get('pendingPromos');
@@ -105,10 +106,10 @@ Template.BookNowClient.helpers({
   },
   setLocationId: locationId => { Session.set('locationId', locationId) },
   setPendingPromos: pendingPromos => { Session.set('pendingPromos', pendingPromos) },
-  setClientId: clientId => { Session.set('clientId', clientId) },
+  setAgentId: agentId => { Session.set('agentId', agentId) },
 });
 
-Template.BookNowClientForm.helpers({
+Template.BookNowAgentForm.helpers({
   types: () => _.map(['relax', 'decontracting', 'sport'], _id => {
     return {
       _id,
@@ -129,17 +130,17 @@ Template.BookNowClientForm.helpers({
   }),
 });
 
-Template.BookNowClient.events({
+Template.BookNowAgent.events({
   'click .edit-data': function (event, template) {
     Session.set('editId', Meteor.userId());
     Session.set('editMode', 1);
     Meteor.setTimeout(function () {
       $("#edit-modal").modal('show');
-    }, 500);
+    }, 1);
   },
 });
 
-Template.BookNowClientForm.events({
+Template.BookNowAgentForm.events({
   'click #product button': event => {
     const product = $(event.target).attr('data-id');
     // Get selected location base rate
@@ -179,9 +180,9 @@ Template.BookNowClientForm.events({
         Bert.alert(TAPi18n.__('book.errors.wrongPromoCode', null), 'danger');
       } else {
         if (res.reference) {
-          Meteor.call('clientOrders', (err1, number) => {
+          Meteor.call('agentOrders', (err1, number) => {
             if (err1 || number) {
-              Bert.alert(TAPi18n.__('book.errors.referenceErrorClient', null), 'danger');
+              Bert.alert(TAPi18n.__('book.errors.referenceErrorAgent', null), 'danger');
             } else {
               Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
               Session.set('promoCodeValid', res);
@@ -196,12 +197,12 @@ Template.BookNowClientForm.events({
   },
 });
 
-Template.BookNowClientPaypal.onRendered(() => {
-  // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
+Template.BookNowAgentPaypal.onRendered(() => {
+  // Issue with agent credentials https://github.com/paypal/paypal-checkout/issues/356
   const env = Session.get('paypal_env');
   paypal.Button.render({
     env,
-    client: {
+    agent: {
       sandbox: 'Ab6JnNhuMzjNDVhueResuMYTirMOwVkmajYwGoD0mACP_0i1VczPp1NQ8vKFJYZYG2X8w27gFJwRySmQ',
       production: 'AZCADNCbS-X7YzWstteXXP-6e-Mbmtt9QiGSNDH69y7a1QpsObsuVAW5o9fqQ1n9eg4nvGBM7uu_VmkT'
     },
@@ -245,21 +246,39 @@ Template.BookNowClientPaypal.onRendered(() => {
     }
   }, '#paypal-button-container');
 });
+Template.paypalCreditCardForm.events({
+    'submit #paypal-payment-form': function(event, tmp){
+        event.preventDefault();
 
-Template.BookNowClientPaypal.helpers({
-  // If total is 0, payment should be skipped
-  payWithPaypal: () => Session.get('total') > 0,
-});
+        var card_data = Template.paypalCreditCardForm.card_data();
 
-Template.BookNowClientPaypal.events({
-    'click #credit-pay': (e) => {
-        e.preventDefault();
-        const orderDetails = getOrderDetails();
         if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
             return false;
         }
-        Session.set('creditCardPayMode', true);
+
+        Session.set('creditCardPayMode',false);
+        //Probably a good idea to disable the submit button here to prevent multiple submissions.
+
+        Meteor.Paypal.purchase(card_data, {total: '100.50', currency: 'USD'}, function(err, results){
+            if (err) console.error(err);
+            else console.log(results);
+        });
+    }
+});
+
+Template.BookNowAgentPaypal.helpers({
+  // If total is 0, payment should be skipped
+    creditCardPayMode(){
+        return Session.get('creditCardPayMode');
     },
+    payWithPaypal: () => Session.get('total') > 0,
+});
+
+Template.BookNowAgentPaypal.events({
+  'click #credit-pay': (e) => {
+      e.preventDefault();
+      Session.set('creditCardPayMode',true);
+  },
     'click #cancel-credit': (e) => {
         e.preventDefault();
         Session.set('creditCardPayMode',false);

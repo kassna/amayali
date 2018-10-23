@@ -45,6 +45,12 @@
 							{{_ "admin.therapists.title"}}
 						</a>
 				</li>
+                <li class="{{isActiveRoute 'admin-agents'}}">
+                    <a class="scroll-top text-center" href="{{pathFor 'admin-agents'}}">
+                        <i class="fa fa-id-card" aria-hidden="true"></i>
+                        {{_ "admin.agents.title"}}
+                    </a>
+                </li>
 				<li class="{{isActiveRoute 'admin-promoCodes'}}">
 						<a class="scroll-top text-center" href="{{pathFor 'admin-promoCodes'}}">
 							<i class="fa fa-tags" aria-hidden="true"></i>
@@ -57,6 +63,12 @@
 							{{_ "admin.therapistRequests.title"}}
 						</a>
 				</li>
+                <li class="{{isActiveRoute 'admin-agents-requests'}}">
+                    <a class="scroll-top text-center" href="{{pathFor 'admin-agents-requests'}}">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        {{_ "admin.agentRequests.title"}}
+                    </a>
+                </li>
 				<li class="{{isActiveRoute 'admin-locations'}}">
 						<a class="scroll-top text-center" href="{{pathFor 'admin-locations'}}">
 							<i class="fa fa-map-marker" aria-hidden="true"></i>
