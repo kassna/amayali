@@ -33,7 +33,7 @@ TherapistsSchema = new SimpleSchema({
         type: String
     },
     birthday: {
-        type: String,
+        type: Date,
         autoform: {
             afFieldInput: {
                 type: 'date'
@@ -122,7 +122,7 @@ TherapistsSchema = new SimpleSchema({
         autoform: {
             type: 'select-radio-inline',
             options() {
-                return _.map(['car', 'other'], option => {
+                return _.map(['car', 'taxi', 'uber', 'other'], option => {
                     return {
                         value: option,
                         label: TAPi18n.__(`schemas.therapists.motTypesSelect.options.${option}`, null)

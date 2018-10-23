@@ -2,6 +2,7 @@
   {
     "_id": "45qWh8iK9oyWNm6bS",
     "name": "Ricardo Carrera Moreno",
+    "spaExperience": "yes",
     "training": "Colegio Mexicano de Terapeutas Profesionales en Masaje y Enfermeria Holistica",
     "sex": "male",
     "experienceYears": 1,
@@ -23,7 +24,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Trabajando",
     "status": true,
     "rating": 0,
@@ -34,6 +34,7 @@
   {
     "_id": "4N2myZBBkoTsbZPEs",
     "name": "Clara Aguilar Padilla",
+    "spaExperience": "yes",
     "training": "Colegio Mexicano de Terapeutas",
     "sex": "female",
     "experienceYears": 2,
@@ -56,7 +57,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Trabajando",
     "status": true,
     "rating": 0,
@@ -67,6 +67,7 @@
   {
     "_id": "6FsxSSGdrxEqN87ym",
     "name": "Gerardo Encinia Escalante",
+    "spaExperience": "yes",
     "training": "Terapeuta en masaje relajante y terapeutico",
     "sex": "male",
     "experienceYears": 2,
@@ -90,7 +91,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Empleado en empresa de imgenieria",
     "status": false,
     "rating": 0,
@@ -101,6 +101,7 @@
   {
     "_id": "6Y7tvLsKhDiQMZaSt",
     "name": "Beatriz delabra moreno",
+    "spaExperience": "yes",
     "training": "Diplomado en Masajes",
     "sex": "female",
     "experienceYears": 6,
@@ -127,7 +128,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Espanhol",
     "jobStatus": "Independiente",
     "status": false,
     "rating": 0,
@@ -138,6 +138,7 @@
   {
     "_id": "8c32Lzf4bXSB3KQ9y",
     "name": "Ruth Esther González Sánchez",
+    "spaExperience": "no",
     "training": "15 años trabajando con reflexologia y shiat su. Certificaciones en Terapia delos hologramas, masaje bioinformático, masaje tailandés",
     "sex": "female",
     "experienceYears": 15,
@@ -155,14 +156,13 @@
     "zip": "67323",
     "mot": "Train",
     "schedulePreference": [
-      "all"
+      "allDay"
     ],
     "contactTime": "De 19AM a 7PM",
     "reference": "other",
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Activo. Cuento con cartera de clientes a dimicilio",
     "status": false,
     "rating": 0,
@@ -173,6 +173,7 @@
   {
     "_id": "9GP6poeKnZGKAkfaq",
     "name": "Ana Priscila González Reyes",
+    "spaExperience": "no",
     "training": "Técnica en rehabilitación física y Lic en.fisioterapia",
     "sex": "female",
     "experienceYears": 8,
@@ -198,7 +199,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español y portugués",
     "jobStatus": "Nuevo León",
     "status": false,
     "rating": 0,
@@ -209,6 +209,7 @@
   {
     "_id": "9KsecLS5EcJcqFgE6",
     "name": "Margaret Iracheta",
+    "spaExperience": "no",
     "training": "certificación",
     "sex": "female",
     "experienceYears": 2,
@@ -234,7 +235,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "español",
     "jobStatus": "independiente",
     "status": false,
     "rating": 0,
@@ -245,6 +245,7 @@
   {
     "_id": "9Y4cp4stFFDzp9LBc",
     "name": "Marcela Martinez Garcia",
+    "spaExperience": "no",
     "training": "Diplomado de masajes terapéuticos(IDH)",
     "sex": "female",
     "experienceYears": 4,
@@ -269,7 +270,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Ingles",
     "jobStatus": "Autoempleada",
     "status": true,
     "rating": 0,
@@ -280,6 +280,7 @@
   {
     "_id": "9vYAmCgSgyDd3HH9s",
     "name": "MARVIN TEPOZ LUNA",
+    "spaExperience": "no",
     "training": "LICENCIADO EN TERAPIA FISICA Y CERTIFICADO EN TERAPIA MANUAL E INSTRUMENTALIZADA.",
     "sex": "male",
     "experienceYears": 6,
@@ -304,7 +305,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "español",
     "jobStatus": "tengo un consultorio y lo atiendo por las tardes/noches.",
     "status": false,
     "rating": 0,
@@ -315,6 +315,7 @@
   {
     "_id": "BG8bJ8cRSmgyhBNwh",
     "name": "Xavier",
+    "spaExperience": "no",
     "training": "Colegio",
     "sex": "male",
     "experienceYears": 20,
@@ -330,14 +331,13 @@
     "zip": "64680",
     "mot": "car",
     "schedulePreference": [
-      "all"
+      "allDay"
     ],
     "contactTime": "mañana",
     "reference": "web",
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "ingles",
     "jobStatus": "horario rotativo",
     "status": false,
     "rating": 0,
@@ -348,6 +348,7 @@
   {
     "_id": "Cf8HAZw42i2nqb9oJ",
     "name": "Gerardo Manuel Alvarado Barajas",
+    "spaExperience": "no",
     "training": "Lic en ciencias del ejercicio, terapeuta en masajes corporales, masaje chino tui na en silla, aplicación de ventosa tradicional, aplicacion de kinesiotaping",
     "sex": "male",
     "experienceYears": 1,
@@ -371,7 +372,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Desempleado",
     "status": false,
     "rating": 0,
@@ -382,6 +382,7 @@
   {
     "_id": "EHLhpC5xPpaavFLCx",
     "name": "Gerardo Guadalupe Navarro Borjas",
+    "spaExperience": "no",
     "training": "Certificación en quiromasaje,  par biomagnetico,  tecnicas chinas de masaje,  dígito presión y acupuntura.",
     "sex": "male",
     "experienceYears": 6,
@@ -400,14 +401,13 @@
     "zip": "64000",
     "mot": "Train",
     "schedulePreference": [
-      "all"
+      "allDay"
     ],
     "contactTime": "En cualquier horario estoy disponible y dispuesto",
     "reference": "web",
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español e Inglés",
     "jobStatus": "Auto empleado",
     "status": false,
     "rating": 0,
@@ -418,6 +418,7 @@
   {
     "_id": "EJFaeM4Nc4GuHsjnp",
     "name": "Maria de Jesús Garza Saenz (SUSY)",
+    "spaExperience": "no",
     "training": "Masoterapeuta",
     "sex": "female",
     "experienceYears": 4,
@@ -444,7 +445,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Propio negocio",
     "status": true,
     "rating": 0,
@@ -455,6 +455,7 @@
   {
     "_id": "EJbxkKrNjkur3zbis",
     "name": "MIRIAM JUDITH GONZALEZ RAMIREZ",
+    "spaExperience": "no",
     "training": "DIPLOMADO EN MASAJES CORPORALES",
     "sex": "female",
     "experienceYears": 1,
@@ -470,14 +471,13 @@
     "zip": "66351",
     "mot": "car",
     "schedulePreference": [
-      "all"
+      "allDay"
     ],
     "contactTime": "7PM",
     "reference": "web",
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "ESPAÑOL",
     "jobStatus": "NUEVO LEON",
     "status": false,
     "rating": 0,
@@ -488,6 +488,7 @@
   {
     "_id": "EycvR8eLErTkSLxyo",
     "name": "Diana Patricia Martinez Castillo",
+    "spaExperience": "no",
     "training": "diplomado en profesional de masaje relajante y terapeutico",
     "sex": "female",
     "experienceYears": 1,
@@ -510,7 +511,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "español,inglés",
     "jobStatus": "activo",
     "status": false,
     "rating": 0,
@@ -521,6 +521,7 @@
   {
     "_id": "Fn2RM3BrK4ZbjNK82",
     "name": "Patricio Garcia Landois Fernandez",
+    "spaExperience": "no",
     "training": "Carrera tecnica en rehabilitacion fisica",
     "sex": "male",
     "experienceYears": 2,
@@ -545,7 +546,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español, Ingles",
     "jobStatus": "Desempleado",
     "status": false,
     "rating": 0,
@@ -556,6 +556,7 @@
   {
     "_id": "FtsqteyaFqkzF6fJm",
     "name": "Blanca Elizabeth Rios Conizales",
+    "spaExperience": "no",
     "training": "Terapeuta SPA en Masajes",
     "sex": "female",
     "experienceYears": 3,
@@ -572,14 +573,13 @@
     "zip": "66214",
     "mot": "Train",
     "schedulePreference": [
-      "all"
+      "allDay"
     ],
     "contactTime": "Cualquier",
     "reference": "staff",
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Masaje a domicilio",
     "status": true,
     "rating": 0,
@@ -590,6 +590,7 @@
   {
     "_id": "HvzEg6BoaBpxYSRoN",
     "name": "Rebecca Denise Montoya Rendon",
+    "spaExperience": "no",
     "training": "Masoterapeuta",
     "sex": "female",
     "experienceYears": 4,
@@ -616,7 +617,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español, entiendo ingles",
     "jobStatus": "Local propio",
     "status": true,
     "rating": 0,
@@ -626,7 +626,8 @@
   },
   {
     "_id": "JJxkKy3zNJs2ARTdB",
-    "name": "Nallely Sarahi Cavazos Briones",
+    "name": "NallDayely Sarahi Cavazos Briones",
+    "spaExperience": "no",
     "training": "Lic en Fisioterapia y Rehabilitación",
     "sex": "female",
     "experienceYears": 3,
@@ -636,7 +637,7 @@
       "b",
       "c"
     ],
-    "email": "nallelycavazos08@example.com",
+    "email": "nallDayelycavazos08@example.com",
     "hasBed": "yes",
     "locationId": "dsYbt8Z2vwgR9mt6A",
     "hasChair": "no",
@@ -650,7 +651,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Trabajo en las mañanas",
     "status": true,
     "rating": 0,
@@ -661,6 +661,7 @@
   {
     "_id": "NSNT6ehhHEqm2qXwZ",
     "name": "Ulises missael",
+    "spaExperience": "no",
     "training": "Rehabilitador fisico",
     "sex": "male",
     "experienceYears": 7,
@@ -686,7 +687,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Inglés",
     "jobStatus": "Rehabilitador fisico",
     "status": false,
     "rating": 0,
@@ -697,6 +697,7 @@
   {
     "_id": "PZT7JTkHD8o5zjgq7",
     "name": "Orlando Espinosa Sosa",
+    "spaExperience": "no",
     "training": "Lic en Fisioterapia",
     "sex": "male",
     "experienceYears": 2,
@@ -713,14 +714,13 @@
     "zip": "64700",
     "mot": "Train",
     "schedulePreference": [
-      "all"
+      "allDay"
     ],
     "contactTime": "Tarde",
     "reference": "staff",
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Ingles",
     "jobStatus": "A domicilio",
     "status": true,
     "rating": 0,
@@ -731,6 +731,7 @@
   {
     "_id": "PpvcXS7oEa6PDjtgN",
     "name": "Aranza Sanchez Arreozola",
+    "spaExperience": "no",
     "training": "Carrera: Terapeuta en masajes corporales",
     "sex": "female",
     "experienceYears": 3,
@@ -755,7 +756,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Solo español",
     "jobStatus": "desempleada",
     "status": false,
     "rating": 0,
@@ -766,6 +766,7 @@
   {
     "_id": "Qcma5LZLf8NY7SwWX",
     "name": "Eduardo Flores Guajardo",
+    "spaExperience": "no",
     "training": "Terapeuta Spa, Maestro de Friki, Contador Publicó Auditor",
     "sex": "male",
     "experienceYears": 12,
@@ -791,7 +792,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Terapeuta Spa",
     "status": false,
     "rating": 0,
@@ -802,6 +802,7 @@
   {
     "_id": "Re6wHYJdojCHPninm",
     "name": "Ulises missael García rios",
+    "spaExperience": "no",
     "training": "Técnico en rehabilitación física",
     "sex": "male",
     "experienceYears": 7,
@@ -827,7 +828,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Inglés",
     "jobStatus": "Por mi cuenta",
     "status": false,
     "rating": 0,
@@ -838,6 +838,7 @@
   {
     "_id": "Sd25XPZy2ybFfXiGG",
     "name": "Karla Celina Toledo Meza",
+    "spaExperience": "no",
     "training": "Cosmetologia",
     "sex": "female",
     "experienceYears": 9,
@@ -862,7 +863,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Ingles - español",
     "jobStatus": "Terapeuta Spa en Hotel Camino Real",
     "status": false,
     "rating": 0,
@@ -873,6 +873,7 @@
   {
     "_id": "Tff3mjXH8X2MqgpkW",
     "name": "Karen Ariana Alvarado Zurita",
+    "spaExperience": "no",
     "training": "Terapeuta SPA",
     "sex": "female",
     "experienceYears": 10,
@@ -889,14 +890,13 @@
     "zip": "66647",
     "mot": "Train",
     "schedulePreference": [
-      "all"
+      "allDay"
     ],
     "contactTime": "Siempre",
     "reference": "staff",
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "SPA propio",
     "status": true,
     "rating": 0,
@@ -907,6 +907,7 @@
   {
     "_id": "Ts8ozi3ZJjxgYcYnL",
     "name": "Mayra Elizabeth Salazar Gzz",
+    "spaExperience": "no",
     "training": "masoterapeuta y estoy estudiando fisioterapia",
     "sex": "female",
     "experienceYears": 1,
@@ -931,7 +932,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "disponible",
     "status": false,
     "rating": 0,
@@ -942,6 +942,7 @@
   {
     "_id": "XaEddBanoWtFvZmXf",
     "name": "Tomás Meza Montaño",
+    "spaExperience": "no",
     "training": "TSU en Terapia Física Área Rehabilitación",
     "sex": "male",
     "experienceYears": 3,
@@ -965,7 +966,6 @@
     "birthday": {
       "$date": "1970-01-01T00:00:00.000Z"
     },
-    "languages": "Español",
     "jobStatus": "Enfermero",
     "status": false,
     "rating": 0,

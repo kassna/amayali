@@ -22,9 +22,7 @@
                               <th>{{_ "admin.general.email"}}</th>
                               <th>{{_ "admin.general.phone"}}</th>
                               <th>{{_ "admin.general.locationId"}}</th>
-                              <th>{{_ "admin.therapists.zone"}}</th>
                               <th>{{_ "admin.therapists.schedulePreference"}}</th>
-                              <th>{{_ "admin.therapists.languages"}}</th>
                               <th>{{_ "admin.general.completedOrders"}}</th>
                               <th>{{_ "admin.therapists.createdAt"}}</th>
                               <th></th>
@@ -38,7 +36,7 @@
                               {{> Therapist}}
                           {{else}}
                               <tr>
-                                  {{> NoResults cols=15}}
+                                  {{> NoResults cols=14}}
                               </tr>
                           {{/each}}
                       </tbody>
