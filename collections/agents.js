@@ -1,7 +1,6 @@
-
 class AgentsCollection extends Mongo.Collection {
     update(selector, modifier, options, callback) {
-        const { $set, $unset } = modifier;
+        const {$set, $unset} = modifier;
         if (!$unset) {
             $set.completedProfile = true;
             modifier.$set = $set;
@@ -14,7 +13,7 @@ const Agents = new AgentsCollection('agents');
 
 Agents.allow({
     insert: () => true,
-    update: function(userId, doc) {
+    update: function (userId, doc) {
         return Roles.userIsInRole(userId, ['admin']) || userId === doc.userId;
     },
     remove: function (userId) {
@@ -26,48 +25,48 @@ Agents.allow({
 // Address schema
 const CompanySchema = new SimpleSchema({
     name: {
-        type: String,
+        type: String
     },
     companyType: {
-        type: String,
+        type: String
     },
     phone: {
-        type: String,
+        type: String
     },
     zip: {
         type: String,
-        regEx: SimpleSchema.RegEx.ZipCode,
+        regEx: SimpleSchema.RegEx.ZipCode
     },
     address: {
-        type: String,
-    },
+        type: String
+    }
 });
 
 const PersonSchema = new SimpleSchema({
     fullname: {
-        type: String,
+        type: String
     },
     personalPhone: {
-        type: String,
+        type: String
     },
     email: {
         type: String,
         regEx: SimpleSchema.RegEx.Email,
-        unique: true,
-    },
+        unique: true
+    }
 });
 
 const AgentsSchema = new SimpleSchema({
 
     agent: {
-        type: PersonSchema,
+        type: PersonSchema
     },
     company: {
-        type: CompanySchema,
+        type: CompanySchema
     },
     createdAt: {
         type: Date,
-        autoValue: function() {
+        autoValue: function () {
             if (this.isInsert) {
                 return new Date();
             } else if (this.isUpsert) {
@@ -79,33 +78,38 @@ const AgentsSchema = new SimpleSchema({
         denyUpdate: true,
         autoform: {
             omit: true
-        },
+        }
+    },
+    status: {
+        type: Boolean,
+        defaultValue: false,
+        autoform: {
+            omit: true
+        }
     },
     completedProfile: {
         type: Boolean,
         defaultValue: false,
         autoform: {
             omit: true
-        },
-    },
+        }
+    }
 });
 
 // Add translations to labels
-for(const prop in AgentsSchema._schema) {
-    // Skip the key of the nested schema
-    if(prop === 'address') continue;
+for (const prop in AgentsSchema._schema) {
     AgentsSchema._schema[prop].label = function () {
         return TAPi18n.__(`schemas.agents.${prop}`, null);
-    }
+    };
 }
 
 AgentsSchema._schema['agent'].label = function () {
     return TAPi18n.__(`schemas.agents.agentLabel`, null);
-}
+};
 AgentsSchema._schema['company'].label = function () {
     return TAPi18n.__(`schemas.agents.companyLabel`, null);
-}
+};
 
 Agents.attachSchema(AgentsSchema);
 
-export {Agents}
+export {Agents};

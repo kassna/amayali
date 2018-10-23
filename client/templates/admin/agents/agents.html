@@ -1,4 +1,4 @@
-<template name="AdminAgents">
+<template name="adminAgents">
     {{#if isInRole 'admin'}}
         <div class="dashhead">
             <div class="dashhead-titles">
@@ -46,8 +46,8 @@
             {{> Loading}}
         {{/if}}
 
-        {{> NewModal collection="Agents"}}
-        {{> EditModal collection="Agents" editItem=editItem }}
+        {{> NewModal collection=agentCollection}}
+        {{> EditModal collection=agentCollection editItem=editItem }}
         {{> AgentInfo}}
 
     {{else}}
