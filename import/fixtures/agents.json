@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "GbZksBb8T9x5cnkCL",
+    "agent": {
+      "fullname": "Agente",
+      "personalPhone": "1234/56789",
+      "email": "agente@example.com"
+    },
+    "company": {
+      "name": "Agent Hotel",
+      "companyType": "Hotel",
+      "phone": "1234/56789",
+      "zip": "66554",
+      "address": "Garza Sada Sur 1"
+    },
+    "createdAt": {
+      "$date": "2018-10-09T10:26:22.603Z"
+    },
+    "completedProfile": false
+  },
+  {
+    "_id": "GbZksBb8T9x5cnkCE",
+    "agent": {
+      "fullname": "Agente2",
+      "personalPhone": "1234/56789",
+      "email": "agente2@example.com"
+    },
+    "company": {
+      "name": "Gym",
+      "companyType": "gym",
+      "phone": "1234/56789",
+      "zip": "66554",
+      "address": "Garza Sada Sur 420"
+    },
+    "createdAt": {
+      "$date": "2018-10-09T10:26:22.603Z"
+    },
+    "completedProfile": false
+  }
+]

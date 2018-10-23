@@ -10,6 +10,9 @@
     <codeStyleSettings language="HTML">
       <option name="RIGHT_MARGIN" value="100" />
     </codeStyleSettings>
+    <codeStyleSettings language="JavaScript">
+      <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    </codeStyleSettings>
     <codeStyleSettings language="SCSS">
       <indentOptions>
         <option name="TAB_SIZE" value="2" />
