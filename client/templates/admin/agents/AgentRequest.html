@@ -23,7 +23,7 @@
       	</button>
       </td>
       <td>
-        {{#if $not isInRole 'superadmin'}}
+        {{#if isInRole 'superadmin'}}
         	{{#quickRemoveButton collection="PromoCodes" _id=this._id class="hidden delete-btn"}}
   				Delete
         	{{/quickRemoveButton}}

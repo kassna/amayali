@@ -1,5 +1,5 @@
 <template name="PromoCodeAgent">
-  {{#if $not isInRole 'agent'}}
+  {{#if isInRole 'agent'}}
       <div class="dashhead">
           <div class="dashhead-titles">
               <h2 class="dashhead-title title-style c-green">{{_ "agent.promoCode.title"}}</h2>

@@ -1,5 +1,5 @@
 <template name="BookNowAgent">
-  {{#if $not isInRole 'agent'}}
+  {{#if isInRole 'agent'}}
     {{setLocationId agent.locationId}}
     {{setPendingPromos agent.pendingPromos}}
     {{setAgentId agent._id}}

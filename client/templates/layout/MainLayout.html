@@ -1,22 +1,39 @@
 <template name="MainLayout">
 	<div class="stage-shelf stage-shelf-right hidden p-a" id="sidebar">
-		{{#if $not isInRole 'admin'}}
+		{{#if isInRole 'admin'}}
 			{{> SidebarAdmin}}
 		{{/if}}
+
+        {{#if isInRole 'client'}}
+            {{> SidebarClient}}
+        {{/if}}
+
+        {{#if isInRole 'agent'}}
+            {{> SidebarAgent}}
+        {{/if}}
+
 	</div>
 	<div class="stage">
 		{{> HeaderAdmin}}
 		<div class="container-fluid m-t-lg profile">
 	        <div class="row">
 	            <div class="col-sm-2 sidebar hidden-xs">
-					{{#if $not isInRole 'admin'}}
+					{{#if isInRole 'admin'}}
 						{{> SidebarAdmin}}
 					{{/if}}
+
+                    {{#if isInRole 'client'}}
+                        {{> SidebarClient}}
+                    {{/if}}
+
+                    {{#if isInRole 'agent'}}
+                        {{> SidebarAgent}}
+                    {{/if}}
 	            </div>
 	            <div class="col-sm-10 content">
 	            	{{> Template.dynamic template=main}}
 
-					{{#if isInRole 'client' $or isInRole 'agent'}}
+					{{#if isInRole 'client'}}
 						{{> EditModal collection="Clients" editItem=client }}
 					{{/if}}
 	            </div>

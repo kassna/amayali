@@ -1,5 +1,5 @@
 <template name="AdminTherapists">
-    {{#if $not  isInRole 'admin'}}
+    {{#if isInRole 'admin'}}
         <div class="dashhead">
             <div class="dashhead-titles">
                 <h2 class="dashhead-title title-style c-green">{{_ "admin.therapists.title"}}</h2>
