@@ -627,12 +627,16 @@
     "agents": {
       "title": "Agentes activos",
       "infoTitle": "Información del agente",
-      "surname": "Apellido",
-      "workLocation": "Dirección de trabajo",
-      "enterprise": "Empresa/Hotel",
-      "personalPhone" : "Teléfono Personal",
-      "workPhone" : "Teléfono de Trabajo"
-
+      "fullname": "Nombre Completo",
+      "email": "Email",
+      "createdAt": "Miembro desde"
+    },
+    "company": {
+      "name": "Nombre de empresa",
+      "companyType": "Tipo de empresa",
+      "phone": "Teléfono de la empresa",
+      "zip": "Código postal",
+      "address": "Dirección de la empresa"
     },
     "agentRequests": {
       "title": "Solicitudes de agentes"
