@@ -5,7 +5,8 @@
                 <h2 class="dashhead-title title-style c-green">{{_ "admin.agents.title"}}</h2>
             </div>
             <div class="btn-toolbar dashhead-toolbar">
-                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal" data-target="#new-modal">
+                <button type="button" class="btn btn-sm btn-pill btn-info" data-toggle="modal"
+                        data-target="#new-modal">
                     {{_ "admin.general.add"}}
                 </button>
             </div>
@@ -13,35 +14,34 @@
 
         {{#if Template.subscriptionsReady}}
             <div class="table-responsive">
-                  <table class="table table-hover table-condensed" data-sort="table">
-                      <thead>
-                          <tr>
-
-                              <th>{{_ "admin.general.name"}}</th>
-                              <th>{{_ "admin.agents.surname"}}</th>
-                              <th>{{_ "admin.general.email"}}</th>
-                              <th>{{_ "admin.general.phone"}}</th>
-                              <th>{{_ "admin.agents.workLocation"}}</th>
-                              <th>{{_ "admin.agents.enterprise"}}</th>
-                              <th>{{_ "admin.agents.personalPhone"}}</th>
-                              <th>{{_ "admin.agents.workPhone"}}</th>
-                              <th></th>
-                              <th>{{_ "admin.general.active"}}</th>
-                              <th></th>
-                              <th></th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          {{#each agents}}
-                              {{> Agent}}
-                          {{else}}
-                              <tr>
-                                  {{> NoResults cols=15}}
-                              </tr>
-                          {{/each}}
-                      </tbody>
-                  </table>
-              </div>
+                <table class="table table-hover table-condensed" data-sort="table">
+                    <thead>
+                    <tr>
+                        <th>{{_ "admin.general.viewMore"}}</th>
+                        <th>{{_ "admin.agents.fullname"}}</th>
+                        <th>{{_ "admin.general.email"}}</th>
+                        <th>{{_ "admin.general.phone"}}</th>
+                        <th>{{_ "admin.company.name"}}</th>
+                        <th>{{_ "admin.company.phone"}}</th>
+                        <th>{{_ "admin.company.address"}}</th>
+                        <th>{{_ "admin.agents.createdAt"}}</th>
+                        <th></th>
+                        <th>{{_ "admin.general.active"}}</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each agents}}
+                        {{> agent}}
+                    {{else}}
+                        <tr>
+                            {{> NoResults cols=12}}
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
         {{else}}
             {{> Loading}}
         {{/if}}
@@ -49,7 +49,6 @@
         {{> NewModal collection=agentCollection}}
         {{> EditModal collection=agentCollection editItem=editItem }}
         {{> AgentInfo}}
-
     {{else}}
         {{> Forbidden}}
     {{/if}}
