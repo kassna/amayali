@@ -9,7 +9,7 @@
     "apply": "Aplicar"
   },
   "landing": {
-    "navbar" : {
+    "navbar": {
       "howWorks": "Cómo funciona",
       "prices": "Precios",
       "therapists": "Terapeutas",
@@ -138,7 +138,7 @@
       "ingresos2": "Recibe depositos semanales de tus ingresos.",
       "ingresos3": "Protegemos a nuestros terapeutas contra cancelaciones de último minuto hasta por el total del costo del servicio.",
       "title3": "Trabaja de manera segura",
-      "seguro1": "Todos los clientes deben validar su identidad y pagar con tarjeta de crédito." ,
+      "seguro1": "Todos los clientes deben validar su identidad y pagar con tarjeta de crédito.",
       "seguro2": "Hacemos check in y check out de cada sesion para saber que completaste el servicio de manera segura.",
       "seguro3": "Nuestros terapeutas evaluan a los clientes. Cualquier cliente que no cumpla con las normas de conducta es bloqueado de nuestra plataforma.",
       "seguro4": "La línea de soporte de Kassna esta disponible para ti los 365 días del año para ayudarte a resolver cualquier duda o problema."
@@ -391,69 +391,64 @@
       "birthday": "Fecha de nacimiento",
       "smartphone": "¿Cuentas con Smartphone y plan de datos que te permita recibir correos en cualquier momento?",
       "languages": "¿Qué idiomas hablas? Por favor solo menciona idiomas en los que puedas entablar una conversación",
-      "locationId": "¿En qué ciudad vives?",
+      "location": "¿En qué ciudad vives?",
+      "locationTypesSelect": {
+        "options": {
+          "other": "Otra"
+        }
+      },
       "zone": "¿De qué zona/colonia/municipio quieres recibir solicitudes de clientes?",
       "schedulePreference": "¿Tienes alguna preferencia de horario para atender las solicitudes?",
       "schedulePreferenceSelect": {
         "options": {
-          "morning": "Mañana (08:00 a 12:00)",
-          "evening": "Tarde (12:00 a 16:00)",
-          "night": "Noche (16:00 a 21:00)",
-          "all": "Todas"
+          "allDay": "Todo el día",
+          "afterOffice": "Después de horario de oficina",
+          "morning": "Por la mañana",
+          "evening": "Por la tarde",
+          "night": "Por la noche",
+          "rotative": "Turno Rotativo",
+          "weekends": "Fines de semana",
+          "other": "Otro"
         }
       },
       "zip": "¿Cuál es el código postal de donde vives?",
       "training": "¿Con qué entrenamiento y/o estudio cuentas?",
       "jobStatus": "¿Cuál es tu estado actual de trabajo?",
       "experience": "¿Dónde adquiriste tu experiencia?",
-      "experienceSelect": {
-        "options": {
-          "hospital": "Hospital",
-          "rehab": "Centro de rehabilitación",
-          "hotel": "Hotel",
-          "gym": "Gimnasio",
-          "spa": "SPA",
-          "private": "Masajes particulares",
-          "onDemand": "Servicio de masaje a domicilio",
-          "school": "Escuela/Instituto",
-          "other": "Otro"
-        }
-      },
       "experienceYears": "¿Cuantos años de experiencia practicando masajes tienes?",
       "experienceTypes": "¿En qué tipo de masajes tienes experiencia? (Seleccionar uno o más)",
       "experienceTypesSelect": {
         "options": {
-          "a": "Masaje Relajandte",
+          "a": "Masaje Relajante",
           "b": "Masaje Descontracturante",
           "c": "Masaje Deportivo",
           "d": "Masaje Prenatal",
-          "e": "Masaje Ayurvédico",
-          "f": "Masaje Tailandés",
-          "g": "Masaje Sueco",
-          "h": "Masaje Shiatsu (Silla)",
-          "i": "Masaje Shiatsu (Cama)",
-          "j": "Reflexología Podal",
-          "k": "Masaje Reductivo",
-          "l": "Masaje Terapéutico",
-          "m": "Drenaje Linfático",
-          "o": "Masaje Lomi Lomi / Hawaiano",
-          "p": "Otros"
+          "e": "Masaje Shiatsu (Silla)",
+          "f": "Otros"
         }
       },
-      "herbs": "¿Trabajas con bálsamos, aromaterapia, compresas herbales? Indica cuáles",
+      "spaExperience": "¿Has trabajado en un SPA?",
+      "school": "¿Donde realizaste tus estudios?",
       "hasBed": "¿Tienes una cama portátil?",
       "hasChair": "¿Tienes una silla portátil?",
-      "hasCar": "Tienes auto u otra manera de llevar todo el equipo a la cita con el cliente? (Eres libre de elegir como transportarte pero la manera recomendada es por auto). Kassna no se hace responsable del transporte.",
+      "mot": "¿Cómo te transportas en la ciudad con tu equipo?",
+      "motTypesSelect": {
+        "options": {
+          "car": "Auto propio / Taxi / Uber",
+          "other": "Otro"
+        }
+      },
       "phone": "¿En qué número de teléfono te podemos contactar?",
-      "contactTime": "¿En qué horario prefieres que te contactemos?",
-      "email": "¿Cuál es tu dirección de correo electrónico personal?",
+      "email": "¿Cuál es tú dirección de correo electrónico personal?",
       "reference": "¿Cómo te enteraste de nosotros?",
       "referenceSelect": {
         "options": {
-          "fb": "Facebook / Instagram",
+          "public": "Vacante publicada",
+          "fb": "Redes Sociales",
           "web": "Página Web",
           "therapist": "Referido de otro terapeuta",
           "staff": "Personal de Kassna",
+          "event": "Evento",
           "other": "Otro"
         }
       }
@@ -734,18 +729,18 @@
       "music": "Música",
       "other": "Otro",
       "nothing": "Nada"
-   },
-   "improve": {
-     "title": "¿Qué podemos mejorar?"
-   },
-   "comment": {
-     "title": "Déjanos tus comentarios",
-     "type": "Tipo de comentario",
-     "field": "Comentario",
-     "suggestion": "Sugerencia",
-     "congratulations": "Felicitación",
-     "complain": "Queja"
-   }
+    },
+    "improve": {
+      "title": "¿Qué podemos mejorar?"
+    },
+    "comment": {
+      "title": "Déjanos tus comentarios",
+      "type": "Tipo de comentario",
+      "field": "Comentario",
+      "suggestion": "Sugerencia",
+      "congratulations": "Felicitación",
+      "complain": "Queja"
+    }
   },
   "therapistSurvey": {
     "title": "Encuesta de satisfacción",
@@ -760,7 +755,7 @@
     "clean": {
       "title": "¿Estaba el área despejada para el masaje?",
       "yes": "Si",
-      "no": "No" 
+      "no": "No"
     },
     "agression": {
       "title": "¿Hubo algún comportamiento inapropiado?",
