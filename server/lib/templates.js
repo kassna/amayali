@@ -17,6 +17,17 @@ export default {
             }
         }
     },
+    newTherapist: {
+        path: 'emailTemplates/newAplication.html', 
+        route: {
+            path: '/prueba1/:id',
+            data: params => {
+              let order = Orders.findOne(params.id);
+              order.location = Locations.findOne(order.locationId).name;
+              return order;
+            }
+        }
+    },
     newOrder: {
         path: 'emailTemplates/newOrder.html',    // Relative to the 'private' dir.
         route: {
