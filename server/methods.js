@@ -1,6 +1,21 @@
 import {check} from 'meteor/check';
 import {Agents} from '../collections/agents';
 
+/**
+ * Creates a new user with role *role*.
+ *
+ * @param accountInfo - @see Accounts.createUser
+ * @param role - The role of the user
+ * @returns {any} - @see Accounts.createUser
+ */
+const addUser = (accountInfo, role) => {
+    const userId = Accounts.createUser(accountInfo);
+
+    Roles.setUserRoles(userId, role);
+
+    return userId;
+};
+
 Meteor.methods({
     createTherapistRequest: doc => {
         doc.status = TherapistsSchema.schema('status').defaultValue;
@@ -23,7 +38,20 @@ Meteor.methods({
     },
 
     toggleStatusAgent: (id) => {
-        const status = Agents.findOne(id).status;
+        const agent = Agents.findOne(id);
+        const status = agent.status;
+        const user = Accounts.findUserByEmail(agent.agent.email);
+
+        if (!user) {
+            const password = Random.secret(12);
+
+            addUser({
+                email: agent.agent.email,
+                password: password
+            }, 'agent');
+
+           // Meteor.call('sendWelcomeAgent', {id: id, password: password});
+        }
 
         if (status) {
             Agents.update({_id: id}, {$set: {status: false}});
@@ -376,22 +404,21 @@ Meteor.methods({
             template: 'newApplication',
             data: therapist
         });
+    },
+    'sendWelcomeAgent': agent => { // TODO: Change template
+        // Send email to user
+        Mailer.send({
+            to: agent.agent.email,
+            subject: `[Kassna] Confirmación de solicitud`,
+            template: 'applicationWait',
+            data: agent
+        });
+
+        Mailer.send({
+            to: process.env.ADMIN_EMAIL,
+            subject: `[Kassna] Nueva solicitud de terapeuta`,
+            template: 'newApplication',
+            data: therapist
+        });
     }
-
-    // 'sendNewAgent': agent => {
-    // 	// Send email to user
-    // 	Mailer.send({
-    // 		to: therapist.email,
-    // 		subject: `[Kassna] Confirmación de solicitud`,
-    // 		template: 'applicationWait',
-    // 		data: therapist
-    // 	});
-
-    // 	Mailer.send({
-    // 		to: process.env.ADMIN_EMAIL,
-    // 		subject: `[Kassna] Nueva solicitud de terapeuta`,
-    // 		template: 'newApplication',
-    // 		data: therapist
-    // 	});
-    // }
 });
