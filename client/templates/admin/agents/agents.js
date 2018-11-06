@@ -1,17 +1,10 @@
 import {Template} from 'meteor/templating';
 import {Agents} from '../../../../collections/agents';
-import {Session} from 'meteor/session'
-
-Template.adminAgents.onCreated(function () {
-    let self = this;
-    self.autorun(function () {
-        self.subscribe('orders', Session.get('currentCity'));
-    });
-});
+import {Session} from 'meteor/session';
 
 Template.adminAgents.onRendered(function () {
     this.autorun(() => {
-        this.subscribe('activeAgents', () => {
+        this.subscribe('activeAgents', Session.get('currentCity'), () => {
             Tracker.afterFlush(() => {
                 if (Agents.find().count()) {
                     $('[data-sort=table]').tablesorter({
@@ -25,11 +18,4 @@ Template.adminAgents.onRendered(function () {
             });
         });
     });
-});
-
-Template.adminAgents.helpers({
-    editItem: () => {
-        return Agents.findOne(Session.get('editId'));
-    },
-    agentCollection: () => Agents
 });
