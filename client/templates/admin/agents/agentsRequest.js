@@ -1,6 +1,6 @@
 import {Template} from 'meteor/templating';
 import {Agents} from '../../../../collections/agents';
-import {Session} from 'meteor/session'
+import {Session} from 'meteor/session';
 
 Template.adminAgentsRequest.onRendered(function () {
     this.autorun(() => {
@@ -18,11 +18,4 @@ Template.adminAgentsRequest.onRendered(function () {
             });
         });
     });
-});
-
-Template.adminAgentsRequest.helpers({
-    editItem: () => {
-        return Agents.findOne(Session.get('editId'));
-    },
-    agentCollection: () => Agents
 });

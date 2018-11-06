@@ -1,0 +1,40 @@
+<template name="adminAgentsList">
+    {{#if Template.subscriptionsReady}}
+        <div class="table-responsive">
+            <table class="table table-hover table-condensed" data-sort="table">
+                <thead>
+                <tr>
+                    <th>{{_ "admin.general.viewMore"}}</th>
+                    <th>{{_ "admin.agents.fullname"}}</th>
+                    <th>{{_ "admin.general.email"}}</th>
+                    <th>{{_ "admin.general.phone"}}</th>
+                    <th>{{_ "admin.company.name"}}</th>
+                    <th>{{_ "admin.company.type"}}</th>
+                    <th>{{_ "admin.company.phone"}}</th>
+                    <th>{{_ "admin.company.address"}}</th>
+                    <th>{{_ "admin.company.zip"}}</th>
+                    <th>{{_ "admin.agents.createdAt"}}</th>
+                    <th>{{_ "admin.general.active"}}</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each agents}}
+                    {{> agentListElement}}
+                {{else}}
+                    <tr>
+                        {{> NoResults cols=13}}
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    {{else}}
+        {{> Loading}}
+    {{/if}}
+
+    {{> NewModal collection=agentCollection}}
+    {{> EditModal collection=agentCollection editItem=editItem }}
+    {{> AgentInfo}}
+</template>
