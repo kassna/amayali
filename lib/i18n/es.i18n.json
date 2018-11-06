@@ -370,7 +370,7 @@
       },
       "company": {
         "name": "Nombre",
-        "companyType": "Tipo(hotel, gimnasio, etc)",
+        "type": "Tipo (hotel, gimnasio, etc)",
         "phone": "Teléfono",
         "zip": "Código Postal",
         "address": "Dirección"
@@ -633,7 +633,7 @@
     },
     "company": {
       "name": "Nombre de empresa",
-      "companyType": "Tipo de empresa",
+      "type": "Tipo de empresa",
       "phone": "Teléfono de la empresa",
       "zip": "Código postal",
       "address": "Dirección de la empresa"

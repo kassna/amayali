@@ -1,5 +1,6 @@
 import {Template} from 'meteor/templating';
 import {Agents} from '../../../../collections/agents';
+import {Session} from 'meteor/session'
 
 Template.adminAgents.onCreated(function () {
     let self = this;
@@ -17,9 +18,6 @@ Template.adminAgents.onRendered(function () {
                         sortList: [[1, 0]],
                         headers: {
                             0: {sorter: false},
-                            8: {sorter: false},
-                            9: {sorter: false},
-                            10: {sorter: false},
                             11: {sorter: false}
                         }
                     });
