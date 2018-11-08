@@ -1,0 +1,12 @@
+<template name="customSelect">
+    <select class="custom-select m-b" id={{id}}>
+        <option value="">{{_ emptyOption}}</option>
+        {{#each options}}
+            {{#if isCurrent ../current value}}
+                <option selected value="{{value}}">{{label}}</option>
+            {{else}}
+                <option value="{{value}}">{{label}}</option>
+            {{/if}}
+        {{/each}}
+    </select>
+</template>

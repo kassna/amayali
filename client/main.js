@@ -176,6 +176,8 @@ Template.registerHelper('humanDate', date => moment(date).format('LL'));
 
 Template.registerHelper('humanDateHour', date => moment(date).format('lll'));
 
+Template.registerHelper('dateYear', date => moment(date).format('YYYY'));
+
 Template.registerHelper('dateHour', date => moment(date, 'MM/DD/YYYY h:mm a').format('llll'));
 
 Template.registerHelper('dateHourComplete', date => moment(date, 'MM/DD/YYYY h:mm a').format('LLLL'));
