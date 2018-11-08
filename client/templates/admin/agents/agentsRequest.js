@@ -1,5 +1,6 @@
 import {Template} from 'meteor/templating';
 import {Agents} from '../../../../collections/agents';
+import {Session} from 'meteor/session';
 
 Template.adminAgentsRequest.onRendered(function () {
     this.autorun(() => {
@@ -10,9 +11,6 @@ Template.adminAgentsRequest.onRendered(function () {
                         sortList: [[1, 0]],
                         headers: {
                             0: {sorter: false},
-                            7: {sorter: false},
-                            8: {sorter: false},
-                            9: {sorter: false},
                             10: {sorter: false}
                         }
                     });
@@ -20,11 +18,4 @@ Template.adminAgentsRequest.onRendered(function () {
             });
         });
     });
-});
-
-Template.adminAgentsRequest.helpers({
-    editItem: () => {
-        return Agents.findOne(Session.get('editId'));
-    },
-    agentCollection: () => Agents
 });
