@@ -196,7 +196,13 @@ Template.BookNowClientForm.events({
   },
 });
 
+
+
+
+
 Template.BookNowClientPaypal.onRendered(() => {
+
+
   // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
   const env = Session.get('paypal_env');
   paypal.Button.render({
@@ -243,25 +249,10 @@ Template.BookNowClientPaypal.onRendered(() => {
     onAuthorize: (data, actions) => {
       return executePaypal(actions);
     }
-  }, '#paypal-button-container');
+  }, '#ppplusDiv');
 });
 
 Template.BookNowClientPaypal.helpers({
   // If total is 0, payment should be skipped
   payWithPaypal: () => Session.get('total') > 0,
 });
-
-Template.BookNowClientPaypal.events({
-    'click #credit-pay': (e) => {
-        e.preventDefault();
-        const orderDetails = getOrderDetails();
-        if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
-            return false;
-        }
-        Session.set('creditCardPayMode', true);
-    },
-    'click #cancel-credit': (e) => {
-        e.preventDefault();
-        Session.set('creditCardPayMode',false);
-    }
-})

@@ -1,0 +1,93 @@
+<template name="PayWithCard">
+    <script src="https://www.paypalobjects.com/webstatic/ppplusdcc/ppplusdcc.min.js" type="text/javascript">
+    </script>
+    <script type="application/javascript">
+        var ppp = PAYPAL.apps.PPP({
+        "approvalUrl": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express- checkout&token=EC-91S960680V162993K",
+        "placeholder": "ppplusDiv",
+        "mode": "sandbox",
+        "payerFirstName": "customerFirstName",
+        "payerLastName": " customerLastName",
+        "payerPhone": " customerPhone",
+        "payerTaxId": "",
+        "payerTaxIdType": "",
+        "language": "es_MX",
+        "country": "MX",
+        "disableContinue": "continueButton",
+        "enableContinue": "continueButton",
+        "rememberedCards": "customerRememberedCardHash"
+    });
+    </script>
+
+    <script>
+        if (window.addEventListener) {
+            window.addEventListener("message", messageListener, false);
+            console.log("addEventListener successful", "debug");
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", messageListener);
+            console.log("attachEvent successful", "debug");
+        } else {
+            console.log("Could not attach message listener", "debug");
+            throw new Error("Can't attach message listener");
+        }
+        function receiveMessage(event) {
+            try {
+                var message = JSON.parse(event.data);
+                if (typeof message['cause'] !== 'undefined') { //iFrame error handling
+                    ppplusError = message['cause'].replace(/['"]+/g, ""); //log & attach this error into the order
+                    switch (ppplusError) {
+                        case "INTERNAL_SERVICE_ERROR": //javascript fallthrough case "SOCKET_HANG_UP": //javascript fallthrough
+                        case "socket hang up": //javascript fallthrough
+                        case "connect ECONNREFUSED": //javascript fallthrough case "connect ETIMEDOUT": //javascript fallthrough
+                        case "UNKNOWN_INTERNAL_ERROR": //javascript fallthrough
+                        case "fiWalletLifecycle_unknown_error": //javascript fallthrough
+                        case "Failed to decrypt term info": //javascript fallthrough
+                        case "RESOURCE_NOT_FOUND": //javascript fallthrough
+                        case "INTERNAL_SERVER_ERROR"://Internal error, reload the iFrame & make a new createPayment API and ask the costumer to try again, if the problem persists check your integration and/or contact your PayPal POC.
+                            // <<Insert Code Here>>
+                            break;
+                        case "RISK_N_DECLINE": //javascript fallthrough
+                        case "NO_VALID_FUNDING_SOURCE_OR_RISK_REFUSED": //javascript fallthrough case "TRY_ANOTHER_CARD": //javascript fallthrough
+                        case "NO_VALID_FUNDING_INSTRUMENT"://Payment declined by risk, inform the customer to contact PayPal or offer Express Checkout payment solution. the iFrame.
+                            // <<Insert Code Here>> break;
+                        case "CARD_ATTEMPT_INVALID":
+                            //03 maximum attempts with error reached, inform the customer to try againa and reload
+                            // <<Insert Code Here>>
+                            break;
+                        case "INVALID_OR_EXPIRED_TOKEN":
+                            //User session is expired, inform the customer to try again and reload the iFrame & make a new createPayment API.inputs.
+                            // <<Insert Code Here>> break;
+                        case "CHECK_ENTRY":
+                            //Missing or invalid credit card information, inform your customer to check the
+                            // <<Insert Code Here>>
+                            break;
+                        default:
+                            //unknown error & reload payment flow
+                            //<<Insert Code Here>>
+                    }
+                }
+                if (message['action'] == 'checkout') { //PPPlus session approved, do logic here
+                    var rememberedCard = null;
+                    var payerID = null;
+                    var installmentsValue = null;
+                    rememberedCard = message['result']['rememberedCards']; //save on user BD record
+                    payerID = message['result']['payer']['payer_info']['payer_id']; //use it on executePayment API
+                    if ("term" in message) {
+                        installmentsValue = message['result']['term']['term']; //installments value
+                    } else {
+                        installmentsValue = 1; //no installments
+                    }
+                    /* Next steps:
+                    1) Save the rememberedCard value on the user record on your Database.
+                    2) Save the installmentsValue value into the order (Optional).
+                    3) Call executePayment API using payerID value to capture the payment.
+                    */
+                    // <<Insert Code Here>
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }
+    </script>
+
+</template>
