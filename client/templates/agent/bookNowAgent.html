@@ -1,10 +1,10 @@
 <template name="BookNowAgent">
   {{#if isInRole 'agent'}}
     {{setLocationId agent.locationId}}
-    {{setPendingPromos agent.pendingPromos}}
+    {{setPendingRewards agent.pendingRewards}}
     {{setAgentId agent._id}}
     
-    {{#if $not agent.completedProfile}}
+    {{#if agent.completedProfile}}
     <div class="dashhead">
         <div class="dashhead-titles">
             <h2 class="dashhead-title title-style c-green">{{_ "general.bookNow"}}<span class="c-yellow"> - Total ${{ total }}</span> </h2>
@@ -15,12 +15,12 @@
 
     <div class="book-form turquoise">
       <div class="simform">
-        {{#if $not agent.completedProfile}}
+        {{#if agent.completedProfile}}
           {{> BookNowAgentForm}}
         {{else}}
           <h2 class="c-yellow text-center">{{_ "agent.bookNow.forbidden"}}</h2>
           <h3 class="c-green text-center">{{_ "agent.bookNow.forbidden2"}}</h3>
-          <h1 class="big c-yellow text-center">{{promoCodeCode agent.promoCodeId}}</h1>
+          <h1 class="big c-yellow text-center">{{agent.pendingRewards}}</h1>
           <div class="footer-buttons center">
             <button class="btn-success edit-data">{{_ "agent.bookNow.update"}}</button>
           </div>
@@ -43,16 +43,16 @@
   {{> ButtonSelectBook attribute="type" elements=types placeholder="book.type"}}
   {{> ButtonSelectBook attribute="product" elements=products placeholder="book.product"}}
   {{> SelectBook attribute="therapistsType" elements=therapistsType placeholder="book.therapistsType"}}
-  {{#if agent.pendingPromos}}
+  {{#if agent.pendingRewards}}
     <div class="radio-select text-center">
-      <h2 class="c-yellow"><b>{{_ "agent.bookNow.pendingPromos1"}} ${{currentDiscount agent.pendingPromos}} {{_ "agent.bookNow.pendingPromos2"}}</b></h2>
+      <h2 class="c-yellow"><b>{{_ "agent.bookNow.pendingRewards1"}} ${{agent.pendingRewards}} {{_ "agent.bookNow.pendingRewards2"}}</b></h2>
       <br>
       <div class="radio-inline custom-control custom-radio">
         <label class="c-turquoise">
-          {{#if $.Session.get 'pendingPromos' true}}
-            <input type="radio" value="{{agent.pendingPromos}}" name="pendingPromos" checked>
+          {{#if $.Session.get 'pendingPro' true}}
+            <input type="radio" value="{{agent.pendingRewards}}" name="pendingRewards" checked>
           {{else}}
-            <input type="radio" value="{{agent.pendingPromos}}" name="pendingPromos">
+            <input type="radio" value="{{agent.pendingRewards}}" name="pendingRewards">
           {{/if}}
           <span class="custom-control-indicator"></span>
           {{_ "schemas.general.yes"}}
@@ -60,10 +60,10 @@
       </div>
       <div class="radio-inline custom-control custom-radio">
         <label class="c-turquoise">
-          {{#if $.Session.equals 'pendingPromos' false}}
-            <input type="radio" value="no" name="pendingPromos" checked>
+          {{#if $.Session.equals 'pendingRewards' false}}
+            <input type="radio" value="no" name="pendingRewards" checked>
           {{else}}
-            <input type="radio" value="no" name="pendingPromos">
+            <input type="radio" value="no" name="pendingRewards">
           {{/if}}
           <span class="custom-control-indicator"></span>
           {{_ "schemas.general.no"}}

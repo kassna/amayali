@@ -105,6 +105,7 @@ Template.BookNowAgent.helpers({
     return total;
   },
   setLocationId: locationId => { Session.set('locationId', locationId) },
+  setPendingRewards: pendingRewards => { Session.set('pendingRewards', pendingRewards)},
   setPendingPromos: pendingPromos => { Session.set('pendingPromos', pendingPromos) },
   setAgentId: agentId => { Session.set('agentId', agentId) },
 });

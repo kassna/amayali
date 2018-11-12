@@ -8,12 +8,39 @@
   	                <h4 class="modal-title block-subtitle c-turquoise">{{_ "admin.agents.infoTitle"}}</h4>
   	            </div>
   	            <div class="modal-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h3 class="c-cream m-t-0">{{_ "admin.general.personalData"}}</h3>
-                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="c-cream m-t-0">{{_ "schemas.agents.agentLabel"}}</h3>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.agent.fullname"}}:</b> {{currentAgent.agent.fullname}}
+                            </div>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.agent.personalPhone"}}:</b> <a href="tel:{{ currentAgent.agent.personalPhone }}">{{ currentAgent.agent.personalPhone }}</a>
+                            </div>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.agent.email"}}:</b> <a href="mailto:{{ currentAgent.agent.email }}">{{ currentAgent.agent.email }}</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3 class="c-cream m-t-0">{{_ "schemas.agents.companyLabel"}}</h3>
 
-                  </div>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.company.name"}}:</b> {{ currentAgent.company.name }}
+                            </div>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.company.type"}}:</b> {{ currentAgent.company.type}}
+                            </div>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.company.phone"}}:</b> {{ currentAgent.company.phone }}
+                            </div>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.company.zip"}}:</b> {{ currentAgent.company.zip }}
+                            </div>
+                            <div class="group">
+                                <b>{{_ "schemas.agents.company.address"}}:</b> {{ currentAgent.company.address }}
+                            </div>
+                        </div>
+                    </div>
   	            </div>
   	        </div>
   	    </div>

@@ -270,6 +270,8 @@ Template.registerHelper('therapists', () => Therapists.find());
 
 Template.registerHelper('clients', () => Clients.find());
 
+Template.registerHelper('agents', () => Agents.find());
+
 Template.registerHelper('orders', () => Orders.find({}, {sort: {date: 1}}));
 
 Template.registerHelper('surveys', () => Surveys.find());

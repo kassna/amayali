@@ -48,5 +48,30 @@
     "roles": [
       "client"
     ]
+  },
+  {
+    "_id": "KhoXY4TYrEMa96dKa",
+    "createdAt": {
+      "$date": "2018-11-12T03:20:02.138Z"
+    },
+    "services": {
+      "password": {
+        "bcrypt": "$2a$10$rlbXfFDu3FK4108Eju.J4ut3kCb/EqrdSiCOR/csUUoDmG0zyDmmW"
+      }
+    },
+    "emails": [
+      {
+        "address": "agente@example.com",
+        "verified": false
+      }
+    ],
+    "profile": {
+      "firstname": "Agent",
+      "lastname": "Schmagent",
+      "terms": false
+    },
+    "roles": [
+      "agent"
+    ]
   }
 ]
