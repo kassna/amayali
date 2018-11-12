@@ -1,3 +1,6 @@
+import {Template} from 'meteor/templating';
+import {Session} from 'meteor/session';
+
 const requiredInputs = ['product', 'type', 'therapistsType', 'date'];
 
 const getOrderDetails = () => {
@@ -132,11 +135,11 @@ Template.BookNowAgentForm.helpers({
 });
 
 Template.BookNowAgent.events({
-  'click .edit-data': function (event, template) {
+  'click .edit-data': () => {
     Session.set('editId', Meteor.userId());
     Session.set('editMode', 1);
     Meteor.setTimeout(function () {
-      $("#edit-modal").modal('show');
+      $('#edit-modal').modal('show');
     }, 1);
   },
 });

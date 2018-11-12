@@ -130,7 +130,7 @@ Template.BookNowClientForm.helpers({
 });
 
 Template.BookNowClient.events({
-  'click .edit-data': function (event, template) {
+  'click .edit-data': () => {
     Session.set('editId', Meteor.userId());
     Session.set('editMode', 1);
     Meteor.setTimeout(function () {
