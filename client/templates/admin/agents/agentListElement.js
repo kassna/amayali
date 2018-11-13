@@ -1,6 +1,7 @@
 import {Template} from 'meteor/templating';
+import {Session} from 'meteor/session';
 
-Template.agent.events({
+Template.agentListElement.events({
     'click .edit-button': function () {
         Session.set('editId', this._id);
         Session.set('editMode', 1);

@@ -27,7 +27,7 @@ const CompanySchema = new SimpleSchema({
     name: {
         type: String
     },
-    companyType: {
+    type: {
         type: String
     },
     phone: {

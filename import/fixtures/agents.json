@@ -8,7 +8,7 @@
     },
     "company": {
       "name": "Agent Hotel",
-      "companyType": "Hotel",
+      "type": "Hotel",
       "phone": "1234/56789",
       "zip": "66554",
       "address": "Garza Sada Sur 1"
@@ -29,7 +29,7 @@
     },
     "company": {
       "name": "Gym",
-      "companyType": "gym",
+      "type": "gym",
       "phone": "1234/56789",
       "zip": "66554",
       "address": "Garza Sada Sur 420"

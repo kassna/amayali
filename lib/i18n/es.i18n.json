@@ -6,7 +6,27 @@
     "backHome": "Volver al inicio",
     "send": "Envíar",
     "total": "Total",
-    "apply": "Aplicar"
+    "apply": "Aplicar",
+    "select": {
+      "selectYear": "Selecciona año",
+      "selectMonth": "Selecciona mes"
+    },
+    "date": {
+      "months": {
+        "1": "Enero",
+        "2": "Febrero",
+        "3": "Marzo",
+        "4": "Abril",
+        "5": "Mayo",
+        "6": "Junio",
+        "7": "Julio",
+        "8": "Agosto",
+        "9": "Septiembre",
+        "10": "Octubre",
+        "11": "Noviembre",
+        "12": "Deciembre"
+      }
+    }
   },
   "landing": {
     "navbar": {
@@ -361,8 +381,7 @@
       "locationFirst": "(Selecciona)",
       "addressLabel": "Dirección"
     },
-
-    "agents" : {
+    "agents": {
       "agent": {
         "fullname": "Nombre completo",
         "email": "Correo electrónico",
@@ -370,14 +389,13 @@
       },
       "company": {
         "name": "Nombre",
-        "companyType": "Tipo(hotel, gimnasio, etc)",
+        "type": "Tipo (hotel, gimnasio, etc)",
         "phone": "Teléfono",
         "zip": "Código Postal",
         "address": "Dirección"
       },
       "companyLabel": "Datos del lugar de trabajo",
-      "agentLabel" : "Datos personales"
-
+      "agentLabel": "Datos personales"
     },
     "therapists": {
       "name": "Nombre completo",
@@ -633,7 +651,7 @@
     },
     "company": {
       "name": "Nombre de empresa",
-      "companyType": "Tipo de empresa",
+      "type": "Tipo de empresa",
       "phone": "Teléfono de la empresa",
       "zip": "Código postal",
       "address": "Dirección de la empresa"

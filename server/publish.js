@@ -165,12 +165,23 @@ Meteor.publish('pendingOrdersClient', function () {
     return Orders.find({status: 'confirmed', clientId});
 });
 
-Meteor.publish('historicalOrders', location => {
+/**
+ * Filters all orders by location, year and month. If a parameter is not set it is ignored.
+ */
+Meteor.publish('historicalOrders', (location, orderYear, orderMonth) => {
+    const selector = {status: {$in: ['completed', 'canceled']}};
+
     if (location) {
-        return Orders.find({locationId: location, status: {$in: ['completed', 'canceled']}});
-    } else {
-        return Orders.find({status: {$in: ['completed', 'canceled']}});
+        selector.locationId = location;
     }
+
+    if (orderMonth && orderMonth.length === 1) {
+        orderMonth = '0' + orderMonth;
+    }
+
+    selector.date = {$regex: `${orderMonth || '.*'}/.*/${orderYear || ''}.*`};
+
+    return Orders.find(selector);
 });
 
 Meteor.publish('historicalOrdersClient', function () {
