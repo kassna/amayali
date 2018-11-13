@@ -13,6 +13,7 @@
       "zip": "66554",
       "address": "Garza Sada Sur 1"
     },
+    "userId": null,
     "status": true,
     "createdAt": {
       "$date": "2018-10-09T10:26:22.603Z"
@@ -33,6 +34,7 @@
       "zip": "66554",
       "address": "Garza Sada Sur 420"
     },
+    "userId": null,
     "status": false,
     "createdAt": {
       "$date": "2018-10-09T10:26:22.603Z"

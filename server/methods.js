@@ -45,20 +45,17 @@ Meteor.methods({
         if (!user) {
             const password = Random.secret(12);
 
-            addUser({
+            const userId = addUser({
                 email: agent.agent.email,
                 password: password
             }, 'agent');
 
-           Meteor.call('sendWelcomeAgent', {agent: agent, password: password});
+            Agents.update({_id: id}, {$set: {userId}});
+
+            Meteor.call('sendWelcomeAgent', agent, password);
         }
 
-        if (status) {
-            Agents.update({_id: id}, {$set: {status: false}});
-        }
-        else {
-            Agents.update({_id: id}, {$set: {status: true}});
-        }
+        Agents.update({_id: id}, {$set: {status: !status}});
     },
 
     // Locations
@@ -416,14 +413,14 @@ Meteor.methods({
         });
     },
 
-     'sendNewAgent': agent => {
-     	// Send email to user
-     	Mailer.send({
-     		to: agent.email,
-     		subject: `[Kassna] Confirmación de solicitud`,
-     		template: 'applicationWait',
-     		data: agent
-     	});
+    'sendNewAgent': agent => {
+        // Send email to user
+        Mailer.send({
+            to: agent.email,
+            subject: `[Kassna] Confirmación de solicitud`,
+            template: 'applicationWait',
+            data: agent
+        });
 
         Mailer.send({
             to: process.env.ADMIN_EMAIL,
