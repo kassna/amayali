@@ -251,8 +251,8 @@ Meteor.methods({
 
     createClientFromOrder: (accountDetails, order) => {
         try {
-            const userId = Accounts.createUser(accountDetails);
-            Roles.setUserRoles(userId, 'client');
+            const userId = addUser(accountDetails, 'client');
+
             const {firstname, lastname, email, phone, locationId, address} = order;
             const client = {
                 firstname,
