@@ -174,6 +174,8 @@ Template.registerHelper('roundedPrice', price => (price % 1 === 0) ? price : pri
 
 Template.registerHelper('humanDate', date => moment(date).format('LL'));
 
+Template.registerHelper('humanDate24', date => moment(date, 'MM/DD/YYYY h:mm a').format('MM/DD/YYYY HH:mm'));
+
 Template.registerHelper('humanDateHour', date => moment(date).format('lll'));
 
 Template.registerHelper('dateYear', date => moment(date).format('YYYY'));
