@@ -4,27 +4,15 @@
     {{setPendingRewards agent.pendingRewards}}
     {{setAgentId agent._id}}
     
-    {{#if agent.completedProfile}}
+
     <div class="dashhead">
         <div class="dashhead-titles">
             <h2 class="dashhead-title title-style c-green">{{_ "general.bookNow"}}<span class="c-yellow"> - Total ${{ total }}</span> </h2>
         </div>
     </div>
-    {{else}}
-    {{/if}}
-
     <div class="book-form turquoise">
       <div class="simform">
-        {{#if agent.completedProfile}}
           {{> BookNowAgentForm}}
-        {{else}}
-          <h2 class="c-yellow text-center">{{_ "agent.bookNow.forbidden"}}</h2>
-          <h3 class="c-green text-center">{{_ "agent.bookNow.forbidden2"}}</h3>
-          <h1 class="big c-yellow text-center">{{agent.pendingRewards}}</h1>
-          <div class="footer-buttons center">
-            <button class="btn-success edit-data">{{_ "agent.bookNow.update"}}</button>
-          </div>
-        {{/if}}
       </div>
     </div>
   {{/if}}
