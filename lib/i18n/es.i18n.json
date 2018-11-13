@@ -385,6 +385,8 @@
       "agent": {
         "fullname": "Nombre completo",
         "email": "Correo electrónico",
+        "points": "Puntos",
+        "reward": "Regalo asignado",
         "personalPhone": "Teléfono personal"
       },
       "company": {
@@ -647,6 +649,8 @@
       "infoTitle": "Información del agente",
       "fullname": "Nombre Completo",
       "email": "Email",
+      "points": "Puntos",
+      "reward": "Regalo asignado",
       "createdAt": "Miembro desde"
     },
     "company": {

@@ -1,3 +1,4 @@
+
 <template name="PromoRewardAgent">
   {{#if isInRole 'agent'}}
       <div class="dashhead">
@@ -8,16 +9,13 @@
 
       {{#if Template.subscriptionsReady}}
         <div class="text-center agent-promo-code">
-          <h3>{{_ "agent.promoCode.text1"}}:</h3>
-          <h1 class="big c-yellow">0</h1>
           <h3 class="c-green">{{_ "agent.promoCode.text2"}}</h3>
-          {{#if agent.pendingRewards}}
-            <h3 class="m-t-md">{{_ "agent.promoCode.text3"}}:</h3>
-            <h1 class="big c-yellow m-t m-b">${{agent.pendingRewards}} {{_ "agent.promoCode.text4"}}</h1>
-            <h3 class="c-green">{{_ "agent.promoCode.text5"}}</h3>
-          {{/if}}
+            <h1 class="big c-yellow"><strong>50</strong></h1>
+            <h1 class="c-green">{{_ "admin.agents.points"}}</h1>
           <p class="m-t-lg">{{_ "agent.promoCode.text6"}}</p>
         </div>
       {{/if}}
+      {{else}}
+      {{> forbidden }}
   {{/if}}
 </template>

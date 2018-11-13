@@ -13,6 +13,8 @@
                     <th>{{_ "admin.company.phone"}}</th>
                     <th>{{_ "admin.company.address"}}</th>
                     <th>{{_ "admin.company.zip"}}</th>
+                    <th>{{_ "admin.agents.points"}}</th>
+                    <th>{{_ "admin.agents.reward"}}</th>
                     <th>{{_ "admin.agents.createdAt"}}</th>
                     <th>{{_ "admin.general.active"}}</th>
                     <th></th>
@@ -24,7 +26,7 @@
                     {{> agentListElement}}
                 {{else}}
                     <tr>
-                        {{> NoResults cols=13}}
+                        {{> NoResults cols=15}}
                     </tr>
                 {{/each}}
                 </tbody>

@@ -13,6 +13,8 @@
       "zip": "66554",
       "address": "Garza Sada Sur 1"
     },
+    "points": 10,
+    "reward": "N/A",
     "status": true,
     "createdAt": {
       "$date": "2018-10-09T10:26:22.603Z"
@@ -33,6 +35,8 @@
       "zip": "66554",
       "address": "Garza Sada Sur 420"
     },
+    "points": 50,
+    "reward": "N/A",
     "status": false,
     "createdAt": {
       "$date": "2018-10-09T10:26:22.603Z"

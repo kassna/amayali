@@ -54,6 +54,7 @@ const PersonSchema = new SimpleSchema({
         regEx: SimpleSchema.RegEx.Email,
         unique: true
     }
+
 });
 
 const AgentsSchema = new SimpleSchema({
@@ -63,6 +64,13 @@ const AgentsSchema = new SimpleSchema({
     company: {
         type: CompanySchema
     },
+    points: {
+        type: Number
+    },
+    reward: {
+        type: String
+    },
+
     createdAt: {
         type: Date,
         autoValue: function () {
@@ -107,6 +115,12 @@ AgentsSchema._schema['agent'].label = function () {
 };
 AgentsSchema._schema['company'].label = function () {
     return TAPi18n.__(`schemas.agents.companyLabel`, null);
+};
+AgentsSchema._schema['points'].label = function () {
+    return TAPi18n.__(`schemas.agents.agent.points`, null);
+};
+AgentsSchema._schema['reward'].label = function () {
+    return TAPi18n.__(`schemas.agents.agent.reward`, null);
 };
 
 Agents.attachSchema(AgentsSchema);
