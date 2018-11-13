@@ -50,7 +50,7 @@ Meteor.methods({
                 password: password
             }, 'agent');
 
-           // Meteor.call('sendWelcomeAgent', {id: id, password: password});
+           Meteor.call('sendWelcomeAgent', {agent: agent, password: password});
         }
 
         if (status) {
@@ -363,6 +363,16 @@ Meteor.methods({
         });
     },
 
+    'sendWelcomeAgent': (agent, password) => {
+        const fullname = agent.agent.fullname;
+        Mailer.send({
+            to: agent.agent.email,
+            subject: `s[Kassna] Bienvenido ${fullname}!`,
+            template: 'welcomeAgent',
+            data: {fullname, password}
+        });
+    },
+
     'sendSurvey': orderId => {
         const {firstname, survey, email} = Orders.findOne(orderId);
         Mailer.send({
@@ -405,14 +415,15 @@ Meteor.methods({
             data: therapist
         });
     },
-    'sendWelcomeAgent': agent => { // TODO: Change template
-        // Send email to user
-        Mailer.send({
-            to: agent.agent.email,
-            subject: `[Kassna] Confirmación de solicitud`,
-            template: 'applicationWait',
-            data: agent
-        });
+
+     'sendNewAgent': agent => {
+     	// Send email to user
+     	Mailer.send({
+     		to: agent.email,
+     		subject: `[Kassna] Confirmación de solicitud`,
+     		template: 'applicationWait',
+     		data: agent
+     	});
 
         Mailer.send({
             to: process.env.ADMIN_EMAIL,
