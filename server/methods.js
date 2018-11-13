@@ -1,6 +1,21 @@
 import {check} from 'meteor/check';
 import {Agents} from '../collections/agents';
 
+/**
+ * Creates a new user with role *role*.
+ *
+ * @param accountInfo - @see Accounts.createUser
+ * @param role - The role of the user
+ * @returns {any} - @see Accounts.createUser
+ */
+const addUser = (accountInfo, role) => {
+    const userId = Accounts.createUser(accountInfo);
+
+    Roles.setUserRoles(userId, role);
+
+    return userId;
+};
+
 Meteor.methods({
     createTherapistRequest: doc => {
         doc.status = TherapistsSchema.schema('status').defaultValue;
@@ -23,14 +38,24 @@ Meteor.methods({
     },
 
     toggleStatusAgent: (id) => {
-        const status = Agents.findOne(id).status;
+        const agent = Agents.findOne(id);
+        const status = agent.status;
+        const user = Accounts.findUserByEmail(agent.agent.email);
 
-        if (status) {
-            Agents.update({_id: id}, {$set: {status: false}});
+        if (!user) {
+            const password = Random.secret(12);
+
+            const userId = addUser({
+                email: agent.agent.email,
+                password: password
+            }, 'agent');
+
+            Agents.update({_id: id}, {$set: {userId}});
+
+            Meteor.call('sendWelcomeAgent', agent, password);
         }
-        else {
-            Agents.update({_id: id}, {$set: {status: true}});
-        }
+
+        Agents.update({_id: id}, {$set: {status: !status}});
     },
 
     // Locations
@@ -223,8 +248,8 @@ Meteor.methods({
 
     createClientFromOrder: (accountDetails, order) => {
         try {
-            const userId = Accounts.createUser(accountDetails);
-            Roles.setUserRoles(userId, 'client');
+            const userId = addUser(accountDetails, 'client');
+
             const {firstname, lastname, email, phone, locationId, address} = order;
             const client = {
                 firstname,
@@ -335,6 +360,16 @@ Meteor.methods({
         });
     },
 
+    'sendWelcomeAgent': (agent, password) => {
+        const fullname = agent.agent.fullname;
+        Mailer.send({
+            to: agent.agent.email,
+            subject: `s[Kassna] Bienvenido ${fullname}!`,
+            template: 'welcomeAgent',
+            data: {fullname, password}
+        });
+    },
+
     'sendSurvey': orderId => {
         const {firstname, survey, email} = Orders.findOne(orderId);
         Mailer.send({
@@ -376,22 +411,22 @@ Meteor.methods({
             template: 'newApplication',
             data: therapist
         });
+    },
+
+    'sendNewAgent': agent => {
+        // Send email to user
+        Mailer.send({
+            to: agent.email,
+            subject: `[Kassna] Confirmación de solicitud`,
+            template: 'applicationWait',
+            data: agent
+        });
+
+        Mailer.send({
+            to: process.env.ADMIN_EMAIL,
+            subject: `[Kassna] Nueva solicitud de terapeuta`,
+            template: 'newApplication',
+            data: therapist
+        });
     }
-
-    // 'sendNewAgent': agent => {
-    // 	// Send email to user
-    // 	Mailer.send({
-    // 		to: therapist.email,
-    // 		subject: `[Kassna] Confirmación de solicitud`,
-    // 		template: 'applicationWait',
-    // 		data: therapist
-    // 	});
-
-    // 	Mailer.send({
-    // 		to: process.env.ADMIN_EMAIL,
-    // 		subject: `[Kassna] Nueva solicitud de terapeuta`,
-    // 		template: 'newApplication',
-    // 		data: therapist
-    // 	});
-    // }
 });

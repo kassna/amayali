@@ -1,0 +1,15 @@
+<div class="align-left p-a">
+    <h2 class="c-turquoise"><span class="">Bienvenido </span> <span class="c-aqua">{{ fullname }}!</span></h2>
+    <p>
+        Felicidades, has sido aceptado como agente en Kassna.
+        Ahora puedes agendar citas a todos tus clientes!
+        Si tienes alguna duda o comentarionos puedes enviar un correo a
+        <a href="mailto:info@kassna.com">info@kassna.com</a> o responder este mismo correo.
+    </p>
+    <br>
+    <p>Hemos creado una contraseña temporal: {{ password }}.</p>
+    <p>Despues de iniciar sesión, recuerda cambiar tu contraseña.</p>
+    <p>Click aquí para iniciar sesión: <a href="{{ emailUrlFor 'login' }}">
+        {{ emailUrlFor 'login' }}</a></p>
+    <br>
+</div>
