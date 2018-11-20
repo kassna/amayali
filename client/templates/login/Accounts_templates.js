@@ -9,7 +9,7 @@ Template['override-atError'].replaces('atError');
 Template.atError.helpers({
   showErrors: (errors) => {
     let newErrors = [];
-    for (error of errors) {
+    for (const error of errors) {
       if(_.isPlainObject(error)) {
         newErrors.push(`<b>${T9n.get(_.camelCase(error.field))}</b>: ${T9n.get(error.err)}`);
       } else {
@@ -22,7 +22,7 @@ Template.atError.helpers({
 });
 
 Template.termsForm.events({
-  'change #termsInput': event => {
+  'change #termsInput': () => {
     $('#termsInput').prop('checked', true);
     swal({
 			title: TAPi18n.__('admin.general.confirm', null),
