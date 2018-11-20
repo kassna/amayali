@@ -1,3 +1,4 @@
+import {Agents} from '../../../collections/agents.js'
 import {Template} from 'meteor/templating';
 import {Session} from 'meteor/session';
 
@@ -63,7 +64,7 @@ Template.BookNowAgent.onCreated(function () {
   if (!Session.get('total')) Session.set('total', 0);
 	let self = this;
 	self.autorun(function() {
-		self.subscribe('agentPromoCode');
+		self.subscribe('agentPoints');
   });
   
   // Get paypal env
@@ -148,21 +149,21 @@ Template.BookNowAgentForm.events({
   'click #product button': event => {
     const product = $(event.target).attr('data-id');
     // Get selected location base rate
-    const baseRate = Locations.findOne(Session.get('locationId')).base_rate;
+    //const baseRate = Locations.findOne(Session.get('locationId')).base_rate;
     
     let price;
     switch (product) {
       case '60':
         // Set price to base rate
-        price = baseRate;
+        price = 799;
         break;
       case '90':
         // Get price by formula
-        price = rate_90(baseRate);
+        price = 1099;
         break;
       case '120':
         // Get price by formula
-        price = rate_120(baseRate);
+        price = 1399;
         break;
       default:
     }
@@ -190,6 +191,7 @@ Template.BookNowAgentForm.events({
             } else {
               Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
               Session.set('promoCodeValid', res);
+              Session.set('agentpoints', Agents.points + 1);
             }
           });
         } else {

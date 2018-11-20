@@ -2,9 +2,9 @@
   {
     "_id": "GbZksBb8T9x5cnkCL",
     "agent": {
-      "fullname": "Agente",
+      "fullname": "Agente2",
       "personalPhone": "1234/56789",
-      "email": "agente@example.com"
+      "email": "agente2@example.com"
     },
     "company": {
       "name": "Agent Hotel",
@@ -24,9 +24,9 @@
   {
     "_id": "GbZksBb8T9x5cnkCE",
     "agent": {
-      "fullname": "Agente2",
+      "fullname": "Agente",
       "personalPhone": "1234/56789",
-      "email": "agente2@example.com"
+      "email": "agente@example.com"
     },
     "company": {
       "name": "Gym",
