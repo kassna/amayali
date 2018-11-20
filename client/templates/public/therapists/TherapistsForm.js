@@ -33,6 +33,8 @@ class TherapistFormHelper {
             });
         });
 
+        this.template.onRendered(this.addMotInput);
+
         this.template.events({
             'change input[name="mot"]': this.setMotOtherDisplayState
         });
@@ -78,6 +80,14 @@ class TherapistFormHelper {
         const motOther = $(template.find(this.motOtherId));
 
         this.isOtherChecked(template.find(ev.currentTarget)) ? motOther.show() : motOther.hide();
+    };
+
+    addMotInput = () => {
+        $('[data-schema-key="mot"]').prepend($('<input>', {
+            class: 'form-control',
+            id: this.motOtherId.replace('#', ''),
+            type: 'text'
+        }).hide());
     };
 }
 

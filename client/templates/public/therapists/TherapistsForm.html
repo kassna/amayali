@@ -6,40 +6,13 @@
                     href="">info@kassna.com</a></h3>
             <hr class="m-b-md m-t-md">
             <div class="request-form m-b-lg">
-                {{#autoForm
+                {{> quickForm
                         schema="TherapistsSchema"
                         collection="Therapists"
                         id="insertTherapistForm" type="method"
-                        meteormethod="createTherapistRequest"}}
-                    {{> afQuickField name='name'}}
-                    {{> afQuickField name='birthday'}}
-                    {{> afQuickField name='sex'}}
-                    {{> afQuickField name='phone'}}
-                    {{> afQuickField name='email'}}
-                    {{> afQuickField name='locationId'}}
-                    {{> afQuickField name='zip'}}
-                    {{> afQuickField name='training'}}
-                    {{> afQuickField name='school'}}
-                    {{> afQuickField name='experienceYears'}}
-                    {{> afQuickField name='spaExperience'}}
-                    {{> afQuickField name='experienceTypes'}}
-                    <div class="form-group {{#if afFieldIsInvalid name='mot'}} has-error{{/if}}">
-                        <label class="control-label">{{_ "schemas.therapists.mot"}}</label>
-                        <input class="form-control" id="motOther" type="text" style="display: none">
-                        {{> afFieldInput name='mot'}}
-
-                        {{#if afFieldIsInvalid name='mot'}}
-                            <span class="help-block">{{afFieldMessage name='mot'}}</span>
-                        {{/if}}
-                    </div>
-                    {{> afQuickField name='hasBed'}}
-                    {{> afQuickField name='hasChair'}}
-                    {{> afQuickField name='schedulePreference'}}
-                    {{> afQuickField name='reference'}}
-                    <button type="submit" class="btn btn-success btn-full submit-button">{{_
-                            "general.send"}}
-                    </button>
-                {{/autoForm}}
+                        meteormethod="createTherapistRequest"
+                        buttonClasses="btn btn-success btn-full submit-button"
+                        buttonContent=sendText}}
             </div>
         </div>
     </div>
