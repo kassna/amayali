@@ -1,4 +1,6 @@
-verifyRequired = attributes => {
+import {scrollTop} from '../../../js/custom';
+
+const verifyRequired = attributes => {
   let allSet = true;
   _.map(attributes, attr => {
     if(!Session.get(attr)) {
@@ -9,9 +11,9 @@ verifyRequired = attributes => {
 
   if(!allSet) Bert.alert(TAPi18n.__('book.errors.requiredInputs', null), 'danger');
   return allSet;
-}
+};
 
-nextInstance = (attributes, currInstance) => {
+const nextInstance = (attributes, currInstance) => {
   if(!verifyRequired(attributes)) {
     Session.set('maxIntance', currInstance);
     return false;
@@ -22,12 +24,12 @@ nextInstance = (attributes, currInstance) => {
   // Increase max instance in case it was the first time advancing
   if(Session.get('maxIntance') === currInstance) Session.set('maxIntance', currInstance + 1);
   scrollTop();
-}
+};
 
-prevInstance = currInstance => {
+const prevInstance = currInstance => {
   Session.set('instance', currInstance - 1);
   scrollTop();
-}
+};
 
 Template.Book.onCreated(function () {
   let self = this;
@@ -47,3 +49,5 @@ Template.Book.onCreated(function () {
     }
   })
 });
+
+export {nextInstance, prevInstance, verifyRequired}
