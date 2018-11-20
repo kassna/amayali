@@ -1,4 +1,5 @@
 import {Agents} from '../collections/agents';
+import {setLanguage} from './js/custom';
 
 _ = lodash;
 
@@ -144,12 +145,8 @@ let accountsTranslationsES = {
 let accountsTranslationsEN = {};
 
 Meteor.startup(function () {
-    Session.set('i18lLoaded', false);
-    TAPi18n.setLanguage('es')
-        .done(function () {
-            Session.set('i18lLoaded', true);
-        });
-    T9n.setLanguage('es');
+    setLanguage('es');
+
     T9n.map('es', accountsTranslationsES);
     T9n.map('en', accountsTranslationsEN);
 });
