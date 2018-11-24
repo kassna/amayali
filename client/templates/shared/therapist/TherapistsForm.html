@@ -1,0 +1,21 @@
+<template name="TherapistsForm">
+    {{#if hideButton}}
+        {{> quickForm
+                schema="TherapistsSchema"
+                collection="Therapists"
+                id=id
+                type=type
+                doc=doc
+                buttonClasses="btn btn-success btn-full submit-button hidden"
+                buttonContent=sendText}}
+    {{else}}
+        {{> quickForm
+                schema="TherapistsSchema"
+                collection="Therapists"
+                id=id
+                doc=doc
+                type=type
+                buttonClasses="btn btn-success btn-full submit-button"
+                buttonContent=sendText}}
+    {{/if}}
+</template>

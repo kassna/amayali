@@ -1,4 +1,4 @@
-<template name="TherapistsForm">
+<template name="registerTherapist">
     <div class="margin-section">
         <div class="container">
             <h1 class="block-title text-center c-yellow">{{_ "landing.therapistForm.title"}}</h1>
@@ -6,13 +6,7 @@
                     href="">info@kassna.com</a></h3>
             <hr class="m-b-md m-t-md">
             <div class="request-form m-b-lg">
-                {{> quickForm
-                        schema="TherapistsSchema"
-                        collection="Therapists"
-                        id="insertTherapistForm" type="method"
-                        meteormethod="createTherapistRequest"
-                        buttonClasses="btn btn-success btn-full submit-button"
-                        buttonContent=sendText}}
+                {{> TherapistsForm id="insertTherapistForm" type="insert"}}
             </div>
         </div>
     </div>

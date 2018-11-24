@@ -1,4 +1,12 @@
 class TherapistsCollection extends Mongo.Collection {
+    insert(doc, callback) {
+        doc.createdAt = new Date();
+
+        Meteor.call('sendNewTherapist', doc);
+
+        return super.insert(doc, callback);
+    }
+
     remove(selector, callback) {
         Meteor.call('removeTherapists', selector, err => {
             if (err) {
@@ -27,6 +35,14 @@ Therapists.allow({
         return Roles.userIsInRole(userId, ['admin']);
     }
 });
+
+/**
+ * Static **mot** (means of transportation) options
+ * in contrary of manually typed **mot** by user.
+ *
+ * @type {string[]}
+ */
+const motStaticOptions = ['car', 'taxi', 'uber'];
 
 TherapistsSchema = new SimpleSchema({
     name: {
@@ -122,7 +138,7 @@ TherapistsSchema = new SimpleSchema({
         autoform: {
             type: 'select-radio-inline',
             options() {
-                return _.map(['car', 'taxi', 'uber', 'other'], option => {
+                return _.map(motStaticOptions.concat(['other']), option => {
                     return {
                         value: option,
                         label: TAPi18n.__(`schemas.therapists.motTypesSelect.options.${option}`, null)
@@ -229,3 +245,5 @@ for (const prop in TherapistsSchema._schema) {
 }
 
 Therapists.attachSchema(TherapistsSchema);
+
+export {motStaticOptions};
