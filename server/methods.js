@@ -405,7 +405,7 @@ Meteor.methods({
             to: process.env.ADMIN_EMAIL,
             subject: `[Kassna] Nueva solicitud de terapeuta`,
             template: 'newApplication',
-            data: therapist
+            data: agent
         });
     }
 });
