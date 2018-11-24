@@ -1,3 +1,5 @@
+import {datepickerSetup, verifySchedule} from '../../../js/custom';
+
 Template.ScheduleBook.onRendered(() => {
   datepickerSetup();
 });

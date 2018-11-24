@@ -1,4 +1,5 @@
 import {Agents} from '../collections/agents';
+import {setLanguage} from './js/custom';
 
 _ = lodash;
 
@@ -16,114 +17,7 @@ AutoForm.hooks({
     }
 });
 
-// Sweet scroll function
-scroll = function (target) {
-    var topPos = $(target).offset().top - 87;
-    $('html,body').animate({scrollTop: topPos}, 600);
-    return false;
-};
-
-scrollTop = () => {
-    if ($('.stage-open').length) {
-        $('body').css('overflow', 'visible');
-        $('.navbar-toggle').trigger('click');
-    }
-    $('html,body').animate({scrollTop: 0}, 0, 'easeInOutQuart');
-};
-
-// Get rates
-rate_90 = baseRate => baseRate * 1.5 - (baseRate - 599) * 0.495 + 0.005 * (699 - baseRate);
-rate_120 = baseRate => baseRate + 600;
-rate_prenatal = baseRate => baseRate * 1.5 - (baseRate - 599) * 0.495 + 0.005 * (699 - baseRate);
-
-// Verify valid hours
-verifySchedule = (value) => {
-    let notAllowed = [0, 1, 2, 3, 4, 5, 6, 7, 21, 22, 23];
-    if (_.includes(notAllowed, moment(value).hour())) {
-        Bert.alert(TAPi18n.__('book.errors.invalidHour', null), 'danger');
-        return false;
-    }
-    return true;
-};
-
-// Initialize datepicker
-datepickerSetup = () => {
-    let date = Session.get('date') || '';
-    // Set active inputs
-    if (date) {
-        // Set as default date
-        date = new Date(date);
-        $('[name=\'date\']').parent().addClass('input--filled');
-    }
-
-    const initDatepicker = () => {
-        $('.select-date').flatpickr({
-            enableTime: true,
-            altInput: true,
-            altFormat: 'F j, Y h:i K',
-            altInputClass: '',
-            defaultDate: date,
-            minDate: moment().add(4, 'h').valueOf(),
-            minuteIncrement: 15,
-            disableMobile: false,
-            wrap: true,
-            onChange: (selectedDates, dateStr) => {
-                // On desktop, date will change with dateStr as it's already validated
-                if ($(window).width() >= 768) {
-                    Session.set('date', moment(dateStr).format('MM/DD/YYYY h:mm a'));
-                } else {
-                    // If there's a valid date, update session
-                    if (selectedDates.length) {
-                        Session.set('date', moment(dateStr).format('MM/DD/YYYY h:mm a'));
-                    } else {
-                        // Nullify date so user will need to update date
-                        Session.set('date', null);
-                    }
-                }
-            },
-            onOpen: (selectedDates, dateStr, instance) => {
-                // Add input class on desktop
-                if ($(window).width() >= 768) {
-                    $(instance.element).addClass('input--filled');
-                }
-            },
-            onClose: (selectedDates, dateStr, instance) => {
-                // Remove input class on desktop
-                if ($(window).width() >= 768 && dateStr.trim() === '') {
-                    $(instance.element).removeClass('input--filled');
-                }
-            }
-        });
-    };
-
-    // Keep track of user's window width
-    let pastWidth = $(window).width();
-
-    // Init datepicker on start
-    initDatepicker();
-    // Verify if window is mobile
-    if (pastWidth < 768) {
-        $('.select-date').addClass('input--filled');
-    }
-
-    // Event listener for resize
-    $(window).resize(() => {
-        const currWidth = $(window).width();
-        // User resize to mobile. Update picker to avoid crashing
-        if (pastWidth >= 768 && currWidth < 768) {
-            initDatepicker();
-            // Add filled class to input, as it's always on in mobile
-            $('.select-date').addClass('input--filled');
-        } else if (pastWidth < 768 && currWidth >= 768) { // User resize from mobile. Update picker to avoid crashing
-            initDatepicker();
-            // Add filled class to input, as it's default is not filled
-            $('.select-date').removeClass('input--filled');
-        }
-        pastWidth = currWidth;
-    });
-};
-
-let accountsTranslationsES = {
+const accountsTranslationsES = {
     firstname: 'Nombre(s)',
     lastname: 'Apellido(s)',
     'Required Field': 'Campo Requerido',
@@ -141,15 +35,11 @@ let accountsTranslationsES = {
 };
 
 // For translation, all language objects should contain the same keys
-let accountsTranslationsEN = {};
+const accountsTranslationsEN = {};
 
 Meteor.startup(function () {
-    Session.set('i18lLoaded', false);
-    TAPi18n.setLanguage('es')
-        .done(function () {
-            Session.set('i18lLoaded', true);
-        });
-    T9n.setLanguage('es');
+    setLanguage('es');
+
     T9n.map('es', accountsTranslationsES);
     T9n.map('en', accountsTranslationsEN);
 });
@@ -173,6 +63,8 @@ Template.registerHelper('imagePath', id => '/cfs/files/images/' + id);
 Template.registerHelper('roundedPrice', price => (price % 1 === 0) ? price : price.toFixed(2));
 
 Template.registerHelper('humanDate', date => moment(date).format('LL'));
+
+Template.registerHelper('humanDate24', date => moment(date, 'MM/DD/YYYY h:mm a').format('MM/DD/YYYY HH:mm'));
 
 Template.registerHelper('humanDateHour', date => moment(date).format('lll'));
 

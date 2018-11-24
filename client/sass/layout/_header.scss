@@ -7,119 +7,128 @@
 // -----------------------------------------------------------------------------
 
 .navbar.navbar-inverse {
-	background-color: transparent;
-	border-color: transparent;
-	transition: all 0.4s;
-	top: 10px;
-	left: 40px;
-	width: calc(100% - 80px);
-	@include bp(tablet) {
-		top: 40px;
-	}
-	&.small-nav {
-		background-color: $white;
-		top: 0;
-		left: 0;
-		width: 100%;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		.navbar-brand {
-			height: 60px;
-		}
-		li a {
-			color: $light-black;
-			padding: 20px 10px;
+  background-color: transparent;
+  border-color: transparent;
+  transition: all 0.4s;
+  top: 10px;
+  left: 40px;
+  width: calc(100% - 80px);
+  @include bp(tablet) {
+    top: 40px;
+  }
+  &.small-nav {
+    background-color: $white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .navbar-brand {
+      height: 60px;
+    }
+    li a {
+      color: $light-black;
+      padding: 20px 10px;
 
-			&.highlight {
-				margin-top: 10px;
-				color: $white;
-			}
-		}
-		.navbar-toggle {
-			color: $cream;
-			margin-top: 15px;
-		}
-	}
-	li {
-		&:hover a {
-			background-color: transparent;
-			color: darken($cream, 15%);
-		}
-		a {
-			color: $white;
-			font-weight: 500;
-			text-transform: uppercase;
-			margin-left: 10px;
-			margin-right: 10px;
-			padding: 30px 10px;
-			letter-spacing: .15em;
-			font-size: 13px;
-			transition: all 0.4s;
+      &.highlight {
+        margin-top: 10px;
+        color: $white;
+      }
+    }
+    .navbar-toggle {
+      color: $cream;
+      margin-top: 15px;
+    }
+  }
+  li {
+    &:hover a:not(.lang-container) {
+      background-color: transparent;
+      color: darken($cream, 15%);
+    }
+    a {
+      color: $white;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 30px 10px;
+      letter-spacing: .15em;
+      font-size: 13px;
+      transition: all 0.4s;
 
-			&.highlight {
-				padding-top: 10px;
-		    padding-bottom: 10px;
-		    margin-top: 20px;
-				background-color: $green;
-				border-radius: 4px;
+      &.highlight {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        background-color: $green;
+        border-radius: 4px;
 
-				&:hover {
-					background-color: $cream;
-					color: $white;
-				}
-			}
-		}
-	}
-	.navbar-brand {
-		height: 80px;
+        &:hover {
+          background-color: $cream;
+          color: $white;
+        }
+      }
+    }
+  }
+  .navbar-brand {
+    height: 80px;
     padding-top: 5px;
     padding-bottom: 5px;
-		transition: all 0.4s ease;
-		@include bp(phone) {
-			height: 60px;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		img {
-			max-height: 100%;
-		}
-	}
-	.navbar-toggle {
-		margin-top: 14px;
-		border-color: rgba(255, 255, 255, 0.4);
-		color: $white;
-		letter-spacing: .15em;
-		font-size: 13px;
-		text-transform: uppercase;
-		margin-top: 15px;
-		@include bp(tablet) {
-			margin-top: 25px;
-		}
-		&:hover {
-			background-color: transparent;
-			color: $yellow;
-			border-color: $white;
-		}
-	}
-	.navbar-nav {
-		@include bp(desk) {
-			float: right;
-		}
-	}
+    transition: all 0.4s ease;
+    @include bp(phone) {
+      height: 60px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    img {
+      max-height: 100%;
+    }
+  }
+  .navbar-toggle {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: $white;
+    letter-spacing: .15em;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    @include bp(tablet) {
+      margin-top: 25px;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $yellow;
+      border-color: $white;
+    }
+  }
+  .navbar-nav {
+    @include bp(desk) {
+      float: right;
+    }
+  }
+}
+
+.lang {
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.current-lang {
+  font-weight: bold;
 }
 
 // -----------------------------------------------------------------------------
 // Mobile header
 // -----------------------------------------------------------------------------
 .landing-header-mobile {
-	img {
-		max-width: 50px;
-	}
-	.nav-bordered>li>a:focus,
-	.nav-bordered>li>a:hover {
-		color: $turquoise;
-	}
-	.nav > li > a:focus,
-	.nav > li > a:hover {
-		background-color: transparent;
-	}
+  img {
+    max-width: 50px;
+  }
+  .nav-bordered > li > a:focus,
+  .nav-bordered > li > a:hover {
+    color: $turquoise;
+  }
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background-color: transparent;
+  }
 }
