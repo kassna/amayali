@@ -1,4 +1,3 @@
-import {check} from 'meteor/check';
 import {Agents} from '../collections/agents';
 
 /**
@@ -17,26 +16,6 @@ const addUser = (accountInfo, role) => {
 };
 
 Meteor.methods({
-    createTherapistRequest: doc => {
-        doc.status = TherapistsSchema.schema('status').defaultValue;
-        doc.rating = TherapistsSchema.schema('rating').defaultValue;
-        doc.createdAt = new Date();
-
-        try {
-            check(doc, TherapistsSchema);
-
-            Therapists.insert(doc, (err) => {
-                if (err) {
-                    throw new Meteor.Error(err);
-                } else {
-                    Meteor.call('sendNewTherapist', doc);
-                }
-            });
-        } catch (exception) {
-            throw new Meteor.Error(exception);
-        }
-    },
-
     toggleStatusAgent: (id) => {
         const agent = Agents.findOne(id);
         const status = agent.status;
@@ -426,7 +405,7 @@ Meteor.methods({
             to: process.env.ADMIN_EMAIL,
             subject: `[Kassna] Nueva solicitud de terapeuta`,
             template: 'newApplication',
-            data: therapist
+            data: agent
         });
     }
 });
