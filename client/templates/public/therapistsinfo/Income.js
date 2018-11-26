@@ -1,3 +1,5 @@
+import {rate_120, rate_90} from '../../../js/custom';
+
 Template.Prices.events({
   'click .massage-type': event => {
     const type = $(event.target).attr('data-type');

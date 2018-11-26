@@ -15,6 +15,7 @@
     },
     "points": 10,
     "reward": "N/A",
+    "userId": null,
     "status": true,
     "createdAt": {
       "$date": "2018-10-09T10:26:22.603Z"
@@ -37,6 +38,7 @@
     },
     "points": 50,
     "reward": "N/A",
+    "userId": null,
     "status": false,
     "createdAt": {
       "$date": "2018-10-09T10:26:22.603Z"

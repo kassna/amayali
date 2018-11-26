@@ -1,3 +1,6 @@
+import {rate_120, rate_90} from '../../../js/custom';
+import {nextInstance, prevInstance} from './Book';
+
 Template.MassageBook.helpers({
   types: () => _.map(['relax', 'decontracting', 'sport'], _id => {
     return {

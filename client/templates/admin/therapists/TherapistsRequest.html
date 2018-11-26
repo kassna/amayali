@@ -47,10 +47,9 @@
             {{> Loading}}
         {{/if}}
 
-        {{> NewModal collection="Therapists"}}
-        {{> EditModal collection="Therapists" editItem=editItem }}
+        {{> NewModal collection="Therapists" type=modalType}}
+        {{> EditModal collection="Therapists" editItem=editItem type=modalType}}
         {{> TherapistInfo}}
-
     {{else}}
         {{> Forbidden}}
     {{/if}}

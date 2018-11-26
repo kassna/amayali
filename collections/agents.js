@@ -87,6 +87,13 @@ const AgentsSchema = new SimpleSchema({
             omit: true
         }
     },
+    userId: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Id,
+        autoform: {
+            omit: true
+        }
+    },
     status: {
         type: Boolean,
         defaultValue: false,

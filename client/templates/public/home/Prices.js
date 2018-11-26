@@ -1,3 +1,4 @@
+import {rate_120, rate_90} from '../../../js/custom';
 
 Template.PricesRow.helpers({
   rate60: () => {
