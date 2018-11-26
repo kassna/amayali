@@ -205,53 +205,6 @@ Template.BookNowClientForm.events({
 });
 
 Template.BookNowClientPaypal.onRendered(() => {
-  // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
-  const env = Session.get('paypal_env');
-  paypal.Button.render({
-    env,
-    client: {
-      sandbox: 'Ab6JnNhuMzjNDVhueResuMYTirMOwVkmajYwGoD0mACP_0i1VczPp1NQ8vKFJYZYG2X8w27gFJwRySmQ',
-      production: 'AZCADNCbS-X7YzWstteXXP-6e-Mbmtt9QiGSNDH69y7a1QpsObsuVAW5o9fqQ1n9eg4nvGBM7uu_VmkT'
-    },
-    style: {
-      label: 'checkout', // checkout | credit | pay
-      size: 'responsive',    // small | medium | responsive
-      shape: 'rect',     // pill | rect
-      color: 'blue'      // gold | blue | silver
-    },
-    commit: true,
-    payment: (data, actions) => {
-      const orderDetails = getOrderDetails();
-      if (!verifyRequired(requiredInputs) || !verifySchedule($("[name='date']").val())) {
-        return false;
-      }
-      return actions.payment.create({
-        transactions: [{
-          amount: {
-            total: Session.get('total'),
-            currency: 'MXN'
-          },
-          description: `${orderDetails.product} + ${orderDetails.type}`,
-        }]
-      }, {
-          input_fields: {
-            no_shipping: 1
-          }
-        });
-    },
-    onError: (err) => {
-      // Show an error page here, when an error occurs
-      console.log('errr', err);
-      handleErrorPayment({ error: "payment" });
-    },
-    onCancel: (data) => {
-      console.log("CANCEL", data);
-      handleErrorPayment({ error: "payment" });
-    },
-    onAuthorize: (data, actions) => {
-      return executePaypal(actions);
-    }
-  }, '#ppplusDiv');
     // Issue with client credentials https://github.com/paypal/paypal-checkout/issues/356
     const env = Session.get('paypal_env');
     paypal.Button.render({
