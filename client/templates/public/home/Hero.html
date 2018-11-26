@@ -15,9 +15,11 @@
               </div>
               <br class="visible-xs-block">
               <div class="col-sm-2">
-                <button class="submit-landing" onclick="return gtag_click_reservar('https://www.kassna.com/reserva');">
-                {{_ "general.book"}}
-              </button>
+                  <a href="{{pathFor 'book'}}">
+                        <button class="submit-landing">
+                        {{_ "general.book"}}
+                      </button>
+                  </a>
               </div>
             </div>
           </div>

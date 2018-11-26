@@ -1,3 +1,4 @@
+/* eslint-disable meteor/template-names */
 import {Template} from 'meteor/templating';
 import {Session} from 'meteor/session';
 

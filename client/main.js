@@ -174,6 +174,8 @@ Template.registerHelper('therapistSurveys', () => TherapistSurveys.find());
 
 Template.registerHelper('location', () => Locations.findOne());
 
+Template.registerHelper('agent', () => Agents.findOne());
+
 Template.registerHelper('promoCode', () => PromoCodes.findOne());
 
 Template.registerHelper('therapist', () => Therapists.findOne());

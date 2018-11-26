@@ -80,7 +80,9 @@ const postPayment = (withPaypal, res) => {
 }
 
 // Make a call to the REST api to execute the payment
-const executePaypal = actions => actions.payment.execute().then(res => postPayment(true, res))
+const executePaypal = actions =>
+    actions.payment.execute()
+    .then(res => postPayment(true, res))
 
 Template.PaymentBook.events({
   'click #verifyPromo': event => {

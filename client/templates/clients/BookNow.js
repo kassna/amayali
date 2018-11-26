@@ -138,13 +138,13 @@ Template.BookNowClientForm.helpers({
 });
 
 Template.BookNowClient.events({
-    'click .edit-data': function () {
-        Session.set('editId', Meteor.userId());
-        Session.set('editMode', 1);
-        Meteor.setTimeout(function () {
-            $('#edit-modal').modal('show');
-        }, 500);
-    }
+  'click .edit-data': () => {
+    Session.set('editId', Meteor.userId());
+    Session.set('editMode', 1);
+    Meteor.setTimeout(function () {
+      $("#edit-modal").modal('show');
+    }, 500);
+  },
 });
 
 Template.BookNowClientForm.events({

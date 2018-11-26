@@ -1,4 +1,7 @@
-import {rate_90, rate_120, verifySchedule, datepickerSetup} from '../../js/custom';
+import {Agents} from '../../../collections/agents.js';
+import {Template} from 'meteor/templating';
+import {Session} from 'meteor/session';
+import {datepickerSetup, verifySchedule} from '../../js/custom';
 
 const requiredInputs = ['product', 'type', 'therapistsType', 'date'];
 
@@ -61,7 +64,7 @@ Template.BookNowAgent.onCreated(function () {
     if (!Session.get('total')) Session.set('total', 0);
     let self = this;
     self.autorun(function () {
-        self.subscribe('agentPromoCode');
+        self.subscribe('agentPoints');
     });
 
     // Get paypal env
@@ -108,6 +111,9 @@ Template.BookNowAgent.helpers({
     setLocationId: locationId => {
         Session.set('locationId', locationId);
     },
+    setPendingRewards: pendingRewards => {
+        Session.set('pendingRewards', pendingRewards);
+    },
     setPendingPromos: pendingPromos => {
         Session.set('pendingPromos', pendingPromos);
     },
@@ -138,7 +144,7 @@ Template.BookNowAgentForm.helpers({
 });
 
 Template.BookNowAgent.events({
-    'click .edit-data': function () {
+    'click .edit-data': () => {
         Session.set('editId', Meteor.userId());
         Session.set('editMode', 1);
         Meteor.setTimeout(function () {
@@ -151,27 +157,27 @@ Template.BookNowAgentForm.events({
     'click #product button': event => {
         const product = $(event.target).attr('data-id');
         // Get selected location base rate
-        const baseRate = Locations.findOne(Session.get('locationId')).base_rate;
+        //const baseRate = Locations.findOne(Session.get('locationId')).base_rate;
 
         let price;
         switch (product) {
             case '60':
                 // Set price to base rate
-                price = baseRate;
+                price = 799;
                 break;
             case '90':
                 // Get price by formula
-                price = rate_90(baseRate);
+                price = 1099;
                 break;
             case '120':
                 // Get price by formula
-                price = rate_120(baseRate);
+                price = 1399;
                 break;
             default:
         }
         Session.set('subTotal', price);
     },
-    'change [name="pendingPromos"]': () => {
+    'change [name="pendingPromos"]': event => {
         const val = $('[name=\'pendingPromos\']:checked').val();
         if (val === 'no') {
             Session.set('pendingPromos', 0);
@@ -180,7 +186,7 @@ Template.BookNowAgentForm.events({
         }
     },
     'change [name="date"]': event => verifySchedule(event.target.value),
-    'click #verifyPromo': () => {
+    'click #verifyPromo': event => {
         const code = Session.get('promoCode');
         Meteor.call('verifyPromoCode', code, Session.get('locationId'), (err, res) => {
             if (err || !res) {
@@ -193,6 +199,7 @@ Template.BookNowAgentForm.events({
                         } else {
                             Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
                             Session.set('promoCodeValid', res);
+                            Session.set('agentpoints', Agents.points + 1);
                         }
                     });
                 } else {

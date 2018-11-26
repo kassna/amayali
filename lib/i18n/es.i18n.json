@@ -385,6 +385,8 @@
       "agent": {
         "fullname": "Nombre completo",
         "email": "Correo electrónico",
+        "points": "Puntos",
+        "reward": "Regalo asignado",
         "personalPhone": "Teléfono personal"
       },
       "company": {
@@ -647,6 +649,8 @@
       "infoTitle": "Información del agente",
       "fullname": "Nombre Completo",
       "email": "Email",
+      "points": "Puntos",
+      "reward": "Regalo asignado",
       "createdAt": "Miembro desde"
     },
     "company": {
@@ -757,12 +761,13 @@
       "title": "Mis datos"
     },
     "promoCode": {
-      "title": "Código kassna",
-      "text1": "Tu código kassna es",
+      "title": "Tus premios",
+      "text1": "Número de ventas realizadas",
       "text2": "En este momento tienes disponible",
-      "text3": "de descuento",
-      "text4": "Aprovéchalo y reserva ya tu próxima cita!",
-      "text5": "* El descuento se obtiene cuando se realiza una nueva reservación y se crea una nueva cuenta. Para más información, envía un correo a info@kassna.com"
+      "text3": "en puntos",
+      "text4": "Aprovéchalos o guardalos para eventos posteriores",
+      "text5": "¡Realiza más ventas para que puedas obtener más puntos",
+      "text6": "* Tu venta ha sido realizada, el personal de Kassna te mandará un correo. Para más información, envía un correo a info@kassna.com"
     }
   },
   "survey": {
