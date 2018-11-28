@@ -3,20 +3,6 @@ import {setLanguage} from './js/custom';
 
 _ = lodash;
 
-AutoForm.hooks({
-    insertForm: {
-        onSuccess: function () {
-            $('#new-modal').modal('hide');
-            Bert.alert(TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right');
-        }
-    },
-    insertTherapistForm: {
-        onSuccess: function () {
-            FlowRouter.go('therapist-success');
-        }
-    }
-});
-
 const accountsTranslationsES = {
     firstname: 'Nombre(s)',
     lastname: 'Apellido(s)',

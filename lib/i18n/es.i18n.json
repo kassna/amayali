@@ -579,6 +579,7 @@
       "successDelete": "Éxito! Se ha eliminado ese elemento",
       "failDelete": "Hubo un error, revisa las dependencias del elemento",
       "successInsert": "Éxito! Se ha agregado a la base de datos",
+      "successUpdate": "Se han modificado los datos correctamte",
       "active": "Activar",
       "createdAt": "Creado",
       "orders": "Ordenes",

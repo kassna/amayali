@@ -36,5 +36,6 @@ AutoForm.addHooks(['insertForm', 'insertTherapistForm'], {
         resetForms();
 
         $('#new-modal').modal('hide');
+        Bert.alert(TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right');
     }
 });

@@ -69,7 +69,19 @@ class TherapistFormHelper {
             }
         });
 
-        AutoForm.addHooks(['insertTherapistForm', 'editTherapistForm'], {
+        AutoForm.hooks({
+            insertTherapistFormPublic: {
+                after: {
+                    insert: function (error, result) {
+                        if (!error) {
+                            Meteor.call('sendNewTherapist', result);
+                        }
+                    }
+                }
+            }
+        });
+
+        AutoForm.addHooks(['insertTherapistForm', 'insertTherapistFormPublic', 'editTherapistForm'], {
             before: {
                 update: (doc) => {
                     doc.$set = this.updateMot(doc.$set);

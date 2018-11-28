@@ -1,12 +1,4 @@
 class TherapistsCollection extends Mongo.Collection {
-    insert(doc, callback) {
-        doc.createdAt = new Date();
-
-        Meteor.call('sendNewTherapist', doc);
-
-        return super.insert(doc, callback);
-    }
-
     remove(selector, callback) {
         Meteor.call('removeTherapists', selector, err => {
             if (err) {

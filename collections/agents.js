@@ -90,6 +90,7 @@ const AgentsSchema = new SimpleSchema({
     userId: {
         type: String,
         regEx: SimpleSchema.RegEx.Id,
+        optional: true,
         autoform: {
             omit: true
         }
@@ -132,4 +133,4 @@ AgentsSchema._schema['reward'].label = function () {
 
 Agents.attachSchema(AgentsSchema);
 
-export {Agents};
+export {Agents, AgentsSchema};

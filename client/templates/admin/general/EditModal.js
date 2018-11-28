@@ -15,5 +15,6 @@ Template.EditModal.helpers({
 AutoForm.addHooks(['updateForm', 'editTherapistForm'], {
     onSuccess: () => {
         $('#edit-modal').modal('hide');
+        Bert.alert(TAPi18n.__('admin.general.successInsert', null), 'success', 'growl-top-right');
     }
 });
