@@ -65,10 +65,17 @@ const AgentsSchema = new SimpleSchema({
         type: CompanySchema
     },
     points: {
-        type: Number
+        type: Number,
+        defaultValue: 0,
+        autoform: {
+            omit: true
+        }
     },
     reward: {
-        type: String
+        type: String,
+        autoform: {
+            omit: true
+        }
     },
 
     createdAt: {
