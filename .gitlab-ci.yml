@@ -1,4 +1,4 @@
-image: spittet/node-mongodb
+image: mongo
 
 stages:
   - build
@@ -6,9 +6,18 @@ stages:
 
 staging:
   stage: deploy
+  before_script:
+    - apt-get update -qy
+    # General dependencies
+    - apt-get install -y curl
+    # Dependencies for deployment to heroku.com
+    - apt-get install -y git
+    # Dependencies for import script
+    - apt-get install -y software-properties-common
+    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    - apt-get install -y nodejs
   script:
     # Deploy to heroku.com
-    - apt-get update -qy
     - apt-get install -y ruby-dev
     - gem install dpl
     - dpl --provider=heroku --app=kassna-develop --api-key=$HEROKU_STAGING_API_KEY
@@ -20,6 +29,14 @@ staging:
 build:
   stage: build
   before_script:
+    - apt-get update -qy
+    # Dependencies for npm
+    - apt-get install -y curl
+    - apt-get install -y software-properties-common
+    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    - apt-get install -y nodejs
+    - apt-get install -y git
+    # Meteor and installing npm packages
     - curl https://install.meteor.com | sh
     - npm install --silent
   script:
