@@ -399,7 +399,7 @@ Meteor.methods({
 
         // Send email to user
         Mailer.send({
-            to: agent.email,
+            to: agent.agent.email,
             subject: `[Kassna] Confirmación de solicitud`,
             template: 'applicationWait',
             data: agent
