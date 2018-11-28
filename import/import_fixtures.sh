@@ -5,8 +5,10 @@
 # author:      Matthias Bräuer
 #=======================================================================================
 
-db="meteor"
-host="localhost:3001"
+db=${MONGO_DB:-"meteor"}
+host=${MONGO_HOST:-"localhost:3001"}
+user=${MONGO_USER}
+password=${MONGO_PW}
 path="import/fixtures"
 
 # Forces shell to exit as soon as one command fails.
@@ -18,20 +20,34 @@ function load_fixtures() {
    cd ${path}
    ls -1 *.json | sed 's/.json$//' | while read col; do
       printf "\nImporting ${col}.json...\n"
-      mongoimport -h ${host} --db ${db} --collection ${col} --type json --file ${col}.json --jsonArray
+
+      if [[ -z "$user" ]]; then
+        mongoimport -h ${host} --db ${db} --collection ${col} --type json --file ${col}.json --jsonArray
+      else
+        mongoimport -h ${host} --db ${db} --collection ${col} -u ${user} -p ${password} --type json --file ${col}.json --jsonArray
+      fi
    done
 }
 
 # Purges the whole database.
 function purge_database() {
     printf "Purging database...\n"
-    mongo ${host}/${db} --eval "db.dropDatabase();"
+    if [[ -z "$user" ]]; then
+      mongo ${host}/${db} --eval "db.dropDatabase();"
+    else
+      mongo ${host}/${db} -u ${user} -p ${password} --eval "db.dropDatabase();"
+    fi
     printf "Database purged\n"
 }
 
-printf "Load fixtures...\nThis will purge the whole database.\nWould you like to continue (Y/n)?\n"
 
-read confirmed
+if [[ -z "$IS_SERVER" ]]; then
+ printf "Load fixtures...\nThis will purge the whole database.\nWould you like to continue (Y/n)?\n"
+
+ read confirmed
+else
+ confirmed="Y"
+fi
 
 if [ ${confirmed} == "Y" ];
 then

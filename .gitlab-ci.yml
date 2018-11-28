@@ -1,7 +1,21 @@
-image: node:8
+image: spittet/node-mongodb
 
 stages:
   - build
+  - deploy
+
+staging:
+  stage: deploy
+  script:
+    # Deploy to heroku.com
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=kassna-develop --api-key=$HEROKU_STAGING_API_KEY
+    # Import fixtures
+    - npm run import:fixtures
+  only:
+    - develop
 
 build:
   stage: build
@@ -10,3 +24,5 @@ build:
     - npm install --silent
   script:
     - meteor build --directory ../output --allow-superuser --server-only
+  except:
+    - develop
