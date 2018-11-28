@@ -3,9 +3,9 @@ import {Agents} from '../collections/agents';
 /**
  * Creates a new user with role *role*.
  *
- * @param accountInfo - @see Accounts.createUser
+ * @param accountInfo - {@see Accounts.createUser}
  * @param role - The role of the user
- * @returns {any} - @see Accounts.createUser
+ * @returns {any} - {@see Accounts.createUser}
  */
 const addUser = (accountInfo, role) => {
     const userId = Accounts.createUser(accountInfo);
@@ -375,7 +375,9 @@ Meteor.methods({
         });
     },
 
-    'sendNewTherapist': therapist => {
+    'sendNewTherapist': id => {
+        const therapist = Therapists.findOne({_id: id});
+
         // Send email to user
         Mailer.send({
             to: therapist.email,
@@ -392,7 +394,9 @@ Meteor.methods({
         });
     },
 
-    'sendNewAgent': agent => {
+    'sendNewAgent': id => {
+        const agent = Agents.findOne({_id: id});
+
         // Send email to user
         Mailer.send({
             to: agent.email,
