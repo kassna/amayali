@@ -8,7 +8,7 @@
             <div class="request-form m-b-lg">
                 {{> quickForm collection=agentCollection schema=agentSchema id="insertAgentFormPublic"
                         type="insert" buttonClasses="btn btn-success btn-full submit-button"
-                        buttonContent=sendText}}
+                        buttonContent=sendText omitFields="points, reward"}}
             </div>
         </div>
     </div>

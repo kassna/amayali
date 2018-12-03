@@ -68,14 +68,14 @@ const AgentsSchema = new SimpleSchema({
         type: Number,
         defaultValue: 0,
         autoform: {
-            omit: true
+            omit: false
         }
     },
     reward: {
         type: String,
         optional: true,
         autoform: {
-            omit: true
+            omit: false
         }
     },
 
