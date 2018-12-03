@@ -1,4 +1,4 @@
-import {Agents} from '../../../collections/agents.js';
+import {verifyRequired} from '../public/book/Book';
 import {Template} from 'meteor/templating';
 import {Session} from 'meteor/session';
 import {datepickerSetup, verifySchedule} from '../../js/custom';
@@ -8,21 +8,12 @@ const requiredInputs = ['product', 'type', 'therapistsType', 'date'];
 const getOrderDetails = () => {
     let orderDetails = {
         agentId: Session.get('agentId'),
-        locationId: Session.get('locationId'),
         product: Session.get('product'),
         type: Session.get('type'),
         therapistsType: Session.get('therapistsType'),
         date: Session.get('date'),
         total: Session.get('total')
     };
-    const promoCodeValid = Session.get('promoCodeValid');
-    if (promoCodeValid) {
-        orderDetails.promoCode = promoCodeValid.code;
-    }
-    const pendingPromos = Session.get('pendingPromos');
-    if (pendingPromos) {
-        orderDetails.referencePromos = pendingPromos;
-    }
     return orderDetails;
 };
 
@@ -54,7 +45,7 @@ const postPayment = (withPaypal, res) => {
 const executePaypal = actions => actions.payment.execute().then(res => postPayment(true, res));
 
 const resetOrderSession = () => {
-    const toReset = _.concat(requiredInputs, ['promoCodeValid', 'promoCode']);
+    const toReset = _.concat(requiredInputs);
     _.map(toReset, item => {
         Session.set(item, null);
     });
@@ -85,37 +76,14 @@ Template.BookNowAgentForm.onRendered(() => {
 Template.BookNowAgent.helpers({
     total: () => {
         let subTotal = Session.get('subTotal');
-        const pendingPromos = Session.get('pendingPromos');
-        const promoCode = Session.get('promoCodeValid');
         if (!subTotal) {
             Session.set('total', 0);
             return 0;
-        }
-        // Apply regular discount codes
-        if (promoCode) {
-            if (promoCode.type === 'amount') {
-                subTotal -= promoCode.amount;
-            } else {
-                subTotal *= ((100 - promoCode.amount) * 0.01);
-            }
-        }
-        // Apply pending promos
-        if (pendingPromos) {
-            subTotal -= pendingPromos * 140;
         }
         // Safe asign total
         const total = subTotal > 0 ? Math.round(subTotal) : 0;
         Session.set('total', total);
         return total;
-    },
-    setLocationId: locationId => {
-        Session.set('locationId', locationId);
-    },
-    setPendingRewards: pendingRewards => {
-        Session.set('pendingRewards', pendingRewards);
-    },
-    setPendingPromos: pendingPromos => {
-        Session.set('pendingPromos', pendingPromos);
     },
     setAgentId: agentId => {
         Session.set('agentId', agentId);
@@ -177,38 +145,7 @@ Template.BookNowAgentForm.events({
         }
         Session.set('subTotal', price);
     },
-    'change [name="pendingPromos"]': event => {
-        const val = $('[name=\'pendingPromos\']:checked').val();
-        if (val === 'no') {
-            Session.set('pendingPromos', 0);
-        } else {
-            Session.set('pendingPromos', Number(val));
-        }
-    },
-    'change [name="date"]': event => verifySchedule(event.target.value),
-    'click #verifyPromo': event => {
-        const code = Session.get('promoCode');
-        Meteor.call('verifyPromoCode', code, Session.get('locationId'), (err, res) => {
-            if (err || !res) {
-                Bert.alert(TAPi18n.__('book.errors.wrongPromoCode', null), 'danger');
-            } else {
-                if (res.reference) {
-                    Meteor.call('agentOrders', (err1, number) => {
-                        if (err1 || number) {
-                            Bert.alert(TAPi18n.__('book.errors.referenceErrorAgent', null), 'danger');
-                        } else {
-                            Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
-                            Session.set('promoCodeValid', res);
-                            Session.set('agentpoints', Agents.points + 1);
-                        }
-                    });
-                } else {
-                    Bert.alert(TAPi18n.__('book.errors.successPromoCode', null), 'success');
-                    Session.set('promoCodeValid', res);
-                }
-            }
-        });
-    }
+    'change [name="date"]': event => verifySchedule(event.target.value)
 });
 
 Template.BookNowAgentPaypal.onRendered(() => {
@@ -216,7 +153,7 @@ Template.BookNowAgentPaypal.onRendered(() => {
     const env = Session.get('paypal_env');
     paypal.Button.render({
         env,
-        agent: {
+        client: {
             sandbox: 'Ab6JnNhuMzjNDVhueResuMYTirMOwVkmajYwGoD0mACP_0i1VczPp1NQ8vKFJYZYG2X8w27gFJwRySmQ',
             production: 'AZCADNCbS-X7YzWstteXXP-6e-Mbmtt9QiGSNDH69y7a1QpsObsuVAW5o9fqQ1n9eg4nvGBM7uu_VmkT'
         },
@@ -260,44 +197,8 @@ Template.BookNowAgentPaypal.onRendered(() => {
         }
     }, '#paypal-button-container');
 });
-Template.paypalCreditCardForm.events({
-    'submit #paypal-payment-form': function (event) {
-        event.preventDefault();
-
-        var card_data = Template.paypalCreditCardForm.card_data();
-
-        if (!verifyRequired(requiredInputs) || !verifySchedule($('[name=\'date\']').val())) {
-            return false;
-        }
-
-        Session.set('creditCardPayMode', false);
-        //Probably a good idea to disable the submit button here to prevent multiple submissions.
-
-        Meteor.Paypal.purchase(card_data, {
-            total: '100.50',
-            currency: 'USD'
-        }, function (err, results) {
-            if (err) console.error(err);
-            else console.log(results);
-        });
-    }
-});
 
 Template.BookNowAgentPaypal.helpers({
     // If total is 0, payment should be skipped
-    creditCardPayMode() {
-        return Session.get('creditCardPayMode');
-    },
     payWithPaypal: () => Session.get('total') > 0
-});
-
-Template.BookNowAgentPaypal.events({
-    'click #credit-pay': (e) => {
-        e.preventDefault();
-        Session.set('creditCardPayMode', true);
-    },
-    'click #cancel-credit': (e) => {
-        e.preventDefault();
-        Session.set('creditCardPayMode', false);
-    }
 });

@@ -1,7 +1,5 @@
 <template name="BookNowAgent">
   {{#if isInRole 'agent'}}
-    {{setLocationId agent.locationId}}
-    {{setPendingRewards agent.pendingRewards}}
     {{setAgentId agent._id}}
     
 
@@ -31,49 +29,11 @@
   {{> ButtonSelectBook attribute="type" elements=types placeholder="book.type"}}
   {{> ButtonSelectBook attribute="product" elements=products placeholder="book.product"}}
   {{> SelectBook attribute="therapistsType" elements=therapistsType placeholder="book.therapistsType"}}
-  {{#if agent.pendingRewards}}
-    <div class="radio-select text-center">
-      <h2 class="c-yellow"><b>{{_ "agent.bookNow.pendingRewards1"}} ${{agent.pendingRewards}} {{_ "agent.bookNow.pendingRewards2"}}</b></h2>
-      <br>
-      <div class="radio-inline custom-control custom-radio">
-        <label class="c-turquoise">
-          {{#if $.Session.get 'pendingPro' true}}
-            <input type="radio" value="{{agent.pendingRewards}}" name="pendingRewards" checked>
-          {{else}}
-            <input type="radio" value="{{agent.pendingRewards}}" name="pendingRewards">
-          {{/if}}
-          <span class="custom-control-indicator"></span>
-          {{_ "schemas.general.yes"}}
-        </label>
-      </div>
-      <div class="radio-inline custom-control custom-radio">
-        <label class="c-turquoise">
-          {{#if $.Session.equals 'pendingRewards' false}}
-            <input type="radio" value="no" name="pendingRewards" checked>
-          {{else}}
-            <input type="radio" value="no" name="pendingRewards">
-          {{/if}}
-          <span class="custom-control-indicator"></span>
-          {{_ "schemas.general.no"}}
-        </label>
-      </div>
-    </div>
-  {{/if}}
-  {{> InputTextBook type="text" attribute="promoCode" placeholder="book.promoCode"}}
-  <div class="footer-buttons center">
-    <button class="btn-success small m-t" id="verifyPromo">{{_ "book.verify"}}</button>
-  </div>
   {{> BookNowAgentPaypal}}
 </template>
  
 <template name="BookNowAgentPaypal">
   <div class="text-center m-t-lg m-b-lg">
         <div id="paypal-button-container"></div>
-      {{#if creditCardPayMode}}
-          <button id="cancel-credit" class="btn btn-primary-outline btn-lg btn-block">Cancelar</button>
-          {{>paypalCreditCardForm}}
-      {{else}}
-          <button id="credit-pay" class="btn btn-primary-outline btn-lg btn-block">Pagar con tarjeta de crédito</button>
-      {{/if}}
   </div>
 </template>
