@@ -160,7 +160,7 @@ Template.registerHelper('therapistSurveys', () => TherapistSurveys.find());
 
 Template.registerHelper('location', () => Locations.findOne());
 
-Template.registerHelper('agentP', _id => Agents.findOne(_id));
+Template.registerHelper('agentP', () => Agents.findOne());
 
 Template.registerHelper('promoCode', () => PromoCodes.findOne());
 
