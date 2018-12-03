@@ -1,6 +1,5 @@
 import {Template} from 'meteor/templating';
 import {Session} from 'meteor/session';
-import {Agents} from '../../../../collections/agents';
 
 Template.agentListElement.events({
     'click .edit-button': function () {
