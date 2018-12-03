@@ -264,10 +264,7 @@ Meteor.methods({
     },
 
     postPaymentAgent: order => {
-        Meteor.call('checkoutPromoCode', order);
-        if (order.referencePromos) {
-            Agents.update({_id: agent._id}, {$set: {points: Agents.findOne(agent._id).points + 1}});
-        }
+        Agents.update({_id: agent._id}, {$set: {points: Agents.findOne(agent._id).points + 1}});
         return Orders.insert(order);
     },
 
