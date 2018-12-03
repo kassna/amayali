@@ -74,6 +74,7 @@ const AgentsSchema = new SimpleSchema({
     reward: {
         type: String,
         optional: true,
+        defaultValue: 'N/A',
         autoform: {
             omit: false
         }
