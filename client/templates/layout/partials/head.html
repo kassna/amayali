@@ -101,6 +101,24 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     }
     </script>
     
+<!-- Event snippet for Wapp_MoreInfo_Hero conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_Wapp_MoreInfo_Hero(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-834878021/bdd1CNvAt4UBEMX0jI4D',
+        'transaction_id': '',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
     <!-- Event snippet for Wapp Leads conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
