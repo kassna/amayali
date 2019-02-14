@@ -71,7 +71,6 @@ export default {
       const options = {
         60: "60 min",
         90: "90 min",
-        120: "120 min"
       };
       return options[option];
     },
