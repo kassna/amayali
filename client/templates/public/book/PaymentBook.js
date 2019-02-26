@@ -1,3 +1,5 @@
+import {prevInstance} from './Book';
+
 const getOrderDetails = () => {
   let orderDetails = {
     locationId: Session.get('locationId'),
@@ -21,7 +23,7 @@ const getOrderDetails = () => {
     orderDetails.promoCode = Session.get('promoCodeValid').code;
   }
   return orderDetails;
-}
+};
 
 const resetOrderSession = () => {
   const toReset = ['locationId', 'product', 'type', 'therapistsType', 'date',
@@ -30,7 +32,7 @@ const resetOrderSession = () => {
   _.map(toReset, item => {
     Session.set(item, null);
   });
-}
+};
 
 const getAccountDetails = () => {
   return {
@@ -41,12 +43,12 @@ const getAccountDetails = () => {
       lastname: Session.get('lastname')
     }
   }
-}
+};
 
 const handleErrorPayment = error => {
   if(error.error === 'email-invalid') Bert.alert(TAPi18n.__('book.errors.emailInvalid', null), 'danger');
   else Bert.alert(TAPi18n.__('book.errors.payment', null), 'danger');
-}
+};
 
 const postPayment = (withPaypal, res) => {
   let orderDetails = getOrderDetails();
@@ -77,12 +79,12 @@ const postPayment = (withPaypal, res) => {
       }
     }
   });
-}
+};
 
 // Make a call to the REST api to execute the payment
 const executePaypal = actions =>
     actions.payment.execute()
-    .then(res => postPayment(true, res))
+    .then(res => postPayment(true, res));
 
 Template.PaymentBook.events({
   'click #verifyPromo': event => {
@@ -179,4 +181,4 @@ Template.PaypalBook.helpers({
 
 Template.PaypalBook.events({
   'click #payWithoutPaypal': () => postPayment(false),
-})
+});

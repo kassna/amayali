@@ -32,7 +32,7 @@
         </td>
         <td>
             {{#if isInRole 'superadmin'}}
-                {{#quickRemoveButton collection="PromoCodes" _id=this._id
+                {{#quickRemoveButton collection=agentsCollection _id=this._id
                                      class="hidden delete-btn"}}
                     Delete
                 {{/quickRemoveButton}}

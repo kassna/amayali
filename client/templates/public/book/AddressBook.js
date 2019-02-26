@@ -1,4 +1,4 @@
-import {nextInstance} from './Book';
+import {nextInstance, prevInstance} from './Book';
 
 Template.AddressBook.onCreated(function () {
     const createAccount = Session.get('createAccount');
