@@ -1,12 +1,17 @@
 {
   "name": "meteor-base",
+  "engines": {
+    "node": "10.x"
+  },
   "private": true,
   "scripts": {
     "start": "meteor run",
     "lint": "node_modules/eslint/bin/eslint.js .",
-    "import:fixtures": "import/import_fixtures.sh"
+    "import:fixtures": "import/import_fixtures.sh",
+    "migrate:db": "node migration/migration.js >> migration/logs.txt"
   },
   "dependencies": {
+    "@babel/runtime": "^7.3.1",
     "babel-runtime": "^6.23.0",
     "bcrypt": "^1.0.2",
     "bootstrap-select": "1.12.4",
@@ -17,6 +22,7 @@
     "jquery": "^3.3.1",
     "masonry-layout": "^4.1.1",
     "meteor-node-stubs": "~0.2.0",
+    "mongodb": "^3.1.13",
     "node-sass": "^4.5.2"
   },
   "devDependencies": {
