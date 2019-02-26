@@ -1,6 +1,7 @@
 {
   "general": {
     "book": "Reservar",
+    "moreinfo": "Más información",
     "bookNow": "Reservar ahora",
     "menu": "Menú",
     "backHome": "Volver al inicio",
@@ -107,7 +108,7 @@
         "title": "Precios",
         "precio60": "$799",
         "precio90": "$1099",
-        "precio120": "$1299"
+        "precio120": "$1399"
       },
       "types": {
         "title": "Elige tu masaje",
@@ -312,10 +313,10 @@
     "noUserLink": "ingresa aquí!",
     "step1Lead": "Selecciona la fecha y ubicación de tu cita",
     "step2Lead": "Personaliza tu masaje",
-    "step3Lead": "Proporciona tus datos para llevarte tu masaje",
+    "step3Lead": "Datos personales",
     "step4Lead": "¿Tienes un código de promoción o de referido?",
     "paymentMethod": "Selecciona tu método de pago",
-    "paymentLead": "Proporciona tus datos de pago",
+    "paymentLead": "Información de pago",
     "date": "Fecha y hora",
     "locationId": "Selecciona tu ciudad",
     "type": "Tipo de masaje",
