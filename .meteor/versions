@@ -63,6 +63,8 @@ ejson@1.0.14
 email@1.2.3
 erasaur:meteor-lodash@4.0.0
 es5-shim@4.6.15
+force-ssl@1.0.15
+force-ssl-common@1.0.15
 fortawesome:fontawesome@4.7.0
 fourseven:scss@3.13.0
 geojson-utils@1.0.10

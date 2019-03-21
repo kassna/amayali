@@ -88,3 +88,4 @@ tap:i18n
 mrt:paypal
 random@1.0.10
 underscore@1.0.10
+force-ssl
