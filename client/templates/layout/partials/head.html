@@ -140,30 +140,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   }
   </script>
     
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4907774.js"></script>
-<!-- End of HubSpot Embed Code -->
-
-    <!-- WhatsHelp.io widget -->
-    <script type="text/javascript">
-      (function () {
-          var options = {
-              whatsapp: "+5218110601776", // WhatsApp number
-              call_to_action: "", // Call to action
-              position: "right", // Position may be 'right' or 'left'
-          };
-          var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-          s.onload = function () { WhWidgetSendButton.init(host, proto, options); 
-            var whatsapp_button = document.getElementsByClassName("wh-widget-button wh-widget-button-activator");
-            whatsapp_button[0].onclick = function () { gtag_wapp_leads('https://api.whatsapp.com/send?phone=5218110601776'); };
-          };
-          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-      })();
-  </script>
-  <!-- /WhatsHelp.io widget -->
-
-
 <!-- Hotjar Tracking Code for www.kassna.com -->
 <script>
   (function(h,o,t,j,a,r){
