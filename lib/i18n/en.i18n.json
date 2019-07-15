@@ -329,8 +329,8 @@
     "creditCard": "Tarjeta de crédito",
     "paypal": "PayPal",
     "errors": {
-      "requiredInputs": "Todos los campos son obligatorios.",
-      "invalidHour": "No podemos atenderte en esa hora. Nuestro horario es de 8AM a 10PM.",
+      "requiredInputs": "Todos los campos son obligatorios. Para reservar con menos de 4 horas de anticipación contactanos por Wapp al 8110601776.",
+      "invalidHour": "Nuestro horario de atención es de 8AM a 10PM y requerimos 4 horas de anticipación.",
       "passwordMatch": "Tus contraseñas no coinciden, intenta de nuevo.",
       "emailInvalid": "El email es incorrecto o ya existe, intenta de nuevo.",
       "payment": "Ha habido un error en tu pago, por favor intenta de nuevo o contáctanos al 8110601776.",
