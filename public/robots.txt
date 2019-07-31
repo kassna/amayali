@@ -1,0 +1,11 @@
+User-Agent: Googlebot
+Disallow: /private/
+Disallow: /client/templates/admin/
+Disallow: /client/templates/agents/
+Disallow: /client/templates/clients/
+Disallow: /client/templates/login/
+
+User-agent: *
+Disallow:
+
+sitemap: https://www.kassna.com/sitemap.xml
