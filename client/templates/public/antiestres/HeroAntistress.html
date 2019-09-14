@@ -10,13 +10,15 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-3"></div>
-              <div class="col-sm-4">
-                {{> SelectBook attribute="locationId" elements=locations placeholder="book.locationId"}}
+              <div class="col-sm-3">
+                <button class="submit-bookwapp" onclick="return gtag_click_reservar('https://wa.me/5218110601776?text=Hola,%20Me%20gustaría%20hacer%20una%20reservación%20para%20un%20masaje%20antiestrés') ;" href="https://wa.me/5218110601776?text= Hola,%20Me%20gustaría%20hacer%20una%20reservación%20para%20un%20masaje%20antiestrés">
+                    {{_ "general.book"}}
+                </button>
               </div>
               <br class="visible-xs-block">
-              <div class="col-sm-2">
-                <button class="submit-landing" onclick="return gtag_click_reservar('https://www.kassna.com/reserva');">
-                  {{_ "general.book"}}
+              <div class="col-sm-3">
+                <button class="submit-moreinfo" onclick="return gtag_Wapp_MoreInfo_Hero('https://wa.me/5218110601776?text=Hola,%20¿Me%20pudieran%20compartir%20más%20información%20de%20*Kassna,%20Masajes%20a%20domicilio*%20y%20de%20masajes%20antiestrés?') ;" href="https://wa.me/5218110601776?text=Hola,%20¿Me%20pudieran%20compartir%20más%20información%20de%20Kassna,%20Masajes%20a%20domicilio%20y%20de%20masajes%20antiestrés?">
+                  {{_ "general.moreinfo"}}
               </button>
               </div>
             </div>
